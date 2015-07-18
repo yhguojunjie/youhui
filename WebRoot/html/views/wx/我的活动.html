@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no">
+<title>我的活动</title>
+<link rel="stylesheet" href="../../css/wx/layout.css">
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/wx/touchslide.js"></script>
+<script type="text/javascript" src="../../js/wx/layout.js"></script>
+</head>
+<body>
+	<!-- 如果没有内容 开始 -->
+	<div class="ifnone">
+		<p>您还没有活动</p>
+	</div>
+	<!-- 如果没有内容 结束 -->
+	<!-- 我的活动 开始 -->
+	<article class="wrap">
+		<div class="ativ_list">
+			<dl>
+				<dt class="not">
+					<span>14/11/11 10:14 ~ 14/11/11 10:14</span>
+					<em>未开始</em>
+				</dt>
+				<dd><a href="#">
+					<img src="../../images/wx/app1.png" />
+					<span>圣诞老爷爷送礼物</span>
+					<strong><i class="ico_eye"></i>300</strong>
+					<strong><i class="ico_people"></i>100</strong>
+				</a></dd>
+				<dt>
+					<i>到期:14/11/11 00:00<b>已过期</b></i>
+					<a class="set_btn" onclick="openPc()">配置</a>
+					<a class="renew_btn" onclick="renew()">续费</a>
+				</dt>
+			</dl>
+			<dl>
+				<dt class="ing">
+					<span>14/11/11 10:14 ~ 14/11/11 10:14</span>
+					<em>正在进行</em>
+				</dt>
+				<dd><a href="#">
+					<img src="../../images/wx/app3.png" />
+					<span>圣诞老爷爷送礼物</span>
+					<strong><i class="ico_eye"></i>300</strong>
+					<strong><i class="ico_people"></i>100</strong>
+				</a></dd>
+				<dt>
+					<i>到期:14/11/11 00:00</i>
+					<a class="set_btn" onclick="openPc()">配置</a>
+					<a class="renew_btn" onclick="renew()">续费</a>
+				</dt>
+			</dl>
+			<dl>
+				<dt class="end">
+					<span>14/11/11 10:14 ~ 14/11/11 10:14</span>
+					<em>已结束</em>
+				</dt>
+				<dd><a href="#">
+					<img src="../../images/wx/app4.png" />
+					<span>圣诞老爷爷送礼物</span>
+					<strong><i class="ico_eye"></i>300</strong>
+					<strong><i class="ico_people"></i>100</strong>
+				</a></dd>
+				<dt>
+					<i>到期:14/11/11 00:00<b>已过期</b></i>
+					<a class="set_btn" onclick="openPc()">配置</a>
+					<a class="renew_btn" onclick="renew()">续费</a>
+				</dt>
+			</dl>
+		</div>
+	</article>
+	<!-- 我的活动 结束 -->
+	<!-- 模版推荐 开始 -->
+	<div class="n_title tr">
+		<h3 class="fl">模版推荐</h3>
+		<!-- <a href="#">更多››</a> -->
+	</div>
+	<article class="wrap">
+		<div class="temp_list">
+			<ul>
+				<li>
+					<div class="btns tr absolute">
+						<a href="#" class="btn_try">免费试用</a>
+						<a href="#" class="btn_direct">购买</a>
+					</div>
+					<section onclick="javascript:self.location='#url';event.stopPropagation();">
+						<a class="imgbox"><img src="../../images/wx/staravatar.jpg"></a>
+						<h3>魔力星愿店-按发布</h3>
+						<p class="tr"><a>@彬 ^_^)Y</a><span>已有14人购买</span></p>
+						<div class="clear"></div>
+						<div class="btns tr">
+							<span>2014/12/10 17:42</span>
+						</div>
+					</section>
+				</li>
+				<li>
+					<section onclick="javascript:self.location='#url'">
+						<a class="imgbox"><img src="../../images/wx/treeavatar.gif"></a>
+						<h3>圣诞树摇礼物-按发布</h3>
+						<p class="tr"><a>@村长</a><span>已有10人购买</span></p>
+						<div class="clear"></div>
+						<div class="btns tr">
+							<span>2014/12/10 20:24</span>
+						</div>
+					</section>
+					<div class="btns tr absolute">
+						<a class="btn_try">试用</a>
+						<a class="btn_direct">￥100</a>
+					</div>
+				</li>
+				<li>
+					<div class="btns tr absolute">
+						<a class="btn_try">试用</a>
+						<a class="btn_direct">￥138</a>
+					</div>
+					<section onclick="javascript:self.location='#url';event.stopPropagation();">
+						<a class="imgbox"><img src="../../images/wx/microscene.jpg"></a>
+						<h3>魔力星愿店-按发布</h3>
+						<p class="tr"><a>@彬 ^_^)Y</a><span>已有14人购买</span></p>
+						<div class="clear"></div>
+						<div class="btns tr">
+							<span>2014/12/10 17:42</span>
+						</div>
+					</section>
+				</li>
+			</ul>
+		</div>
+	</article>
+	<!-- 模版推荐 结束 -->
+	<!-- 渠道 结束 -->
+	<footer>
+		<img src="../../images/wx/hdt_logo2.png" />
+		<p>专注移动社交互动广告</p>
+		<p>Copyright © 2014 www.tchajian.com  闽ICP备14019370号</p>
+	</footer>
+	<div class="menu">
+		<ul>
+			<li style="width:40%;margin-left:10%;"><a href="#">
+				<img src="../../images/wx/menu7.png" />
+				<span>首页</span>
+			</a></li>
+			<li style="width:40%;"><a href="#">
+				<img src="../../images/wx/menu5.png" />
+				<span>个人主页</span>
+			</a></li>
+			<li><a href="#">
+				<img src="../../images/wx/menu4.png" />
+				<span>我的活动</span>
+			</a></li>
+			<li><a href="#">
+				<img src="../../images/wx/menu8.png" />
+				<span>我的订单</span>
+			</a></li>
+			<li><a href="#">
+				<img src="../../images/wx/menu6.png" />
+				<span>收益提现</span>
+			</a></li>
+		</ul>
+	</div>
+	<!-- 菜单 开始 -->
+	<div class="menu_btn"><img src="../../images/wx/menu1.png" /></div>
+	<!-- 菜单 结束 -->
+</body>
+</html>
+<script type="text/javascript">
+	
+//PC端打开
+function openPc(){
+	var html = '\
+	<article class="prompt">\
+		<div class="cont h170">\
+			<div class="title"><strong>提示</strong><i onclick="closePrompt(this)">╳</i></div>\
+			<div class="text tc">\
+				<div class="space_5"></div>\
+				<p>请在PC端打开<br />（www.hudongtui.com）</p>\
+			</div>\
+			<div class="btns">\
+				<a class="cancel_btn" onclick="closePrompt(this)">知道了</a>\
+			</div>\
+		</div>\
+	</article>';
+	$('body').append(html);
+}
+
+//续费
+function renew(){
+	var html = '\
+	<div class="prompt">\
+		<form class="cont h210">\
+			<div class="title"><strong>续费</strong><i onclick="closePrompt(this)">╳</i></div>\
+			<div class="space_3"></div>\
+			<div class="text tc">\
+				<p>	\
+					有效期\
+					<select>\
+						<option>1个月</option>\
+						<option>2个月</option>\
+						<option>3个月</option>\
+						<option>4个月</option>\
+						<option>5个月</option>\
+						<option>6个月</option>\
+						<option>7个月</option>\
+						<option>8个月</option>\
+						<option>9个月</option>\
+						<option>10个月</option>\
+						<option>11个月</option>\
+						<option>12个月</option>\
+					</select>\
+				</p>\
+				<div class="space_5"></div>\
+				<h3>消费：￥268.0</h3>\
+				<p>\
+					<label><input type="checkbox">使用代币：￥8608.0</label> \
+					<a href="javascript:alert(\'敬请期待!\')" class="paycash">赚代币</a>\
+				</p>\
+			</div>\
+			<div class="btns">\
+				<a class="cancel_btn" onclick="closePrompt(this)">取消</a><a class="done_btn">支付</a>\
+			</div>\
+		</form>\
+		<div class="bg"></div>\
+	</div>';
+	$('body').append(html);
+}
+</script>

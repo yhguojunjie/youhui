@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="../../css/basic.css" />
+<link type="text/css" rel="stylesheet" href="../../css/global.css" />
+<link type="text/css" rel="stylesheet" href="../../css/layout.css" />
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/layout.js"></script>
+<title>login</title>
+</head>
+<body>
+	<!-- 头部 开始 -->
+	<div class="w1190 head">
+		<div class="logo">
+			<h1><a href="#" title="互动推"><img alt="互动推" src="../../images/pc/hdt_logo.png" /></a></h1>
+			<div class="slogan"><span>专注移动社交互动广告</span></div>
+		</div>
+		<div class="nav">
+			<ul>
+				<li><a href="#"><em class="icon_home"></em>首页</a></li>
+				<li><a href="#"><em class="icon_ativ"></em>活动圈</a></li>
+				<li><a href="#"><em class="icon_plugin"></em>模版库</a></li>
+				<li><a href="#"><em class="icon_channel"></em>发布渠道</a></li>
+				<li><a href="#"><em class="icon_help"></em>帮助中心</a></li>
+				<li><a href="#"><em class="icon_agent"></em>加盟代理</a></li>
+				<li><a href="#">登录</a><strong>|</strong><a href="#">注册</a></li>
+				<!-- <li class="users_btn"><a href="#"><img src="../../images/avatar.jpg" />山间的风</a>（<a href="#">退出</a>）</li> -->
+			</ul>
+		</div>
+	</div>
+	<!-- 头部 结束 -->
+	<!-- 登录 开始 -->
+	<div class="w1190 login">
+		<div class="cont">
+			<h2>
+				<span>登录<em>登录后即可免费试用所有模板，新增配置活动，体验全部付费功能</em></span>
+				<!-- <strong>登录超时，请重新登录</strong> -->
+			</h2>
+			<form class="fl" onsubmit="return login()">
+				<div class="row">
+					<span>帐号</span>
+					<input class="username" type="text" placeholder="请输入邮箱" />
+				</div>
+				<div class="row">
+					<span>密码</span>
+					<input class="password" type="password" />
+					<div>
+						<label>
+							<input type="checkbox" />下次自动登录
+						</label>
+						<a href="#" class="forget">忘记密码</a>
+					</div>
+				</div>
+				<div class="row ">
+					<input type="submit" value="提 交" />
+				</div>
+				<p class="notice">老用户注意：新版QQ登录入口已关闭，无法登录请联系<a href="#">在线客服</a></p>
+			</form>
+			<!-- <div class="fl">
+				<h3>推荐：<span>（同微信公众号数据同步）</span></h3>
+				<div class="space_10"></div>
+				<dl>
+					<dt><a href="#">
+						<img src="../../images/wechat.png" />
+						<span>微信登录</span>
+					</a></dt>
+				</dl>
+			</div> -->
+			<dl class="fr">
+				<dd>
+					还没有互动推帐号？<a href="#">立即注册</a>
+				</dd>
+				<dd>
+					其他登录方式：
+				</dd>
+				<dt><a href="#">
+					<img src="../../images/wechat.png" />
+					<span>微信登录</span>
+				</a></dt>
+			</dl>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<!-- 登录 结束 -->
+	
+	<!-- 底部 开始 -->
+	<div class="w1190 foot">
+		<h2><a href="#">
+			<img alt="互动推" src="../../images/pc/hdt_logo.png" />
+			<span>专注移动社交互动广告</span>
+		</a></h2>
+		<p>
+			<a href="#">首页</a>
+			<em>|</em>
+			<a href="#">活动圈</a>
+			<em>|</em>
+			<a href="#">模板库</a>
+			<em>|</em>
+			<a href="#">发布渠道</a>
+			<em>|</em>
+			<a href="#">帮助中心</a>
+			<em>|</em>
+			<a href="#">渠道代理</a>
+			<em>|</em>
+			<a href="#">代理商登录</a>
+		</p>
+		<p>
+			<span>咨询电话：0592-7127103</span>
+			<span>QQ：888888888</span>
+			<span>邮箱：cs@tchajian.com</span>
+		</p>
+		<p>地址： 福建省厦门市思明区软件园二期望海路19号之二502室</p>
+		<p>Copyright © 2014 www.tchajian.com All Rights Reserved 有戏（厦门）网络科技有限公司&nbsp;&nbsp;闽ICP备14019370号</p>
+	</div>
+	<!-- 底部 结束 -->
+	<!-- 浮动菜单 开始 -->
+	<div class="float_menu">
+		<ul>
+			<li class="sliding">
+				<a><em class="phone_ico"></em><span>0592-7127103</span></a>
+			</li>
+			<li class="clear"></li>
+			<li class="sliding">
+				<a href="#"><em class="qq_ico"></em><span>点击QQ交谈</span></a>
+			</li>
+			<li class="clear"></li>
+			<li id="float_menucode">
+				<a href="#" class="sliding"><img src="../../images/pc/float_code.jpg"></a>
+			</li>
+			<li class="clear"></li>
+			<li class="gotop">
+				<a><em class="gotop_ico">返回顶部</em></a>
+			</li>
+		</ul>
+	</div>
+	<!-- 浮动菜单 结束 -->
+</body>
+</html>
+<script type="text/javascript">
+	function login(){
+		if(!$('.username').val() || !$('.password').val()){
+			alert("帐号密码不能为空！");
+			return false;
+		}else if(true){
+			alert("帐号密码有误！");
+			return false;
+		}else{
+			return true;
+		}
+	}
+
+	//回到顶部
+	$(function(){
+		$(".gotop").click(function(){
+			$("body,html").animate({scrollTop:0},300);
+		});
+		$(window).scroll(function(){
+			if($(window).scrollTop() > 10){
+				$('.gotop').attr("style","display:block;");
+			}else{
+				$('.gotop').attr("style","display:none;");
+			}
+		});
+	});
+</script>

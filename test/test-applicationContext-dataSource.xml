@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:aop="http://www.springframework.org/schema/aop"      
+xmlns:tx="http://www.springframework.org/schema/tx"      
+xmlns:context="http://www.springframework.org/schema/context"
+xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd" 
+default-lazy-init="true">
+   	 <context:annotation-config/>
+    <!-- 这里使用Spring自带的DriverManagerDataSource，实际开发产品应该使用具有连接持管理的DataSource等 -->
+  	
+  	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/taoplugin?useUnicode=true&amp;characterEncoding=utf8"/>
+        <property name="username" value="root"/>
+        <property name="password" value="root"/>
+    </bean>
+    
+	<!-- 使用annotation定义事务 -->
+	<tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true"/>
+
+	<aop:config>  
+        <aop:pointcut id="transactionPointCut" expression="execution(* com.yoxi.hudongtui.controllers.*.*(..))"/>  
+        <aop:advisor pointcut-ref="transactionPointCut" advice-ref="jdbcTxAdvice"/>  
+    </aop:config>	
+    
+    <!-- 定义事务传播属性 -->  
+    <tx:advice id="jdbcTxAdvice" transaction-manager="transactionManager">  
+        <tx:attributes>  
+            <tx:method name="get*" propagation="NOT_SUPPORTED" read-only="true"/>  
+            <tx:method name="add*" propagation="REQUIRED"/>  
+            <tx:method name="save*" propagation="REQUIRED"/>  
+            <tx:method name="update*" propagation="REQUIRED"/>  
+            <tx:method name="delete*" propagation="REQUIRED"/>  
+        </tx:attributes>  
+    </tx:advice>
+
+	<!-- JDBC事务管理器配置,单数据源事务 -->
+	<bean id="transactionManager"
+        class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+    
+	
+	<!-- service bean 免配置 ,service类需添加@Service标识 -->
+	<context:component-scan base-package="com.youxi.school.service.*" />
+	
+	<!-- 测试用支持jade的配置 -->
+	<bean id="jade.daoProcessor" class="net.paoding.rose.jade.core.JadeDaoProcessor" />
+
+	<bean id="jada.dataAccessProvider" class="net.paoding.rose.jade.provider.jdbctemplate.JdbcTemplateDataAccessProvider" />
+
+	<bean id="jade.expressSQLInterpreter" class="net.paoding.rose.jade.provider.jdbctemplate.ExpressSQLInterpreter" />	
+    
+
+</beans>

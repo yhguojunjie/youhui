@@ -1,0 +1,635 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="../../../css/bootstrap/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet" href="../../../css/bootstrap/daterangepicker.css" />
+<link type="text/css" rel="stylesheet" href="../../../css/basic.css" />
+<link type="text/css" rel="stylesheet" href="../../../css/global.css" />
+<link type="text/css" rel="stylesheet" href="../../../css/layout.css" />
+<link type="text/css" rel="stylesheet" href="../../../pluginres/css/pintu.css" />
+<script type="text/javascript" src="../../../js/jquery.js"></script>
+<script type="text/javascript" src="../../../js/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../../js/bootstrap/moment.min.js"></script>
+<script type="text/javascript" src="../../../js/bootstrap/daterangepicker.js"></script>
+<script type="text/javascript" src="../../../js/layout.js"></script>
+<script type="text/javascript" src="../../../js/pluginpublic.js"></script>
+<script type="text/javascript" src="../../../pluginres/js/pintu.js"></script>
+<title>拼图</title>
+</head>
+<body>
+	<!-- 头部 开始 -->
+	<div class="w1190 head">
+		<div class="logo">
+			<h1><a href="#">淘插件</a></h1>
+			<div class="slogan"><img src="../../../../images/slogan.png" /></div>
+		</div>
+		<div class="nav">
+			<ul>
+				<li><a href="#" class="active"><em class="icon_home"></em>首页</a></li>
+				<li><a href="#"><em class="icon_plugin"></em>我的淘插件</a></li>
+				<li><a href="#"><em class="icon_login"></em>山间的风</a></li>
+				<li><a href="#"><em class="icon_setup"></em>设置</a></li>
+				<li><a href="#"><em class="icon_exit"></em>退出</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- 头部 结束 -->
+	<!-- 内容 开始 -->
+	<div class="w1190 pintu">
+		<!-- 左侧内容 开始 -->
+		<div class="fl w840 main">
+			<div class="tab_title">
+				<a href="#" class="active">活动设置</a>
+				<a href="#">中奖记录</a>
+				<a href="#">排行榜</a>
+			</div>
+			<div class="cont">
+				<form onsubmit="return verify_submit()">
+					<h3><strong>基础设置</strong><span class="fold">收起</span></h3>
+					<div class="basic_config">
+						<div class="row">
+							<strong class="fl">活动名称：</strong>
+							<div class="fr">
+								<p>
+									<input class="verify_name w300" type="text" maxlength="10" placeholder="拼出奖品来" />
+								</p>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="row">
+							<strong class="fl space_15">活动图标：</strong>
+							<div class="fr">
+								<div class="preview"><img class="w80 h80" src="../../../pluginres/images/runman_ico.png" /></div>
+								<div class="upload_file">
+									<input type="text" />
+									<span><em class="ico_image"><!-- 图标 --></em>点击上传图片</span>
+								</div>
+								<b>建议尺寸：100*100（或等比），大小不超过50K。</b>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="row">
+							<strong class="fl">插入广告：</strong>
+							<div class="fr">
+								<p class="tab_ad">
+									<label class="active"><input type="radio" checked="checked" name="showad" />开启</label>
+									<label><input type="radio" name="showad" />关闭</label>
+									<b>展示在排行榜页</b>
+								</p>
+								<div class="ad_upcont space_10">
+									<div class="preview"><img class="w320 h50" src="../../../pluginres/images/ad.png" /></div>
+									<div class="upload_file">
+										<input type="text" />
+										<span><em class="ico_image"><!-- 图标 --></em>上传广告图</span>
+									</div>
+									<b>建议尺寸：640*100（或等比），大小不超过100K。</b>
+									<p>
+										<input class="w420" type="text" value="http://" />
+									</p>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="row">
+							<strong class="fl">分享内容设置：</strong>
+							<div class="fr">
+								<p>
+									<input class="verify_title w300" type="text" maxlength="25" placeholder="标题" value="标题" />
+									<b>分享到朋友圈仅显示标题，不显示简介</b>
+								</p>
+								<div class="space_10"><!-- 填充10像素间距 --></div>
+								<p>
+									<textarea class="verify_intro w300" maxlength="36" placeholder="简介">简介</textarea>
+									<b>发送给好友时既显示标题，也显示简介</b>
+								</p>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="row">
+							<strong class="fl">活动时间：</strong>
+							<div class="fr">
+								<div class="control-group">
+									<div class="controls">
+										<div class="input-append">
+											<input type="text" class="verify_time daterangepick input-xlarge w320" value="" />
+											<span class="add-on"><i class="icon-calendar"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<h3><strong>图库</strong><span class="fold">展开</span></h3>
+					<div class="imgs_config">
+						<!-- 图片1 开始 -->
+						<div class="pinimg">
+							<h4 class="pinimg_title"><strong>图片1</strong></h4>
+							<div class="row">
+								<div class="fr">
+									<div class="preview"><img class="w80 h80" src="../../../pluginres/images/pintu/pintu1.jpg" /></div>
+									<div class="upload_file">
+										<input type="text" />
+										<span><em class="ico_image"></em>选择图片</span>
+									</div>
+									<b>建议尺寸：100*100（或等比），大小不超过50K。</b>
+								</div>
+								<div class="clear"></div>
+							</div>
+						</div>
+						<!-- 图片1 结束 -->
+						<!-- 图片2 开始 -->
+						<div class="pinimg">
+							<h4 class="pinimg_title"><strong>图片2</strong><em class="close">╳</em></h4>
+							<div class="row">
+								<div class="fr">
+									<div class="preview"><img class="w80 h80" src="../../../pluginres/images/pintu/pintu1.jpg" /></div>
+									<div class="upload_file">
+										<input type="text" />
+										<span><em class="ico_image"></em>选择图片</span>
+									</div>
+									<b>建议尺寸：100*100（或等比），大小不超过50K。</b>
+								</div>
+								<div class="clear"></div>
+							</div>
+						</div>
+						<!-- 图片2 结束 -->
+						<!-- 图片3 开始 -->
+						<div class="pinimg">
+							<h4 class="pinimg_title"><strong>图片3</strong><em class="close">╳</em></h4>
+							<div class="row">
+								<div class="fr">
+									<div class="preview"><img class="w80 h80" src="../../../pluginres/images/pintu/pintu1.jpg" /></div>
+									<div class="upload_file">
+										<input type="text" />
+										<span><em class="ico_image"></em>选择图片</span>
+									</div>
+									<b>建议尺寸：100*100（或等比），大小不超过50K。</b>
+								</div>
+								<div class="clear"></div>
+							</div>
+						</div>
+						<!-- 图片3 结束 -->
+						<div class="add_pinimg">新增更多拼图</div>
+					</div>
+					<h3><strong>奖项设置</strong><span class="fold">展开</span></h3>
+					<div class="cont_config">
+						<div class="row">
+							<strong class="fl w220">是否显示奖品的"显示数量"：</strong>
+							<div class="fr w560">
+								<p>
+									<label class="active"><input type="radio" checked="checked" name="gift_num" />是</label>&nbsp;&nbsp;
+									<label><input type="radio" name="gift_num" />否</label>
+								</p>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<!-- 一等奖 开始 -->
+						<div class="screen">
+							<h4 class="screen_title"><strong>1等奖</strong></h4>
+							<div class="row">
+								<strong class="fl">奖品名称：</strong>
+								<div class="fr">
+									<p>
+										<input class="verify_prizename w300" type="text" maxlength="50" value="iPhone 6" />
+									</p>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div class="row">
+								<strong class="fl">显示数量：</strong>
+								<div class="fr">
+									<p>
+										<input class="verify_num w80" type="text" value="3" />
+										<b>只用于前端展示</b>
+									</p>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div class="row">
+								<strong class="fl">实际数量：</strong>
+								<div class="fr">
+									<p>
+										<input class="verify_num w80" type="text" value="0" />
+										<b>发完即止</b>
+									</p>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div class="row">
+								<strong class="fl space_15">奖品图片：</strong>
+								<div class="fr">
+									<div class="preview"><img class="w80 h80" src="../../../pluginres/images/giftbox_ico.png" /></div>
+									<div class="upload_file">
+										<input type="text" />
+										<span><em class="ico_image"></em>选择图片</span>
+									</div>
+									<b>建议尺寸：100*100（或等比），大小不超过50K。</b>
+								</div>
+								<div class="clear"></div>
+							</div>
+						</div>
+						<!-- 一等奖 结束 -->
+						<!-- 二等奖 开始 -->
+						<div class="screen">
+							<h4 class="screen_title"><strong>2等奖</strong><em class="close">╳</em></h4>
+							<div class="row">
+								<strong class="fl">奖品名称：</strong>
+								<div class="fr">
+									<p>
+										<input class="verify_prizename w300" type="text" maxlength="50" value="iPhone 6" />
+									</p>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div class="row">
+								<strong class="fl">显示数量：</strong>
+								<div class="fr">
+									<p>
+										<input class="verify_num w80" type="text" value="3" />
+										<b>只用于前端展示</b>
+									</p>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div class="row">
+								<strong class="fl">实际数量：</strong>
+								<div class="fr">
+									<p>
+										<input class="verify_num w80" type="text" value="0" />
+										<b>发完即止</b>
+									</p>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div class="row">
+								<strong class="fl space_15">奖品图片：</strong>
+								<div class="fr">
+									<div class="preview"><img class="w80 h80" src="../../../pluginres/images/giftbox_ico.png" /></div>
+									<div class="upload_file">
+										<input type="text" />
+										<span><em class="ico_image"></em>选择图片</span>
+									</div>
+									<b>建议尺寸：100*100（或等比），大小不超过50K。</b>
+								</div>
+								<div class="clear"></div>
+							</div>
+						</div>
+						<!-- 二等奖 结束 -->
+						<!-- 三等奖 开始 -->
+						<div class="screen">
+							<h4 class="screen_title"><strong>3等奖</strong><em class="close">╳</em></h4>
+							<div class="row">
+								<strong class="fl">奖品名称：</strong>
+								<div class="fr">
+									<p>
+										<input class="verify_prizename w300" type="text" maxlength="50" value="iPhone 6" />
+									</p>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div class="row">
+								<strong class="fl">显示数量：</strong>
+								<div class="fr">
+									<p>
+										<input class="verify_num w80" type="text" value="3" />
+										<b>只用于前端展示</b>
+									</p>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div class="row">
+								<strong class="fl">实际数量：</strong>
+								<div class="fr">
+									<p>
+										<input class="verify_num w80" type="text" value="0" />
+										<b>发完即止</b>
+									</p>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div class="row">
+								<strong class="fl space_15">奖品图片：</strong>
+								<div class="fr">
+									<div class="preview"><img class="w80 h80" src="../../../pluginres/images/giftbox_ico.png" /></div>
+									<div class="upload_file">
+										<input type="text" />
+										<span><em class="ico_image"></em>选择图片</span>
+									</div>
+									<b>建议尺寸：100*100（或等比），大小不超过50K。</b>
+								</div>
+								<div class="clear"></div>
+							</div>
+						</div>
+						<!-- 三等奖 结束 -->
+						<div class="add_screen">新增更多奖项</div>
+					</div>
+					<h3><strong>活动设置</strong><span class="fold">展开</span></h3>
+					<div class="act_config">
+						<div class="row">
+							<strong class="fl w220">拼图关数：</strong>
+							<div class="fr w560">
+								<p>
+									<input class="verify_num w80 checkpoint" type="text" value="3" />
+									<b>不能大于图库图片数量，每次游戏从图库中随机抽取</b>
+								</p>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="row">
+							<strong class="fl w220">游戏倒计时：</strong>
+							<div class="fr w560">
+								<p>
+									<input class="verify_num w80" type="text" value="60" />
+									<b>秒</b>
+								</p>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="row">
+							<strong class="fl w220">每人每天最多游戏次数：</strong>
+							<div class="fr w560">
+								<p>
+									<input class="verify_num w80 game_count" type="text" value="3" />
+									<b>首次游戏系统将提示用户分享朋友圈</b>
+								</p>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="row">
+							<strong class="fl w220">活动规则：</strong>
+							<div class="fr w560">
+								<p class="actrule_msgbox">
+									<textarea class="verify_rule w430 h120">• 活动时间：2014/10/29 10:27 至 2014/11/29 10:27。
+• 活动结束后按排行榜名次依次发奖，赶快刷榜吧！
+(插件演示，纯属体验，不予兑奖！)</textarea>
+								</p>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="row">
+							<strong class="fl w220">兑奖说明：</strong>
+							<div class="fr w560">
+								<p>
+									<input class="verify_contact w420" type="text" value="请填写以下：(插件演示，纯属体验，不予兑奖！)" maxlength="50" />
+									<b>用户兑奖时显示</b>
+								</p>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="row">
+							<strong class="fl w220">用户信息：</strong>
+							<div class="fr w560">
+								<p>
+									<label><input type="checkbox" checked="checked" disabled="disabled" />手机号</label>
+									<label><input type="checkbox" checked="checked" disabled="disabled" />姓名</label>
+									<label class="need_usermsg"><input value="mail," type="checkbox" />邮寄地址</label>
+									<label class="need_usermsg"><input value="qq," type="checkbox" />QQ</label>
+									<label class="need_usermsg"><input value="wechat," type="checkbox" />微信号</label>
+									<label class="need_usermsg">
+										<input class="need_other" value="other:" type="checkbox" />其他
+										<input type="text" class="other w80" />
+									</label>
+									<input type="hidden" value="" />
+								</p>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<h3><strong>自定义风格</strong><span class="fold">展开</span></h3>
+					<div class="custom_config">
+						<div class="row">
+							<strong class="fl w220">封面：</strong>
+							<div class="fr w560">
+								<div class="preview"><img class="w160 h240" src="http://121.40.19.134:29099/group1/M00/00/0A/eSgThlSetFWAEYXAAAGrFoad0TM063.jpg"></div>
+								<div class="upload_file">
+									<input type="text" class="fileuploadclass" name="bgUrl" value="group1/M00/00/0A/eSgThlSetFWAEYXAAAGrFoad0TM063.jpg">
+									<span><em class="ico_image"><!-- 图标 --></em>选择背景</span>
+								</div>
+								<b>建议尺寸：640*960（或等比），大小不超过200K。</b>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="fr">
+							<p>
+								<input type="submit" value="提 交" />
+							</p>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- 左侧内容 结束 -->
+		<!-- 右侧内容 开始 -->
+		<div class="fr w320 side">
+			<div class="service_box">
+				<h3>配置太麻烦？我们来帮您</h3>
+				<p>您可以拨打：<em>400-188-6666</em></p>
+				<p>服务时间段：<em>09:00—23:00</em></p>
+				<a href="#" class="btn">联系在线客服</a>
+				<div class="clear"></div>
+			</div>
+			<h4 class="tr">
+				<strong class="fl">界面预览</strong>
+				<a href="#" class="btn_refresh">刷新</a>
+			</h4>
+			<div class="cont">
+				<!-- 这里放手机端嵌入页面连接 -->
+				<iframe width="320" height="400" scrolling="no" src="../../../../images/banner.jpg"></iframe>
+			</div>
+		</div>
+		<!-- 右侧内容 结束 -->
+		<div class="clear"></div>
+	</div>
+	<!-- 内容 结束 -->
+	<!-- 底部 开始 -->
+	<div class="w1190 foot">
+		<h2><a href="#">淘插件-营销推广插件超市</a></h2>
+		<p>Opyright © 2014 WWW.GIFTGAME.CN All Rights Reserved 有戏（厦门）网络科技有限公司版权所有 闽ICP备14019370号</p>
+	</div>
+	<!-- 底部 结束 -->
+</body>
+</html>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//表单字段验证
+		$('.verify_name').eq(0).blur(function(){
+			if(!verify($(this).val(),'')){
+				insertNotice($(this),"请输入活动名称");
+				$(this).attr("verify","false");
+				return false;
+			}else{
+				insertNotice($(this),"");
+				$(this).attr("verify","true");
+				return true;
+			}
+		});
+		$(document).on("blur",".verify_prizename",function(){
+			if(!verify($(this).val(),'')){
+				insertNotice($(this),"请输入奖品名称");
+				$(this).attr("verify","false");
+				return false;
+			}else{
+				insertNotice($(this),"");
+				$(this).attr("verify","true");
+				return true;
+			}
+		});
+		$(document).on("blur",".verify_num",function(){
+			if($(this).val()){
+				if(!verify($(this).val(),'number')){
+					insertNotice($(this),"请输入正确格式");
+					$(this).attr("verify","false");
+					return false;
+				}else{
+					insertNotice($(this),"");
+					$(this).attr("verify","true");
+					return true;
+				}
+			}else{
+				insertNotice($(this),"请输入数字");
+				$(this).attr("verify","false");
+				return false;
+			}
+		});
+		$('.verify_title').blur(function(){
+			if(!verify($(this).val(),'')){
+				insertNotice($(this),"请输入分享标题");
+				$(this).attr("verify","false");
+				return false;
+			}else{
+				insertNotice($(this),"");
+				$(this).attr("verify","true");
+				return true;
+			}
+		});
+		$('.verify_intro').blur(function(){
+			if(!verify($(this).val(),'')){
+				insertNotice($(this),"请输入活动简介");
+				$(this).attr("verify","false");
+				return false;
+			}else{
+				insertNotice($(this),"");
+				$(this).attr("verify","true");
+				return true;
+			}
+		});
+		$('.verify_time').blur(function(){
+			if(!verify($(this).val(),'')){
+				insertNotice($(this),"请选择时间");
+				$(this).attr("verify","false");
+				return false;
+			}else{
+				insertNotice($(this),"");
+				$(this).attr("verify","true");
+				return true;
+			}
+		});
+		$('.verify_rule').blur(function(){
+			if(!verify($(this).val(),'')){
+				insertNotice($(this),"请输入活动规则");
+				$(this).attr("verify","false");
+				return false;
+			}else{
+				insertNotice($(this),"");
+				$(this).attr("verify","true");
+				return true;
+			}
+		});
+		$('.verify_contact').blur(function(){
+			if(!verify($(this).val(),'')){
+				insertNotice($(this),"请输入兑奖说明");
+				$(this).attr("verify","false");
+				return false;
+			}else{
+				insertNotice($(this),"");
+				$(this).attr("verify","true");
+				return true;
+			}
+		});
+		$(document).on("blur",".checkpoint",function(){
+			if($(this).val() > $('.imgs_config .pinimg').length){
+				insertNotice($(this),"关数过多");
+				$(this).attr("verify","false");
+				return false;
+			}else{
+				insertNotice($(this),"");
+				$(this).attr("verify","true");
+				return true;
+			}
+		});
+		$('.verify_url').blur(function(){
+			if($(this).val()){
+				if(!verify($(this).val(),'url')){
+				insertNotice($(this),"请输入正确的URL格式");
+				$(this).attr("verify","false");
+				return false;
+			}else{
+				insertNotice($(this),"");
+				$(this).attr("verify","true");
+				return true;
+			}
+			}else{
+				insertNotice($(this),"");
+				$(this).attr("verify","true");
+				return true;
+			}
+		});
+		
+	});
+
+	//用户信息抓取1
+	$(document).ready(function(){
+		$('.need_usermsg input[type="checkbox"]').change(function(){
+			if($(this).attr("class") == "need_other"){
+				if($(this).prop("checked") == true){
+					$('.need_usermsg input[type="text"]').attr("style","display:inline-block;");
+				}else{
+					$('.need_usermsg input[type="text"]').attr("style","display:none;");
+					$('.need_usermsg input[type="text"]').val('');
+				}
+			}
+		});
+	});
+	//提交表单前端验证
+	function verify_submit(){
+		//用户信息抓取2
+		var str = '';
+		$('.need_usermsg').each(function(){
+			if( $(this).find('input[type="checkbox"]').prop("checked") == true){
+				str += $(this).find('input[type="checkbox"]').val();
+			}
+		});
+		str += $('.need_usermsg input[type="text"]').val();
+		// alert(str);
+
+		//提交前验证
+		var verify = 0;
+		$('input[type="text"]').each(function(){
+			$(this).blur();
+			if($(this).attr("verify") == "false"){
+				verify += 1;
+			}
+		});
+		$('textarea').each(function(){
+			$(this).blur();
+			if($(this).attr("verify") == "false"){
+				verify += 1;
+			}
+		});
+		
+		if(verify > 0){
+			$('.pintu .main .cont .imgs_config,.pintu .main .cont .cont_config,.pintu .main .cont .act_config,.pintu .main .cont .custom_config').attr("style","display:block;");	
+			$('.pintu .main .cont h3 span').text("收起");
+			return false;
+		}else{
+			return true;
+		}
+	}
+
+</script>

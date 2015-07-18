@@ -1,0 +1,666 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="../../../css/bootstrap/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet" href="../../../css/bootstrap/daterangepicker.css" />
+<link type="text/css" rel="stylesheet" href="../../../css/basic.css" />
+<link type="text/css" rel="stylesheet" href="../../../css/global.css" />
+<link type="text/css" rel="stylesheet" href="../../../css/layout.css" />
+<link type="text/css" rel="stylesheet" href="../../../pluginres/css/microscene.css">
+<script type="text/javascript" src="../../../js/jquery.js"></script>
+<script type="text/javascript" src="../../../js/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../../js/bootstrap/moment.min.js"></script>
+<script type="text/javascript" src="../../../js/bootstrap/daterangepicker.js"></script>
+<script type="text/javascript" src="../../../js/layout.js"></script>
+<script type="text/javascript" src="../../../js/pluginpublic.js"></script>
+<script type="text/javascript" src="../../../pluginres/js/microscene.js"></script>
+<title>微场景</title>
+</head>
+<body>
+	<!-- 头部 开始 -->
+	<div class="w1190 head">
+		<div class="logo">
+			<h1><a href="#">淘插件</a></h1>
+			<div class="slogan"><img src="../../../images/slogan.png" /></div>
+		</div>
+		<div class="nav">
+			<ul>
+				<li><a href="#" class="active"><em class="icon_home"></em>首页</a></li>
+				<li><a href="#"><em class="icon_plugin"></em>我的淘插件</a></li>
+				<li><a href="#"><em class="icon_login"></em>山间的风</a></li>
+				<li><a href="#"><em class="icon_setup"></em>设置</a></li>
+				<li><a href="#"><em class="icon_exit"></em>退出</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- 头部 结束 -->
+	<!-- 内容 开始 -->
+	<div class="w1190 microscene">
+		<!-- 左侧内容 开始 -->
+		<div class="fl w840 main">
+			<div class="tab_title">
+				<span class="active">活动设置</span>
+				<span>中奖记录</span>
+				<span>排行榜</span>
+			</div>
+			<div class="cont">
+				<form onsubmit="return verify_submit()">
+					<h3><strong>基础设置</strong><span class="fold">收起</span></h3>
+					<div class="basic_config">
+						<div class="row">
+							<strong class="fl">活动名称：</strong>
+							<div class="fr">
+								<p>
+									<input class="verify_name w300" type="text" maxlength="10" placeholder="淘插件-微信营销互动插件平台" />
+								</p>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="row">
+							<strong class="fl space_10">活动封面：</strong>
+							<div class="fr">
+								<div class="preview"><img class="imghead" src="../../../images/default_bg.jpg" /></div>
+								<div class="upload_file">
+									<input type="file" onchange="previewImages(this)" />
+									<span><em class="ico_image"><!-- 图标 --></em>点击上传图片</span>
+								</div>
+								<em>建议尺寸：宽100像素，高100像素或等比图片，大小不超过50K。</em>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="row">
+							<strong class="fl">分享内容设置：</strong>
+							<div class="fr">
+								<p>
+									<input class="verify_title w300" type="text" placeholder="标题" value="标题" />
+									<em>分享到朋友圈仅显示标题，不显示简介</em>
+								</p>
+								<div class="space_10"><!-- 填充10像素间距 --></div>
+								<p>
+									<textarea class="verify_intro w300" maxlength="36" placeholder="简介">简介</textarea>
+									<em>发送给好友时既显示标题，也显示简介</em>
+								</p>
+								<div class="space_10"><!-- 填充10像素间距 --></div>
+								<p>
+									<input class="verify_url w420" type="text" placeholder="分享成功后自动跳转链接" />
+									<em>不填写则不跳转</em>
+								</p>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="row">
+							<strong class="fl">活动时间：</strong>
+							<div class="fr">
+								<div class="control-group">
+									<div class="controls">
+										<div class="input-append">
+											<input type="text" class="daterangepick input-xlarge w320" value="" />
+											<span class="add-on"><i class="icon-calendar"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<h3><strong>内容设置</strong><span class="fold">展开</span></h3>
+					<div class="cont_config">
+						<!-- 画面一 开始 -->
+						<div class="screen">
+							<h4 class="screen_title"><strong>画面1</strong></h4>
+							<div class="cont_style">
+								<strong class="fl">样式：</strong>
+								<div class="fr">
+									<p>
+										<select class="w200">
+											<option value="1" selected="selected">刮卡图片式</option>
+											<option value="0">纯图片式</option>
+											<option value="2">带按钮图片式</option>
+											<option value="3">带视频链接式</option>
+										</select>
+									</p>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div class="tab_cont">
+								<div class="style_image hide">
+									<div class="row">
+										<strong class="fl space_10">内容：</strong>
+										<div class="fr">
+											<div class="preview"><img class="imghead" src="../../../images/default_bg.jpg" /></div>
+											<div class="upload_file">
+												<input type="file" onchange="previewImages(this)" />
+												<span><em class="ico_image"><!-- 图标 --></em>点击上传图片</span>
+											</div>
+											<em>建议尺寸：宽640像素，高960像素或等比图片</em>
+										</div>
+										<div class="clear"></div>
+									</div>
+								</div>
+								<div class="style_card hide" id="show">
+									<div class="row">
+										<strong class="fl space_10">覆盖图：</strong>
+										<div class="fr">
+											<div class="preview"><img class="imghead" src="../../../images/default_bg.jpg" /></div>
+											<div class="upload_file">
+												<input type="file" onchange="previewImages(this)" />
+												<span><em class="ico_card"><!-- 图标 --></em>点击上传图片</span>
+											</div>
+											<em>建议尺寸：宽640像素，高960像素或等比图片</em>
+										</div>
+										<div class="clear"></div>
+									</div>
+									<div class="row">
+										<strong class="fl space_10">底图：</strong>
+										<div class="fr">
+											<div class="preview"><img class="imghead" src="../../../images/default_bg.jpg" /></div>
+											<div class="upload_file">
+												<input type="file" onchange="previewImages(this)" />
+												<span><em class="ico_image"><!-- 图标 --></em>点击上传图片</span>
+											</div>
+											<em>建议尺寸：宽640像素，高960像素或等比图片</em>
+										</div>
+										<div class="clear"></div>
+									</div>
+								</div>
+								<div class="style_button hide">
+									<div class="row">
+										<strong class="fl space_10">内容：</strong>
+										<div class="fr">
+											<div class="preview"><img class="imghead" src="../../../images/default_bg.jpg" /></div>
+											<div class="upload_file">
+												<input type="file" onchange="previewImages(this)" />
+												<span><em class="ico_image"><!-- 图标 --></em>点击上传图片</span>
+											</div>
+											<em>建议尺寸：宽640像素，高960像素或等比图片</em>
+										</div>
+										<div class="clear"></div>
+									</div>
+									<div class="row">
+										<strong class="fl space_10">按钮：</strong>
+										<div class="fr">
+											<div class="preview"><img class="imghead btn" src="../../../images/default_btn.png" /></div>
+											<div class="upload_file">
+												<input type="file" onchange="previewImages(this)" />
+												<span><em class="ico_button"><!-- 图标 --></em>上传按钮图片</span>
+											</div>
+										</div>
+										<div class="clear"></div>
+									</div>
+									<div class="row">
+										<strong class="fl">按钮位置：</strong>
+										<div class="fr">
+											<p>
+												<select class="w200">
+													<option>靠上</option>
+												</select>
+											</p>
+										</div>
+										<div class="clear"></div>
+									</div>
+									<div class="row">
+										<strong class="fl">图文外链类型：</strong>
+										<div class="fr">
+											<p>
+												<select class="w200">
+													<option value="0" selected="selected">链接</option>
+													<option value="1">电话</option>
+												</select>
+											</p>
+										</div>
+										<div class="clear"></div>
+									</div>
+									<div class="row">
+										<strong class="fl">页面URL：</strong>
+										<div class="fr">
+											<p>
+												<input class="w320" type="text" />
+												<em>必填，请您填写正确的URL格式。</em>
+											</p>
+										</div>
+										<div class="clear"></div>
+									</div>
+								</div>
+								<div class="style_video hide">
+									<div class="row">
+										<strong class="fl space_10">内容：</strong>
+										<div class="fr">
+											<div class="preview"><img class="imghead" src="../../../images/default_bg.jpg" /></div>
+											<div class="upload_file">
+												<input type="file" onchange="previewImages(this)" />
+												<span><em class="ico_image"><!-- 图标 --></em>点击上传图片</span>
+											</div>
+											<em>建议尺寸：宽640像素，高960像素或等比图片</em>
+										</div>
+										<div class="clear"></div>
+									</div>
+									<div class="row">
+										<strong class="fl">按钮样式：</strong>
+										<div class="fr">
+											<p>
+												<select class="w200">
+													<option>绿色特效播放按钮</option>
+												</select>
+											</p>
+										</div>
+										<div class="clear"></div>
+									</div>
+									<div class="row">
+										<strong class="fl">视频链接地址：</strong>
+										<div class="fr">
+											<p>
+												<input class="w420" type="text" />
+												<em>暂时只支持MP4、ogv、webm格式，视频链接格式为http://您的域名/视频文件名.mp4(或ogv/webm)</em>
+											</p>
+										</div>
+										<div class="clear"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 画面一 结束 -->
+						<!-- 画面二 开始 -->
+						<div class="screen">
+							<h4 class="screen_title"><strong>画面2</strong><em class="close">╳</em></h4>
+							<div class="cont_style">
+								<strong class="fl">样式：</strong>
+								<div class="fr">
+									<p>
+										<select class="w200">
+											<option value="0" selected="selected">纯图片式</option>
+											<option value="1">带按钮图片式</option>
+											<option value="2">带视频链接式</option>
+										</select>
+									</p>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div class="tab_cont">
+								<div class="style_image hide" id="show">
+									<div class="row">
+										<strong class="fl space_10">内容：</strong>
+										<div class="fr">
+											<div class="preview"><img class="imghead" src="../../../images/default_bg.jpg" /></div>
+											<div class="upload_file">
+												<input type="file" onchange="previewImages(this)" />
+												<span><em class="ico_image"><!-- 图标 --></em>点击上传图片</span>
+											</div>
+											<em>建议尺寸：宽640像素，高960像素或等比图片</em>
+										</div>
+										<div class="clear"></div>
+									</div>
+								</div>
+								<div class="style_button hide">
+									<div class="row">
+										<strong class="fl space_10">内容：</strong>
+										<div class="fr">
+											<div class="preview"><img class="imghead" src="../../../images/default_bg.jpg" /></div>
+											<div class="upload_file">
+												<input type="file" onchange="previewImages(this)" />
+												<span><em class="ico_image"><!-- 图标 --></em>点击上传图片</span>
+											</div>
+											<em>建议尺寸：宽640像素，高960像素或等比图片</em>
+										</div>
+										<div class="clear"></div>
+									</div>
+									<div class="row">
+										<strong class="fl space_10">按钮：</strong>
+										<div class="fr">
+											<div class="preview"><img class="imghead btn" src="../../../images/default_btn.png" /></div>
+											<div class="upload_file">
+												<input type="file" onchange="previewImages(this)" />
+												<span><em class="ico_button"><!-- 图标 --></em>上传按钮图片</span>
+											</div>
+										</div>
+										<div class="clear"></div>
+									</div>
+									<div class="row">
+										<strong class="fl">按钮位置：</strong>
+										<div class="fr">
+											<p>
+												<select class="w200">
+													<option>靠上</option>
+												</select>
+											</p>
+										</div>
+										<div class="clear"></div>
+									</div>
+									<div class="row">
+										<strong class="fl">图文外链类型：</strong>
+										<div class="fr">
+											<p>
+												<select class="w200">
+													<option value="0" selected="selected">链接</option>
+													<option value="1">电话</option>
+												</select>
+											</p>
+										</div>
+										<div class="clear"></div>
+									</div>
+									<div class="row">
+										<strong class="fl">页面URL：</strong>
+										<div class="fr">
+											<p>
+												<input class="w320" type="text" />
+												<em>必填，请您填写正确的URL格式。</em>
+											</p>
+										</div>
+										<div class="clear"></div>
+									</div>
+								</div>
+								<div class="style_video hide">
+									<div class="row">
+										<strong class="fl space_10">内容：</strong>
+										<div class="fr">
+											<div class="preview"><img class="imghead" src="../../../images/default_bg.jpg" /></div>
+											<div class="upload_file">
+												<input type="file" onchange="previewImages(this)" />
+												<span><em class="ico_image"><!-- 图标 --></em>点击上传图片</span>
+											</div>
+											<em>建议尺寸：宽640像素，高960像素或等比图片</em>
+										</div>
+										<div class="clear"></div>
+									</div>
+									<div class="row">
+										<strong class="fl">按钮样式：</strong>
+										<div class="fr">
+											<p>
+												<select class="w200">
+													<option>绿色特效播放按钮</option>
+												</select>
+											</p>
+										</div>
+										<div class="clear"></div>
+									</div>
+									<div class="row">
+										<strong class="fl">视频链接地址：</strong>
+										<div class="fr">
+											<p>
+												<input class="w420" type="text" />
+												<em>暂时只支持MP4、ogv、webm格式，视频链接格式为http://您的域名/视频文件名.mp4(或ogv/webm)</em>
+											</p>
+										</div>
+										<div class="clear"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 画面二 结束 -->
+						<!-- 画面三 开始 -->
+						<div class="screen">
+							<h4 class="screen_title"><strong>画面3</strong><em class="close">╳</em></h4>
+							<div class="cont_style">
+								<strong class="fl">样式：</strong>
+								<div class="fr">
+									<p>
+										<select class="w200">
+											<option value="0" selected="selected">纯图片式</option>
+											<option value="1">带按钮图片式</option>
+											<option value="2">带视频链接式</option>
+										</select>
+									</p>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div class="tab_cont">
+								<div class="style_image hide" id="show">
+									<div class="row">
+										<strong class="fl space_10">内容：</strong>
+										<div class="fr">
+											<div class="preview"><img class="imghead" src="../../../images/default_bg.jpg" /></div>
+											<div class="upload_file">
+												<input type="file" onchange="previewImages(this)" />
+												<span><em class="ico_image"><!-- 图标 --></em>点击上传图片</span>
+											</div>
+											<em>建议尺寸：宽640像素，高960像素或等比图片</em>
+										</div>
+										<div class="clear"></div>
+									</div>
+								</div>
+								<div class="style_button hide">
+									<div class="row">
+										<strong class="fl space_10">内容：</strong>
+										<div class="fr">
+											<div class="preview"><img class="imghead" src="../../../images/default_bg.jpg" /></div>
+											<div class="upload_file">
+												<input type="file" onchange="previewImages(this)" />
+												<span><em class="ico_image"><!-- 图标 --></em>点击上传图片</span>
+											</div>
+											<em>建议尺寸：宽640像素，高960像素或等比图片</em>
+										</div>
+										<div class="clear"></div>
+									</div>
+									<div class="row">
+										<strong class="fl space_10">按钮：</strong>
+										<div class="fr">
+											<div class="preview"><img class="imghead btn" src="../../../images/default_btn.png" /></div>
+											<div class="upload_file">
+												<input type="file" onchange="previewImages(this)" />
+												<span><em class="ico_button"><!-- 图标 --></em>上传按钮图片</span>
+											</div>
+										</div>
+										<div class="clear"></div>
+									</div>
+									<div class="row">
+										<strong class="fl">按钮位置：</strong>
+										<div class="fr">
+											<p>
+												<select class="w200">
+													<option>靠上</option>
+												</select>
+											</p>
+										</div>
+										<div class="clear"></div>
+									</div>
+									<div class="row">
+										<strong class="fl">图文外链类型：</strong>
+										<div class="fr">
+											<p>
+												<select class="w200">
+													<option value="0" selected="selected">链接</option>
+													<option value="1">电话</option>
+												</select>
+											</p>
+										</div>
+										<div class="clear"></div>
+									</div>
+									<div class="row">
+										<strong class="fl">页面URL：</strong>
+										<div class="fr">
+											<p>
+												<input class="w320" type="text" />
+												<em>必填，请您填写正确的URL格式。</em>
+											</p>
+										</div>
+										<div class="clear"></div>
+									</div>
+								</div>
+								<div class="style_video hide">
+									<div class="row">
+										<strong class="fl space_10">内容：</strong>
+										<div class="fr">
+											<div class="preview"><img class="imghead" src="../../../images/default_bg.jpg" /></div>
+											<div class="upload_file">
+												<input type="file" onchange="previewImages(this)" />
+												<span><em class="ico_image"><!-- 图标 --></em>点击上传图片</span>
+											</div>
+											<em>建议尺寸：宽640像素，高960像素或等比图片</em>
+										</div>
+										<div class="clear"></div>
+									</div>
+									<div class="row">
+										<strong class="fl">按钮样式：</strong>
+										<div class="fr">
+											<p>
+												<select class="w200">
+													<option>绿色特效播放按钮</option>
+												</select>
+											</p>
+										</div>
+										<div class="clear"></div>
+									</div>
+									<div class="row">
+										<strong class="fl">视频链接地址：</strong>
+										<div class="fr">
+											<p>
+												<input class="w420" type="text" />
+												<em>暂时只支持MP4、ogv、webm格式，视频链接格式为http://您的域名/视频文件名.mp4(或ogv/webm)</em>
+											</p>
+										</div>
+										<div class="clear"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 画面三 结束 -->
+						<div class="add_screen">新增更多画面</div>
+					</div>
+					<h3><strong>场景设置</strong><span class="fold">展开</span></h3>
+					<div class="scene_config">
+						<div class="row">
+							<strong class="fl">微场景效果：</strong>
+							<div class="fr">
+								<p>
+									<select class="w200">
+										<option>左右滑动</option>
+									</select>
+								</p>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="row">
+							<strong class="fl">背景音乐：</strong>
+							<div class="fr">
+								<p class="tab_music">
+									<label class="active"><input type="radio" name="music" checked="checked" />开启</label>
+									<label><input type="radio" name="music" />关闭</label>
+								</p>
+								<div class="music_upcont">
+									<i id="bgmusic_name">背景音乐名</i>
+									<div class="upload_file">
+										<input type="file" />
+										<span><em class="ico_audio"><!-- 图标 --></em>点击上传音乐</span>
+									</div>
+									<em>为保证浏览网页的加载速度，上传音乐最大为3MB</em>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="row">
+							<strong class="fl">音乐图标及效果：</strong>
+							<div class="fr">
+								<p>
+									<select class="w200">
+										<option>音阶效果</option>
+									</select>
+								</p>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="fr">
+							<p>
+								<input type="submit" value="提 交" />
+							</p>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- 左侧内容 结束 -->
+		<!-- 右侧内容 开始 -->
+		<div class="fr w320 side">
+			<div class="service_box">
+				<h3>配置太麻烦？我们来帮您</h3>
+				<p>您可以拨打：<em>400-188-6666</em></p>
+				<p>服务时间段：<em>09:00—23:00</em></p>
+				<a href="#" class="btn">联系在线客服</a>
+				<div class="clear"></div>
+			</div>
+			<h4 class="tr">
+				<strong class="fl">界面预览</strong>
+				<a href="#" class="btn_refresh">刷新</a>
+			</h4>
+			<div class="cont">
+				<!-- 这里放手机端嵌入页面连接 -->
+				<iframe width="320" height="400" scrolling="no" src="../../../images/banner.jpg"></iframe>
+			</div>
+		</div>
+		<!-- 右侧内容 结束 -->
+		<div class="clear"></div>
+	</div>
+	<!-- 内容 结束 -->
+	<!-- 底部 开始 -->
+	<div class="w1190 foot">
+		<h2><a href="#">淘插件-营销推广插件超市</a></h2>
+		<p>Opyright © 2014 WWW.GIFTGAME.CN All Rights Reserved 有戏（厦门）网络科技有限公司版权所有 闽ICP备14019370号</p>
+	</div>
+	<!-- 底部 结束 -->
+</body>
+</html>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//表单字段验证
+		$('.verify_name').blur(function(){
+			if(!verify($(this).val(),'')){
+				insertNotice($(this),"请输入活动名称");
+				$(this).attr("verify","false");
+				return false;
+			}else{
+				insertNotice($(this),"");
+				$(this).attr("verify","true");
+				return true;
+			}
+		});
+		$('.verify_title').blur(function(){
+			if(!verify($(this).val(),'')){
+				insertNotice($(this),"请输入分享标题");
+				$(this).attr("verify","false");
+				return false;
+			}else{
+				insertNotice($(this),"分享到朋友圈仅显示标题，不显示简介");
+				$(this).attr("verify","true");
+				return true;
+			}
+		});
+		$('.verify_intro').blur(function(){
+			if(!verify($(this).val(),'')){
+				insertNotice($(this),"请输入活动名称");
+				$(this).attr("verify","false");
+				return false;
+			}else{
+				insertNotice($(this),"发送给好友时既显示标题，也显示简介");
+				$(this).attr("verify","true");
+				return true;
+			}
+		});
+		$('.verify_url').blur(function(){
+			if($(this).val()){
+				if(!verify($(this).val(),'url')){
+				insertNotice($(this),"请输入正确的URL格式");
+				$(this).attr("verify","false");
+				return false;
+			}else{
+				insertNotice($(this),"不填写则不跳转");
+				$(this).attr("verify","true");
+				return true;
+			}
+			}else{
+				insertNotice($(this),"");
+				$(this).attr("verify","true");
+				return true;
+			}
+		});
+	});
+	//提交表单前端验证
+	function verify_submit(){
+		if($('.verify_name').blur().attr("verify") != "false" && $('.verify_title').blur().attr("verify") != "false" && $('.verify_intro').blur().attr("verify") != "false" && $('.verify_url').blur().attr("verify") != "false"){
+			return true;
+		}else{
+			return false;
+		}
+	}
+</script>

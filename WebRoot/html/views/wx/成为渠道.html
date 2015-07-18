@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no">
+<title>成为渠道</title>
+<link rel="stylesheet" href="../../css/wx/layout.css">
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/wx/touchslide.js"></script>
+<script type="text/javascript" src="../../js/wx/layout.js"></script>
+</head>
+<body>
+	<!-- 成为渠道 开始 -->
+	<div class="space_15"></div>
+	<article class="wrap">
+		<form class="turnpath" onsubmit="return verify_submit()">
+			<div class="row">
+				<span class="fl">类型</span>
+				<div class="fr">
+					<select id="trenchtype">
+						<option value="1">微信订阅号</option>
+						<option value="1">微信服务号</option>
+						<option value="4">微信个人号</option>
+						<option value="2">微博帐号</option>
+						<option value="2">网站</option>
+						<option value="3">APP</option>
+					</select>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="space_10"></div>
+			<div class="row" id="code">
+				<span class="fl">二维码</span>
+				<div class="fr">
+					<img class="preview" src="../../images/code1.jpg" />
+					<div class="uploadimg"><input class="verify_logo" onchange="imgToBase64(this)" type="file" verify="false" />上传图片</div>
+					<i>*</i><b>推荐150X50或等比尺寸</b><em>请上传二维码</em>
+				</div>
+				<div class="clear"></div>
+				<span class="fl">关注链接</span>
+				<div class="fr">
+					<input class="verify_cont" type="text" style="width:175px;" />
+					<i>*</i><em></em>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="row" id="url" style="display:none;">
+				<span class="fl">网址</span>
+				<div class="fr">
+					<input class="verify_cont" type="text" style="width:175px;" />
+					<i>*</i><em></em>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="row" id="app" style="display:none;">
+				<span class="fl">网址</span>
+				<div class="fr">
+					<input class="verify_cont" type="text" style="width:175px;" />
+					<i>*</i><em></em>
+				</div>
+				<div class="clear"></div>
+				<span class="fl">下载链接</span>
+				<div class="fr">
+					<input class="verify_cont" type="text" style="width:175px;" />
+					<i>*</i><em></em>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="row" id="person" style="display:none;">
+				<span class="fl">二维码</span>
+				<div class="fr">
+					<img class="preview" src="../../images/code1.jpg" />
+					<div class="uploadimg"><input class="verify_logo" onchange="imgToBase64(this)" type="file" verify="false" />上传图片</div>
+					<i>*</i><b>推荐150X50或等比尺寸</b><em>请上传二维码</em>
+				</div>
+				<div class="clear"></div>
+				<span class="fl">微信号</span>
+				<div class="fr">
+					<input class="verify_cont" type="text" />
+					<i>*</i><em></em>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="space_10"></div>
+			<div class="row">
+				<span class="fl">名称</span>
+				<div class="fr">
+					<input class="verify_cont" type="text" />
+					<i>*</i><em></em>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="space_10"></div>
+			<div class="row">
+				<span class="fl">LOGO</span>
+				<div class="fr">
+					<img class="preview" src="../../images/108px.png" />
+					<div class="uploadimg"><input class="verify_logo" onchange="imgToBase64(this)" type="file" verify="false" />上传图片</div>
+					<i>*</i><b>推荐150X50或等比尺寸</b><em>请上传LOGO</em>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="space_10"></div>
+			<div class="row">
+				<span class="fl">简介</span>
+				<div class="fr">
+					<textarea class="verify_cont"></textarea>
+					<i>*</i><em></em>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="space_15"></div>
+			<div class="row">
+				<span class="fl">粉丝数</span>
+				<div class="fr">
+					<select>
+						<option>1W~5W</option>
+						<option>5W~10W</option>
+						<option>10W~50W</option>
+						<option>50W~100W</option>
+						<option>100W~500W</option>
+						<option>500W~1000W</option>
+						<option>1000W以上</option>
+					</select>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="space_10"></div>
+			<div class="row">
+				<span class="fl">发布价位</span>
+				<div class="fr">
+					<input class="verify_cont" type="text" style="width:60px;" />
+					<b>元/条</b><i>*</i>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="space_10"></div>
+			<div class="row">
+				<span class="fl">联系QQ</span>
+				<div class="fr">
+					<input class="verify_cont" type="text" />
+					<i>*</i><em></em>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="space_10"></div>
+			<div class="row">
+				<span class="fl">联系手机</span>
+				<div class="fr">
+					<input class="verify_cont" type="text" />
+					<i>*</i><em></em>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="space_20"></div>
+			<div class="row">
+				<span class="fl">&nbsp;</span>
+				<div class="fr">
+					<input type="submit" value="提 交" /> 
+				</div>
+				<div class="clear space_20"></div>
+			</div>
+		</form>
+	</article>
+	<!-- 成为渠道 结束 -->
+	<footer>
+		<img src="../../images/wx/hdt_logo2.png" />
+		<p>专注移动社交互动广告</p>
+		<p>Copyright © 2014 www.tchajian.com  闽ICP备14019370号</p>
+	</footer>
+	<div class="menu">
+		<ul>
+			<li><a href="#">
+				<img src="../../images/wx/menu7.png" />
+				<span>首页</span>
+			</a></li>
+			<li><a href="#">
+				<img src="../../images/wx/menu2.png" />
+				<span>活动圈</span>
+			</a></li>
+			<li><a href="#">
+				<img src="../../images/wx/menu3.png" />
+				<span>模版库</span>
+			</a></li>
+			<li><a href="#">
+				<img src="../../images/wx/menu10.png" />
+				<span>经典案例</span>
+			</a></li>
+			<li><a href="#">
+				<img src="../../images/wx/menu9.png" />
+				<span>发布渠道</span>
+			</a></li>
+			<li><a href="#">
+				<img src="../../images/wx/menu5.png" />
+				<span>个人主页</span>
+			</a></li>
+		</ul>
+	</div>
+	<!-- 菜单 开始 -->
+	<div class="menu_btn"><img src="../../images/wx/menu1.png" /></div>
+	<!-- 菜单 结束 -->
+</body>
+</html>
+<script type="text/javascript">
+
+	//图片上传预览
+	function imgToBase64(file){
+		if (file.files && file.files[0]){
+			var reader = new FileReader();
+			reader.onload = function(evt){
+				$(file).parent().prev().attr("src",evt.target.result);
+			}
+			reader.readAsDataURL(file.files[0]);
+		}
+	}
+
+	//渠道类型切换
+	$(function(){
+		$('#trenchtype').on("change",function(){
+			if($(this).val() == '1'){
+				$('#url,#app,#person').css("display","none");
+				$('#code').css("display","block");
+			}else if($(this).val() == '2'){
+				$('#code,#app,#person').css("display","none");
+				$('#url').css("display","block");
+			}else if($(this).val() == '3'){
+				$('#code,#url,#person').css("display","none");
+				$('#app').css("display","block");
+			}else{
+				$('#code,#url,#app').css("display","none");
+				$('#person').css("display","block");
+			}
+		});
+	});
+
+	//验证品牌标志是否上传
+	$(function(){
+		$('.verify_logo').change(function(){
+			insertNotice($(this).parent(),'<img src="../../images/pc/done_ico.png">');
+			$(this).attr("verify","true");
+			return true;
+		});
+	});
+
+	//验证填写内容
+	$(function(){
+		$('.verify_cont').blur(function(){
+			if($(this).val()){
+				insertNotice($(this),'<img src="../../images/pc/done_ico.png">');
+				$(this).attr("verify","true");
+				return true;
+			}else{
+				insertNotice($(this),"请输入内容");
+				$(this).attr("verify","false");
+				return false;
+			}
+		});
+	});
+	
+	//提交表单前端验证
+	function verify_submit(){
+		var verify = 0;
+		$('input[type="text"],textarea,.verify_logo').each(function(){
+			$(this).blur();
+			if($(this).attr("verify") == "false" && !$(this).parents('.row').attr('style')){
+				verify += 1;
+			}
+			console.log(verify);
+		});
+		if(verify > 0){
+			return false;
+		}else{
+			return true;
+		}
+	}
+
+	//渠道推荐切换 开始----------------------------------->
+
+
+
+	//渠道推荐切换 结束-----------------------------------<
+
+</script>

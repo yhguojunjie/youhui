@@ -1,0 +1,396 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="../../../css/bootstrap/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet" href="../../../css/bootstrap/daterangepicker.css" />
+<link type="text/css" rel="stylesheet" href="../../../css/basic.css" />
+<link type="text/css" rel="stylesheet" href="../../../css/global.css" />
+<link type="text/css" rel="stylesheet" href="../../../css/layout.css" />
+<link type="text/css" rel="stylesheet" href="../../../pluginres/css/mature.css" />
+<script type="text/javascript" src="../../../js/jquery.js"></script>
+<script type="text/javascript" src="../../../js/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../../js/bootstrap/moment.min.js"></script>
+<script type="text/javascript" src="../../../js/bootstrap/daterangepicker.js"></script>
+<script type="text/javascript" src="../../../js/layout.js"></script>
+<script type="text/javascript" src="../../../js/pluginpublic.js"></script>
+<script type="text/javascript" src="../../../pluginres/js/mature.js"></script>
+<title>红包熟了</title>
+</head>
+<body>
+	<!-- 头部 开始 -->
+	<div class="w1190 head">
+		<div class="logo">
+			<h1><a href="#">淘插件</a></h1>
+			<div class="slogan"><img src="../../../images/slogan.png" /></div>
+		</div>
+		<div class="nav">
+			<ul>
+				<li><a href="#" class="active"><em class="icon_home"></em>首页</a></li>
+				<li><a href="#"><em class="icon_plugin"></em>我的淘插件</a></li>
+				<li><a href="#"><em class="icon_login"></em>山间的风</a></li>
+				<li><a href="#"><em class="icon_setup"></em>设置</a></li>
+				<li><a href="#"><em class="icon_exit"></em>退出</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- 头部 结束 -->
+	<!-- 内容 开始 -->
+	<div class="w1190 mature">
+		<!-- 左侧内容 开始 -->
+		<div class="fl w840 main">
+			<div class="tab_title">
+				<a href="#" class="active">活动设置</a>
+				<a href="#">中奖记录</a>
+			</div>
+			<div class="cont">
+				<form onsubmit="return verify_submit()">
+					<h3><strong>基础设置</strong><span class="fold">收起</span></h3>
+					<div class="basic_config">
+						<div class="row">
+							<strong class="fl">活动名称：</strong>
+							<div class="fr">
+								<p>
+									<input class="verify_name w300" type="text" maxlength="10" value="“红包”熟了" />
+								</p>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="row">
+							<strong class="fl space_15">活动图标：</strong>
+							<div class="fr">
+								<div class="preview"><img class="w80 h80" src="../../../images/108px.png" /></div>
+								<div class="upload_file">
+									<input type="text" />
+									<span><em class="ico_image"><!-- 图标 --></em>上传图片</span>
+								</div>
+								<b>建议尺寸：宽100像素，高100像素或等比图片，大小不超过50K。</b>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="row">
+							<strong class="fl">插入广告：</strong>
+							<div class="fr">
+								<p class="tab_ad">
+									<label class="active"><input type="radio" checked="checked" name="showad" />开启</label>
+									<label><input type="radio" name="showad" />关闭</label>
+								</p>
+								<div class="ad_upcont space_10">
+									<div class="preview"><img class="w320 h70" src="../../../images/plugin_topad.jpg" /></div>
+									<div class="upload_file">
+										<input type="text" />
+										<span><em class="ico_image"><!-- 图标 --></em>上传广告图</span>
+									</div>
+									<b>建议尺寸：宽640像素，高135像素或等比图片，大小不超过80K。</b>
+									<p>
+										<input class="verify_url w420" type="text" placeholder="链接地址" />
+										<b>页面内容需包含红包兑换说明</b>
+									</p>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="row">
+							<strong class="fl">分享内容设置：</strong>
+							<div class="fr">
+								<p>
+									<input class="verify_title w300" type="text" maxlength="25" placeholder="标题" value="“红包”快熟了，快来帮我浇浇水！也送你一棵2015发财树。" />
+									<b>分享到朋友圈仅显示标题，不显示简介</b>
+								</p>
+								<div class="space_10"><!-- 填充10像素间距 --></div>
+								<p>
+									<textarea class="verify_intro w300" maxlength="36" placeholder="简介">红包越多，新年越旺，奖励越多！</textarea>
+									<b>发送给好友时既显示标题，也显示简介</b>
+								</p>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="row">
+							<strong class="fl">活动时间：</strong>
+							<div class="fr">
+								<input type="text" class="daterangepick w320 verify_time" value="" />
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<h3><strong>活动设置</strong><span class="fold">展开</span></h3>
+					<div class="act_config">
+						<div class="row">
+							<strong class="fl">红包成熟时间：</strong>
+							<div class="fr">
+								<p class="mature_timetab">
+									<label><input type="radio" name="mature_time" checked="checked" />每天</label>&nbsp;&nbsp;
+									<label><input type="radio" name="mature_time" />总的</label>
+								</p>
+								<div class="space_10"></div>
+								<div class="mature_time1">
+									<select data="23"></select>&nbsp;时&nbsp;&nbsp;
+									<select data="59"></select>&nbsp;分&nbsp;&nbsp;
+									<select data="59"></select>&nbsp;秒&nbsp;&nbsp;
+								</div>
+								<div class="mature_time2" style="display:none;">
+									<input type="text" class="singledatepick w200" value="" />
+								</div>
+								<script type="text/javascript">
+									$(function(){
+										$('.mature_time1 select').each(function(){
+											for(var i = $(this).attr("data")*1; i >= 0; i--){
+												$(this).append('<option>'+i+'</option>');
+											}
+										});
+
+										$('.mature_timetab input[type="radio"]').change(function(){
+											if($('.mature_timetab input[type="radio"]').eq(0).prop("checked") == true){
+												$('.mature_time1').attr("style","display:block;");
+												$('.mature_time2').attr("style","display:none;");
+											}else{
+												$('.mature_time1').attr("style","display:none;");
+												$('.mature_time2').attr("style","display:block;");
+											}
+										});
+
+									});
+								</script>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="row">
+							<strong class="fl">兑奖说明：</strong>
+							<div class="fr">
+								<p>
+									<input class="verify_contact w420" type="text" value="第一步：填写以下信息提交。第二步：关注公众号，并回复您的手机号，完成兑奖。" maxlength="50" />
+									<b>用户兑奖时显示</b>
+								</p>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="row">
+							<strong class="fl">用户信息：</strong>
+							<div class="fr">
+								<p>
+									<label><input type="checkbox" checked="checked" disabled="disabled" />手机号</label>
+									<label class="need_usermsg"><input value="name," type="checkbox" />姓名</label>
+									<label class="need_usermsg"><input value="mail," type="checkbox" />邮寄地址</label>
+									<label class="need_usermsg"><input value="qq," type="checkbox" />QQ</label>
+									<label class="need_usermsg"><input value="wechat," type="checkbox" />微信号</label>
+									<label class="need_usermsg">
+										<input class="need_other" value="other:" type="checkbox" />其他
+										<input type="text" class="other w80" />
+									</label>
+									<input type="hidden" value="" />
+								</p>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="fr">
+							<p>
+								<input type="submit" value="提 交" />
+							</p>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- 左侧内容 结束 -->
+		<!-- 右侧内容 开始 -->
+		<div class="fr w320 side">
+			<div class="service_box">
+				<h3>配置太麻烦？我们来帮您</h3>
+				<p>您可以拨打：<em>400-188-6666</em></p>
+				<p>服务时间段：<em>09:00—23:00</em></p>
+				<a href="#" class="btn">联系在线客服</a>
+				<div class="clear"></div>
+			</div>
+			<h4 class="tr">
+				<strong class="fl">界面预览</strong>
+				<a href="#" class="btn_refresh">刷新</a>
+			</h4>
+			<div class="cont">
+				<!-- 这里放手机端嵌入页面连接 -->
+				<iframe width="320" height="400" scrolling="no" src="../../../images/banner.jpg"></iframe>
+			</div>
+		</div>
+		<!-- 右侧内容 结束 -->
+		<div class="clear"></div>
+	</div>
+	<!-- 内容 结束 -->
+	<!-- 底部 开始 -->
+	<div class="w1190 foot">
+		<h2><a href="#">淘插件-营销推广插件超市</a></h2>
+		<p>Opyright © 2014 WWW.GIFTGAME.CN All Rights Reserved 有戏（厦门）网络科技有限公司版权所有 闽ICP备14019370号</p>
+	</div>
+	<!-- 底部 结束 -->
+</body>
+</html>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//表单字段验证
+		$(document).on("blur",".verify_name",function(){
+			if(!verify($(this).val(),'')){
+				insertNotice($(this),"请输入活动名称");
+				$(this).attr("verify","false");
+				return false;
+			}else{
+				insertNotice($(this),"");
+				$(this).attr("verify","true");
+				return true;
+			}
+		});
+		$(document).on("blur",".verify_time",function(){
+			if(!verify($(this).val(),'')){
+				insertNotice($(this),"请输入时间");
+				$(this).attr("verify","false");
+				return false;
+			}else{
+				insertNotice($(this),"");
+				$(this).attr("verify","true");
+				return true;
+			}
+		});
+		$(document).on("blur",".verify_prizename",function(){
+			if(!verify($(this).val(),'')){
+				insertNotice($(this),"请输入奖品名称");
+				$(this).attr("verify","false");
+				return false;
+			}else{
+				insertNotice($(this),"");
+				$(this).attr("verify","true");
+				return true;
+			}
+		});
+		$(document).on("blur",".verify_num",function(){
+			if($(this).val()){
+				if(!verify($(this).val(),'number')){
+					insertNotice($(this),"请输入正确格式");
+					$(this).attr("verify","false");
+					return false;
+				}else{
+					insertNotice($(this),"");
+					$(this).attr("verify","true");
+					return true;
+				}
+			}else{
+				insertNotice($(this),"");
+				$(this).attr("verify","true");
+				return true;
+			}
+		});
+		$(document).on("blur",".verify_title",function(){
+			if(!verify($(this).val(),'')){
+				insertNotice($(this),"请输入分享标题");
+				$(this).attr("verify","false");
+				return false;
+			}else{
+				insertNotice($(this),"");
+				$(this).attr("verify","true");
+				return true;
+			}
+		});
+		$(document).on("blur",".verify_intro",function(){
+			if(!verify($(this).val(),'')){
+				insertNotice($(this),"请输入活动简介");
+				$(this).attr("verify","false");
+				return false;
+			}else{
+				insertNotice($(this),"");
+				$(this).attr("verify","true");
+				return true;
+			}
+		});
+		$(document).on("blur",".verify_rule",function(){
+			if(!verify($(this).val(),'')){
+				insertNotice($(this),"请输入活动规则");
+				$(this).attr("verify","false");
+				return false;
+			}else{
+				insertNotice($(this),"");
+				$(this).attr("verify","true");
+				return true;
+			}
+		});
+		$(document).on("blur",".verify_contact",function(){
+			if(!verify($(this).val(),'')){
+				insertNotice($(this),"请输入兑奖说明");
+				$(this).attr("verify","false");
+				return false;
+			}else{
+				insertNotice($(this),"");
+				$(this).attr("verify","true");
+				return true;
+			}
+		});
+		$(document).on("blur",".verify_url",function(){
+			if($(this).val()){
+				if(!verify($(this).val(),'url')){
+				insertNotice($(this),"请输入正确的URL格式");
+				$(this).attr("verify","false");
+				return false;
+			}else{
+				insertNotice($(this),"不填写则不跳转");
+				$(this).attr("verify","true");
+				return true;
+			}
+			}else{
+				insertNotice($(this),"");
+				$(this).attr("verify","true");
+				return true;
+			}
+		});
+	});
+
+	//用户信息抓取1
+	$('.need_usermsg input[type="checkbox"]').change(function(){
+		if($(this).attr("class") == "need_other"){
+			if($(this).prop("checked") == true){
+				$('.need_usermsg input[type="text"]').attr("style","display:inline-block;");
+			}else{
+				$('.need_usermsg input[type="text"]').attr("style","display:none;");
+				$('.need_usermsg input[type="text"]').val('');
+			}
+		}
+	});
+
+	//提交表单前端验证
+	function verify_submit(){
+		//用户信息抓取2
+		var str = mature_time = '';
+		$('.need_usermsg').each(function(){
+			if( $(this).find('input[type="checkbox"]').prop("checked") == true){
+				str += $(this).find('input[type="checkbox"]').val();
+			}
+		});
+		str += $('.need_usermsg input[type="text"]').val();
+
+		//用户信息抓取3
+		$('.mature_time1 select').each(function(){
+			mature_time += $(this).val() + ':';
+		});
+		mature_time = mature_time.substr(0,mature_time.length-1);
+		alert(mature_time);
+
+		var verify = 0;
+		$('input[type="text"]').each(function(){
+			$(this).blur();
+			if($(this).attr("verify") == "false"){
+				verify += 1;
+			}
+		});
+		$('textarea').each(function(){
+			$(this).blur();
+			if($(this).attr("verify") == "false"){
+				verify += 1;
+			}
+		});
+		if(verify > 0){
+			$('.mature .main .cont .cont_config,.mature .main .cont .act_config').attr("style","display:block;");
+			$('.mature .main .cont h3 span').text("收起");
+			return false;
+		}else{
+			return true;
+		}
+	}
+</script>

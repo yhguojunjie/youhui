@@ -1,0 +1,324 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="../../css/basic.css" />
+<link type="text/css" rel="stylesheet" href="../../css/global.css" />
+<link type="text/css" rel="stylesheet" href="../../css/layout.css" />
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/layout.js"></script>
+<title>成为渠道</title>
+</head>
+<body>
+	<!-- 头部 开始 -->
+	<div class="w1190 head">
+		<div class="logo">
+			<h1><a href="#" title="互动推"><img alt="互动推" src="../../images/pc/hdt_logo.png" /></a></h1>
+			<div class="slogan"><span>专注移动社交互动广告</span></div>
+		</div>
+		<div class="nav">
+			<ul>
+				<li><a href="#"><em class="icon_home"></em>首页</a></li>
+				<li><a href="#"><em class="icon_ativ"></em>活动圈</a></li>
+				<li><a href="#"><em class="icon_plugin"></em>模版库</a></li>
+				<li><a href="#"><em class="icon_channel"></em>发布渠道</a></li>
+				<li><a href="#"><em class="icon_help"></em>帮助中心</a></li>
+				<li><a href="#"><em class="icon_agent"></em>加盟代理</a></li>
+				<li><a href="#">登录</a><strong>|</strong><a href="#">注册</a></li>
+				<!-- <li class="users_btn"><a href="#"><img src="../../images/avatar.jpg" />山间的风</a>（<a href="#">退出</a>）</li> -->
+			</ul>
+		</div>
+	</div>
+	<!-- 头部 结束 -->
+	<!-- 注册 开始 -->
+	<div class="w1190 register">
+		<form class="cont" onsubmit="return verify_submit()">
+			<h2>成为渠道</h2>
+			<div class="row">
+				<span class="fl">类型</span>
+				<div class="fr">
+					<select id="trenchtype">
+						<option value="1">微信订阅号</option>
+						<option value="1">微信服务号</option>
+						<option value="4">微信个人号</option>
+						<option value="2">微博帐号</option>
+						<option value="2">网站</option>
+						<option value="3">APP</option>
+					</select>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="space_10"></div>
+			<div class="row" id="code">
+				<span class="fl">二维码</span>
+				<div class="fr">
+					<img class="preview" src="../../images/code1.jpg" />
+					<div class="uploadimg"><input class="verify_logo" onchange="imgToBase64(this)" type="file" verify="false" />上传图片</div>
+					<i>*</i><b>推荐150X50或等比尺寸</b><em>请上传二维码</em>
+				</div>
+				<div class="clear"></div>
+				<span class="fl">关注链接</span>
+				<div class="fr">
+					<input class="verify_cont" type="text" style="width:400px;" />
+					<i>*</i><em></em>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="row" id="url" style="display:none;">
+				<span class="fl">网址</span>
+				<div class="fr">
+					<input class="verify_cont" type="text" style="width:400px;" />
+					<i>*</i><em></em>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="row" id="app" style="display:none;">
+				<span class="fl">网址</span>
+				<div class="fr">
+					<input class="verify_cont" type="text" style="width:400px;" />
+					<i>*</i><em></em>
+				</div>
+				<div class="clear"></div>
+				<span class="fl">下载链接</span>
+				<div class="fr">
+					<input class="verify_cont" type="text" style="width:400px;" />
+					<i>*</i><em></em>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="row" id="person" style="display:none;">
+				<span class="fl">二维码</span>
+				<div class="fr">
+					<img class="preview" src="../../images/code1.jpg" />
+					<div class="uploadimg"><input class="verify_logo" onchange="imgToBase64(this)" type="file" verify="false" />上传图片</div>
+					<i>*</i><b>推荐150X50或等比尺寸</b><em>请上传二维码</em>
+				</div>
+				<div class="clear"></div>
+				<span class="fl">微信号</span>
+				<div class="fr">
+					<input class="verify_cont" type="text" />
+					<i>*</i><em></em>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="space_10"></div>
+			<div class="row">
+				<span class="fl">名称</span>
+				<div class="fr">
+					<input class="verify_cont" type="text" />
+					<i>*</i><em></em>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="space_10"></div>
+			<div class="row">
+				<span class="fl">LOGO</span>
+				<div class="fr">
+					<img class="preview" src="../../images/108px.png" />
+					<div class="uploadimg"><input class="verify_logo" onchange="imgToBase64(this)" type="file" verify="false" />上传图片</div>
+					<i>*</i><b>推荐150X50或等比尺寸</b><em>请上传LOGO</em>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="space_10"></div>
+			<div class="row">
+				<span class="fl">简介</span>
+				<div class="fr">
+					<textarea class="verify_cont"></textarea>
+					<i>*</i><em></em>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="space_15"></div>
+			<div class="row">
+				<span class="fl">粉丝数</span>
+				<div class="fr">
+					<select>
+						<option>1W~5W</option>
+						<option>5W~10W</option>
+						<option>10W~50W</option>
+						<option>50W~100W</option>
+						<option>100W~500W</option>
+						<option>500W~1000W</option>
+						<option>1000W以上</option>
+					</select>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="space_10"></div>
+			<div class="row">
+				<span class="fl">发布价位</span>
+				<div class="fr">
+					<input class="verify_cont" type="text" style="width:80px;" />
+					<b>元/条</b><i>*</i>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="space_10"></div>
+			<div class="row">
+				<span class="fl">联系人QQ</span>
+				<div class="fr">
+					<input class="verify_cont" type="text" />
+					<i>*</i><em></em>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="space_10"></div>
+			<div class="row">
+				<span class="fl">联系人手机号</span>
+				<div class="fr">
+					<input class="verify_cont" type="text" />
+					<i>*</i><em></em>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="space_20"></div>
+			<div class="row">
+				<span class="fl">&nbsp;</span>
+				<div class="fr">
+					<input type="submit" value="提 交" /> 
+				</div>
+				<div class="clear space_20"></div>
+			</div>
+		</form>
+	</div>
+	<!-- 注册 结束 -->
+	<!-- 底部 开始 -->
+	<div class="w1190 foot">
+		<h2><a href="#">
+			<img alt="互动推" src="../../images/pc/hdt_logo.png" />
+			<span>专注移动社交互动广告</span>
+		</a></h2>
+		<p>
+			<a href="#">首页</a>
+			<em>|</em>
+			<a href="#">活动圈</a>
+			<em>|</em>
+			<a href="#">模板库</a>
+			<em>|</em>
+			<a href="#">发布渠道</a>
+			<em>|</em>
+			<a href="#">帮助中心</a>
+			<em>|</em>
+			<a href="#">渠道代理</a>
+			<em>|</em>
+			<a href="#">代理商登录</a>
+		</p>
+		<p>
+			<span>咨询电话：0592-7127103</span>
+			<span>QQ：888888888</span>
+			<span>邮箱：cs@tchajian.com</span>
+		</p>
+		<p>地址： 福建省厦门市思明区软件园二期望海路19号之二502室</p>
+		<p>Copyright © 2014 www.tchajian.com All Rights Reserved 有戏（厦门）网络科技有限公司&nbsp;&nbsp;闽ICP备14019370号</p>
+	</div>
+	<!-- 底部 结束 -->
+	<!-- 浮动菜单 开始 -->
+	<div class="float_menu">
+		<ul>
+			<li class="sliding">
+				<a><em class="phone_ico"></em><span>0592-7127103</span></a>
+			</li>
+			<li class="clear"></li>
+			<li class="sliding">
+				<a href="#"><em class="qq_ico"></em><span>点击QQ交谈</span></a>
+			</li>
+			<li class="clear"></li>
+			<li id="float_menucode">
+				<a href="#" class="sliding"><img src="../../images/pc/float_code.jpg"></a>
+			</li>
+			<li class="clear"></li>
+			<li class="gotop">
+				<a><em class="gotop_ico">返回顶部</em></a>
+			</li>
+		</ul>
+	</div>
+	<!-- 浮动菜单 结束 -->
+</body>
+</html>
+<script type="text/javascript">
+	//图片上传预览
+	function imgToBase64(file){
+		if (file.files && file.files[0]){
+			var reader = new FileReader();
+			reader.onload = function(evt){
+				$(file).parent().prev().attr("src",evt.target.result);
+			}
+			reader.readAsDataURL(file.files[0]);
+		}
+	}
+
+	//渠道类型切换
+	$(function(){
+		$('#trenchtype').on("change",function(){
+			if($(this).val() == '1'){
+				$('#url,#app,#person').css("display","none");
+				$('#code').css("display","block");
+			}else if($(this).val() == '2'){
+				$('#code,#app,#person').css("display","none");
+				$('#url').css("display","block");
+			}else if($(this).val() == '3'){
+				$('#code,#url,#person').css("display","none");
+				$('#app').css("display","block");
+			}else{
+				$('#code,#url,#app').css("display","none");
+				$('#person').css("display","block");
+			}
+		});
+	});
+
+	//验证品牌标志是否上传
+	$(function(){
+		$('.verify_logo').change(function(){
+			insertNotice($(this).parent(),'<img src="../../images/pc/done_ico.png">');
+			$(this).attr("verify","true");
+			return true;
+		});
+	});
+
+	//验证填写内容
+	$(function(){
+		$('.verify_cont').blur(function(){
+			if($(this).val()){
+				insertNotice($(this),'<img src="../../images/pc/done_ico.png">');
+				$(this).attr("verify","true");
+				return true;
+			}else{
+				insertNotice($(this),"请输入内容");
+				$(this).attr("verify","false");
+				return false;
+			}
+		});
+	});
+	
+	//提交表单前端验证
+	function verify_submit(){
+		var verify = 0;
+		$('input[type="text"],textarea,.verify_logo').each(function(){
+			$(this).blur();
+			if($(this).attr("verify") == "false" && !$(this).parents('.row').attr('style')){
+				verify += 1;
+			}
+			console.log(verify);
+		});
+		if(verify > 0){
+			return false;
+		}else{
+			return true;
+		}
+	}
+
+	//回到顶部
+	$(function(){
+		$(".gotop").click(function(){
+			$("body,html").animate({scrollTop:0},300);
+		});
+		$(window).scroll(function(){
+			if($(window).scrollTop() > 10){
+				$('.gotop').attr("style","display:block;");
+			}else{
+				$('.gotop').attr("style","display:none;");
+			}
+		});
+	});
+</script>

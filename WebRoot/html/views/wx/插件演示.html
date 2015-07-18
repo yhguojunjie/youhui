@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no">
+<title>插件演示</title>
+<link rel="stylesheet" href="../../css/wx/layout.css">
+<script type="text/javascript" src="../../js/jquery.js"></script>
+</head>
+<body>
+	<div class="plugin_demo">
+		<a class="btn_try">商家免费试用</a>
+		<span><strong>插件演示</strong>— 淘插件</span>
+	</div>
+	<div class="plugindemo_cont">
+		<iframe src="模版库.html"></iframe>
+	</div>
+</body>
+</html>
+<style type="text/css">
+	.plugin_demo{height:60px;width:100%;padding:15px;box-sizing:border-box;background:#ececec;}
+	.plugin_demo span{float:left;height:30px;font:12px/30px "微软雅黑";color:#999;}
+	.plugin_demo span strong{float:left;height:30px;font:16px/30px "微软雅黑";color:#333;margin-right:20px;}
+	.plugin_demo .btn_try{float:right;width:110px;height:30px;font:14px/30px "微软雅黑";border:0;border-radius:3px;background:#63c7bb;color:#fff;text-align:center;}
+	.plugindemo_cont{width:100%;height:400px;}
+	.plugindemo_cont iframe{width:100%;height:100%;border:0;margin:0;padding:0;}
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.plugindemo_cont').attr("style","height:"+ ($('body').height()-63) +"px");
+});
+</script>
+<style type="text/css">
+html,body{height:100%;width:100%;}
+</style>

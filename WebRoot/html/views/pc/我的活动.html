@@ -1,0 +1,715 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="../../css/basic.css" />
+<link type="text/css" rel="stylesheet" href="../../css/global.css" />
+<link type="text/css" rel="stylesheet" href="../../css/layout.css" />
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/layout.js"></script>
+<script type="text/javascript" src="../../js/zeroclipboard/ZeroClipboard.js"></script>
+<title>我的活动</title>
+</head>
+<body>
+	<!-- 头部 开始 -->
+	<div class="w1190 head">
+		<div class="logo">
+			<h1><a href="#" title="互动推"><img alt="互动推" src="../../images/pc/hdt_logo.png" /></a></h1>
+			<!-- <div class="slogan"><span>专注移动社交互动广告</span></div> -->
+		</div>
+		<div class="nav">
+			<ul>
+				<li><a href="#"><em class="icon_home"></em>首页</a></li>
+				<li><a href="#" class="active"><em class="icon_ativ"></em>活动圈</a></li>
+				<li><a href="#"><em class="icon_plugin"></em>模版库</a></li>
+				<li><a href="#"><em class="icon_channel"></em>发布渠道</a></li>
+				<li><a href="#"><em class="icon_help"></em>帮助中心</a></li>
+				<li><a href="#"><em class="icon_agent"></em>加盟代理</a></li>
+				<!-- <li><a href="#">登录</a><strong>|</strong><a href="#">注册</a></li> -->
+				<li class="users_btn"><a href="#"><img src="../../images/avatar.jpg" />山间的风</a>（<a href="#">退出</a>）</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 头部 结束 -->
+	<!-- 内容 开始 -->
+	<div class="w1190 index">
+		<!-- 左侧内容 开始 -->
+		<div class="fl w300 side">
+			<div class="usermsg_subnav">
+				<div class="space_15"></div>
+				<div class="space_30"></div>
+				<div class="user_card">
+					<a href="#" class="avatar"><img src="../../images/avatar.jpg" /></a>
+					<h3>
+						<a class="fl" href="#">御泥坊</a>
+						<img class="fl" src="../../images/pc/vip_ico.png" />
+						<!-- <a class="btn">成为会员</a> -->
+					</h3>
+					<p>古代的居民们一直保留着一种奇特的“祭泥仪式”。</p>
+					<div class="clear"></div>
+					<ul>
+						<li>
+							<i class="ico_gold"><!-- 图标 --></i>
+							收入：<em>50</em>
+						</li>
+						<li>
+							<a>提现</a>
+						</li>
+						<li>
+							<i class="ico_gold"><!-- 图标 --></i>
+							代币：<em>50</em>
+						</li>
+						<li>
+							<a class="paycash">赚代币</a>
+						</li>
+					</ul>
+					<div class="clear"></div>
+				</div>
+				<div class="subnav">
+					<ul>
+						<li><a href="#" class="active">我的活动</a></li>
+						<li><a href="#">收益提现</a></li>
+						<li><a href="#">我的订单</a></li>
+						<li><a href="#">账号设置</a></li>
+						<li><a href="#">个人主页</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- 左侧内容 结束 -->
+		<!-- 右侧内容 开始 -->
+		<div class="fr w890 main">
+			<div class="fr w860">
+				<div class="tab_title">
+					<div class="fl options" id="myactivity_sortbtn">
+						<a class="active">全部</a>
+						<a>未开始(1)</a>
+						<a>正在进行(2)</a>
+						<a>已结束(3)</a>
+					</div>
+					<div class="fr add_activity">
+						<a class="del">删除</a>
+						<!-- <a class="add">新增活动</a> -->
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="cont activity_list">
+					<dl>
+						<dd>
+							<div class="fl">
+								<a href="#" class="img"><img src="../../images/app1.png" /></a>
+								<h3><a href="#">活动名称</a></h3>
+								<p>
+									总浏览量：<em>38496</em>
+									&nbsp;&nbsp;&nbsp;&nbsp;
+									总参与人数：<em>20571</em>
+								</p>
+								<div class="clear space_5"></div>
+								<p>
+									活动时间：2014-11-11 00:00 到 2015-11-11 00:00
+									&nbsp;&nbsp;
+									<em class="end">已结束</em>
+								</p>
+							</div>
+							<div class="fr">
+								<img src="../../images/code1.jpg" />
+								<a class="btn_copy" onclick="init('sss')">双击复制地址</a>
+							</div>
+							<div class="clear space_10"></div>
+							<div class="btns">
+								<span>
+									使用模版：<a href="#">《摇一摇，中大奖》</a>
+									&nbsp;&nbsp;&nbsp;&nbsp;
+									到期时间：2014-11-11 00:00
+									&nbsp;&nbsp;
+									<em>已过期</em>
+								</span>
+								<a class="renew btn_direct">续费</a>
+								<a href="#" class="set">配置</a>
+								<!-- <a class="ativ_permis"><em>公开</em>(<i>显示数据</i>)</a> -->
+							</div>
+						</dd>
+						<dd>
+							<div class="fl">
+								<a onclick="alertset();" class="img"><img src="../../images/app2.png" /></a>
+								<h3 onclick="alertset();"><a>活动名称</a></h3>
+								<p>攒人气，拼人品。粉丝玩的HIGH，商家活动吸粉乐开怀</p>
+								<!-- <p>
+									总浏览量：<em>38496</em>
+									&nbsp;&nbsp;&nbsp;&nbsp;
+									总参与人数：<em>20571</em>
+								</p>
+								<div class="clear space_5"></div>
+								<p>
+									活动时间：2014-11-11 00:00 到 2015-11-11 00:00
+									&nbsp;&nbsp;
+									<em class="nostart">未开始</em>
+								</p> -->
+							</div>
+							<!-- <div class="fr">
+								<img src="../../images/code1.jpg" />
+								<a class="btn_copy" onclick="init('sss')">双击复制地址</a>
+							</div> -->
+							<div class="clear space_10"></div>
+							<div class="btns">
+								<span>
+									使用模版：<a href="#">《摇一摇，中大奖》</a>
+									&nbsp;&nbsp;&nbsp;&nbsp;
+									到期时间：2014-11-11 00:00
+									&nbsp;&nbsp;
+								</span>
+								<a class="renew btn_direct">续费</a>
+								<a href="#" class="set">配置</a>
+								<!-- <a class="ativ_permis"><em>公开</em>(<i>显示数据</i>)</a> -->
+							</div>
+						</dd>
+						<dd>
+							<div class="fl">
+								<a href="#" class="img"><img src="../../images/app3.png" /></a>
+								<h3><a href="#">活动名称</a></h3>
+								<p>
+									总浏览量：<em>38496</em>
+									&nbsp;&nbsp;&nbsp;&nbsp;
+									总参与人数：<em>20571</em>
+								</p>
+								<div class="clear space_5"></div>
+								<p>
+									活动时间：2014-11-11 00:00 到 2015-11-11 00:00
+									&nbsp;&nbsp;
+									<em class="ing">正在进行</em>
+								</p>
+							</div>
+							<div class="fr">
+								<img src="../../images/code1.jpg" />
+								<a class="btn_copy" onclick="init('sss')">双击复制地址</a>
+							</div>
+							<div class="clear space_10"></div>
+							<div class="btns">
+								<span>
+									使用模版：<a href="#">《摇一摇，中大奖》</a>
+									&nbsp;&nbsp;&nbsp;&nbsp;
+									到期时间：2014-11-11 00:00
+									&nbsp;&nbsp;
+								</span>
+								<a class="renew btn_direct">续费</a>
+								<a href="#" class="set">配置</a>
+								<!-- <a class="ativ_permis"><em>公开</em>(<i>显示数据</i>)</a> -->
+							</div>
+						</dd>
+						<dd>
+							<div class="fl">
+								<a href="#" class="img"><img src="../../images/app4.png" /></a>
+								<h3><a href="#">活动名称</a></h3>
+								<p>
+									总浏览量：<em>38496</em>
+									&nbsp;&nbsp;&nbsp;&nbsp;
+									总参与人数：<em>20571</em>
+								</p>
+								<div class="clear space_5"></div>
+								<p>
+									活动时间：2014-11-11 00:00 到 2015-11-11 00:00
+									&nbsp;&nbsp;
+									<em class="end">已结束</em>
+								</p>
+							</div>
+							<div class="fr">
+								<img src="../../images/code1.jpg" />
+								<a class="btn_copy" onclick="init('sss')">双击复制地址</a>
+							</div>
+							<div class="clear space_10"></div>
+							<div class="btns">
+								<span>
+									使用模版：<a href="#">《摇一摇，中大奖》</a>
+									&nbsp;&nbsp;&nbsp;&nbsp;
+									到期时间：2014-11-11 00:00
+									&nbsp;&nbsp;
+									<em>已过期</em>
+								</span>
+								<a class="renew btn_direct">续费</a>
+								<a href="#" class="set">配置</a>
+								<!-- <a class="ativ_permis"><em>公开</em>(<i>显示数据</i>)</a> -->
+							</div>
+						</dd>
+						<dd>
+							<div class="fl">
+								<a href="#" class="img"><img src="../../images/app5.png" /></a>
+								<h3><a href="#">活动名称</a></h3>
+								<p>
+									总浏览量：<em>38496</em>
+									&nbsp;&nbsp;&nbsp;&nbsp;
+									总参与人数：<em>20571</em>
+								</p>
+								<div class="clear space_5"></div>
+								<p>
+									活动时间：2014-11-11 00:00 到 2015-11-11 00:00
+									&nbsp;&nbsp;
+									<em class="end">已结束</em>
+								</p>
+							</div>
+							<div class="fr">
+								<img src="../../images/code1.jpg" />
+								<a class="btn_copy" onclick="init('sss')">双击复制地址</a>
+							</div>
+							<div class="clear space_10"></div>
+							<div class="btns">
+								<span>
+									使用模版：<a href="#">《摇一摇，中大奖》</a>
+									&nbsp;&nbsp;&nbsp;&nbsp;
+									到期时间：2014-11-11 00:00
+									&nbsp;&nbsp;
+									<em>已过期</em>
+								</span>
+								<a class="renew btn_direct">续费</a>
+								<a href="#" class="set">配置</a>
+								<!-- <a class="ativ_permis"><em>公开</em>(<i>显示数据</i>)</a> -->
+							</div>
+						</dd>
+					</dl>
+					<!-- 分页 开始 -->
+					<div class="tr pages">
+						<form>
+							<a href="#" class="prev"><!-- 上一张 --></a>
+							<a href="#">1</a>
+							<a href="#" class="active">2</a>
+							<a href="#">3</a>
+							<a href="#">4</a>
+							<a href="#">5</a>
+							<a href="#">6</a>
+							<a href="#">7</a>
+							<a href="#">8</a>
+							<a href="#">9</a>
+							<a href="#">10</a>
+							<span>......</span>
+							<a href="#">103</a>
+							<a href="#">104</a>
+							<input type="text">
+							<input type="submit" value="GO">
+							<a href="#" class="next"><!-- 下一张 --></a>
+						</form>
+					</div>
+					<!-- 分页 结束 -->
+					<div class="if_none">
+						<p>您还没有活动</p>
+					</div>
+				</div>
+			</div>
+			<div class="clear space_10"></div>
+			<!-- 模版推荐 开始 -->
+			<div class="fr w860">
+				<div class="norl_title">
+					<div class="fr"><a href="#" class="more_btn">更多&gt;&gt;</a></div>
+					<h3>模版推荐</h3>
+				</div>
+				<div class="cont">
+					<ul>
+						<li>
+							<a href="#" class="img"><img src="../../images/app1.png"></a>
+							<h3>
+								<a href="#"><strong>海报杂志</strong></a>
+								<a href="#" class="author">@山间的风</a>
+								<span>2014/10/12&nbsp;21:26&nbsp;&nbsp;&nbsp;&nbsp;<em>已有15人购买</em></span>
+							</h3>
+							<div class="intro">
+								<p>
+									<em class="quot_left"><!-- 前引号 --></em>
+									<span>面霜类电商适用，烧到带敬爱较大搜救是敬爱是骄傲排水口烧到带敬爱较大的</span>
+									<em class="quot_right"><!-- 后引号 --></em>
+								</p>
+								<a href="#" class="btn_try">免费试用</a>
+								<a href="#" class="btn_direct">￥100</a>
+							</div>
+							<div class="clear"></div>
+							<!-- 展开内容 -->
+							<dl style="display: none;">
+								<dd><img src="../../images/app_cont2.jpg"></dd>
+								<dd><img src="../../images/app_cont1.jpg"></dd>
+								<dd><img src="../../images/app_cont2.jpg"></dd>
+								<dd><img src="../../images/app_cont1.jpg"></dd>
+								<dd><img src="../../images/app_cont2.jpg"></dd>
+							</dl>
+						</li>
+						<li>
+							<a href="#" class="img"><img src="../../images/app2.png"></a>
+							<h3>
+								<a href="#"><strong>海报杂志</strong></a>
+								<a href="#" class="author">@山间的风</a>
+								<span>2014/10/12&nbsp;21:26&nbsp;&nbsp;&nbsp;&nbsp;<em>已有15人购买</em></span>
+							</h3>
+							<div class="intro">
+								<p>
+									<em class="quot_left"><!-- 前引号 --></em>
+									<span>面霜类电商适用，烧到带敬爱较大搜救是敬爱是骄傲排水口烧到带敬爱较大的</span>
+									<em class="quot_right"><!-- 后引号 --></em>
+								</p>
+								<a href="#" class="btn_free">购买</a>
+							</div>
+							<div class="clear"></div>
+							<!-- 展开内容 -->
+							<dl style="display: none;">
+								<dd><img src="../../images/app_cont2.jpg"></dd>
+								<dd><img src="../../images/app_cont1.jpg"></dd>
+								<dd><img src="../../images/app_cont2.jpg"></dd>
+								<dd><img src="../../images/app_cont1.jpg"></dd>
+								<dd><img src="../../images/app_cont2.jpg"></dd>
+							</dl>
+						</li>
+						<li>
+							<a href="#" class="img"><img src="../../images/app3.png"></a>
+							<h3>
+								<a href="#"><strong>海报杂志</strong></a>
+								<a href="#" class="author">@山间的风</a>
+								<span>2014/10/12&nbsp;21:26&nbsp;&nbsp;&nbsp;&nbsp;<em>已有15人购买</em></span>
+							</h3>
+							<div class="intro">
+								<p>
+									<em class="quot_left"><!-- 前引号 --></em>
+									<span>面霜类电商适用，烧到带敬爱较大搜救是敬爱是骄傲排水口烧到带敬爱较大的</span>
+									<em class="quot_right"><!-- 后引号 --></em>
+								</p>
+								<a href="#" class="btn_free">免费</a>
+							</div>
+							<div class="clear"></div>
+							<!-- 展开内容 -->
+							<dl style="display: none;">
+								<dd><img src="../../images/app_cont2.jpg"></dd>
+								<dd><img src="../../images/app_cont1.jpg"></dd>
+								<dd><img src="../../images/app_cont2.jpg"></dd>
+								<dd><img src="../../images/app_cont1.jpg"></dd>
+								<dd><img src="../../images/app_cont2.jpg"></dd>
+							</dl>
+						</li>
+					</ul>
+				</div>			
+			</div>
+			<div class="clear"></div>
+			<!-- 模版推荐 结束 -->
+		</div>
+		<!-- 右侧内容 结束 -->
+		<div class="clear"></div>
+	</div>
+	<!-- 内容 结束 -->
+	<!-- 底部 开始 -->
+	<div class="w1190 foot">
+		<h2><a href="#">
+			<img alt="互动推" src="../../images/pc/hdt_logo.png" />
+			<span>专注移动社交互动广告</span>
+		</a></h2>
+		<p>
+			<a href="#">首页</a>
+			<em>|</em>
+			<a href="#">活动圈</a>
+			<em>|</em>
+			<a href="#">模板库</a>
+			<em>|</em>
+			<a href="#">发布渠道</a>
+			<em>|</em>
+			<a href="#">帮助中心</a>
+			<em>|</em>
+			<a href="#">渠道代理</a>
+			<em>|</em>
+			<a href="#">代理商登录</a>
+		</p>
+		<p>
+			<span>咨询电话：0592-7127103</span>
+			<span>QQ：888888888</span>
+			<span>邮箱：cs@tchajian.com</span>
+		</p>
+		<p>地址： 福建省厦门市思明区软件园二期望海路19号之二502室</p>
+		<p>Copyright © 2014 www.tchajian.com All Rights Reserved 有戏（厦门）网络科技有限公司&nbsp;&nbsp;闽ICP备14019370号</p>
+	</div>
+	<!-- 底部 结束 -->
+	<!-- 浮动菜单 开始 -->
+	<div class="float_menu">
+		<ul>
+			<li class="sliding">
+				<a><em class="phone_ico"></em><span>0592-7127103</span></a>
+			</li>
+			<li class="clear"></li>
+			<li class="sliding">
+				<a href="#"><em class="qq_ico"></em><span>点击QQ交谈</span></a>
+			</li>
+			<li class="clear"></li>
+			<li id="float_menucode">
+				<a href="#" class="sliding"><img src="../../images/pc/float_code.jpg"></a>
+			</li>
+			<li class="clear"></li>
+			<li class="gotop">
+				<a><em class="gotop_ico">返回顶部</em></a>
+			</li>
+		</ul>
+	</div>
+	<!-- 浮动菜单 结束 -->
+	<!-- 赚代币弹出对话框 开始 -->
+	<div class="earn_box">
+		<dl>
+			<dt>代币可1:1代替现金购买插件，存在账号里，永久有效！</dt>
+			<dd class="space_20">可通过以下方式获取：</dd>
+			<dd>1、扫二维码，打开“活动中心”，分享至朋友圈，即可获得10元代币，每周限一次。</dd>
+			<dd><img src="../../images/code1.jpg" /></dd>
+			<dd class="tc space_20"><a class="btn_cancel">知道了</a></dd>
+		</dl>
+		<div class="bg"></div>
+	</div>
+	<!-- 赚代币弹出对话框 结束 -->
+	<!-- 挑选插件弹出对话框 开始 -->
+	<div class="pluginlist_box">
+		<div class="cont">
+			<h3>
+				<strong>挑选插件</strong>
+				<span class="close"><!-- 关闭窗口按钮 -->╳</span>
+			</h3>
+			<div class="notice">
+				<p>请从以下“我的插件”中，选择一款插件新增活动：</p>
+				<!-- <h4>没有可使用的插件，请<a href="#">查看</a></h4> -->
+			</div>
+			<div class="pluginlistmask">
+				<div class="pluginlist">
+					<ul>
+						<li>
+							<img src="../../images/app1.png" />
+							<span>干掉XXX</span>
+							<em>还剩11个月</em>
+						</li>
+						<li>
+							<img src="../../images/app2.png" />
+							<span>干掉XXX</span>
+							<em>还剩11个月</em>
+						</li>
+						<li>
+							<img src="../../images/app3.png" />
+							<span>干掉XXX</span>
+							<em>还剩11个月</em>
+						</li>
+						<li>
+							<img src="../../images/app4.png" />
+							<span>干掉XXX</span>
+							<em>还剩11个月</em>
+						</li>
+						<li>
+							<img src="../../images/app5.png" />
+							<span>干掉XXX</span>
+							<em>还剩11个月</em>
+						</li>
+						<li>
+							<img src="../../images/app1.png" />
+							<span>干掉XXX</span>
+							<em>还剩11个月</em>
+						</li>
+						<li>
+							<img src="../../images/app2.png" />
+							<span>干掉XXX</span>
+							<em>还剩11个月</em>
+						</li>
+						<li>
+							<img src="../../images/app3.png" />
+							<span>干掉XXX</span>
+							<em>还剩11个月</em>
+						</li>
+						<li>
+							<img src="../../images/app4.png" />
+							<span>干掉XXX</span>
+							<em>还剩11个月</em>
+						</li>
+						<li>
+							<img src="../../images/app5.png" />
+							<span>干掉XXX</span>
+							<em>还剩11个月</em>
+						</li>
+						<li>
+							<img src="../../images/app1.png" />
+							<span>干掉XXX</span>
+							<em>还剩11个月</em>
+						</li>
+						<li>
+							<img src="../../images/app2.png" />
+							<span>干掉XXX</span>
+							<em>还剩11个月</em>
+						</li>
+						<li>
+							<img src="../../images/app3.png" />
+							<span>干掉XXX</span>
+							<em>还剩11个月</em>
+						</li>
+						<li>
+							<img src="../../images/app4.png" />
+							<span>干掉XXX</span>
+							<em>还剩11个月</em>
+						</li>
+						<li>
+							<img src="../../images/app5.png" />
+							<span>干掉XXX</span>
+							<em>还剩11个月</em>
+						</li>
+					</ul>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div class="ativcenter_btns">
+				<a class="btn_add">新增站外活动</a>
+				<a class="btn_done">确定</a>
+			</div>
+		</div>
+		<div class="bg"></div>
+	</div>
+	<!-- 挑选插件弹出对话框 结束 -->
+	<!-- 支付 开始 -->
+	<div class="pay_box" id="paysuc">
+		<form action="/pay/pay/pf" method="post" name="payForm" id="payForm">
+			<h3>
+				<strong>购买活动</strong><span class="close">╳</span>
+			</h3>
+			<div class="clear space_20"></div>
+			<div class="row">
+				有效期
+				<select>
+					<option>1个月</option>
+					<option>2个月</option>
+					<option>3个月</option>
+					<option>4个月</option>
+					<option>5个月</option>
+					<option>6个月</option>
+					<option>7个月</option>
+					<option>8个月</option>
+					<option>9个月</option>
+					<option>10个月</option>
+					<option>11个月</option>
+					<option>12个月</option>
+				</select>
+			</div>
+			<h4>消费：￥268.0</h4>
+			<div class="row">
+				<label><input type="checkbox" name="isRepreCoin" id="isRepreCoin">使用代币：￥8608.0</label> 
+				<a href="javascript:alert('敬请期待!')" class="paycash">赚代币</a>
+			</div>
+			<div class="clear space_20"></div>
+			<div class="row">
+				<a class="btn_cancel">取消</a> <a onclick="topay();" class="btn_pay">支付</a>
+			</div>
+			<div class="clear"></div>
+			<div id="pluginIdInputHid"><input type="hidden" id="productId" name="productId" value="10"></div>
+		</form>
+		<div class="bg"></div>
+	</div>
+	<div class="pay_box" id="payfal">
+		<div class="cont">
+			<h3>
+				<strong>购买活动</strong><span class="close">╳</span>
+			</h3>
+			<div class="space_10"></div>
+			<div class="space_5"></div>
+			<p>暂不支持线上购买</p>
+			<p>请联系客服</p>
+			<div class="space_10"></div>
+			<div class="space_5"></div>
+			<div class="btns">
+				<a href="#" class="btn_cancel">知道了</a>
+			</div>
+		</div>
+		<div class="bg"></div>
+	</div>
+	<!-- 支付 结束 -->
+	<!-- 新手引导 开始 -->
+	<div class="guide">
+		<div class="cont">
+			<img class='ativ1' src="../../images/pc/activityguide1.png" />
+			<img class='ativ2' src="../../images/pc/activityguide2.png" />
+			<img class='ativ3' src="../../images/pc/activityguide3.png" />
+			<img class='ativ4' src="../../images/pc/activityguide4.png" />
+			<img class='ativ5' src="../../images/pc/activityguide5.png" />
+		</div>
+		<div class="bg"></div>
+	</div>
+	<!-- 新手引导 结束 -->
+</body>
+</html>
+<script type="text/javascript">
+
+	//显示大图(code)
+	$(function(){
+		$('.activity_list td .code').click(function(){
+			$('body').append('<div class="bigimg_box">\
+								<img src="'+$(this).attr("src")+'" />\
+							</div>');
+			$('.bigimg_box img').load(function(){
+				$(this).attr("style","margin-top:-" + ($(this).height()/2-5) +"px;margin-left:-" + ($(this).width()/2-5) +"px;");
+			});
+		});
+		$(document).on("click",".bigimg_box",function(){
+			$(this).remove();
+		});
+	});
+
+	//回到顶部
+	$(function(){
+		$(".gotop").click(function(){
+			$("body,html").animate({scrollTop:0},300);
+		});
+		$(window).scroll(function(){
+			if($(window).scrollTop() > 10){
+				$('.gotop').attr("style","display:block;");
+			}else{
+				$('.gotop').attr("style","display:none;");
+			}
+		});
+	});
+
+	//双击复制
+	function init(str){
+		var clip = new ZeroClipboard.Client();
+		clip.setHandCursor(true);
+		clip.setText($('#'+str).val());
+		clip.addEventListener("mouseUp");
+		clip.glue(str);
+		return false;
+	}
+
+
+	//支付
+	$(function(){
+		$('.btn_direct').click(function(){
+			if(true){
+				$('#paysuc').css("display","block");
+			}else{
+				$('#payfal').css("display","block");
+			}
+		});
+		$('.pay_box .close,.pay_box .btn_cancel').click(function(){
+			$('.pay_box').attr("style","display:none;");
+		});
+	});
+
+
+	function alertset(){
+		$('body').append('<div class="alertset">\
+			<dl style="display:block;">\
+				<dt>请您先配置活动</dd>\
+				<dd class="tc space_20"><a class="btn_cancel" onclick="hidealert(this);">知道了</a></dd>\
+			</dl>\
+			<div class="bg"></div>\
+		</div>');
+	}
+
+	function hidealert(obj){
+		$(obj).parents(".alertset").remove();
+	}
+
+
+	//新手引导
+	$(function(){
+		var guide = 1;
+		if(guide <= 0){
+			$('.guide').attr("style","display:none;");
+		}
+		$('.guide').click(function(){
+			guide += 1;
+			if(guide <= 5 && guide > 0){
+				$('.guide .cont img').fadeOut(500);
+				$('.guide .cont img.ativ' + guide).fadeIn(200);
+			}else if(guide > 5){
+				$('.guide').fadeOut(500);
+			}
+
+		});
+	});
+</script>
+

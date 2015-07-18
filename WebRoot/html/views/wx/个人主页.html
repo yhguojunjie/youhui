@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no">
+<title>个人页/他人页</title>
+<link rel="stylesheet" href="../../css/wx/layout.css">
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/wx/touchslide.js"></script>
+<script type="text/javascript" src="../../js/wx/layout.js"></script>
+</head>
+<body>
+	<div class="space_15"></div>
+	<!-- 个人主页 开始 -->
+	<article class="wrap">
+		<div class="user_center">
+			<a class="avatar"><img src="../../images/wx/avatar.jpg" /></a>
+			<h3>
+				<a class="title">御泥坊</a>
+				<a href="#" class="cash_btn">提现</a><!-- 个人主页 -->
+				<a class="contact_btn" onclick="contact();">联系我</a><!-- 他人页面 -->
+			</h3>
+			<p>这种神秘泥块为原料生产的护肤品颇受妇女欢迎，成为宫中养颜圣品，被封为“御泥”。</p>
+			<div class="clear"></div>
+		</div>
+	</article>
+	<!-- 个人主页 结束 -->
+	<!-- 我的活动 开始 -->
+	<div class="n_title tr">
+		<h3 class="fl">我的活动(3)</h3>
+		<!-- <a href="#">更多››</a> -->
+	</div>
+	<article class="wrap">
+		<div class="ativ_ing">
+			<ul>
+				<li>
+					<section onclick="javascript:self.location='#url'">
+						<a class="imgbox"><img src="../../images/wx/app5.png"></a>
+						<a class="title">圣诞送优惠</a>
+						<div class="clear"></div>
+					</section>
+					<a href="#" class="enterprise">御泥坊</a>
+				</li>
+				<li>
+					<section onclick="javascript:self.location='#url'">
+						<a class="imgbox"><img src="../../images/wx/app2.png"></a>
+						<a class="title">圣诞送优惠</a>
+						<div class="clear"></div>
+					</section>
+					<a href="#" class="enterprise">御泥坊</a>
+				</li>
+				<li>
+					<section onclick="javascript:self.location='#url'">
+						<a class="imgbox"><img src="../../images/wx/app4.png"></a>
+						<a class="title">圣诞送优惠</a>
+						<div class="clear"></div>
+					</section>
+					<a href="#" class="enterprise">御泥坊</a>
+				</li>
+			</ul>
+			<div class="seemore" onclick="seemoreMyativ(this);">查看更多</div>
+		</div>
+	</article>
+	<!-- 我的活动 结束 -->
+	<!-- 名下渠道 开始 -->
+	<div class="n_title tr">
+		<h3 class="fl">名下渠道(3)</h3>
+		<!-- <a href="#">更多››</a> -->
+	</div>
+	<article class="wrap">
+		<div class="path_list">
+			<ul>
+				<li><a href="#">
+					<img src="../../images/pc/demo19_ico.jpg">
+					<h3><strong>钦州国美-按发布</strong><i class="sina_ico"></i></h3>
+					<p>电子商务钦州一霸，连续三十年销量第一。</p>
+					<p class="tr space_10">
+						<span class="fl">粉丝数：<em>10W-50W</em></span>
+						<span>价位：<em>5000元/条</em></span>
+					</p>
+				</a></li>
+				<li><a href="#">
+					<img src="../../images/pc/demo13_ico.jpg">
+					<h3><strong>华韩整容-按发布</strong><i class="wechat_ico">订</i></h3>
+					<p>电子商务钦州一霸，连续三十年销量第一。</p>
+					<p class="tr space_10">
+						<span class="fl">粉丝数：<em>10W-50W</em></span>
+						<span>价位：<em>5000元/条</em></span>
+					</p>
+				</a></li>
+				<li><a href="#">
+					<img src="../../images/pc/demo7_ico.jpg">
+					<h3><strong>中央花园-按发布</strong><i class="wechat_ico">服</i></h3>
+					<p>电子商务钦州一霸，连续三十年销量第一。</p>
+					<p class="tr space_10">
+						<span class="fl">粉丝数：<em>10W-50W</em></span>
+						<span>价位：<em>5000元/条</em></span>
+					</p>
+				</a></li>
+				<li class="seemore" style="padding:0;" onclick="seemorePath(this);">查看更多</li>
+			</ul>
+			
+		</div>
+	</article>
+	<!-- 名下渠道 结束 -->
+	<!-- 活动推荐 开始 -->
+	<div class="n_title tr">
+		<h3 class="fl">活动推荐</h3>
+		<!-- <a href="#">更多››</a> -->
+	</div>
+	<article class="wrap">
+		<div class="ativ_list">
+			<ul>
+				<li>
+					<a href="#" class="ativ_title">
+						<img src="../../images/wx/microscene.jpg">
+						<h3>全大伟寿司店-按发布</h3>
+						<p class="tr">
+							<span class="fl">参与人数：<em>20万</em></span>
+							<span>浏览量：<em>44万</em></span>
+						</p>
+					</a>
+					<a href="#" class="ativ_intro">
+						<img src="../../images/wx/avatar.jpg">
+						<h4>全大伟寿司店</h4>
+						<p>わたしのしんゆう,に中する,をね准らう千喜。</p>
+					</a>
+					<a href="#" class="ativ_plugin">使用插件：<em>《圣诞树摇礼物》</em></a>
+				</li>
+				<li>
+					<a href="#" class="ativ_title">
+						<img src="../../images/wx/microscene.jpg">
+						<h3>全大伟寿司店-按发布</h3>
+						<p class="tr">
+							<span class="fl">参与人数：<em>20万</em></span>
+							<span>浏览量：<em>44万</em></span>
+						</p>
+					</a>
+					<a href="#" class="ativ_intro">
+						<img src="../../images/wx/avatar.jpg">
+						<h4>全大伟寿司店</h4>
+						<p>わたしのしんゆう,に中する,をね准らう千喜。</p>
+					</a>
+					<a href="#" class="ativ_plugin">使用插件：<em>《圣诞树摇礼物》</em></a>
+				</li>
+				<li>
+					<a href="#" class="ativ_title">
+						<img src="../../images/wx/microscene.jpg">
+						<h3>全大伟寿司店-按发布</h3>
+						<p class="tr">
+							<span class="fl">参与人数：<em>20万</em></span>
+							<span>浏览量：<em>44万</em></span>
+						</p>
+					</a>
+					<a href="#" class="ativ_intro">
+						<img src="../../images/wx/avatar.jpg">
+						<h4>全大伟寿司店</h4>
+						<p>わたしのしんゆう,に中する,をね准らう千喜。</p>
+					</a>
+					<a href="#" class="ativ_plugin">使用插件：<em>《圣诞树摇礼物》</em></a>
+				</li>
+			</ul>
+		</div>
+	</article>
+	<!-- 活动推荐 结束 -->
+	<footer>
+		<img src="../../images/wx/hdt_logo2.png" />
+		<p>专注移动社交互动广告</p>
+		<p>Copyright © 2014 www.tchajian.com  闽ICP备14019370号</p>
+	</footer>
+	<div class="menu">
+		<ul>
+			<li style="width:40%;margin-left:10%;"><a href="#">
+				<img src="../../images/wx/menu7.png" />
+				<span>首页</span>
+			</a></li>
+			<li style="width:40%;"><a href="#">
+				<img src="../../images/wx/menu5.png" />
+				<span>个人主页</span>
+			</a></li>
+			<li><a href="#">
+				<img src="../../images/wx/menu4.png" />
+				<span>我的活动</span>
+			</a></li>
+			<li><a href="#">
+				<img src="../../images/wx/menu8.png" />
+				<span>我的订单</span>
+			</a></li>
+			<li><a href="#">
+				<img src="../../images/wx/menu6.png" />
+				<span>收益提现</span>
+			</a></li>
+		</ul>
+	</div>
+	<!-- 菜单 开始 -->
+	<div class="menu_btn"><img src="../../images/wx/menu1.png" /></div>
+	<!-- 菜单 结束 -->
+	<!-- 浮动按钮 开始 -->
+	<div class="space_30"></div>
+	<div class="space_30"></div>
+	<div class="edit">
+		<a class="edit_btn" href="#">编&nbsp;&nbsp;辑</a><!-- 个人主页 -->
+	</div>
+	<!-- 浮动按钮 结束 -->
+</body>
+</html>
+<script type="text/javascript">
+
+	//联系我
+	function contact(){
+		var html = '\
+		<div class="prompt">\
+			<form class="cont h250">\
+				<div class="title"><strong>联系方式</strong><i onclick="closePrompt(this)">╳</i></div>\
+				<ul class="contact">\
+					<li>\
+						<i class="phone_ico"></i>\
+						<span>手机：</span>\
+						18205909550\
+					</li>\
+					<li>\
+						<i class="qq_ico"></i>\
+						<span>Q Q：</span>\
+						<a href="#">123456</a>\
+					</li>\
+					<li>\
+						<i class="wechat_ico"></i>\
+						<span>微信：</span>\
+						Tiny_Yanye\
+					</li>\
+					<li>\
+						<i class="mail_ico"></i>\
+						<span>邮箱：</span>\
+						<a href="#">123456@gmail.com</a>\
+					</li>\
+				</ul>\
+				<div class="btns">\
+					<a class="cancel_btn" onclick="closePrompt(this)">知道了</a>\
+				</div>\
+			</form>\
+			<div class="bg"></div>\
+		</div>';
+		$('body').append(html);
+	}
+
+
+	//查看更多我的活动
+	function seemoreMyativ(obj){
+		$.ajax({
+			url: 'xxxxxxxxxx',
+			dataType: 'json',
+			timeout: 300,
+			complete: function(data){
+				var html="";
+				for (var i = 0; i < 5; i++) {
+					html+='<li>\
+								<section onclick="javascript:self.location=\'#url\'">\
+									<a class="imgbox"><img src="../../images/wx/app4.png"></a>\
+									<a class="title">圣诞送优惠</a>\
+									<div class="clear"></div>\
+								</section>\
+								<a href="#" class="enterprise">御泥坊</a>\
+							</li>';
+		 		};
+				$(obj).prev().append(html);
+			}
+		});
+	}
+
+	//查看更多名下渠道
+	function seemorePath(obj){
+		$.ajax({
+			url: 'xxxxxxxxxx',
+			dataType: 'json',
+			timeout: 300,
+			complete: function(data){
+				var html="";
+				for (var i = 0; i < 5; i++) {
+					html+='<li><a href="#">\
+								<img src="../../images/pc/demo7_ico.jpg">\
+								<h3><strong>中央花园-按发布</strong><i class="wechat_ico">服</i></h3>\
+								<p>电子商务钦州一霸，连续三十年销量第一。</p>\
+								<p class="tr space_10">\
+									<span class="fl">粉丝数：<em>10W-50W</em></span>\
+									<span>价位：<em>5000元/条</em></span>\
+								</p>\
+							</a></li>';
+		 		};
+				$(obj).before(html);
+			}
+		});
+	}
+
+</script>

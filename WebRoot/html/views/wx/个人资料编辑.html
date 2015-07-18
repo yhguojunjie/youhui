@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no">
+<title>个人资料编辑</title>
+<link rel="stylesheet" href="../../css/wx/layout.css">
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/wx/area.js"></script>
+<script type="text/javascript" src="../../js/wx/layout.js"></script>
+</head>
+<body onload="loadProv()">
+	<!-- 资料编辑 开始 -->
+	<div class="user_edit">
+		<form onsubmit="return verify_submit()">
+			<div class="n_title tr">
+				<h3 class="fl">模版推荐</h3>
+			</div>
+			<article class="wrap">
+				<div class="box">
+					<div class="row">
+						<div class="avatar_upload">
+							<img src="../../images/wx/avatar.png" />
+							<input type="file" />
+						</div>
+						<span>点击头像修改</span>
+						<div class="clear"></div>
+					</div>
+					<div class="row">
+						<strong>昵称：</strong>
+						<div class="fl">
+							<input class="verify_name" type="text" placeholder="" />
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="row">
+						<strong>地区：</strong>
+						<div class="fl">
+							<select id="prov" onchange="provChange()"><option>福建省</option></select>
+							<select id="city"><option>厦门市</option></select>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="row">
+						<strong>简介：</strong>
+						<div class="fl">
+							<textarea></textarea>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+			</article>
+			<div class="n_title tr">
+				<h3 class="fl">模版推荐</h3>
+			</div>
+			<article class="wrap">
+				<div class="box">
+					<div class="row">
+						<strong>手机：</strong>
+						<div class="fl">
+							<input class="verify_phone" type="text" />
+							<label><input type="checkbox" />不公开</label>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="row">
+						<strong>Q Q：</strong>
+						<div class="fl">
+							<input class="verify_qq" type="text" />
+							<label><input type="checkbox" />不公开</label>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="row">
+						<strong>微信：</strong>
+						<div class="fl">
+							<input class="verify_wechat" type="text" />
+							<label><input type="checkbox" />不公开</label>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="row">
+						<strong>邮箱：</strong>
+						<div class="fl">
+							<input class="verify_mail" type="text" />
+							<label><input type="checkbox" />不公开</label>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+			</article>
+			<div class="btn_submit"><input type="submit" value="确定" /></div>
+		</form>
+	</div>
+	<!-- 资料编辑 结束 -->
+	<footer>
+		<img src="../../images/wx/hdt_logo2.png" />
+		<p>专注移动社交互动广告</p>
+		<p>Copyright © 2014 www.tchajian.com  闽ICP备14019370号</p>
+	</footer>
+	<div class="menu">
+		<ul>
+			<li style="width:40%;margin-left:10%;"><a href="#">
+				<img src="../../images/wx/menu7.png" />
+				<span>首页</span>
+			</a></li>
+			<li style="width:40%;"><a href="#">
+				<img src="../../images/wx/menu5.png" />
+				<span>个人主页</span>
+			</a></li>
+			<li><a href="#">
+				<img src="../../images/wx/menu4.png" />
+				<span>我的活动</span>
+			</a></li>
+			<li><a href="#">
+				<img src="../../images/wx/menu8.png" />
+				<span>我的订单</span>
+			</a></li>
+			<li><a href="#">
+				<img src="../../images/wx/menu6.png" />
+				<span>收益提现</span>
+			</a></li>
+		</ul>
+	</div>
+	<!-- 菜单 开始 -->
+	<div class="menu_btn"><img src="../../images/wx/menu1.png" /></div>
+	<!-- 菜单 结束 -->
+	<div class="space_30"></div>
+	<div class="space_30"></div>
+</body>
+</html>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//表单字段验证
+		$('.verify_name').blur(function(){
+			if(!verify($(this).val(),'')){
+				insertNotice($(this),"请输入名称");
+				$(this).attr("verify","false");
+				return false;
+			}else{
+				insertNotice($(this),"");
+				$(this).attr("verify","true");
+				return true;
+			}
+		});
+		$('.verify_phone').blur(function(){
+			if($(this).val()){
+				if(!verify($(this).val(),'number')){
+					insertNotice($(this),"电话号码应为全数字");
+					$(this).attr("verify","false");
+					return false;
+				}else if(!verify($(this).val(),11,'count')){
+					insertNotice($(this),"请输入11位电话号码");
+					$(this).attr("verify","false");
+					return false;
+				}else{
+					insertNotice($(this),"");
+					$(this).attr("verify","true");
+					return true;
+				}
+			}else{
+				insertNotice($(this),"");
+				$(this).attr("verify","true");
+				return true;
+			}
+		});
+		$('.verify_qq').blur(function(){
+			if(!verify($(this).val(),'number')){
+				insertNotice($(this),"QQ号码应为全数字");
+				$(this).attr("verify","false");
+				return false;
+			}else{
+				insertNotice($(this),"");
+				$(this).attr("verify","true");
+				return true;
+			}
+		});
+		$('.verify_wechat').blur(function(){
+			if($(this).val()){
+				if(!verify($(this).val(),'username')){
+					insertNotice($(this),"请输入正确的微信号格式");
+					$(this).attr("verify","false");
+					return false;
+				}else{
+					insertNotice($(this),"");
+					$(this).attr("verify","true");
+					return true;
+				}
+			}else{
+				insertNotice($(this),"");
+				$(this).attr("verify","true");
+				return true;
+			}
+		});
+		$('.verify_mail').blur(function(){
+			if($(this).val()){
+				if(!verify($(this).val(),'email')){
+					insertNotice($(this),"请输入正确的邮箱格式");
+					$(this).attr("verify","false");
+					return false;
+				}else{
+					insertNotice($(this),"");
+					$(this).attr("verify","true");
+					return true;
+				}
+			}else{
+				insertNotice($(this),"");
+				$(this).attr("verify","true");
+				return true;
+			}
+		});
+	});
+	//提交表单前端验证
+	function verify_submit(){
+		if($('.verify_name').blur().attr("verify") != "false" && $('.verify_phone').blur().attr("verify") != "false" && $('.verify_qq').blur().attr("verify") != "false" && $('.verify_wechat').blur().attr("verify") != "false" && $('.verify_mail').blur().attr("verify") != "false"){
+			return true;
+		}else{
+			return false;
+		}
+	}
+</script>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no">
+<title>渠道</title>
+<link rel="stylesheet" href="../../css/wx/layout.css">
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/wx/touchslide.js"></script>
+<script type="text/javascript" src="../../js/wx/layout.js"></script>
+</head>
+<body>
+	<!-- 渠道 开始 -->
+	<div class="space_15"></div>
+	<a href="#" class="turnpath_btn">成为渠道</a>
+	<article class="wrap">
+		<div class="t_title line3">
+			<a class="active" id="path_time">按发布</a>
+			<a id="path_fans">按粉丝数</a>
+			<a id="path_price">按均价</a>
+		</div>
+		<div class="path_list">
+			<ul>
+				<li><a href="#">
+					<em class="rehot">推荐</em>
+					<img src="../../images/pc/demo19_ico.jpg">
+					<h3><strong>钦州国美-按发布</strong><i class="sina_ico"></i></h3>
+					<p>电子商务钦州一霸，连续三十年销量第一。</p>
+					<p class="tr space_10">
+						<span class="fl">粉丝数：<em>10W-50W</em></span>
+						<span>价位：<em>5000元/条</em></span>
+					</p>
+				</a></li>
+				<li><a href="#">
+					<em class="rehot">推荐</em>
+					<img src="../../images/pc/demo13_ico.jpg">
+					<h3><strong>华韩整容-按发布</strong><i class="wechat_ico">订</i></h3>
+					<p>电子商务钦州一霸，连续三十年销量第一。</p>
+					<p class="tr space_10">
+						<span class="fl">粉丝数：<em>10W-50W</em></span>
+						<span>价位：<em>5000元/条</em></span>
+					</p>
+				</a></li>
+				<li><a href="#">
+					<em class="rehot">推荐</em>
+					<img src="../../images/pc/demo7_ico.jpg">
+					<h3><strong>中央花园-按发布</strong><i class="wechat_ico">服</i></h3>
+					<p>电子商务钦州一霸，连续三十年销量第一。</p>
+					<p class="tr space_10">
+						<span class="fl">粉丝数：<em>10W-50W</em></span>
+						<span>价位：<em>5000元/条</em></span>
+					</p>
+				</a></li>
+				<li><a href="#">
+					<img src="../../images/pc/demo13_ico.jpg">
+					<h3><strong>华韩整容-按发布</strong><i class="wechat_ico">订</i></h3>
+					<p>电子商务钦州一霸，连续三十年销量第一。</p>
+					<p class="tr space_10">
+						<span class="fl">粉丝数：<em>10W-50W</em></span>
+						<span>价位：<em>5000元/条</em></span>
+					</p>
+				</a></li>
+				<li><a href="#">
+					<img src="../../images/pc/demo7_ico.jpg">
+					<h3><strong>中央花园-按发布</strong><i class="wechat_ico">服</i></h3>
+					<p>电子商务钦州一霸，连续三十年销量第一。</p>
+					<p class="tr space_10">
+						<span class="fl">粉丝数：<em>10W-50W</em></span>
+						<span>价位：<em>5000元/条</em></span>
+					</p>
+				</a></li>
+			</ul>
+			<div class="getmore">努力加载中...</div>
+		</div>
+	</article>
+	<footer>
+		<img src="../../images/wx/hdt_logo2.png" />
+		<p>专注移动社交互动广告</p>
+		<p>Copyright © 2014 www.tchajian.com  闽ICP备14019370号</p>
+	</footer>
+	<div class="menu">
+		<ul>
+			<li><a href="#">
+				<img src="../../images/wx/menu7.png" />
+				<span>首页</span>
+			</a></li>
+			<li><a href="#">
+				<img src="../../images/wx/menu2.png" />
+				<span>活动圈</span>
+			</a></li>
+			<li><a href="#">
+				<img src="../../images/wx/menu3.png" />
+				<span>模版库</span>
+			</a></li>
+			<li><a href="#">
+				<img src="../../images/wx/menu10.png" />
+				<span>经典案例</span>
+			</a></li>
+			<li><a href="#">
+				<img src="../../images/wx/menu9.png" />
+				<span>发布渠道</span>
+			</a></li>
+			<li><a href="#">
+				<img src="../../images/wx/menu5.png" />
+				<span>个人主页</span>
+			</a></li>
+		</ul>
+	</div>
+	<!-- 菜单 开始 -->
+	<div class="menu_btn"><img src="../../images/wx/menu1.png" /></div>
+	<!-- 菜单 结束 -->
+</body>
+</html>
+<script type="text/javascript">
+
+
+	//渠道推荐切换 开始----------------------------------->
+	$('#path_time').click(function(){//按发布
+		//更新按钮高亮
+		$('#path_time').attr("class","ative");
+		$('#path_fans').attr("class"," ");
+		$('#path_price').attr("class"," ");
+		//加载按发布内容
+		$.ajax({
+			url: 'xxxxxxxxxx',
+			dataType: 'json',
+			timeout: 300,
+			complete: function(data){
+				var html="";
+				for (var i = 0; i < 5; i++) {
+					html+='<li><a href="#">\
+								<em class="rehot">推荐</em>\
+								<img src="../../images/pc/demo19_ico.jpg">\
+								<h3><strong>钦州国美-按发布</strong><i class="sina_ico"></i></h3>\
+								<p>电子商务钦州一霸，连续三十年销量第一。</p>\
+								<p class="tr space_10">\
+									<span class="fl">粉丝数：<em>10W-50W</em></span>\
+									<span>价位：<em>5000元/条</em></span>\
+								</p>\
+							</a></li>';
+		 		};
+				$(".path_list ul").html(html);
+			}
+		});
+	});
+	$('#path_fans').click(function(){//按粉丝数
+		//更新按钮高亮
+		$('#path_time').attr("class"," ");
+		$('#path_fans').attr("class","ative");
+		$('#path_price').attr("class"," ");
+		//加载按粉丝数内容
+		$.ajax({
+			url: 'xxxxxxxxxx',
+			dataType: 'json',
+			timeout: 300,
+			complete: function(data){
+				var html="";
+				for (var i = 0; i < 5; i++) {
+					html+='<li><a href="#">\
+								<img src="../../images/pc/demo19_ico.jpg">\
+								<h3><strong>钦州国美-按粉丝数</strong><i class="sina_ico"></i></h3>\
+								<p>电子商务钦州一霸，连续三十年销量第一。</p>\
+								<p class="tr space_10">\
+									<span class="fl">粉丝数：<em>10W-50W</em></span>\
+									<span>价位：<em>5000元/条</em></span>\
+								</p>\
+							</a></li>';
+		 		};
+				$(".path_list ul").html(html);
+			}
+		});
+	});
+	$('#path_price').click(function(){//按均价
+		//更新按钮高亮
+		$('#path_time').attr("class"," ");
+		$('#path_fans').attr("class"," ");
+		$('#path_price').attr("class","ative");
+		//加载按均价内容
+		$.ajax({
+			url: 'xxxxxxxxxx',
+			dataType: 'json',
+			timeout: 300,
+			complete: function(data){
+				var html="";
+				for (var i = 0; i < 5; i++) {
+					html+='<li><a href="#">\
+								<img src="../../images/pc/demo19_ico.jpg">\
+								<h3><strong>钦州国美-按均价</strong><i class="sina_ico"></i></h3>\
+								<p>电子商务钦州一霸，连续三十年销量第一。</p>\
+								<p class="tr space_10">\
+									<span class="fl">粉丝数：<em>10W-50W</em></span>\
+									<span>价位：<em>5000元/条</em></span>\
+								</p>\
+							</a></li>';
+		 		};
+				$(".path_list ul").html(html);
+			}
+		});
+	});
+	//渠道推荐切换 结束-----------------------------------<
+
+
+	//加载更多模版 开始----------------------------------->
+	var ajaxload=false,
+	winHeight=$(window).height();
+	$(window).scroll(function(){
+		var wst=$(window).scrollTop();
+		var bodyHeight=$(document).height();
+		if(!ajaxload){
+			if(wst+winHeight>bodyHeight-20){
+				ajaxtip("努力加载中...");
+				$.ajax({
+					url: 'xxxxxxxxxx',
+					dataType: 'json',
+					timeout: 300,
+					complete: function(data){
+				 		var html="";
+				 		for (var i = 0; i < 10; i++) {
+				 			html+='<li><a href="#">\
+										<img src="../../images/pc/demo19_ico.jpg">\
+										<h3><strong>钦州国美</strong><i class="sina_ico"></i></h3>\
+										<p>电子商务钦州一霸，连续三十年销量第一。</p>\
+										<p class="tr space_10">\
+											<span class="fl">粉丝数：<em>10W-50W</em></span>\
+											<span>价位：<em>5000元/条</em></span>\
+										</p>\
+									</a></li>';
+				 		};
+						$(".path_list ul").append(html);
+						ajaxload=false;
+					}
+				});
+			}
+		}
+	});
+	function ajaxtip(txt){
+		$(".get_more").html(txt);
+	}
+	//加载更多模版 结束-----------------------------------<
+
+</script>

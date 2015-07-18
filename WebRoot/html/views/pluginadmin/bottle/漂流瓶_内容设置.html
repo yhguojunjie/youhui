@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="../../../css/basic.css" />
+<link type="text/css" rel="stylesheet" href="../../../css/global.css" />
+<link type="text/css" rel="stylesheet" href="../../../css/layout.css" />
+<link type="text/css" rel="stylesheet" href="../../../pluginres/css/bottle.css" />
+<script type="text/javascript" src="../../../js/jquery.js"></script>
+<script type="text/javascript" src="../../../js/layout.js"></script>
+<script type="text/javascript" src="../../../pluginres/js/bottle.js"></script>
+<title>漂流瓶_内容设置</title>
+</head>
+<body>
+	<!-- 头部 开始 -->
+	<div class="w1190 head">
+		<div class="logo">
+			<h1><a href="#">淘插件</a></h1>
+			<div class="slogan"><img src="../../../images/slogan.png" /></div>
+		</div>
+		<div class="nav">
+			<ul>
+				<li><a href="#" class="active"><em class="icon_home"></em>首页</a></li>
+				<li><a href="#"><em class="icon_plugin"></em>我的淘插件</a></li>
+				<li><a href="#"><em class="icon_login"></em>山间的风</a></li>
+				<li><a href="#"><em class="icon_setup"></em>设置</a></li>
+				<li><a href="#"><em class="icon_exit"></em>退出</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- 头部 结束 -->
+	<!-- 内容 开始 -->
+	<div class="w1190 bottle">
+		<!-- 左侧内容 开始 -->
+		<div class="fl w840 main">
+			<div class="tab_title">
+				<a href="#">活动设置</a>
+				<a href="#" class="active">内容设置</a>
+				<a href="#">中奖名单</a>
+			</div>
+			<div class="cont mark">
+				<h4 class="tr">
+					<span class="fl">内容总数：<em>10</em></span>
+					<a class="bg_green" id="add_ques" onclick="addContbox()">新增题目</a>
+				</h4>
+				<table>
+					<tr>
+						<th>序号</th>
+						<th style="min-width:300px;">名称</th>
+						<th>操作</th>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>佛罗伦萨</td>
+						<td>
+							<a class="btn" onclick="editContbox(this)">编辑</a>
+							<a class="btn" onclick="delContbox(this)">删除</a>
+						</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>满切斯特</td>
+						<td>
+							<a class="btn" onclick="editContbox(this)">编辑</a>
+							<a class="btn" onclick="delContbox(this)">删除</a>
+						</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>哈尔科夫</td>
+						<td>
+							<a class="btn" onclick="editContbox(this)">编辑</a>
+							<a class="btn" onclick="delContbox(this)">删除</a>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!-- 分页 开始 -->
+			<div class="tr pages">
+				<form>
+					<a href="#" class="prev"><!-- 上一张 --></a>
+					<a href="#">1</a>
+					<a href="#" class="active">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="#">6</a>
+					<a href="#">7</a>
+					<a href="#">8</a>
+					<a href="#">9</a>
+					<a href="#">10</a>
+					<span>......</span>
+					<a href="#">103</a>
+					<a href="#">104</a>
+					<input type="text" />
+					<input type="submit" value="GO" />
+					<a href="#" class="next"><!-- 下一张 --></a>
+				</form>
+			</div>
+			<!-- 分页 结束 -->
+		</div>
+		<!-- 左侧内容 结束 -->
+		<!-- 右侧内容 开始 -->
+		<div class="fr w320 side">
+			<div class="service_box">
+				<h3>配置太麻烦？我们来帮您</h3>
+				<p>您可以拨打：<em>400-188-6666</em></p>
+				<p>服务时间段：<em>09:00—23:00</em></p>
+				<a href="#" class="btn">联系在线客服</a>
+				<div class="clear"></div>
+			</div>
+			<h4 class="tr">
+				<strong class="fl">界面预览</strong>
+				<a href="#" class="btn_refresh">刷新</a>
+			</h4>
+			<div class="cont">
+				<!-- 这里放手机端嵌入页面连接 -->
+				<iframe width="320" height="400" scrolling="no" src="../../../../images/banner.jpg"></iframe>
+			</div>
+		</div>
+		<!-- 右侧内容 结束 -->
+		<div class="clear"></div>
+	</div>
+	<!-- 内容 结束 -->
+	<!-- 底部 开始 -->
+	<div class="w1190 foot">
+		<h2><a href="#">淘插件-营销推广插件超市</a></h2>
+		<p>Opyright © 2014 WWW.GIFTGAME.CN All Rights Reserved 有戏（厦门）网络科技有限公司版权所有 闽ICP备14019370号</p>
+	</div>
+	<!-- 底部 结束 -->
+	<div class="cont_box" style="display:none;">
+		<h3>
+			<em class="close" onclick="hideContbox()">╳</em> 
+			<strong>内容添加</strong>
+			</h3>
+		<div class="space_20"></div>
+		<div class="row" id="contImg">
+			<span>图片：</span>
+			<div class="fr">
+				<div class="preview"><img class="w100 h120" src="../../../pluginres/images/bottle/img.jpg"></div>
+				<div class="upload_file">
+					<input type="file" class="fileupload" onchange="imgToBase64(this)" />
+					<span><em class="ico_image"><!-- 图标 --></em>选择封面</span>
+				</div>
+				<em>建议尺寸：500*600（或等比），大小不超过50K。</em>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="row">
+			<span>名称：</span>
+			<div class="fr">
+				<input type="text" id="contName" value="佛罗伦萨" maxlength="16" />
+				<em>必填，长度不超过16个字符</em>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="row">
+			<span>描述：</span>
+			<div class="fr">
+				<textarea id="contIntro" maxlength="60"></textarea>
+				<em>必填，长度不超过60个字符</em>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="row">
+			<div class="fr">
+				<a class="done" onclick="submitContbox()">保&nbsp;存</a>
+				<a class="cancel" onclick="hideContbox()">取&nbsp;消</a>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	//图片上传预览
+	function imgToBase64(file){
+		if(file.files && file.files[0]){
+			var reader = new FileReader();
+			reader.onload = function(e){
+				$(file).parent().prev().find('img').attr("src",e.target.result);
+			}
+			reader.readAsDataURL(file.files[0]);
+		}
+	}
+	//隐藏
+	function hideContbox(){
+		$('.cont_box').hide();
+	}
+	//新增
+	function addContbox(){
+		$('.cont_box').show();
+		//更新该新增内容面板
+		//更新图片
+		var imgUrl = '../../../pluginres/images/bottle/img.jpg';
+		$('#contImg').find('.preview img').attr("src",imgUrl);
+		$('#contImg').find('.fileupload').val(imgUrl);
+		//更新名称
+		var contName = '';
+		$('#contName').val(contName);
+		//更新介绍
+		var contIntro = '';
+		$('#contIntro').val(contIntro);
+	}
+	//编辑
+	function editContbox(obj){
+		//得到条内容序号
+		contNum = $(obj).parent().parent().find('td').eq(0).text();
+
+		$('.cont_box').show();
+
+		$.ajax({
+			url: 'xxxxxxxxxx',
+			dataType: 'json',
+			timeout: 300,
+			complete: function(data){
+				//通过得到的序号返回数据，更新该条内容面板
+				//更新图片
+				var imgUrl = data.imgUrl || '';
+				$('#contImg').find('.preview img').attr("src",imgUrl);
+				$('#contImg').find('.fileupload').val(imgUrl);
+				//更新名称
+				var contName = data.contName || '';
+				$('#contName').val(contName);
+				//更新介绍
+				var contIntro = data.contIntro || '';
+				$('#contIntro').val(contIntro);
+			}
+		});
+	}
+
+	//删除
+	function delContbox(obj){
+		//得到条内容序号
+		contNum = $(obj).parent().parent().find('td').eq(0).text();
+
+		//通过序号删除
+	}
+
+	//保存该条内容
+	function submitContbox(){
+
+		//得到该面板的数据
+		//得到图片Base64
+		$('#contImg').find('.preview img').attr("src");
+		//得到名称
+		$('#contName').val();
+		//得到介绍
+		$('#contIntro').val();
+
+
+		//这里写你的提交事件
+
+
+		$('.cont_box').hide();
+	}
+
+</script>

@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="../../css/basic.css" />
+<link type="text/css" rel="stylesheet" href="../../css/global.css" />
+<link type="text/css" rel="stylesheet" href="../../css/layout.css" />
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/layout.js"></script>
+<title>找回密码2</title>
+</head>
+<body>
+	<!-- 头部 开始 -->
+	<div class="w1190 head">
+		<div class="logo">
+			<h1><a href="#" title="互动推"><img alt="互动推" src="../../images/pc/hdt_logo.png" /></a></h1>
+			<div class="slogan"><span>专注移动社交互动广告</span></div>
+		</div>
+		<div class="nav">
+			<ul>
+				<li><a href="#"><em class="icon_home"></em>首页</a></li>
+				<li><a href="#"><em class="icon_ativ"></em>活动圈</a></li>
+				<li><a href="#"><em class="icon_plugin"></em>模版库</a></li>
+				<li><a href="#"><em class="icon_channel"></em>发布渠道</a></li>
+				<li><a href="#"><em class="icon_help"></em>帮助中心</a></li>
+				<li><a href="#"><em class="icon_agent"></em>加盟代理</a></li>
+				<li><a href="#">登录</a><strong>|</strong><a href="#">注册</a></li>
+				<!-- <li class="users_btn"><a href="#"><img src="../../images/avatar.jpg" />山间的风</a>（<a href="#">退出</a>）</li> -->
+			</ul>
+		</div>
+	</div>
+	<!-- 头部 结束 -->
+	<!-- 找回密码 开始 -->
+	<div class="w1190 register">
+		<form class="cont" onsubmit="return verify_submit()">
+			<h2>找回密码</h2>
+			<div class="row">
+				<span class="fl">新密码</span>
+				<div class="fr">
+					<input class="verify_pass1" type="password" maxlength="16" verify="false" />
+					<i>*</i><b>长度为6~16位字符</b><em></em>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="row">
+				<span class="fl">确认密码</span>
+				<div class="fr">
+					<input class="verify_pass2" type="password" maxlength="16" verify="false" />
+					<i>*</i><em></em>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="space_20"></div>
+			<div class="row">
+				<span class="fl">&nbsp;</span>
+				<div class="fr">
+					<input type="submit" value="完 成" />
+				</div>
+				<div class="clear space_20"></div>
+			</div>
+		</form>
+	</div>
+	<!-- 找回密码 结束 -->
+	<!-- 浮动菜单 开始 -->
+	<div class="float_menu">
+		<ul>
+			<li class="sliding">
+				<a><em class="phone_ico"></em><span>0592-7127103</span></a>
+			</li>
+			<li class="clear"></li>
+			<li class="sliding">
+				<a href="#"><em class="qq_ico"></em><span>点击QQ交谈</span></a>
+			</li>
+			<li class="clear"></li>
+			<li id="float_menucode">
+				<a href="#" class="sliding"><img src="../../images/pc/float_code.jpg"></a>
+			</li>
+			<li class="clear"></li>
+			<li class="gotop">
+				<a><em class="gotop_ico">返回顶部</em></a>
+			</li>
+		</ul>
+	</div>
+	<!-- 浮动菜单 结束 -->
+</body>
+</html>
+<script type="text/javascript">
+	//屏蔽复制密码
+	$(function(){
+		$("input:password").bind("copy cut paste",function(e){
+			return false;
+		});
+	});
+
+
+	//验证密码
+	$(function(){
+		$('.verify_pass1').blur(function(){
+			$(".verify_pass2").blur();
+			if($(this).val()){
+				if($(this).val().length > 5){
+					insertNotice($(this),'<img src="../../images/pc/done_ico.png">');
+					$(this).attr("verify","true");
+					return true;
+				}else{
+					insertNotice($(this),"请输入合适的密码长度");
+					$(this).attr("verify","false");
+					return false;
+				}
+			}else{
+				insertNotice($(this),"请输入密码");
+				$(this).attr("verify","false");
+				return false;
+			}
+		});
+		$('.verify_pass2').blur(function(){
+			if($(this).val()){
+				if($(this).val().length > 5){
+					if($('.verify_pass1').val() == $('.verify_pass2').val()){
+						insertNotice($(this),'<img src="../../images/pc/done_ico.png">');
+						$(this).attr("verify","true");
+						return true;
+					}else{
+						insertNotice($(this),'两次输入密码不一致');
+						$(this).attr("verify","false");
+						return false;
+					}
+				}else{
+					insertNotice($(this),"请输入合适的密码长度");
+					$(this).attr("verify","false");
+					return false;
+				}
+			}else{
+				insertNotice($(this),"请输入密码");
+				$(this).attr("verify","false");
+				return false;
+			}
+		});
+	});
+
+	//验证品牌标志是否上传
+	$(function(){
+		$('.verify_logo').change(function(){
+			insertNotice($(this).parent(),'<img src="../../images/pc/done_ico.png">');
+			$(this).attr("verify","true");
+			return true;
+		});
+	});
+
+	//提交表单前端验证
+	function verify_submit(){
+		var verify = 0;
+		$('input[type="password"]').each(function(){
+			$(this).blur();
+			if($(this).attr("verify") == "false"){
+				verify += 1;
+			}
+		});
+		if(verify > 0){
+			return false;
+		}else{
+			return true;
+		}
+	}
+</script>

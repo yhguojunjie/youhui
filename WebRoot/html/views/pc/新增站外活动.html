@@ -1,0 +1,328 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="../../css/bootstrap/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet" href="../../css/bootstrap/daterangepicker.css" />
+<link type="text/css" rel="stylesheet" href="../../css/basic.css" />
+<link type="text/css" rel="stylesheet" href="../../css/global.css" />
+<link type="text/css" rel="stylesheet" href="../../css/layout.css" />
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap/moment.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap/daterangepicker.js"></script>
+<script type="text/javascript" src="../../js/pluginpublic.js"></script>
+<script type="text/javascript" src="../../js/layout.js"></script>
+<title>新增站外活动</title>
+</head>
+<body>
+	<!-- 头部 开始 -->
+	<div class="w1190 head">
+		<div class="logo">
+			<h1><a href="#" title="互动推"><img alt="互动推" src="../../images/pc/hdt_logo.png" /></a></h1>
+			<div class="slogan"><span>专注移动社交互动广告</span></div>
+		</div>
+		<div class="nav">
+			<ul>
+				<li><a href="#"><em class="icon_home"></em>首页</a></li>
+				<li><a href="#" class="active"><em class="icon_ativ"></em>活动圈</a></li>
+				<li><a href="#"><em class="icon_plugin"></em>模版库</a></li>
+				<li><a href="#"><em class="icon_channel"></em>发布渠道</a></li>
+				<li><a href="#"><em class="icon_help"></em>帮助中心</a></li>
+				<li><a href="#"><em class="icon_agent"></em>加盟代理</a></li>
+				<!-- <li><a href="#">登录</a><strong>|</strong><a href="#">注册</a></li> -->
+				<li class="users_btn"><a href="#"><img src="../../images/avatar.jpg" />山间的风</a>（<a href="#">退出</a>）</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 头部 结束 -->
+	<!-- 内容 开始 -->
+	<div class="w1190 add_outativ">
+		<!-- 左侧内容 开始 -->
+		<div class="fl w840 cont">
+			<div class="tab_title">
+				<a href="#" class="active">新增站外活动</a>
+			</div>
+			<form onsubmit="return verify_submit()">
+				<div class="space_20"></div>
+				<div class="row">
+					<strong class="fl">活动名称：</strong>
+					<div class="fr">
+						<p>
+							<input class="verify_name w300" type="text" maxlength="50" placeholder="幸运大转盘">
+						</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="row">
+					<strong class="fl space_15">活动图标：</strong>
+					<div class="fr">
+						<div class="preview"><img class="w80 h80" src="../../images/avatar.jpg"></div>
+						<div class="upload_file">
+							<input type="text">
+							<span><em class="ico_image"><!-- 图标 --></em>上传图标</span>
+						</div>
+						<b>建议尺寸：300*300（或等比），大小不超过80K。</b>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="row">
+					<strong class="fl">活动地址：</strong>
+					<div class="fr">
+						<p>
+							<input class="verify_title w400" type="text" maxlength="25" placeholder="http://" value="http://">
+						</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="row">
+					<strong class="fl">活动时间：</strong>
+					<div class="fr">
+						<div class="control-group">
+							<div class="controls">
+								<div class="input-append">
+									<input type="text" class="verify_time daterangepick input-xlarge w320" value="" />
+									<span class="add-on"><i class="icon-calendar"></i></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="row">
+					<strong class="fl space_15">活动二维码：</strong>
+					<div class="fr">
+						<div class="preview"><img class="w80 h80" src="../../images/code1.jpg"></div>
+						<div class="upload_file">
+							<input type="text">
+							<span><em class="ico_image"><!-- 图标 --></em>上传二维码</span>
+						</div>
+						<b>建议尺寸：200*200（或等比），大小不超过50K。</b>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="row">
+					<div class="fr">
+						<p>
+							<input type="submit" value="提 交">
+						</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</form>
+		</div>
+		<!-- 左侧内容 结束 -->
+		<!-- 右侧内容 开始 -->
+		<div class="fr w320 side">
+			<div class="norl_title"><a href="#" class="fr">换一批</a>推荐使用以下插件生成活动：</div>
+			<ul class="plugin_list">
+				<li>
+					<a href="#" class="imgbox"><img src="../../images/app1.png" /></a>
+					<h3><a href="#">再见小苹果</a></h3>
+					<p>已有35人购买</p>
+				</li>
+				<li>
+					<a href="#" class="imgbox"><img src="../../images/app2.png" /></a>
+					<h3><a href="#">再见小苹果</a></h3>
+					<p>已有35人购买</p>
+				</li>
+				<li>
+					<a href="#" class="imgbox"><img src="../../images/app3.png" /></a>
+					<h3><a href="#">再见小苹果</a></h3>
+					<p>已有35人购买</p>
+				</li>
+				<li>
+					<a href="#" class="imgbox"><img src="../../images/app4.png" /></a>
+					<h3><a href="#">再见小苹果</a></h3>
+					<p>已有35人购买</p>
+				</li>
+				<li>
+					<a href="#" class="imgbox"><img src="../../images/app5.png" /></a>
+					<h3><a href="#">再见小苹果</a></h3>
+					<p>已有35人购买</p>
+				</li>
+			</ul>
+		</div>
+		<!-- 右侧内容 结束 -->
+		<div class="clear"></div>
+	</div>
+	<!-- 内容 结束 -->
+	<!-- 底部 开始 -->
+	<div class="w1190 foot">
+		<h2><a href="#">
+			<img alt="互动推" src="../../images/pc/hdt_logo.png" />
+			<span>专注移动社交互动广告</span>
+		</a></h2>
+		<p>
+			<a href="#">首页</a>
+			<em>|</em>
+			<a href="#">活动圈</a>
+			<em>|</em>
+			<a href="#">模板库</a>
+			<em>|</em>
+			<a href="#">发布渠道</a>
+			<em>|</em>
+			<a href="#">帮助中心</a>
+			<em>|</em>
+			<a href="#">渠道代理</a>
+			<em>|</em>
+			<a href="#">代理商登录</a>
+		</p>
+		<p>
+			<span>咨询电话：0592-7127103</span>
+			<span>QQ：888888888</span>
+			<span>邮箱：cs@tchajian.com</span>
+		</p>
+		<p>地址： 福建省厦门市思明区软件园二期望海路19号之二502室</p>
+		<p>Copyright © 2014 www.tchajian.com All Rights Reserved 有戏（厦门）网络科技有限公司&nbsp;&nbsp;闽ICP备14019370号</p>
+	</div>
+	<!-- 底部 结束 -->
+	<!-- 浮动菜单 开始 -->
+	<div class="float_menu">
+		<ul>
+			<li class="sliding">
+				<a><em class="phone_ico"></em><span>0592-7127103</span></a>
+			</li>
+			<li class="clear"></li>
+			<li class="sliding">
+				<a href="#"><em class="qq_ico"></em><span>点击QQ交谈</span></a>
+			</li>
+			<li class="clear"></li>
+			<li id="float_menucode">
+				<a href="#" class="sliding"><img src="../../images/pc/float_code.jpg"></a>
+			</li>
+			<li class="clear"></li>
+			<li class="gotop">
+				<a><em class="gotop_ico">返回顶部</em></a>
+			</li>
+		</ul>
+	</div>
+	<!-- 浮动菜单 结束 -->
+</body>
+</html>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//表单字段验证
+		$('.verify_name').eq(0).blur(function(){
+			if(!verify($(this).val(),'')){
+				insertNotice($(this),"请输入活动名称");
+				$(this).attr("verify","false");
+				return false;
+			}else{
+				insertNotice($(this),"");
+				$(this).attr("verify","true");
+				return true;
+			}
+		});
+		$(document).on("blur",".verify_prizename",function(){
+			if(!verify($(this).val(),'')){
+				insertNotice($(this),"请输入奖品名称");
+				$(this).attr("verify","false");
+				return false;
+			}else{
+				insertNotice($(this),"");
+				$(this).attr("verify","true");
+				return true;
+			}
+		});
+		$(document).on("blur",".verify_num",function(){
+			if($(this).val()){
+				if(!verify($(this).val(),'number')){
+					insertNotice($(this),"请输入正确格式");
+					$(this).attr("verify","false");
+					return false;
+				}else{
+					insertNotice($(this),"");
+					$(this).attr("verify","true");
+					return true;
+				}
+			}else{
+				insertNotice($(this),"");
+				$(this).attr("verify","true");
+				return true;
+			}
+		});
+		$('.verify_title').blur(function(){
+			if(!verify($(this).val(),'')){
+				insertNotice($(this),"请输入分享标题");
+				$(this).attr("verify","false");
+				return false;
+			}else{
+				insertNotice($(this),"");
+				$(this).attr("verify","true");
+				return true;
+			}
+		});
+		$('.verify_intro').blur(function(){
+			if(!verify($(this).val(),'')){
+				insertNotice($(this),"请输入活动简介");
+				$(this).attr("verify","false");
+				return false;
+			}else{
+				insertNotice($(this),"");
+				$(this).attr("verify","true");
+				return true;
+			}
+		});
+		$('.verify_rule').blur(function(){
+			if(!verify($(this).val(),'')){
+				insertNotice($(this),"请输入活动规则");
+				$(this).attr("verify","false");
+				return false;
+			}else{
+				insertNotice($(this),"");
+				$(this).attr("verify","true");
+				return true;
+			}
+		});
+		$('.verify_contact').blur(function(){
+			if(!verify($(this).val(),'')){
+				insertNotice($(this),"请输入兑奖说明");
+				$(this).attr("verify","false");
+				return false;
+			}else{
+				insertNotice($(this),"");
+				$(this).attr("verify","true");
+				return true;
+			}
+		});
+		$('.verify_url').blur(function(){
+			if($(this).val()){
+				if(!verify($(this).val(),'url')){
+				insertNotice($(this),"请输入正确的URL格式");
+				$(this).attr("verify","false");
+				return false;
+			}else{
+				insertNotice($(this),"不填写则不跳转");
+				$(this).attr("verify","true");
+				return true;
+			}
+			}else{
+				insertNotice($(this),"");
+				$(this).attr("verify","true");
+				return true;
+			}
+		});
+	});
+
+	function verify_submit(){
+		var verify = 0;
+		$('input[type="text"]').each(function(){
+			$(this).blur();
+			if($(this).attr("verify") == "false"){
+				verify += 1;
+			}
+		});
+		$('textarea').each(function(){
+			$(this).blur();
+			if($(this).attr("verify") == "false"){
+				verify += 1;
+			}
+		});
+		if(verify > 0){
+			return false;
+		}else{
+			return true;
+		}
+	}
+</script>

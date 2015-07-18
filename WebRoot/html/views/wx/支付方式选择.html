@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no">
+<link rel="stylesheet" href="../../css/wx/layout.css">
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/wx/touchslide.js"></script>
+<script type="text/javascript" src="../../js/wx/layout.js"></script>
+<title>支付方式选择</title>
+</head>
+<body>
+	<div class="space_15"></div>
+	<!-- 支付方式选择 开始 -->
+	<div class="pay_method">
+	<div class="space_3"></div>
+		<dl>
+			<dt>
+				<p>您所购买的<b>XXXX</b>插件</p>
+				商品价格：<strong id="need_money">138</strong>元
+			</dt>
+			<dd>
+				<label class="btn_virtual">
+					<span>支付:<strong> </strong>元</span>
+					<input type="checkbox" />代币（余额:100元）
+				</label>
+			</dd>
+			<dd>
+				<label class="btn_alipay">
+					<span>支付:<strong> </strong>元</span>
+					<input type="radio" name="payway" />支付宝支付
+				</label>
+			</dd>
+			<dt><a class="btn_done">确认支付</a></dt>
+		</dl>
+		<div class="space_10"></div>
+	</div>
+	<!-- 支付方式选择 结束 -->
+	<div class="space_10"></div>
+	<footer>
+		<img src="../../images/wx/hdt_logo2.png" />
+		<p>专注移动社交互动广告</p>
+		<p>Copyright © 2014 www.tchajian.com  闽ICP备14019370号</p>
+	</footer>
+	<div class="menu">
+		<ul>
+			<li><a href="#">
+				<img src="../../images/wx/menu7.png" />
+				<span>首页</span>
+			</a></li>
+			<li><a href="#">
+				<img src="../../images/wx/menu2.png" />
+				<span>活动圈</span>
+			</a></li>
+			<li><a href="#">
+				<img src="../../images/wx/menu3.png" />
+				<span>模版库</span>
+			</a></li>
+			<li><a href="#">
+				<img src="../../images/wx/menu10.png" />
+				<span>经典案例</span>
+			</a></li>
+			<li><a href="#">
+				<img src="../../images/wx/menu9.png" />
+				<span>发布渠道</span>
+			</a></li>
+			<li><a href="#">
+				<img src="../../images/wx/menu5.png" />
+				<span>个人主页</span>
+			</a></li>
+		</ul>
+	</div>
+	<!-- 菜单 开始 -->
+	<div class="menu_btn"><img src="../../images/wx/menu1.png" /></div>
+	<!-- 菜单 结束 -->
+</body>
+</html>
+<script type="text/javascript">
+//支付方式选择
+	function pay(virtual_money,need_money){
+		if(virtual_money >= need_money){
+			$('.btn_virtual input[type="checkbox"]').prop("checked",true);
+			$('.btn_virtual').parents('dd').attr("class","active");
+			$('.btn_virtual span strong').html(need_money);
+			$('.btn_alipay span strong').html(0);
+
+			$('.btn_alipay').change(function(){
+				$('.btn_virtual input[type="checkbox"]').prop("checked",false);
+				$('.btn_virtual').parents('dd').attr("class"," ");
+				$('.btn_virtual span strong').html(0);
+
+				$('.btn_alipay').parents('dd').attr("class","active");
+				$('.btn_alipay span strong').html(need_money);
+			});
+
+			$('.btn_virtual').change(function(){
+				if($('.btn_virtual input[type="checkbox"]').prop("checked") == false){
+					$('.btn_virtual input[type="checkbox"]').prop("checked",true);
+				}else{
+					$('.btn_alipay input[type="radio"]').prop("checked",false);
+					$('.btn_alipay').parents('dd').attr("class"," ");
+					$('.btn_alipay span strong').html(0);
+
+					$('.btn_virtual').parents('dd').attr("class","active");
+					$('.btn_virtual span strong').html(need_money);
+				}
+
+			});
+
+		}else if(virtual_money > 0 && virtual_money < need_money){
+			$('.btn_virtual input[type="checkbox"]').prop("checked",true);
+			$('.btn_virtual').parents('dd').attr("class","active");
+			$('.btn_virtual span strong').html(virtual_money);
+
+			$('.btn_alipay input[type="radio"]').prop("checked",true);
+			$('.btn_alipay').parents('dd').attr("class","active");
+			$('.btn_alipay span strong').html(need_money - virtual_money);
+
+
+			$('.btn_virtual').change(function(){
+				if($('.btn_virtual input[type="checkbox"]').prop("checked") == false){
+					$('.btn_alipay input[type="radio"]').prop("checked",true);
+					$('.btn_alipay').parents('dd').attr("class","active");
+					$('.btn_alipay span strong').html(need_money);
+
+					$('.btn_virtual').parents('dd').attr("class"," ");
+					$('.btn_virtual span strong').html(0);
+				}else{
+					$('.btn_virtual input[type="checkbox"]').prop("checked",true);
+					$('.btn_virtual').parents('dd').attr("class","active");
+					$('.btn_virtual span strong').html(virtual_money);
+
+					$('.btn_alipay input[type="radio"]').prop("checked",true);
+					$('.btn_alipay').parents('dd').attr("class","active");
+					$('.btn_alipay span strong').html(need_money - virtual_money);
+				}
+
+			});
+
+		}else{
+			$('.btn_alipay input[type="radio"]').prop("checked",true);
+			$('.btn_alipay').parents('dd').attr("class","active");
+			$('.btn_alipay span strong').html(need_money);
+			$('.btn_virtual input[type="checkbox"]').prop("disabled","disabled");
+			$('.btn_virtual span strong').html(0);
+
+		}
+
+
+
+	}
+$(document).ready(function(){
+	pay(10,138);
+	//返回状态
+	$('.pay_method .btn_done').click(function(){
+		var state = 0;
+		$('.pay_method dd input').each(function(){
+			if($(this).prop("checked")){
+				if($(this).parent().attr("class") == "btn_virtual"){
+					state += 1;
+				}else if($(this).parent().attr("class") == "btn_wechat"){
+					state += 2;
+				}else{
+					state += 4;
+				}
+			}
+		});
+		alert(state);
+		/**
+		*
+			state:1(纯代币支付)
+			state:2(纯微信支付)
+			state:4(纯支付宝支付)
+			state:3(代币+微信支付)
+			state:5(代币+支付宝支付)
+		*
+		**/
+	});
+});
+</script>

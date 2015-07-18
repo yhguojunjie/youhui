@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no">
+<title>我的订单</title>
+<link rel="stylesheet" href="../../css/wx/layout.css">
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/wx/touchslide.js"></script>
+<script type="text/javascript" src="../../js/wx/layout.js"></script>
+</head>
+<body>
+	<!-- 如果没有内容 开始 -->
+	<div class="ifnone">
+		<p>您还没有订单</p>
+	</div>
+	<!-- 如果没有内容 结束 -->
+	<!-- 我的订单 开始 -->
+	<article class="wrap">
+		<div class="order_list">
+			<dl>
+				<dt class="not">
+					<span>订单号：1238462722</span>
+					<em>2015/01/15 16:34</em>
+				</dt>
+				<dd>
+					<a href="#" class="fl">
+						<img src="../../images/wx/app1.png" />
+						<span>圣诞老爷爷送礼物</span>
+					</a>
+					<p class="fr">
+						<strong>108元/月</strong>
+						<strong>3个月</strong>
+					</p>
+					<div class="btns">
+						<a class="cancel">关闭交易</a>
+						<a onclick="buyTemp()">&nbsp;支&nbsp;付&nbsp;</a>
+						<del>324.0元</del>
+						<em>259.2元</em>
+					</div>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="ing">
+					<span>订单号：1238462722</span>
+					<em>2015/01/15 16:34</em>
+				</dt>
+				<dd>
+					<a href="#" class="fl">
+						<img src="../../images/wx/app1.png" />
+						<span>圣诞老爷爷送礼物</span>
+					</a>
+					<p class="fr">
+						<strong>108元/月</strong>
+						<strong>3个月</strong>
+					</p>
+					<div class="btns">
+						<b>交易成功</b>
+						<del>324.0元</del>
+						<em>259.2元</em>
+					</div>
+				</dd>
+			</dl>
+			<dl>
+				<dt class="end">
+					<span>订单号：1238462722</span>
+					<em>2015/01/15 16:34</em>
+				</dt>
+				<dd>
+					<a href="#" class="fl">
+						<img src="../../images/wx/app1.png" />
+						<span>圣诞老爷爷送礼物</span>
+					</a>
+					<p class="fr">
+						<strong>108元/月</strong>
+						<strong>3个月</strong>
+					</p>
+					<div class="btns">
+						<b>交易关闭</b>
+						<del>324.0元</del>
+						<em>259.2元</em>
+					</div>
+				</dd>
+			</dl>
+		</div>
+	</article>
+	<div class="getmore" onclick="seemore()">查看更多</div>
+	<!-- 我的订单 结束 -->
+	<!-- 活动推荐 开始 -->
+	<div class="n_title tr">
+		<h3 class="fl">活动推荐</h3>
+		<!-- <a href="#">更多››</a> -->
+	</div>
+	<article class="wrap">
+		<!-- <div class="t_title line2">
+			<a class="active" id="ativ_time">按发布</a>
+			<a id="ativ_heat">按热度</a>
+		</div> -->
+		<div class="ativ_list">
+			<ul>
+				<li>
+					<a href="#" class="ativ_title">
+						<img src="../../images/wx/microscene.jpg">
+						<h3>全大伟寿司店-按发布</h3>
+						<p class="tr">
+							<span class="fl">参与人数：<em>20万</em></span>
+							<span>浏览量：<em>44万</em></span>
+						</p>
+					</a>
+					<a href="#" class="ativ_intro">
+						<img src="../../images/wx/avatar.jpg">
+						<h4>全大伟寿司店</h4>
+						<p>わたしのしんゆう,に中する,をね准らう千喜。</p>
+					</a>
+					<a href="#" class="ativ_plugin">使用插件：<em>《圣诞树摇礼物》</em></a>
+				</li>
+				<li>
+					<a href="#" class="ativ_title">
+						<img src="../../images/wx/microscene.jpg">
+						<h3>全大伟寿司店-按发布</h3>
+						<p class="tr">
+							<span class="fl">参与人数：<em>20万</em></span>
+							<span>浏览量：<em>44万</em></span>
+						</p>
+					</a>
+					<a href="#" class="ativ_intro">
+						<img src="../../images/wx/avatar.jpg">
+						<h4>全大伟寿司店</h4>
+						<p>わたしのしんゆう,に中する,をね准らう千喜。</p>
+					</a>
+					<a href="#" class="ativ_plugin">使用插件：<em>《圣诞树摇礼物》</em></a>
+				</li>
+				<li>
+					<a href="#" class="ativ_title">
+						<img src="../../images/wx/microscene.jpg">
+						<h3>全大伟寿司店-按发布</h3>
+						<p class="tr">
+							<span class="fl">参与人数：<em>20万</em></span>
+							<span>浏览量：<em>44万</em></span>
+						</p>
+					</a>
+					<a href="#" class="ativ_intro">
+						<img src="../../images/wx/avatar.jpg">
+						<h4>全大伟寿司店</h4>
+						<p>わたしのしんゆう,に中する,をね准らう千喜。</p>
+					</a>
+					<a href="#" class="ativ_plugin">使用插件：<em>《圣诞树摇礼物》</em></a>
+				</li>
+			</ul>
+		</div>
+	</article>
+	<!-- 活动推荐 结束 -->
+	<footer>
+		<img src="../../images/wx/hdt_logo2.png" />
+		<p>专注移动社交互动广告</p>
+		<p>Copyright © 2014 www.tchajian.com  闽ICP备14019370号</p>
+	</footer>
+	<div class="menu">
+		<ul>
+			<li style="width:40%;margin-left:10%;"><a href="#">
+				<img src="../../images/wx/menu7.png" />
+				<span>首页</span>
+			</a></li>
+			<li style="width:40%;"><a href="#">
+				<img src="../../images/wx/menu5.png" />
+				<span>个人主页</span>
+			</a></li>
+			<li><a href="#">
+				<img src="../../images/wx/menu4.png" />
+				<span>我的活动</span>
+			</a></li>
+			<li><a href="#">
+				<img src="../../images/wx/menu8.png" />
+				<span>我的订单</span>
+			</a></li>
+			<li><a href="#">
+				<img src="../../images/wx/menu6.png" />
+				<span>收益提现</span>
+			</a></li>
+		</ul>
+	</div>
+	<!-- 菜单 开始 -->
+	<div class="menu_btn"><img src="../../images/wx/menu1.png" /></div>
+	<!-- 菜单 结束 -->
+</body>
+</html>
+<script type="text/javascript">
+
+//关闭交易
+$(function(){
+	$('.order_list .cancel').click(function(){
+		var obj = $(this);
+		var str = '<div class="close_order">\
+						<div class="cont">\
+							<h3>\
+								<strong>提示</strong>\
+								<span class="close">╳</span>\
+							</h3>\
+							<p>\
+								<span>是否关闭该交易？</span>\
+							</p>\
+							<div class="btns">\
+								<a class="btn_cancel">取消</a>\
+								<a class="btn_done">确认</a>\
+							</div>\
+						</div>\
+						<div class="bg"></div>\
+					</div>';
+		$('body').append(str);
+
+		$('.close_order .btn_cancel,.close_order .close').on("click",function(){
+			$(this).parents('.close_order').remove();
+		});
+
+		$('.close_order .btn_done').on("click",function(){
+			obj.parent().prepend('<b>交易关闭</b>');
+			obj.parent().find('a').remove();
+			$(this).parents('.close_order').remove();
+		});
+	});
+
+});
+
+//支付
+function buyTemp(){
+	var html = '\
+	<div class="prompt">\
+		<form class="cont h210">\
+			<div class="title"><strong>支付</strong><i onclick="closePrompt(this)">╳</i></div>\
+			<div class="space_3"></div>\
+			<div class="text tc">\
+				<p>	\
+					有效期\
+					<select>\
+						<option>1个月</option>\
+						<option>2个月</option>\
+						<option>3个月</option>\
+						<option>4个月</option>\
+						<option>5个月</option>\
+						<option>6个月</option>\
+						<option>7个月</option>\
+						<option>8个月</option>\
+						<option>9个月</option>\
+						<option>10个月</option>\
+						<option>11个月</option>\
+						<option>12个月</option>\
+					</select>\
+				</p>\
+				<div class="space_5"></div>\
+				<h3>消费：￥268.0</h3>\
+				<p>\
+					<label><input type="checkbox">使用代币：￥8608.0</label> \
+					<a href="javascript:alert(\'敬请期待!\')" class="paycash">赚代币</a>\
+				</p>\
+			</div>\
+			<div class="btns">\
+				<a class="cancel_btn" onclick="closePrompt(this)">取消</a><a class="done_btn">支付</a>\
+			</div>\
+		</form>\
+		<div class="bg"></div>\
+	</div>';
+	$('body').append(html);
+}
+
+//暂不支持购买
+function buyFail(){
+	var html = '\
+	<article class="prompt">\
+		<div class="cont h170">\
+			<div class="title"><strong>提示</strong><i onclick="closePrompt(this)">╳</i></div>\
+			<div class="text tc">\
+				<div class="space_5"></div>\
+				<p>暂不支持移动端购买<br />（www.hudongtui.com）</p>\
+			</div>\
+			<div class="btns">\
+				<a class="cancel_btn" onclick="closePrompt(this)">知道了</a>\
+			</div>\
+		</div>\
+	</article>';
+	$('body').append(html);
+}
+
+	//查看更多订单
+	function seemore(){
+		$.ajax({
+			url: 'xxxxxxxxxx',
+			dataType: 'json',
+			timeout: 300,
+			complete: function(data){
+				var html="";
+				for (var i = 0; i < 5; i++) {
+					html+='<dl>\
+								<dt class="end">\
+									<span>订单号：1238462722</span>\
+									<em>2015/01/15 16:34</em>\
+								</dt>\
+								<dd>\
+									<a href="#" class="fl">\
+										<img src="../../images/wx/app1.png" />\
+										<span>圣诞老爷爷送礼物</span>\
+									</a>\
+									<p class="fr">\
+										<strong>3个月</strong>\
+										<strong>108元/月</strong>\
+									</p>\
+									<div class="btns">\
+										<b>交易关闭</b>\
+										<del>324.0元</del>\
+										<em>259.2元</em>\
+									</div>\
+								</dd>\
+							</dl>';
+		 		};
+				$('.order_list').append(html);
+			}
+		});
+	}
+
+</script>

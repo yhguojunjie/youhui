@@ -1,0 +1,711 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="../../../css/basic.css" />
+<link type="text/css" rel="stylesheet" href="../../../css/global.css" />
+<link type="text/css" rel="stylesheet" href="../../../css/layout.css" />
+<link type="text/css" rel="stylesheet" href="../../../pluginres/css/riddles.css" />
+<script type="text/javascript" src="../../../js/jquery.js"></script>
+<script type="text/javascript" src="../../../js/layout.js"></script>
+<script type="text/javascript" src="../../../pluginres/js/riddles.js"></script>
+<title>猜灯谜_题库管理</title>
+</head>
+<body>
+	<!-- 头部 开始 -->
+	<div class="w1190 head">
+		<div class="logo">
+			<h1><a href="#">淘插件</a></h1>
+			<div class="slogan"><img src="../../../images/slogan.png" /></div>
+		</div>
+		<div class="nav">
+			<ul>
+				<li><a href="#" class="active"><em class="icon_home"></em>首页</a></li>
+				<li><a href="#"><em class="icon_plugin"></em>我的淘插件</a></li>
+				<li><a href="#"><em class="icon_login"></em>山间的风</a></li>
+				<li><a href="#"><em class="icon_setup"></em>设置</a></li>
+				<li><a href="#"><em class="icon_exit"></em>退出</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- 头部 结束 -->
+	<!-- 内容 开始 -->
+	<div class="w1190 riddles">
+		<!-- 左侧内容 开始 -->
+		<div class="fl w840 main">
+			<div class="tab_title">
+				<a href="#">活动设置</a>
+				<a href="#" class="active">题库管理</a>
+				<a href="#">中奖名单</a>
+				<a href="#">排行榜</a>
+			</div>
+			<div class="cont mark">
+				<h4 class="tr">
+					<span class="fl">题目总数：<em>10</em></span>
+					<a class="bg_green" id="add_ques">新增题目</a>
+				</h4>
+				<table>
+				</table>
+			</div>
+			<!-- 分页 开始 -->
+			<div class="tr pages">
+				<form>
+					<a href="#" class="prev"><!-- 上一张 --></a>
+					<a href="#">1</a>
+					<a href="#" class="active">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="#">6</a>
+					<a href="#">7</a>
+					<a href="#">8</a>
+					<a href="#">9</a>
+					<a href="#">10</a>
+					<span>......</span>
+					<a href="#">103</a>
+					<a href="#">104</a>
+					<input type="text" />
+					<input type="submit" value="GO" />
+					<a href="#" class="next"><!-- 下一张 --></a>
+				</form>
+			</div>
+			<!-- 分页 结束 -->
+		</div>
+		<!-- 左侧内容 结束 -->
+		<!-- 右侧内容 开始 -->
+		<div class="fr w320 side">
+			<div class="service_box">
+				<h3>配置太麻烦？我们来帮您</h3>
+				<p>您可以拨打：<em>400-188-6666</em></p>
+				<p>服务时间段：<em>09:00—23:00</em></p>
+				<a href="#" class="btn">联系在线客服</a>
+				<div class="clear"></div>
+			</div>
+			<h4 class="tr">
+				<strong class="fl">界面预览</strong>
+				<a href="#" class="btn_refresh">刷新</a>
+			</h4>
+			<div class="cont">
+				<!-- 这里放手机端嵌入页面连接 -->
+				<iframe width="320" height="400" scrolling="no" src="../../../../images/banner.jpg"></iframe>
+			</div>
+		</div>
+		<!-- 右侧内容 结束 -->
+		<div class="clear"></div>
+	</div>
+	<!-- 内容 结束 -->
+	<!-- 底部 开始 -->
+	<div class="w1190 foot">
+		<h2><a href="#">淘插件-营销推广插件超市</a></h2>
+		<p>Opyright © 2014 WWW.GIFTGAME.CN All Rights Reserved 有戏（厦门）网络科技有限公司版权所有 闽ICP备14019370号</p>
+	</div>
+	<!-- 底部 结束 -->
+</body>
+</html>
+<script type="text/javascript">
+	//图片上传预览
+	function imgToBase64(file){
+		if (file.files && file.files[0]){
+			var reader = new FileReader();
+			reader.onload = function(evt){
+				$(file).parent().prev().attr("src",evt.target.result);
+			}
+			reader.readAsDataURL(file.files[0]);
+		}
+	}
+
+	// var quesbox_html = '<div class="ques_box">\
+	// 						<h3>\
+	// 							<em class="close">╳</em> \
+	// 							<strong>题目添加</strong>\
+	// 						</h3>\
+	// 						<div class="row">\
+	// 							<span>题目名称：</span>\
+	// 							<div class="fr">\
+	// 								<input type="text" style="width:330px;" />\
+	// 								<em>必填，长度不超过60个字符</em>\
+	// 							</div>\
+	// 							<div class="clear"></div>\
+	// 						</div>\
+	// 						<div class="row">\
+	// 							<span>选项A：</span>\
+	// 							<div class="fr">\
+	// 								<div class="tabs">\
+	// 									<label><input type="radio" name="tab_a" checked="checked" />文案</label>\
+	// 									<label><input type="radio" name="tab_a" />图片</label>\
+	// 								</div>\
+	// 								<ul class="conts">\
+	// 									<li class="text">\
+	// 										<input type="text" />\
+	// 										<em>必填，长度不超过16个字符</em>\
+	// 									</li>\
+	// 									<li class="img">\
+	// 										<img src="../../../pluginres/images/riddles/def.png" />\
+	// 										<div class="pickimg"><input type="file" onchange="imgToBase64(this)" />上传图片</div>\
+	// 										<em>图片建议100*100像素</em>\
+	// 									</li>\
+	// 								</ul>\
+	// 							</div>\
+	// 							<div class="clear"></div>\
+	// 						</div>\
+	// 						<div class="row">\
+	// 							<span>选项B：</span>\
+	// 							<div class="fr">\
+	// 								<div class="tabs">\
+	// 									<label><input type="radio" name="tab_b" checked="checked" />文案</label>\
+	// 									<label><input type="radio" name="tab_b" />图片</label>\
+	// 								</div>\
+	// 								<ul class="conts">\
+	// 									<li class="text">\
+	// 										<input type="text" />\
+	// 										<em>必填，长度不超过16个字符</em>\
+	// 									</li>\
+	// 									<li class="img">\
+	// 										<img src="../../../pluginres/images/riddles/def.png" />\
+	// 										<div class="pickimg"><input type="file" onchange="imgToBase64(this)" />上传图片</div>\
+	// 										<em>图片建议100*100像素</em>\
+	// 									</li>\
+	// 								</ul>\
+	// 							</div>\
+	// 							<div class="clear"></div>\
+	// 						</div>\
+	// 						<div class="row">\
+	// 							<span>选项C：</span>\
+	// 							<div class="fr">\
+	// 								<div class="tabs">\
+	// 									<label><input type="radio" name="tab_c" checked="checked" />文案</label>\
+	// 									<label><input type="radio" name="tab_c" />图片</label>\
+	// 								</div>\
+	// 								<ul class="conts">\
+	// 									<li class="text">\
+	// 										<input type="text" disabled="disabled" />\
+	// 										<em>必填，长度不超过16个字符</em>\
+	// 									</li>\
+	// 									<li class="img">\
+	// 										<img src="../../../pluginres/images/riddles/def.png" />\
+	// 										<div class="pickimg"><input type="file" onchange="imgToBase64(this)" />上传图片</div>\
+	// 										<em>图片建议100*100像素</em>\
+	// 									</li>\
+	// 								</ul>\
+	// 							</div>\
+	// 							<div class="clear"></div>\
+	// 						</div>\
+	// 						<div class="row">\
+	// 							<span>选项D：</span>\
+	// 							<div class="fr">\
+	// 								<div class="tabs">\
+	// 									<label><input type="radio" name="tab_d" checked="checked" />文案</label>\
+	// 									<label><input type="radio" name="tab_d" />图片</label>\
+	// 								</div>\
+	// 								<ul class="conts">\
+	// 									<li class="text">\
+	// 										<input type="text" disabled="disabled" />\
+	// 										<em>必填，长度不超过16个字符</em>\
+	// 									</li>\
+	// 									<li class="img">\
+	// 										<img src="../../../pluginres/images/riddles/def.png" />\
+	// 										<div class="pickimg"><input type="file" onchange="imgToBase64(this)" />上传图片</div>\
+	// 										<em>图片建议100*100像素</em>\
+	// 									</li>\
+	// 								</ul>\
+	// 							</div>\
+	// 							<div class="clear"></div>\
+	// 						</div>\
+	// 						<div class="row">\
+	// 							<span>选项E：</span>\
+	// 							<div class="fr">\
+	// 								<div class="tabs">\
+	// 									<label><input type="radio" name="tab_e" checked="checked" />文案</label>\
+	// 									<label><input type="radio" name="tab_e" />图片</label>\
+	// 								</div>\
+	// 								<ul class="conts">\
+	// 									<li class="text">\
+	// 										<input type="text" disabled="disabled" />\
+	// 										<em>必填，长度不超过16个字符</em>\
+	// 									</li>\
+	// 									<li class="img">\
+	// 										<img src="../../../pluginres/images/riddles/def.png" />\
+	// 										<div class="pickimg"><input type="file" onchange="imgToBase64(this)" />上传图片</div>\
+	// 										<em>图片建议100*100像素</em>\
+	// 									</li>\
+	// 								</ul>\
+	// 							</div>\
+	// 							<div class="clear"></div>\
+	// 						</div>\
+	// 						<div class="row">\
+	// 							<span>题目答案：</span>\
+	// 							<div class="fr">\
+	// 								<select>\
+	// 									<option value="A">选项A</option>\
+	// 									<option value="B">选项B</option>\
+	// 									<option value="C">选项C</option>\
+	// 									<option value="D">选项D</option>\
+	// 									<option value="E">选项E</option>\
+	// 								</select>\
+	// 								<em>必填</em>\
+	// 							</div>\
+	// 							<div class="clear"></div>\
+	// 						</div>\
+	// 						<div class="row">\
+	// 							<div class="fr">\
+	// 								<a class="done">保&nbsp;存</a>\
+	// 								<a class="cancel">取&nbsp;消</a>\
+	// 							</div>\
+	// 							<div class="clear"></div>\
+	// 						</div>\
+	// 					</div>';
+
+
+	var jsonData = [
+		{
+			"queid" : 1,
+			"point" : 10,
+			"times" : 10,
+			"qcont" : "六畜兴旺中的六畜是指：猪、牛、马、羊、狗、鸡六种，其中人工驯化最早的是？",
+			"acont" : [
+				{ "num" : "A" , "cont" : "猪" },
+				{ "num" : "B" , "cont" : "牛" },
+				{ "num" : "C" , "cont" : "马" },
+				{ "num" : "D" , "cont" : "羊" },
+				{ "num" : "E" , "cont" : "狗" }
+			],
+			"awnum" : "B"
+		},
+		{
+			"queid" : 2,
+			"point" : 11,
+			"times" : 20,
+			"qcont" : "四畜兴旺中的六畜是指：猪、牛、马、羊四种，其中人工驯化最早的是？",
+			"acont" : [
+				{ "num" : "A" , "cont" : "猪" },
+				{ "num" : "B" , "cont" : "牛" },
+				{ "num" : "C" , "cont" : "马" },
+				{ "num" : "D" , "cont" : "羊" }
+			],
+			"awnum" : "D"
+		}
+	];
+
+	//加载题目列表
+	function loadQues(json){
+		//先清空
+		$('.riddles .cont table').html('');
+		//再加载
+		$('.riddles .cont table').append('<tr>\
+						<th>序号</th>\
+						<th style="width:500px;text-align:left;padding:0px 20px;">题目名称</th>\
+						<th>操作</th>\
+					</tr>');
+		for(var i = 0 ; i < json.length ; i++){
+			$('.riddles .cont table').append('<tr>\
+							<td>'+(i+1)+'</td>\
+							<td>'+json[i].qcont+'</td>\
+							<td>\
+								<p><a class="btn_green edit_ques">编辑</a></p>\
+								<p><a class="btn_green clear_ques">删除</a></p>\
+							</td>\
+						</tr>');
+		}
+	}
+
+
+	//保存单个题目数据
+	function saveQues(obj){
+		//单个问题
+		var quescont  = {
+							//"queid" : 1,
+							"point" : 10,
+							"times" : 10,
+							"qcont" : "",
+							"acont" : "",
+							"awnum" : "A"
+						};
+		//quescont.queid = $('.riddles .cont table tr').index()+1;//更新题号
+		quescont.qcont = obj.parents('.ques_box').find('#questitle').val();//更新问题
+		var tabanswer = [];//选项名称和内容
+		//组织选项数据
+		obj.parents('.ques_box').find('.text').each(function(){
+			if($(this).find('input[type="text"]').val() != ''){
+				tabanswer.push({ "num" : $(this).attr("tabdata") , "cont" : $(this).find('input[type="text"]').val() });
+			}
+		});
+		quescont.acont = tabanswer;//更新选项
+		quescont.awnum = $('.ques_box #anum').val();//更新答案
+		obj.parents('.ques_box').remove();//关闭窗口
+
+
+		return quescont;
+	}
+
+
+
+
+	$(function(){
+		//答案选项文本图片切换
+		// $(document).on("change",'.ques_box .row .tabs label',function(){
+		// 	$(this).parents('.fr').find('li').css("display","none");
+		// 	$(this).parents('.fr').find('li').eq($(this).index()).css("display","block");
+		// });
+
+		//加载题目列表
+		loadQues(jsonData);
+
+		//激活下一个选项
+		$(document).on("change",'.ques_box .row .conts .text input[type="text"]',function(){
+			if($(this).val() != ''){
+				$(this).parents('.row').next().find('.text input[type="text"]').removeAttr("disabled");
+			}
+		});
+
+		//关闭题目框
+		$(document).on("click",'.ques_box .cancel,.ques_box .close',function(){
+			$(this).parents('.ques_box').remove();
+		});
+
+		//新增题目
+		$('#add_ques').click(function(){
+			$('body').append('<div class="ques_box">\
+							<h3>\
+								<em class="close">╳</em> \
+								<strong>题目添加</strong>\
+							</h3>\
+							<div class="space_30"></div>\
+							<div class="row">\
+								<span>题目名称：</span>\
+								<div class="fr">\
+									<input id="questitle" type="text" style="width:330px;" />\
+									<em>必填，长度不超过60个字符</em>\
+								</div>\
+								<div class="clear"></div>\
+							</div>\
+							<div class="row">\
+								<span>选项A：</span>\
+								<div class="fr">\
+									<ul class="conts">\
+										<li class="text" tabdata="A">\
+											<input type="text" />\
+											<em>必填，长度不超过16个字符</em>\
+										</li>\
+									</ul>\
+								</div>\
+								<div class="clear"></div>\
+							</div>\
+							<div class="row">\
+								<span>选项B：</span>\
+								<div class="fr">\
+									<ul class="conts">\
+										<li class="text" tabdata="B">\
+											<input type="text" />\
+											<em>必填，长度不超过16个字符</em>\
+										</li>\
+									</ul>\
+								</div>\
+								<div class="clear"></div>\
+							</div>\
+							<div class="row">\
+								<span>选项C：</span>\
+								<div class="fr">\
+									<ul class="conts">\
+										<li class="text" tabdata="C">\
+											<input type="text" disabled="disabled" />\
+											<em>必填，长度不超过16个字符</em>\
+										</li>\
+									</ul>\
+								</div>\
+								<div class="clear"></div>\
+							</div>\
+							<div class="row">\
+								<span>选项D：</span>\
+								<div class="fr">\
+									<ul class="conts">\
+										<li class="text" tabdata="D">\
+											<input type="text" disabled="disabled" />\
+											<em>必填，长度不超过16个字符</em>\
+										</li>\
+									</ul>\
+								</div>\
+								<div class="clear"></div>\
+							</div>\
+							<div class="row">\
+								<span>选项E：</span>\
+								<div class="fr">\
+									<ul class="conts">\
+										<li class="text" tabdata="E">\
+											<input type="text" disabled="disabled" />\
+											<em>必填，长度不超过16个字符</em>\
+										</li>\
+									</ul>\
+								</div>\
+								<div class="clear"></div>\
+							</div>\
+							<div class="row">\
+								<span>题目答案：</span>\
+								<div class="fr">\
+									<select id="anum">\
+										<option value="A">选项A</option>\
+										<option value="B">选项B</option>\
+										<option value="C">选项C</option>\
+										<option value="D">选项D</option>\
+										<option value="E">选项E</option>\
+									</select>\
+									<em>必填</em>\
+								</div>\
+								<div class="clear"></div>\
+							</div>\
+							<div class="row">\
+								<div class="fr">\
+									<a class="done">保&nbsp;存</a>\
+									<a class="cancel">取&nbsp;消</a>\
+								</div>\
+								<div class="clear"></div>\
+							</div>\
+						</div>');
+		});
+
+		//保存新增的题目数据
+		$(document).on("click",'.ques_box .done',function(){
+			//把该题目存入json数组(题目列表)
+			jsonData.push(saveQues($(this)));
+			//把题目显示到列表
+			loadQues(jsonData);
+		});
+
+		//删除题目
+		$(document).on("click",'.clear_ques',function(){
+			//删除jsonData中该问题
+			jsonData.splice($(this).parents('tr').index()-1,1);
+			//更新问题列表
+			loadQues(jsonData);
+		});
+
+		//编辑题目
+		$(document).on("click",'.edit_ques',function(){
+			//得到该问题
+			var quesnum = $(this).parents('tr').index()-1;
+			var ques = jsonData[quesnum];
+
+			var queshtml ='<div class="ques_box">\
+							<h3>\
+								<em class="close">╳</em> \
+								<strong>题目添加</strong>\
+							</h3>\
+							<div class="space_30"></div>\
+							<div class="row">\
+								<span>题目名称：</span>\
+								<div class="fr">\
+									<input id="questitle" type="text" style="width:330px;" value="'+ques.qcont+'" />\
+									<em>必填，长度不超过60个字符</em>\
+								</div>\
+								<div class="clear"></div>\
+							</div>';
+			if(ques.acont.length >= 1){
+				queshtml += '<div class="row">\
+									<span>选项A：</span>\
+									<div class="fr">\
+										<ul class="conts">\
+											<li class="text" tabdata="C">\
+												<input type="text" value="'+ques.acont[0].cont+'" />\
+												<em>必填，长度不超过16个字符</em>\
+											</li>\
+										</ul>\
+									</div>\
+									<div class="clear"></div>\
+								</div>';
+
+			}else{
+				queshtml += '<div class="row">\
+									<span>选项A：</span>\
+									<div class="fr">\
+										<ul class="conts">\
+											<li class="text" tabdata="C">\
+												<input type="text" disabled="disabled" />\
+												<em>必填，长度不超过16个字符</em>\
+											</li>\
+										</ul>\
+									</div>\
+									<div class="clear"></div>\
+								</div>';
+			}
+			if(ques.acont.length >= 2){
+				queshtml += '<div class="row">\
+									<span>选项B：</span>\
+									<div class="fr">\
+										<ul class="conts">\
+											<li class="text" tabdata="C">\
+												<input type="text" value="'+ques.acont[1].cont+'" />\
+												<em>必填，长度不超过16个字符</em>\
+											</li>\
+										</ul>\
+									</div>\
+									<div class="clear"></div>\
+								</div>';
+
+			}else{
+				queshtml += '<div class="row">\
+									<span>选项B：</span>\
+									<div class="fr">\
+										<ul class="conts">\
+											<li class="text" tabdata="C">\
+												<input type="text" disabled="disabled" />\
+												<em>必填，长度不超过16个字符</em>\
+											</li>\
+										</ul>\
+									</div>\
+									<div class="clear"></div>\
+								</div>';
+			}							
+			if(ques.acont.length >= 3){
+				queshtml += '<div class="row">\
+									<span>选项C：</span>\
+									<div class="fr">\
+										<ul class="conts">\
+											<li class="text" tabdata="C">\
+												<input type="text" value="'+ques.acont[2].cont+'" />\
+												<em>必填，长度不超过16个字符</em>\
+											</li>\
+										</ul>\
+									</div>\
+									<div class="clear"></div>\
+								</div>';
+
+			}else{
+				queshtml += '<div class="row">\
+									<span>选项C：</span>\
+									<div class="fr">\
+										<ul class="conts">\
+											<li class="text" tabdata="C">\
+												<input type="text" disabled="disabled" />\
+												<em>必填，长度不超过16个字符</em>\
+											</li>\
+										</ul>\
+									</div>\
+									<div class="clear"></div>\
+								</div>';
+			}
+			if(ques.acont.length >= 4){
+				queshtml += '<div class="row">\
+									<span>选项D：</span>\
+									<div class="fr">\
+										<ul class="conts">\
+											<li class="text" tabdata="C">\
+												<input type="text" value="'+ques.acont[3].cont+'" />\
+												<em>必填，长度不超过16个字符</em>\
+											</li>\
+										</ul>\
+									</div>\
+									<div class="clear"></div>\
+								</div>';
+
+			}else{
+				queshtml += '<div class="row">\
+									<span>选项D：</span>\
+									<div class="fr">\
+										<ul class="conts">\
+											<li class="text" tabdata="C">\
+												<input type="text" disabled="disabled" />\
+												<em>必填，长度不超过16个字符</em>\
+											</li>\
+										</ul>\
+									</div>\
+									<div class="clear"></div>\
+								</div>';
+			}
+			if(ques.acont.length == 5){
+				queshtml += '<div class="row">\
+									<span>选项E：</span>\
+									<div class="fr">\
+										<ul class="conts">\
+											<li class="text" tabdata="C">\
+												<input type="text" value="'+ques.acont[4].cont+'" />\
+												<em>必填，长度不超过16个字符</em>\
+											</li>\
+										</ul>\
+									</div>\
+									<div class="clear"></div>\
+								</div>';
+
+			}else{
+				queshtml += '<div class="row">\
+									<span>选项E：</span>\
+									<div class="fr">\
+										<ul class="conts">\
+											<li class="text" tabdata="C">\
+												<input type="text" disabled="disabled" />\
+												<em>必填，长度不超过16个字符</em>\
+											</li>\
+										</ul>\
+									</div>\
+									<div class="clear"></div>\
+								</div>';
+			}
+			queshtml += '<div class="row">\
+								<span>题目答案：</span>\
+								<div class="fr">\
+							<select id="anum" value="'+ques.awnum+'">';
+			if(ques.awnum == "A"){
+				queshtml += '<option selected="selected" value="A">选项A</option>\
+							 <option value="B">选项B</option>\
+							 <option value="C">选项C</option>\
+							 <option value="D">选项D</option>\
+							 <option value="E">选项E</option>';
+
+			}else if(ques.awnum == "B"){
+				queshtml += '<option value="A">选项A</option>\
+							 <option selected="selected" value="B">选项B</option>\
+							 <option value="C">选项C</option>\
+							 <option value="D">选项D</option>\
+							 <option value="E">选项E</option>';
+
+			}else if(ques.awnum == "C"){
+				queshtml += '<option value="A">选项A</option>\
+							 <option value="B">选项B</option>\
+							 <option selected="selected" value="C">选项C</option>\
+							 <option value="D">选项D</option>\
+							 <option value="E">选项E</option>';
+				
+			}else if(ques.awnum == "D"){
+				queshtml += '<option value="A">选项A</option>\
+							 <option value="B">选项B</option>\
+							 <option value="C">选项C</option>\
+							 <option selected="selected" value="D">选项D</option>\
+							 <option value="E">选项E</option>';
+				
+			}else{
+				queshtml += '<option value="A">选项A</option>\
+							 <option value="B">选项B</option>\
+							 <option value="C">选项C</option>\
+							 <option value="D">选项D</option>\
+							 <option selected="selected" value="E">选项E</option>';
+			}
+			queshtml += '</select>\
+									<em>必填</em>\
+								</div>\
+								<div class="clear"></div>\
+							</div>\
+							<div class="row">\
+								<div class="fr">\
+									<a class="editdone">保&nbsp;存</a>\
+									<a class="cancel">取&nbsp;消</a>\
+								</div>\
+								<div class="clear"></div>\
+							</div>\
+						</div>';
+			$('body').append(queshtml);
+
+
+			//保存修改的题目数据
+			$('.ques_box .editdone').click(function(){
+				//修改该题目
+				jsonData.splice(quesnum,1,saveQues($(this)));
+				//把题目显示到列表
+				loadQues(jsonData);
+			});
+
+		});
+
+	});
+
+
+
+</script>

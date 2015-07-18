@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="../../css/basic.css" />
+<link type="text/css" rel="stylesheet" href="../../css/global.css" />
+<link type="text/css" rel="stylesheet" href="../../css/layout.css" />
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/layout.js"></script>
+<title>注册成功</title>
+</head>
+<body>
+	<!-- 头部 开始 -->
+	<div class="w1190 head">
+		<div class="logo">
+			<h1><a href="#" title="互动推"><img alt="互动推" src="../../images/pc/hdt_logo.png" /></a></h1>
+			<div class="slogan"><span>专注移动社交互动广告</span></div>
+		</div>
+		<div class="nav">
+			<ul>
+				<li><a href="#"><em class="icon_home"></em>首页</a></li>
+				<li><a href="#"><em class="icon_ativ"></em>活动圈</a></li>
+				<li><a href="#"><em class="icon_plugin"></em>模版库</a></li>
+				<li><a href="#"><em class="icon_channel"></em>发布渠道</a></li>
+				<li><a href="#"><em class="icon_help"></em>帮助中心</a></li>
+				<li><a href="#"><em class="icon_agent"></em>加盟代理</a></li>
+				<li><a href="#">登录</a><strong>|</strong><a href="#">注册</a></li>
+				<!-- <li class="users_btn"><a href="#"><img src="../../images/avatar.jpg" />山间的风</a>（<a href="#">退出</a>）</li> -->
+			</ul>
+		</div>
+	</div>
+	<!-- 头部 结束 -->
+	<!-- 注册 开始 -->
+	<div class="w1190">
+		<div class="doneskip">
+			<h2>
+				<img src="../../images/pc/registerdone.jpg" />
+				恭喜，VIVIKING 已注册成功！
+			</h2>
+			<p><em>10</em>秒后自动跳转，如果你的浏览器无法跳转，<a href="http://www.tchajian.com">请点击此处跳转</a>。</p>
+		</div>
+	</div>
+	<!-- 注册 结束 -->
+	<!-- 底部 开始 -->
+	<div class="w1190 foot">
+		<h2><a href="#">
+			<img alt="互动推" src="../../images/pc/hdt_logo.png" />
+			<span>专注移动社交互动广告</span>
+		</a></h2>
+		<p>
+			<a href="#">首页</a>
+			<em>|</em>
+			<a href="#">活动圈</a>
+			<em>|</em>
+			<a href="#">模板库</a>
+			<em>|</em>
+			<a href="#">发布渠道</a>
+			<em>|</em>
+			<a href="#">帮助中心</a>
+			<em>|</em>
+			<a href="#">渠道代理</a>
+			<em>|</em>
+			<a href="#">代理商登录</a>
+		</p>
+		<p>
+			<span>咨询电话：0592-7127103</span>
+			<span>QQ：888888888</span>
+			<span>邮箱：cs@tchajian.com</span>
+		</p>
+		<p>地址： 福建省厦门市思明区软件园二期望海路19号之二502室</p>
+		<p>Copyright © 2014 www.tchajian.com All Rights Reserved 有戏（厦门）网络科技有限公司&nbsp;&nbsp;闽ICP备14019370号</p>
+	</div>
+	<!-- 底部 结束 -->
+</body>
+</html>
+<script type="text/javascript">
+	//自动跳转
+	$(function(){
+		var count = 10;
+		var countdown = setInterval(function(){
+			$('.doneskip p em').text(count);
+			count--;
+			if(count == 0){
+				location.href="http://www.tchajian.com";
+				clearInterval(countdown);
+			}
+		},1000);
+	});
+</script>
