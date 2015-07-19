@@ -52,13 +52,13 @@ public class GlobalRequiredInterceptor extends ControllerInterceptorAdapter {
 		WebApplicationContext webApplicationContext = WebApplicationContextUtils
 				.getWebApplicationContext(request.getServletContext());
 		/*****************代理商归属处理*******************/
-		if(SessionUtil.getAgentInfo(request) == null){
+	/*	if(SessionUtil.getAgentInfo(request) == null){
 			IAgentBusService agentBusService = (IAgentBusService) webApplicationContext.getBean("agentBusService");
 			Integer agentId = agentBusService.getAgentIdForUser(request);
 //			AgentInfoVO agentInfoVO = agentBusService.getMcacheAgentInfo(agentId);
 			AgentInfoVO agentInfoVO = agentBusService.getAgentInfoVO(agentId);
 			SessionUtil.setAgentInfo(request, agentInfoVO);
-		}
+		}*/
 		
 		//登录信息处理
 /*		if(SessionUtil.getUser(request) != null){

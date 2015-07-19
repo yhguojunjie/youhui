@@ -94,18 +94,18 @@ public class PluginController {
 	@Get("/list")
 	public String getPlugins(Invocation inv) throws Exception {
 		//1.代理商信息处理
-		AgentInfoVO agentInfoVO = SessionUtil.getAgentInfo(inv.getRequest());
-		inv.getRequest().setAttribute("agentInfoVO", agentInfoVO);
-		
+//		AgentInfoVO agentInfoVO = SessionUtil.getAgentInfo(inv.getRequest());
+//		inv.getRequest().setAttribute("agentInfoVO", agentInfoVO);
+//		
 		//2.品牌处理
-		List<Brand> brandList = null;
-		Integer brandCount;
-		String findStr = " b.state = '0' AND a.hideState='0' AND b.agentId = " + agentInfoVO.getId() + " ORDER BY a.seq ASC,b.createTime DESC LIMIT 0,4 ";
-		String findStr2 = " agentId = " + agentInfoVO.getId() + " ";
+//		List<Brand> brandList = null;
+//		Integer brandCount;
+//		String findStr = " b.state = '0' AND a.hideState='0' AND b.agentId = " + agentInfoVO.getId() + " ORDER BY a.seq ASC,b.createTime DESC LIMIT 0,4 ";
+//		String findStr2 = " agentId = " + agentInfoVO.getId() + " ";
 //		String findStr3 = " agentId = " + agentInfoVO.getId() + " oder ";
 //		brandList = brandService.getTopBrand(findStr3);
-		brandList = brandService.getAgentTopBrand(findStr);
-		brandCount = brandService.getAgentTotalCount(findStr2);
+//		brandList = brandService.getAgentTopBrand(findStr);
+//		brandCount = brandService.getAgentTotalCount(findStr2);
 		
 		//缓存处理，暂不开启
 		//String brandKey = MemcachedConstans.BRAND_INDEX_KEY;
@@ -154,9 +154,9 @@ public class PluginController {
 		 * bannerList = bannerService.getBannerList(findBannerStr); } else {
 		 */
 
-		String findBannerStr = " a.hideState='0' and (a.auditstate='1' or a.auditstate='') and a.agentId = " + agentInfoVO.getId() + " ORDER BY a.seq ASC,a.createTime desc LIMIT " + start + ","
-				+ count;
-		bannerList = bannerService.getAgentBannerList(findBannerStr);
+//		String findBannerStr = " a.hideState='0' and (a.auditstate='1' or a.auditstate='') and a.agentId = " + agentInfoVO.getId() + " ORDER BY a.seq ASC,a.createTime desc LIMIT " + start + ","
+//				+ count;
+//		bannerList = bannerService.getAgentBannerList(findBannerStr);
 
 		/*
 		 * } } else { String findBannerStr =
@@ -165,9 +165,9 @@ public class PluginController {
 		 * bannerList = bannerService.getBannerList(findBannerStr); }
 		 */
 
-		inv.getRequest().setAttribute("bannerList", bannerList);
-		inv.getRequest().setAttribute("brandList", brandList);
-		inv.getRequest().setAttribute("brandCount", brandCount);
+//		inv.getRequest().setAttribute("bannerList", bannerList);
+//		inv.getRequest().setAttribute("brandList", brandList);
+//		inv.getRequest().setAttribute("brandCount", brandCount);
 
 		inv.getRequest().getSession().setAttribute(Globals.SESSION_LASTURL, inv.getRequest().getRequestURL());
 		return "index";
