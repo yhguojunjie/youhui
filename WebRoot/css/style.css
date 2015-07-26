@@ -1,0 +1,164 @@
+.fa-gray{margin:0 2px;color:#9c9c9c}
+.fa-orange{margin:2px;color:#c40000}
+.a-float-left{float:left;margin:0 3px}
+.top-wrapper{position:fixed;top:0;z-index:10000;width:100%;height:35px;border-bottom:1px solid #eee;background-color:#f5f5f5}
+.top-info{width:1190px;height:100%;margin:auto}
+.top-left{position:relative;float:left;width:30%;height:100%;line-height:35px}
+.top-right{position:relative;float:right;height:100%;line-height:35px}
+.user-name{float:left;height:36px;padding:0 3px;text-align:center;border-right:1px solid #f5f5f5;border-left:1px solid #f5f5f5;line-height:35px}
+.down-icon{display:inline-block;width:12px;height:12px;background:url(../img/arrow.png) no-repeat center center}
+.msg-info{float:left;height:36px;padding:0 3px;line-height:35px;border-right:1px solid #f5f5f5;border-left:1px solid #f5f5f5}
+.user-name:hover{border-right:1px solid #eee;border-left:1px solid #eee;background:#fff}
+.msg-info:hover{border-right:1px solid #eee;border-left:1px solid #eee;background:#fff}
+.get-box,.msg-box,.my-taobao-box,.nav-box,.shopping-box{position:absolute;z-index:99999;left:0;top:35px;display:none;width:260px;height:170px;border:1px solid #eee;border-top:none;overflow:hidden;background:#fff}
+.msg-box{left:70px;width:250px;height:180px;box-shadow:1px 1px 1px #dfdfdf}
+.msg-box h1{position:relative;width:100%;height:30px;border-bottom:1px solid #eee;text-align:center;line-height:30px}
+.pencil{position:absolute;right:10px;top:10px}
+.close-msg{margin-left:85px;color:#ddd;cursor:pointer}
+.close-msg:hover{color:#c40000}
+.read-info{width:100%;height:110px;border-bottom:1px solid #eee}
+.read-info p{height:35px;line-height:16px;margin-right:10px}
+.read-info img{float:left;margin-left:10px}
+.msg-setting a:first-child{margin:0 10px}
+.my-taobao-box{width:80px;height:140px}
+.my-taobao-box li{width:95.5%;height:28px;line-height:28px;color:#6C6C6C;cursor:pointer;padding-left:4.5%}
+.my-taobao-box li:hover{background:#f3f3f3}
+.shopping-box{width:260px;padding-left:30px;height:40px;line-height:40px;left:72px}
+.check-shopp{padding:5px 5px;background:#c40000;color:#fff}
+.check-shopp:hover{color:#fff}
+.get-box{left:151px;width:77px;height:58px}
+.get-box li{width:100%;height:28px;line-height:28px;text-align:center;color:#6C6C6C;cursor:pointer}
+.get-box li:hover{background:#f3f3f3}
+.nav-box{left:-675px;width:1190px;height:180px}
+.other-search>a{margin-right:6px}
+.top-main{margin:40px auto 10px;width:1190px;height:90px}
+.top-main:after{content:'';display:block;visibility:hidden;clear:both;height:0;width:0}
+.top-main>img{float:left}
+.search-wrapper,.search-wrapper-scroll{float:left;margin-top:20px;margin-left:30px;width:730px;height:75%}
+.search-wrapper-scroll{width:166px;margin:0;float:right}
+.search-box,.search-box-scroll{position:relative;float:left;margin-right:10px;width:600px;height:40px;border:3px solid #c40000}
+.search-box-scroll{width:160px;height:21px}
+.search-in,.search-in-scroll{float:left;width:495px;height:38px;padding-left:10px;border:none;outline:0}
+.search-in-scroll{width:106px;padding-left:4px;font-size:10px;height:20px;line-height:20px}
+.search-but,.search-but-scroll{float:left;width:95px;height:40px;border:none;outline:0;font-size:20px;letter-spacing:5px;background:#c40000;cursor:pointer;color:#fff;font-family:'microsoft yahei',Arial,Helvetica,sans-serif}
+.search-but-scroll{width:50px;font-size:12px;height:21px;line-height:20px}
+.two-code{float:right;position:relative;width:94px;height:90px;text-align:center;border:1px solid #eee}
+.close-code{position:absolute;top:-1px;left:-21px;width:19px;height:18px;line-height:18px;border:1px solid #eee;font-size:14px;color:#d8d8d8;cursor:pointer}
+.close-code:hover{border-color:#c40000;background:#c40000;color:#fff}
+.two-code>h3{margin:9px 0;font-size:12px;text-align:center;color:#c40000}
+.scroll-search{display:none;position:relative;z-index:8888;margin:auto;padding-top:10px;clear:both;width:100%;height:42px;background:#fff;border-bottom:1px solid #eee;box-shadow:0 2px 2px #eee}
+.search-litter{width:1190px;margin:auto}
+.scroll-logo{float:left;margin-right:15px}
+.scroll-list{float:left;min-width:200px;height:40px;line-height:40px;margin:0 8px}
+.scroll-list ul li{list-style:none;float:left;margin-right:12px;font-size:12px}
+.content-top{width:1190px;height:467px;margin:0 auto;clear:both;margin-bottom:40px}
+.sidebar{float:left;width:150px;height:100%;box-shadow:2px 2px 2px #e1e1e1;border-top: 1px solid #b61d1d;border-bottom: 1px solid #b61d1d;background: #b61d1d;}
+.sidebar-info{position:relative;width:100%;height:100%;border-top:none}
+.side-li{position:relative;z-index:5000;background:#b61d1d;border-right:1px solid #b61d1d;}
+.side-li>li{width:150px;margin:auto;height:31px;line-height:32px;text-align:center;border-right:1px solid #b61d1d;cursor:pointer;color:#fff}
+.side-li>li:hover{background:#fff;color:#b61d1d;border-right-color: #fff;}
+.side-li>li.visited{background: #fff;color: #B61D1D;border-right-color: #fff;}
+.sidebar-info h3{width:100%;height:100%;margin:0 auto;padding:0;border-bottom:1px solid #b61d1d}
+.right-con{width:1038px;height:100%;float:right;position:relative;}
+.right-con .nav {width: 100%;height: 41px;line-height: 38px;font-weight: bold;font-size: 14px;border-bottom: 2px solid #c40000;}
+.right-con #spe-a1,.right-con #spe-a2,.right-con #spe-a3 {color: #c40000;font-size: 16px;}
+.right-con .nav > a {padding: 5px 5px;height: 32px;margin: 0 8px;color: #202020;}
+.right-con .line-a {color: #efefef;padding: 5px;margin: 0 8px;}
+.right-con .nav img {vertical-align: middle;border: none;margin: 0 0px 0 40px;}
+.right-con .content{width: 100%;float: left;border:1px solid #eee;border-left-color: #fff;height: 423px;}
+.right-con .content.visited{border:1px solid #b61d1d;border-top: none;}
+.right-con .con{position:absolute;width:100%;height:100%;display:none;left:0;top:0;padding: 0 10px;}
+.right-con .con.dsb{display:block}
+.right-con .con .cooper-logo{position:relative;float:left;display:block;width:141px;height:84px;margin:5px auto;border:2px solid #FFF;padding-top:8px;overflow:hidden;text-align:center;color:#999}
+.right-con .con .cooper-logo img{display:block;width:90px;height:40px;margin:5px auto;text-align:center}
+.right-con .con .cooper-logo.hover{border:2px solid #ffad21}
+.content,.content-sub{position:relative;float:left;width:831px;height:100%;overflow:hidden}
+.content-sub{height:160px;width:100%;margin-bottom:10px}
+.imgBox2{position:absolute;clear:both;width:660px;list-style-type:none}
+.imgBox2>li{float:left;width:160px}
+.imgBox2 a{display:inline-block}
+.orange{color:#c40000}
+.main{width:1190px;margin:auto;min-height:4023px}
+.main-left{width:960px;float:left;height:4085px;border:1px solid #eee;border-top:2px solid #ddd;border-right:none;border-left:none}
+.main-title{width:100%;height:50px;margin-left:-1px;line-height:50px;border:1px solid #eee;border-top:none}
+.show-title{font-size:12px;margin-right:20px;font-weight:lighter;float:right}
+.main-title h1{margin-left:20px;font-size:16px;text-shadow:2px 2px 2px #c4c4c4}
+.product-box{position:relative;float:left;width:466px;height:auto;border:1px solid #eee;box-shadow:rgba(0,0,0,.17) 1px 1px 2px;margin-top:20px;margin-right:23px}
+.product-box:hover{border-color:#c40000;box-shadow:none}
+.product-box:nth-child(2n+1){margin-right:0}
+.box{width:100%}
+.box img{width:100%;height:327px}
+.box_activity{background:#333;width:212px;height:29px;position:absolute;top:0;right:0;color:#fff;line-height:29px;font-size:15px}
+.box_activity span{margin-left:5px}
+.box_activity i{margin:5px 5px 0 5px;font-size:20px;float:left}
+.box_activity p span{padding-left:10px;color:#fff;line-height:29px;font-size:15px}
+.box_hover{background:url(../img/pro_hover-bg.png) repeat;color:#FFF;font-weight:700;height:33px;left:0;line-height:34px;position:absolute;top:294px;width:100%}
+.box_hover .sale{padding-left:5px;float:left}
+.box_hover .money{padding-right:5px;float:right}
+.box_list{padding:20px;height:auto;overflow:hidden}
+.box_list h3{font-size:20px;height:32px;overflow:hidden;line-height:32px;border-bottom:1px dotted #d5d5d5;padding-bottom:8px;margin-bottom:10px}
+.box_list h3 a{font-size:18px}
+.box_list .box_listl{float:left;margin-left:77px;min-width:90px;text-align:center}
+.pb_Price{margin:15px 0;font-size:14px;color:#f40;float:left;width:100%}
+.pb_Price span{font-size:16px;font-weight:700}
+.pb_Price p{color:#000;height:30px;line-height:30px}
+.box_list .list_logo{width:86px;height:50px;margin-top:20px;float:left}
+.box_list .list_logo img{width:80px;height:30px;vertical-align:middle}
+.box_list .box_listr{float:right;padding-top:20px;width:135px;text-align:center;overflow:hidden}
+.box_listr a{background:#c40000;padding:8px 29px;color:#fff;font-weight:600;font-size:18px}
+.box_listr p{margin-top:20px;font-weight:700;color:#c40000}
+.main-right{float:right;width:178px}
+.time-go{position:relative;width:100%;height:auto;border:1px solid #ddd}
+.time-cell{width:100%;height:auto;margin:16px auto}
+.time-cell h1{padding-left:12px;line-height:30px;margin-bottom:10px;font-size:16px}
+.time-cell a{font-size:16px}
+.now-news{float:right;font-weight:lighter;margin-right:5px}
+.now-news>span{margin-left:6px;color:#c40000}
+.inner-show{margin-top:19px;width:100%;margin:auto;height:auto;background:#fff}
+.inner-show ul li{list-style:none;float:left;margin-bottom:20px}
+.inner-show ul li a{display:inline-block;margin:0 9px 10px}
+.inner-show>a img{width:100%}
+.inner-show h3{margin-top:3px;font-weight:lighter;font-size:12px;text-align:center;color:#6c6c6c}
+.inner-show h3:hover{color:#c40000}
+.inner-show h3>a{margin-right:6px;font-size:12px}
+.inner-show .show-right{margin:0 9px}
+.inner-show .show-right .nowPrice{font-size:8px;float:left;width:100%}
+.inner-show .show-right .nowPrice i{font-style:normal;color:#c40000;font-weight:600;font-size:14px}
+.inner-show .show-right .nowPrice s{font-size:12px;margin-left:5px}
+.inner-show .show-right .desc{margin:8px 0 10px 0;line-height:18px;height:36px;overflow:hidden;float:left}
+.inner-show .show-right .desc a{font-size:12px;margin:0 0 10px}
+.inner-show .show-right .consumer i{color:#005aa0;font-style:normal}
+.circle-new{position:absolute;z-index:3000;top:10px;left:-14px;width:25px;text-align:center;line-height:25px;height:25px;border-radius:25px;background:#c40000;color:#fff}
+.time-circle{position:absolute;top:744px;left:-6px;width:8px;height:8px;border:1px solid #fff;border-radius:10px;background:#ccc;cursor:pointer}
+.bottom-circle{top:962px}
+.time-circle:hover{background:#c40000}
+.gogo-choose{float:left;margin-top:20px;width:100%;height:auto;border:1px solid #ddd}
+.gogo-choose>h1{font-size:16px;padding-left:10px;line-height:30px;margin-bottom:10px}
+.sub-show{margin-top:20px;margin:0 9px 20px;height:auto;float:left}
+.sub-right .oriPrice{font-size:8px;float:left}
+.sub-right .nowPrice{font-size:8px;float:left;width:100%}
+.sub-right .nowPrice i{font-style:normal;color:#c40000;font-weight:600;font-size:14px}
+.sub-right .desc{margin:8px 0 10px 0;line-height:18px;height:36px;overflow:hidden;float:left}
+.sub-right .desc a{font-size:12px;margin:0 0 10px}
+.sub-right .consumer i{color:#005aa0;font-style:normal}
+.fix-right-sub{width:178px;float:left}
+.help{width:1190px;height:175px;margin:auto;border-bottom:2px solid #c40000}
+.help-info{float:left;width:286px;padding-left:10px;height:100px;border-right:1px solid #eee}
+.help-info:last-child{border-right:none}
+.help-info h1{height:40px;line-height:40px}
+.help-text{vertical-align:top;font-size:16px;margin-left:9px;color:#3e3e3f;text-shadow:1px 1px 1px #7f7f7f}
+.help-a,.help-a-litter{display:inline-block;margin:10px 70px 0 5px}
+.help-a-litter{margin:10px 10px 0 5px}
+.margin-r{margin-right:0}
+.footer{width:1190px;height:150px;margin:10px auto}
+.footer-right{width:94%;height:100%;margin:auto;text-align:center}
+.tao-man{float:right}
+.footer-nav{width:100%;height:42px;line-height:42px;border-bottom:1px solid #ddd;color:#dedede}
+.footer-nav>a{margin:0 3px}
+.about-tao{width:100%;height:42px;line-height:42px}
+.footer-right p span{margin:0 5px}
+.some-info{margin-top:10px}
+.backtoTop{clear:both;height:60px;width:40px;position:absolute;//绝对定位
+	padding:5px 0;right:15px;-moz-transition:all .6s ease;-webkit-transition:all .6s ease;-o-transition:all .6s ease;transition:all .6s ease;border-radius:5px;overflow:hidden;background:#f5f5f5;font-size:30px;cursor:pointer;text-align:center;color:#9c9c9c}
+	.up-back{background:#ECF0F1}
+	.down-back{background:#BDC3C7;color:#fff}
