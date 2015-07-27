@@ -51,35 +51,39 @@
 .scroll-logo{float:left;margin-right:15px}
 .scroll-list{float:left;min-width:200px;height:40px;line-height:40px;margin:0 8px}
 .scroll-list ul li{list-style:none;float:left;margin-right:12px;font-size:12px}
-.content-top{width:1190px;height:467px;margin:0 auto;clear:both;margin-bottom:40px}
-.sidebar{float:left;width:150px;height:100%;box-shadow:2px 2px 2px #e1e1e1;border-top: 1px solid #b61d1d;border-bottom: 1px solid #b61d1d;background: #b61d1d;}
-.sidebar-info{position:relative;width:100%;height:100%;border-top:none}
-.side-li{position:relative;z-index:5000;background:#b61d1d;border-right:1px solid #b61d1d;}
-.side-li>li{width:150px;margin:auto;height:31px;line-height:32px;text-align:center;border-right:1px solid #b61d1d;cursor:pointer;color:#fff}
-.side-li>li:hover{background:#fff;color:#b61d1d;border-right-color: #fff;}
-.side-li>li.visited{background: #fff;color: #B61D1D;border-right-color: #fff;}
-.sidebar-info h3{width:100%;height:100%;margin:0 auto;padding:0;border-bottom:1px solid #b61d1d}
-.right-con{width:1038px;height:100%;float:right;position:relative;}
-.right-con .nav {width: 100%;height: 41px;line-height: 38px;font-weight: bold;font-size: 14px;border-bottom: 2px solid #c40000;}
-.right-con #spe-a1,.right-con #spe-a2,.right-con #spe-a3 {color: #c40000;font-size: 16px;}
+.typeList{position: relative;width: 100%;}
+.typeList .line{width: 100%;height: 41px;position: absolute;top:0;line-height: 0;border-bottom: 2px solid #B1191A;z-index: 9;}
+.content-top{/**/width:1190px;height:476px;margin:0 auto;clear:both;margin-bottom:40px;}
+.sidebar{float:left;width:152px;height:100%;background: #b61d1d;}
+.sidebar h3 {width: 100%;height: 41px;line-height: 41px;text-align: center;font-size: 14px;background: #B1191A;color: #fff;}
+.sidebar .sidebar-info{position:relative;width:100%;border-top:none}
+.sidebar .side-li{position:relative;font-weight: 600;font-size: 14px;}
+.sidebar .side-li>li{width:100%;margin:auto;height:31px;line-height:32px;text-align:center;border-left:1px solid #b61d1d;cursor:pointer;color:#fff}
+.sidebar .side-li>li:hover{background:#fff;color:#b61d1d;}
+.sidebar .side-li>li.visited{background: #fff;color: #B61D1D;}
+
+.right-con{width:1038px;height:100%;float:left;position:relative;}
+.right-con .nav {width: 100%;height: 41px;line-height: 38px;font-weight: bold;font-size: 14px;}
 .right-con .nav > a {padding: 5px 5px;height: 32px;margin: 0 8px;color: #202020;}
+.right-con .nav > a.spe{color: #c40000;font-size: 16px;}
 .right-con .line-a {color: #efefef;padding: 5px;margin: 0 8px;}
 .right-con .nav img {vertical-align: middle;border: none;margin: 0 0px 0 40px;}
-.right-con .content{width: 100%;float: left;border:1px solid #eee;border-left-color: #fff;height: 423px;}
+.right-con .content{width: 100%;float: left;border:1px solid #eee;border-left-color: #fff;height: 434px;}
 .right-con .content.visited{border:1px solid #b61d1d;border-top: none;}
 .right-con .con{position:absolute;width:100%;height:100%;display:none;left:0;top:0;padding: 0 10px;}
 .right-con .con.dsb{display:block}
 .right-con .con .cooper-logo{position:relative;float:left;display:block;width:141px;height:84px;margin:5px auto;border:2px solid #FFF;padding-top:8px;overflow:hidden;text-align:center;color:#999}
 .right-con .con .cooper-logo img{display:block;width:90px;height:40px;margin:5px auto;text-align:center}
 .right-con .con .cooper-logo.hover{border:2px solid #ffad21}
-.content,.content-sub{position:relative;float:left;width:831px;height:100%;overflow:hidden}
-.content-sub{height:160px;width:100%;margin-bottom:10px}
+.content,.content-sub{position:relative;float:left;width:831px;height:100%;/*overflow:hidden*/}
+.content-sub{height:179px;width:100%;margin-bottom:10px;overflow: hidden;}
 .imgBox2{position:absolute;clear:both;width:660px;list-style-type:none}
 .imgBox2>li{float:left;width:160px}
 .imgBox2 a{display:inline-block}
+.imgBox2 img{height: 178px;}
 .orange{color:#c40000}
-.main{width:1190px;margin:auto;min-height:4023px}
-.main-left{width:960px;float:left;height:4085px;border:1px solid #eee;border-top:2px solid #ddd;border-right:none;border-left:none}
+.main{width:1190px;margin:auto;min-height:4409px}
+.main-left{width:960px;float:left;border:1px solid #eee;border-top:2px solid #ddd;border-right:none;border-left:none}
 .main-title{width:100%;height:50px;margin-left:-1px;line-height:50px;border:1px solid #eee;border-top:none}
 .show-title{font-size:12px;margin-right:20px;font-weight:lighter;float:right}
 .main-title h1{margin-left:20px;font-size:16px;text-shadow:2px 2px 2px #c4c4c4}
@@ -119,7 +123,7 @@
 .inner-show ul li a{display:inline-block;margin:0 9px 10px}
 .inner-show>a img{width:100%}
 .inner-show h3{margin-top:3px;font-weight:lighter;font-size:12px;text-align:center;color:#6c6c6c}
-.inner-show h3:hover{color:#c40000}
+.inner-show∫£√≈ h3:hover{color:#c40000}
 .inner-show h3>a{margin-right:6px;font-size:12px}
 .inner-show .show-right{margin:0 9px}
 .inner-show .show-right .nowPrice{font-size:8px;float:left;width:100%}
@@ -142,7 +146,7 @@
 .sub-right .desc a{font-size:12px;margin:0 0 10px}
 .sub-right .consumer i{color:#005aa0;font-style:normal}
 .fix-right-sub{width:178px;float:left}
-.help{width:1190px;height:175px;margin:auto;border-bottom:2px solid #c40000}
+.help{width:1190px;height:120px;margin:auto;border-bottom:2px solid #c40000}
 .help-info{float:left;width:286px;padding-left:10px;height:100px;border-right:1px solid #eee}
 .help-info:last-child{border-right:none}
 .help-info h1{height:40px;line-height:40px}
@@ -158,7 +162,6 @@
 .about-tao{width:100%;height:42px;line-height:42px}
 .footer-right p span{margin:0 5px}
 .some-info{margin-top:10px}
-.backtoTop{clear:both;height:60px;width:40px;position:absolute;//ÁªùÂØπÂÆö‰Ωç
-	padding:5px 0;right:15px;-moz-transition:all .6s ease;-webkit-transition:all .6s ease;-o-transition:all .6s ease;transition:all .6s ease;border-radius:5px;overflow:hidden;background:#f5f5f5;font-size:30px;cursor:pointer;text-align:center;color:#9c9c9c}
-	.up-back{background:#ECF0F1}
-	.down-back{background:#BDC3C7;color:#fff}
+.backtoTop{clear:both;height:60px;width:40px;position:absolute;padding:5px 0;right:15px;-moz-transition:all .6s ease;-webkit-transition:all .6s ease;-o-transition:all .6s ease;transition:all .6s ease;border-radius:5px;overflow:hidden;background:#f5f5f5;font-size:30px;cursor:pointer;text-align:center;color:#9c9c9c}
+.up-back{background:#ECF0F1}
+.down-back{background:#BDC3C7;color:#fff}

@@ -127,58 +127,49 @@
             <div class="close-code"><i class="fa fa-times"></i></div>
         </div>
     </div>
+    <div class="typeList">
+       <div class="line">
+       </div>
     <div class="content-top">
        <div class="sidebar">
+           <h3>导购优惠分类</h3>
          <div class="sidebar-info">
-         <h1 >导购优惠分类</h1>
             <ul class="side-li">
-                <li class="s_1"><h3>服装内衣</h3></li>
-                <li class="s_2"><h3>鞋包配饰</h3></li>
-                <li class="s_3"><h3>运动户外</h3></li>
-                <li class="s_4"><h3>珠宝手表</h3></li>
-                <li class="s_5"><h3>手机数码</h3></li>
-                <li class="s_6"><h3>家电办公</h3></li>
-                <li class="s_7"><h3>护肤彩妆</h3>v</li>
-                <li class="s_8"><h3>母婴用品</h3></li>
-                <li class="s_9"><h3>家纺居家</h3></li>
-                <li class="s_10"><h3>家具建材</h3></li>
-                <li class="s_11"><h3>美食特产</h3></li>
-                <li class="s_12"><h3>日用百货</h3></li>
-                <li class="s_13"><h3>汽车摩托</h3></li>
-                <li class="s_14"><h3>文化娱乐</h3></li>
-                <li class="s_15"><h3>文化娱乐</h3></li>
+                <li class="s_1">服装内衣</li>
+                <li class="s_2">鞋包配饰</li>
+                <li class="s_3">运动户外</li>
+                <li class="s_4">珠宝手表</li>
+                <li class="s_5">手机数码</li>
+                <li class="s_6">家电办公</li>
+                <li class="s_7">护肤彩妆</li>
+                <li class="s_8">母婴用品</li>
+                <li class="s_9">家纺居家</li>
+                <li class="s_10">家具建材</li>
+                <li class="s_11">美食特产</li>
+                <li class="s_12">日用百货</li>
+                <li class="s_13">汽车摩托</li>
+                <li class="s_14">文化娱乐</li>
             </ul>
         </div>
     </div> 
     <div class="right-con">
-        <div class="nav">
-           <!--  <a id="spe-a1" href="#">全站优惠</a>
-            <a id="spe-a2" href="#">超高优惠</a>
-            <a id="spe-a3" href="#">特卖场：</a> -->
-            <a  href="#">全站优惠</a>
+        <div class="nav">  
+            <a class="spe" href="#">全站优惠</a>
+            <a class="spe" href="#">超高优惠</a>
             <span class="line-a">|</span>
-            <a  href="#" id="spe-a1">超高优惠</a>
-             <!-- <a  href="#" id="spe-a2" >限购特价通道</a> -->
-            <a  href="#" id="spe-a2" >限购特价商品</a>
-            <a  href="#" id="spe-a3" >限时抢购商品</a>
-            <a  href="#" id="spe-a3" >多买多送</a>
-            <a  href="#" id="spe-a3" >推荐商品</a>
-            <span class="line-a">|</span>
-            <a  href="#">特卖场：</a>
-<!--             <span class="line-a">|</span> -->
+            <a href="#">限购特价商品</a>
+            <a href="#">限时抢购商品</a>
+            <a href="#">多买多送</a>
+            <a href="#">推荐商品</a>
+            <a href="#">特卖场</a>
             <a href="#">9.9包邮</a>
             <a href="#">19.9包邮</a>
-            <a href="#">50块封顶</a>
-            <span class="line-a">|</span>
-            <a href="#">优惠券</a>
+            <!-- <a href="#">50块封顶</a> -->
+           <!--  <a href="#">优惠券</a>
             <a href="#">本地优惠</a>
-            
-            <a href="#">手机版</a>
-<!--             <a href="#">云手机</a>
-            <a href="#">特色中国</a> -->
+            <a href="#">手机版</a> -->
             <img style="cursor: pointer" src="${path}/img/ad.gif">
-<!--             <span class="keep-a" href="#"><a href="#">消费者保障</a></span>
- -->        </div>
+        </div>
         <div class="content">
             <div class="con dsb">
                 <a href="#" class="cooper-logo">
@@ -1472,11 +1463,70 @@
             </div>
         </div>
     </div> 
+    </div>
 </div> 
 <div class="main">
     <div class="main-left">
         <div class="main-title">
             <h1>超高优惠<span class="show-title">下面有30个特色市场等你来逛哦！</span></h1>
+        </div>
+        <div class="product-box">
+            <div class="box">
+                <a target="_blank" href="#">
+                    <img src="${path}/img/show1.png">
+                </a>
+                <span class="box_activity">
+                    <i class="fa fa-clock-o"></i>
+                    距活动结束<span>00:04:56:15</span>
+                </span>
+                <div class="box_hover">
+                    <span class="sale">已售0份</span>
+                    <span class="money">定金¥1,000.00</span>
+                </div>
+            </div>
+            <div class="box_list">
+                <h3><a target="_blank" title="" href="#">荣耀 6 Plus (PE-TL10) 白色 移动联通双4G手机 双卡双待双通</a></h3>
+                <div class="list_logo"><img src="${path}/img/cooperlogo/maibaobao.gif" /></div>
+                <div class="box_listl">
+                    <div class="pb_Price">
+                        ￥<span>2400.00</span>
+                        <p>当前价</p>
+                    </div>
+                </div>
+                <div class="box_listr">
+                    <a href="#" class="" target="_blank">立即购买</a>
+                    <p>每增加1份再优惠0.1折</p>
+                </div>
+            </div>
+        </div>
+        <div class="product-box">
+            <div class="box">
+                <a target="_blank" href="#">
+                    <img src="${path}/img/show1.png">
+                </a>
+                <span class="box_activity">
+                    <i class="fa fa-clock-o"></i>
+                    距活动结束<span>00:04:56:15</span>
+                </span>
+                <div class="box_hover">
+                    <span class="sale">已售0份</span>
+                    <span class="money">定金¥1,000.00</span>
+                </div>
+            </div>
+            <div class="box_list">
+                <h3><a target="_blank" title="" href="#">荣耀 6 Plus (PE-TL10) 白色 移动联通双4G手机 双卡双待双通</a></h3>
+                <div class="list_logo"><img src="${path}/img/cooperlogo/maibaobao.gif" /></div>
+                <div class="box_listl">
+                    <div class="pb_Price">
+                        ￥<span>2400.00</span>
+                        <p>当前价</p>
+                    </div>
+                </div>
+                <div class="box_listr">
+                    <a href="#" class="" target="_blank">立即购买</a>
+                    <p>每增加1份再优惠0.1折</p>
+                </div>
+            </div>
         </div>
         <div class="product-box">
             <div class="box">
@@ -1952,6 +2002,27 @@
         <div class="fix-right-sub">
             <div class="gogo-choose">
                 <h1>今日推荐商品</h1>
+                <div class="sub-show">
+                    <div class="content-sub">
+                        <ul class="imgBox2">
+                            <li><a href="#"><img src="${path}/img/sub1.jpg"></a></li>
+                            <li><a href="#"><img src="${path}/img/sub2.jpg"></a></li>
+                            <li><a href="#"><img src="${path}/img/sub3.jpg"></a></li>
+                        </ul>
+                        <div class="currentNum-sub">
+                            <span class="imgNum2 mark-color"></span>
+                            <span class="imgNum2"></span>
+                            <span class="imgNum2"></span>
+                        </div>
+                        <div class="control2 to-left2"><i class="fa fa-angle-left"></i></div>
+                        <div class="control2 to-right2"><i class="fa fa-angle-right"></i></div>
+                    </div>
+                    <div class="sub-right">
+                        <div class="nowPrice">导购价：<i>￥1020</i></div>
+                        <p class="desc"><a target="_blank" href="#">荣耀 6 Plus (PE-TL10) 白色 移动联通双4G手机 双卡双待双通</a></p>
+                        <p class="consumer">已有<i>2309</i>人购买</p>
+                    </div>
+                </div>
                 <div class="sub-show">
                     <div class="content-sub">
                         <ul class="imgBox2">
