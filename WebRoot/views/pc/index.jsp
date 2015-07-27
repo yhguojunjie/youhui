@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>导购网</title>
+    <title>优惠-导购网</title>
     <link rel="stylesheet" href="${path }/css/reset.css"/>
     <link rel="stylesheet" href="${path }/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="${path }/css/style.css"/>
@@ -131,6 +131,7 @@
     <div class="content-top">
        <div class="sidebar">
          <div class="sidebar-info">
+         <h1 >导购优惠分类</h1>
             <ul class="side-li">
                 <li class="s_1"><h3>服装内衣</h3></li>
                 <li class="s_2"><h3>鞋包配饰</h3></li>
@@ -152,17 +153,30 @@
     </div> 
     <div class="right-con">
         <div class="nav">
-            <a id="spe-a1" href="#">天猫</a>
-            <a id="spe-a2" href="#">聚划算</a>
-            <a id="spe-a3" href="#">二手</a>
+           <!--  <a id="spe-a1" href="#">全站优惠</a>
+            <a id="spe-a2" href="#">超高优惠</a>
+            <a id="spe-a3" href="#">特卖场：</a> -->
+            <a  href="#">全站优惠</a>
             <span class="line-a">|</span>
-            <a href="#">拍卖</a>
-            <a href="#">一淘</a>
-            <a href="#">电器城</a>
-            <a href="#">Hitao粉妆</a>
-            <a href="#">旅行</a>
-            <a href="#">云手机</a>
-            <a href="#">特色中国</a>
+            <a  href="#" id="spe-a1">超高优惠</a>
+             <!-- <a  href="#" id="spe-a2" >限购特价通道</a> -->
+            <a  href="#" id="spe-a2" >限购特价商品</a>
+            <a  href="#" id="spe-a3" >限时抢购商品</a>
+            <a  href="#" id="spe-a3" >多买多送</a>
+            <a  href="#" id="spe-a3" >推荐商品</a>
+            <span class="line-a">|</span>
+            <a  href="#">特卖场：</a>
+<!--             <span class="line-a">|</span> -->
+            <a href="#">9.9包邮</a>
+            <a href="#">19.9包邮</a>
+            <a href="#">50块封顶</a>
+            <span class="line-a">|</span>
+            <a href="#">优惠券</a>
+            <a href="#">本地优惠</a>
+            
+            <a href="#">手机版</a>
+<!--             <a href="#">云手机</a>
+            <a href="#">特色中国</a> -->
             <img style="cursor: pointer" src="${path}/img/ad.gif">
 <!--             <span class="keep-a" href="#"><a href="#">消费者保障</a></span>
  -->        </div>
@@ -1463,7 +1477,7 @@
 <div class="main">
     <div class="main-left">
         <div class="main-title">
-            <h1>万能的导购<span class="show-title">下面有30个特色市场等你来逛哦！</span></h1>
+            <h1>超高优惠<span class="show-title">下面有30个特色市场等你来逛哦！</span></h1>
         </div>
         <div class="product-box">
             <div class="box">
@@ -1875,7 +1889,7 @@
     <div class="main-right">
         <div class="time-go">
             <div class="time-cell">
-                <h1>今日上新<span class="now-news">更新<span class="">3</span></span></h1>
+                <h1>今日限购特价商品<span class="now-news">更新<span class="">3</span></span></h1>
                 <div class="inner-show">
                     <ul>
                         <li>
@@ -1938,7 +1952,7 @@
         </div>
         <div class="fix-right-sub">
             <div class="gogo-choose">
-                <h1>大家都选</h1>
+                <h1>今日推荐商品</h1>
                 <div class="sub-show">
                     <div class="content-sub">
                         <ul class="imgBox2">
