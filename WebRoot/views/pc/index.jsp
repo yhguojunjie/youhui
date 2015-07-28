@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>帮you惠,优惠优惠网</title>
+    <title>导购网</title>
     <link rel="stylesheet" href="${path}/css/reset.css"/>
     <link rel="stylesheet" href="${path}/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="${path}/css/style.css"/>
@@ -14,72 +14,96 @@
     <div class="top-wrapper">
         <div class="top-info">
             <div class="top-left">
-                <div data-toggle="arrowdown" id="arrow1" class="user-name">
-                    <a href="#">亲，请登录</a>
-                </div>
-                <div data-toggle="arrowdown" id="arrow2" class="msg-info">
-                    <i class="fa fa-envelope fa-gray"></i>
-                    <a href="#">消息</a>
+            <ul>
+               <li><a href="#">亲，请登录</a><a href="#">注册</a></li>
+               <li class="spacer"></li>
+               <li data-toggle="arrowdown" id="arrow2" class="msg-info">
+                    <a href="#">我的导购</a>
                     <span class="down-icon"></span>
-                </div>
-                <a class="a-float-left" href="#">手机优惠</a>
+                </li>
+                <li class="spacer"></li>
+                <li><a href="#">我的订单</a></li>
+                </ul>
                 <div data-toggle="hidden-box" id="nav-box2" class="msg-box">
-                    <h1>未读新消息<a href="#" class="fa fa-pencil-square-o pencil"></a></h1>
-                    <div class="read-info">
-                        <h2>
-                            <span class="orange">&nbsp;&nbsp;|</span>&nbsp;你的书架&nbsp;
-                            <span style="font-weight: lighter">收到了</span>
-                            <span class="orange">1本书</span>
-                            <span class="fa fa-times close-msg"></span>
-                        </h2>
-                        <img src="${path}/img/book-1.png" />
-                        <div style="float: right">
-                            <p>
-                                全中国最穷的小伙子发财日记<br/>
-                                掏彩票公共账号
-                            </p>
-                            <h3><a href="#">去看看</a></h3>
-                        </div>
-                    </div>
-                    <div class="msg-setting">
-                        <a href="#" class="fa fa-cog"></a>
-                        <a href="#" class="fa fa-pencil-square-o"></a>
-                        <a style="margin-left: 70px" href="#">买家消息&nbsp;|&nbsp;</a>
-                        <a href="#">卖家消息</a>
-                    </div>
+						<div class="userinfo">
+							<div class="u-pic">
+								<a href="#"><img src="http://i.jd.com/commons/img/no-img_mid_.jpg" width="60" height="60"></a>
+							</div>
+							<div class="u-name u-login">
+								<a href="#" class="link-login">你好，请登录</a>
+							</div>
+							<div class="u-extra">
+								<a href="#">优惠券</a><a href="#">消息</a>
+							</div>
+						</div>
+						<div class="otherlist">
+							<div class="fore1">
+								<div class="item">
+									<a href="#" clstag="" target="_blank">待处理订单</a>
+								</div>
+								<div class="item">
+									<a href="#" clstag="" target="_blank">咨询回复<span id="num-consultation"></span></a>
+								</div>
+								<div class="item">
+									<a href="#" clstag="" target="_blank">降价商品<span id="num-reduction"></span></a>
+								</div>
+								<div class="item">
+									<a href="#" clstag="" target="_blank">返修退换货</a>
+								</div>
+							</div>
+							<div class="fore2">
+								<div class="item">
+									<a href="#" clstag="" target="_blank">我的关注</a>
+								</div>
+								<div class="item">
+									<a href="#" clstag="" target="_blank">我的京豆</a>
+								</div>
+								<div class="item">
+									<a href="#" clstag="" target="_blank">我的理财</a>
+								</div>
+								<div class="item baitiao hide" style="display:block">
+									<a href="#" clstag="jr|keycount|njdhome|wdbaitiao" target="_blank">我的白条</a>
+								</div>
+							</div>
+						</div>
                 </div>
             </div>
             <div class="top-right">
-                <div data-toggle="arrowdown" id="arrow3" class="user-name">
-                    <a href="#">我的优惠</a>
+            <ul>
+                <li data-toggle="arrowdown" id="arrow3" class="user-name">
+                    <a href="#">我的导购</a>
                     <span class="down-icon"></span>
-                </div>
-                <div data-toggle="arrowdown" id="arrow4" class="user-name">
+                </li>
+                <li class="spacer"></li>
+                <li data-toggle="arrowdown" id="arrow4" class="user-name">
                     <i class="fa fa-shopping-cart fa-orange"></i>
-                    <a href="#">优惠车</a>
+                    <a href="#">导购车</a>
                     <span class="down-icon"></span>
-                </div>
-                <div data-toggle="arrowdown" id="arrow5" class="user-name">
+                </li>
+                <li class="spacer"></li>
+                <li data-toggle="arrowdown" id="arrow5" class="user-name">
                     <i class="fa fa-star fa-gray"></i>
                     <a href="#">收藏夹</a>
                     <span class="down-icon"></span>
-                </div>
-                <a class="a-float-left" href="#">商品分类</a>
-                <div data-toggle="hidden-box" id="nav-box3" class="my-taobao-box">
+                </li>
+                <li class="spacer"></li>
+                <li href="#">商品分类</li>
+                <li data-toggle="hidden-box" id="nav-box3" class="my-taobao-box">
                     <ul>
                         <li>已购宝贝</li>
                         <li>我的优惠</li>
                     </ul>
-                </div>
-                <div data-toggle="hidden-box" id="nav-box4" class="shopping-box">
+                </li>
+                <li data-toggle="hidden-box" id="nav-box4" class="shopping-box">
                     <span>您购物车里还没有任何宝贝。</span><a class="check-shopp" href="#">查看我的购物车</a>
-                </div>
-                <div data-toggle="hidden-box" id="nav-box5" class="get-box">
+                </li>
+                <li data-toggle="hidden-box" id="nav-box5" class="get-box">
                     <ul>
                         <li>收藏的宝贝</li>
                         <li>收藏的店铺</li>
                     </ul>
-                </div>
+                </li>
+                </ul>
             </div>
         </div>
         <div class="scroll-search">
@@ -122,7 +146,7 @@
             </div>
         </div>
         <div class="two-code">
-            <h3>手机优惠</h3>
+            <h3>手机导购</h3>
             <img src="${path}/img/code.png" />
             <div class="close-code"><i class="fa fa-times"></i></div>
         </div>
@@ -132,7 +156,7 @@
        </div>
     <div class="content-top">
        <div class="sidebar">
-           <h3>帮you惠优惠分类</h3>
+           <h3>导购优惠分类</h3>
          <div class="sidebar-info">
             <ul class="side-li">
                 <li class="s_1">服装内衣</li>
@@ -154,15 +178,14 @@
     </div> 
     <div class="right-con">
         <div class="nav">  
-          
+            <a  href="#">商城优惠</a>
+            <a  href="#">宝贝优惠</a>
+            <span class="line-a">|</span>
             <a class="spe" href="#">超高优惠</a>
             <a class="spe" href="#">限量特价抢购</a>
             <!-- <a class="spe" href="#">限时抢购</a> -->
             <!-- <a class="spe" href="#">多买多送</a> -->
             <a class="spe" href="#">推荐商品</a>
-            <span class="line-a">|</span>
-            <a  href="#">商城优惠</a>
-            <a  href="#">宝贝优惠</a>
             <!-- <a href="#">特卖场</a> -->
             <span class="line-a">|</span>
             <a href="#">9.9包邮</a>
@@ -2021,7 +2044,7 @@
                         <div class="control2 to-right2"><i class="fa fa-angle-right"></i></div>
                     </div>
                     <div class="sub-right">
-                        <div class="nowPrice">优惠价：<i>￥1020</i></div>
+                        <div class="nowPrice">导购价：<i>￥1020</i></div>
                         <p class="desc"><a target="_blank" href="#">荣耀 6 Plus (PE-TL10) 白色 移动联通双4G手机 双卡双待双通</a></p>
                         <p class="consumer">已有<i>2309</i>人购买</p>
                     </div>
@@ -2042,7 +2065,7 @@
                         <div class="control2 to-right2"><i class="fa fa-angle-right"></i></div>
                     </div>
                     <div class="sub-right">
-                        <div class="nowPrice">优惠价：<i>￥1020</i></div>
+                        <div class="nowPrice">导购价：<i>￥1020</i></div>
                         <p class="desc"><a target="_blank" href="#">荣耀 6 Plus (PE-TL10) 白色 移动联通双4G手机 双卡双待双通</a></p>
                         <p class="consumer">已有<i>2309</i>人购买</p>
                     </div>
@@ -2063,7 +2086,7 @@
                         <div class="control2 to-right2"><i class="fa fa-angle-right"></i></div>
                     </div>
                     <div class="sub-right">
-                        <div class="nowPrice">优惠价：<i>￥1020</i></div>
+                        <div class="nowPrice">导购价：<i>￥1020</i></div>
                         <p class="desc"><a target="_blank" href="#">荣耀 6 Plus (PE-TL10) 白色 移动联通双4G手机 双卡双待双通</a></p>
                         <p class="consumer">已有<i>2309</i>人购买</p>
                     </div>
@@ -2084,7 +2107,7 @@
                         <div class="control2 to-right2"><i class="fa fa-angle-right"></i></div>
                     </div>
                     <div class="sub-right">
-                        <div class="nowPrice">优惠价：<i>￥1020</i></div>
+                        <div class="nowPrice">导购价：<i>￥1020</i></div>
                         <p class="desc"><a target="_blank" href="#">荣耀 6 Plus (PE-TL10) 白色 移动联通双4G手机 双卡双待双通</a></p>
                         <p class="consumer">已有<i>2309</i>人购买</p>
                     </div>
@@ -2116,10 +2139,10 @@
         <a class="help-a" href="#">货到付款</a>
     </div>
     <div class="help-info">
-        <h1><img src="${path}/img/help3.png"><span class="help-text">优惠特色</span></h1>
-        <a class="help-a" href="#">优惠指数</a>
+        <h1><img src="${path}/img/help3.png"><span class="help-text">导购特色</span></h1>
+        <a class="help-a" href="#">导购指数</a>
         <a class="help-a" href="#">淘公仔</a>
-        <a class="help-a" href="#">手机优惠</a>
+        <a class="help-a" href="#">手机导购</a>
         <a class="help-a" href="#">旺信</a>
     </div>
 </div>
@@ -2130,7 +2153,7 @@
             <a href="#">阿里巴巴国际站</a>|
             <a href="#">阿里巴巴中国站</a>|
             <a href="#">全球速卖通</a>|
-            <a href="#">优惠网</a>|
+            <a href="#">导购网</a>|
             <a href="#">天猫</a>|
             <a href="#">聚划算</a>|
             <a href="#">一淘</a>|
@@ -2146,7 +2169,7 @@
         </div>
         <div class="about-tao">
             <span class="gary-text">&copy; 2014 Taobao.com 版权所有</span>
-            <a href="#">关于优惠</a>
+            <a href="#">关于导购</a>
             <a href="#">合作伙伴</a>
             <a href="#">营销中心</a>
             <a href="#">廉正举报</a>
