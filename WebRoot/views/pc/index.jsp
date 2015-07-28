@@ -14,15 +14,17 @@
     <div class="top-wrapper">
         <div class="top-info">
             <div class="top-left">
-                <div data-toggle="arrowdown" id="arrow1" class="user-name">
-                    <a href="#">亲，请登录</a>
-                </div>
-                <div data-toggle="arrowdown" id="arrow2" class="msg-info">
+            <ul>
+               <li><a href="#">亲，请登录</a><a href="#">注册</a></li>
+               <li class="spacer"></li>
+                <li data-toggle="arrowdown" id="arrow2" class="msg-info">
                     <i class="fa fa-envelope fa-gray"></i>
                     <a href="#">消息</a>
                     <span class="down-icon"></span>
-                </div>
-                <a href="#">手机导购</a>
+                </li>
+                <li class="spacer"></li>
+                <li><a href="#">手机导购</a></li>
+                </ul>
                 <div data-toggle="hidden-box" id="nav-box2" class="msg-box">
                     <h1>未读新消息<a href="#" class="fa fa-pencil-square-o pencil"></a></h1>
                     <div class="read-info">
