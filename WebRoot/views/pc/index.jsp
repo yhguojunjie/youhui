@@ -17,71 +17,93 @@
             <ul>
                <li><a href="#">亲，请登录</a><a href="#">注册</a></li>
                <li class="spacer"></li>
-                <li data-toggle="arrowdown" id="arrow2" class="msg-info">
-                    <i class="fa fa-envelope fa-gray"></i>
-                    <a href="#">消息</a>
+               <li data-toggle="arrowdown" id="arrow2" class="msg-info">
+                    <a href="#">我的导购</a>
                     <span class="down-icon"></span>
                 </li>
                 <li class="spacer"></li>
-                <li><a href="#">手机导购</a></li>
+                <li><a href="#">我的订单</a></li>
                 </ul>
                 <div data-toggle="hidden-box" id="nav-box2" class="msg-box">
-                    <h1>未读新消息<a href="#" class="fa fa-pencil-square-o pencil"></a></h1>
-                    <div class="read-info">
-                        <h2>
-                            <span class="orange">&nbsp;&nbsp;|</span>&nbsp;你的书架&nbsp;
-                            <span style="font-weight: lighter">收到了</span>
-                            <span class="orange">1本书</span>
-                            <span class="fa fa-times close-msg"></span>
-                        </h2>
-                        <img src="${path}/img/book-1.png" />
-                        <div style="float: right">
-                            <p>
-                                全中国最穷的小伙子发财日记<br/>
-                                掏彩票公共账号
-                            </p>
-                            <h3><a href="#">去看看</a></h3>
-                        </div>
-                    </div>
-                    <div class="msg-setting">
-                        <a href="#" class="fa fa-cog"></a>
-                        <a href="#" class="fa fa-pencil-square-o"></a>
-                        <a style="margin-left: 70px" href="#">买家消息&nbsp;|&nbsp;</a>
-                        <a href="#">卖家消息</a>
-                    </div>
+						<div class="userinfo">
+							<div class="u-pic">
+								<a href="#"><img src="http://i.jd.com/commons/img/no-img_mid_.jpg" width="60" height="60"></a>
+							</div>
+							<div class="u-name u-login">
+								<a href="#" class="link-login">你好，请登录</a>
+							</div>
+							<div class="u-extra">
+								<a href="#">优惠券</a><a href="#">消息</a>
+							</div>
+						</div>
+						<div class="otherlist">
+							<div class="fore1">
+								<div class="item">
+									<a href="#" clstag="" target="_blank">待处理订单</a>
+								</div>
+								<div class="item">
+									<a href="#" clstag="" target="_blank">咨询回复<span id="num-consultation"></span></a>
+								</div>
+								<div class="item">
+									<a href="#" clstag="" target="_blank">降价商品<span id="num-reduction"></span></a>
+								</div>
+								<div class="item">
+									<a href="#" clstag="" target="_blank">返修退换货</a>
+								</div>
+							</div>
+							<div class="fore2">
+								<div class="item">
+									<a href="#" clstag="" target="_blank">我的关注</a>
+								</div>
+								<div class="item">
+									<a href="#" clstag="" target="_blank">我的京豆</a>
+								</div>
+								<div class="item">
+									<a href="#" clstag="" target="_blank">我的理财</a>
+								</div>
+								<div class="item baitiao hide" style="display:block">
+									<a href="#" clstag="jr|keycount|njdhome|wdbaitiao" target="_blank">我的白条</a>
+								</div>
+							</div>
+						</div>
                 </div>
             </div>
             <div class="top-right">
-                <div data-toggle="arrowdown" id="arrow3" class="user-name">
+            <ul>
+                <li data-toggle="arrowdown" id="arrow3" class="user-name">
                     <a href="#">我的导购</a>
                     <span class="down-icon"></span>
-                </div>
-                <div data-toggle="arrowdown" id="arrow4" class="user-name">
+                </li>
+                <li class="spacer"></li>
+                <li data-toggle="arrowdown" id="arrow4" class="user-name">
                     <i class="fa fa-shopping-cart fa-orange"></i>
                     <a href="#">导购车</a>
                     <span class="down-icon"></span>
-                </div>
-                <div data-toggle="arrowdown" id="arrow5" class="user-name">
+                </li>
+                <li class="spacer"></li>
+                <li data-toggle="arrowdown" id="arrow5" class="user-name">
                     <i class="fa fa-star fa-gray"></i>
                     <a href="#">收藏夹</a>
                     <span class="down-icon"></span>
-                </div>
-                <a href="#">商品分类</a>
-                <div data-toggle="hidden-box" id="nav-box3" class="my-taobao-box">
+                </li>
+                <li class="spacer"></li>
+                <li href="#">商品分类</li>
+                <li data-toggle="hidden-box" id="nav-box3" class="my-taobao-box">
                     <ul>
                         <li>已购宝贝</li>
                         <li>我的优惠</li>
                     </ul>
-                </div>
-                <div data-toggle="hidden-box" id="nav-box4" class="shopping-box">
+                </li>
+                <li data-toggle="hidden-box" id="nav-box4" class="shopping-box">
                     <span>您购物车里还没有任何宝贝。</span><a class="check-shopp" href="#">查看我的购物车</a>
-                </div>
-                <div data-toggle="hidden-box" id="nav-box5" class="get-box">
+                </li>
+                <li data-toggle="hidden-box" id="nav-box5" class="get-box">
                     <ul>
                         <li>收藏的宝贝</li>
                         <li>收藏的店铺</li>
                     </ul>
-                </div>
+                </li>
+                </ul>
             </div>
         </div>
         <div class="scroll-search">

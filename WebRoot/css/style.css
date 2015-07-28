@@ -22,15 +22,16 @@
 .top-wrapper .top-info .top-left .msg-info{float:left;height:36px;padding:0 8px;line-height:35px;border-right:1px solid #f5f5f5;border-left:1px solid #f5f5f5}
 .top-wrapper .top-info .top-left .msg-info:hover{border-right:1px solid #eee;border-left:1px solid #eee;background:#fff}
 .top-wrapper .top-info .get-box,.top-wrapper .top-info .msg-box,.top-wrapper .top-info .my-taobao-box,.top-wrapper .top-info .nav-box,.top-wrapper .top-info .shopping-box{position:absolute;z-index:99999;left:0;top:35px;display:none;width:260px;height:170px;border:1px solid #eee;border-top:none;overflow:hidden;background:#fff}
-.top-wrapper .top-info .top-left .msg-box{left:70px;width:250px;height:180px;box-shadow:1px 1px 1px #dfdfdf}
-.top-wrapper .top-info .top-left .msg-box h1{position:relative;width:100%;height:30px;border-bottom:1px solid #eee;text-align:center;line-height:30px}
-.top-wrapper .top-info .top-left .msg-box .pencil{position:absolute;right:10px;top:10px}
-.top-wrapper .top-info .top-left .msg-box .close-msg{margin-left:85px;color:#ddd;cursor:pointer}
-.top-wrapper .top-info .top-left .msg-box .close-msg:hover{color:#c40000}
-.top-wrapper .top-info .top-left .msg-box .read-info{width:100%;height:110px;border-bottom:1px solid #eee}
-.top-wrapper .top-info .top-left .msg-box .read-info p{height:35px;line-height:16px;margin-right:10px}
-.top-wrapper .top-info .top-left .msg-box .read-info img{float:left;margin-left:10px}
-.top-wrapper .top-info .top-left .msg-box .msg-setting a:first-child{margin:0 10px}
+.top-wrapper .top-info .top-left .msg-box{left:113px;width:270px;height:230px;box-shadow:1px 1px 1px #dfdfdf}
+.top-wrapper .top-info .top-left .msg-box a{float:left;}
+.top-wrapper .top-info .top-left .msg-box .userinfo {padding: 10px 15px;overflow: hidden;height:80px;}
+.top-wrapper .top-info .top-left .msg-box .u-pic {float: left;margin-right: 10px;}
+.top-wrapper .top-info .top-left .msg-box .u-pic img {border-radius: 50%;-moz-border-radius: 50%;-webkit-border-radius: 50%;}
+.top-wrapper .top-info .top-left .msg-box .u-name {float: left;padding: 6px 0 0;font-weight: 700;width:140px;height:30px;}
+.top-wrapper .top-info .top-left .msg-box .u-extra{float: left;width:140px;height:30px;}
+
+.top-wrapper .top-info .top-left .msg-box .otherlist {padding:0 10px;margin: 5px 0;overflow: hidden;margin-bottom: 10px;}
+.top-wrapper .top-info .top-left .msg-box .fore1,.top-wrapper .top-info .top-left .msg-box .fore2 {float: left;width: 110px;}
 .top-wrapper .top-info .my-taobao-box{width:80px;height:140px}
 .top-wrapper .top-info .my-taobao-box li{width:95.5%;height:28px;line-height:28px;color:#6C6C6C;cursor:pointer;padding-left:4.5%}
 .top-wrapper .top-info .my-taobao-box li:hover{background:#f3f3f3}
@@ -86,13 +87,13 @@
 .right-con .con .cooper-logo{position:relative;float:left;display:block;width:141px;height:84px;margin:5px auto;border:2px solid #FFF;padding-top:8px;overflow:hidden;text-align:center;color:#999}
 .right-con .con .cooper-logo img{display:block;width:90px;height:40px;margin:5px auto;text-align:center}
 .right-con .con .cooper-logo.hover{border:2px solid #ffad21}
-.content,.content-sub{position:relative;float:left;width:831px;height:100%;/*overflow:hidden*/}
+.content,.content-sub{position:relative;float:left;width:831px;height:100%;}
 .content-sub{height:179px;width:100%;margin-bottom:10px;overflow: hidden;}
 .imgBox2{position:absolute;clear:both;width:660px;list-style-type:none}
 .imgBox2>li{float:left;width:160px}
 .imgBox2 a{display:inline-block}
 .imgBox2 img{height: 178px;}
-.orange{color:#c40000}
+
 .main{width:1190px;margin:auto;min-height:4409px}
 .main-left{width:960px;float:left;border:1px solid #eee;border-top:2px solid #ddd;border-right:none;border-left:none}
 .main-title{width:100%;height:50px;margin-left:-1px;line-height:50px;border:1px solid #eee;border-top:none}
