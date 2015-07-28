@@ -22,7 +22,7 @@
                     <a href="#">消息</a>
                     <span class="down-icon"></span>
                 </div>
-                <a class="a-float-left" href="#">手机导购</a>
+                <a href="#">手机导购</a>
                 <div data-toggle="hidden-box" id="nav-box2" class="msg-box">
                     <h1>未读新消息<a href="#" class="fa fa-pencil-square-o pencil"></a></h1>
                     <div class="read-info">
@@ -64,7 +64,7 @@
                     <a href="#">收藏夹</a>
                     <span class="down-icon"></span>
                 </div>
-                <a class="a-float-left" href="#">商品分类</a>
+                <a href="#">商品分类</a>
                 <div data-toggle="hidden-box" id="nav-box3" class="my-taobao-box">
                     <ul>
                         <li>已购宝贝</li>
