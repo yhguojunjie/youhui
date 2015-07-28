@@ -154,21 +154,23 @@
     </div> 
     <div class="right-con">
         <div class="nav">  
-            <a class="spe" href="#">全站优惠</a>
-            <a class="spe" href="#">超高优惠</a>
+            <a  href="#">商城优惠</a>
+            <a  href="#">宝贝优惠</a>
             <span class="line-a">|</span>
-            <a href="#">限购特价商品</a>
-            <a href="#">限时抢购商品</a>
-            <a href="#">多买多送</a>
-            <a href="#">推荐商品</a>
-            <a href="#">特卖场</a>
+            <a class="spe" href="#">超高优惠</a>
+            <a class="spe" href="#">限量特价抢购</a>
+            <!-- <a class="spe" href="#">限时抢购</a> -->
+            <!-- <a class="spe" href="#">多买多送</a> -->
+            <a class="spe" href="#">推荐商品</a>
+            <!-- <a href="#">特卖场</a> -->
+            <span class="line-a">|</span>
             <a href="#">9.9包邮</a>
             <a href="#">19.9包邮</a>
-            <!-- <a href="#">50块封顶</a> -->
-           <!--  <a href="#">优惠券</a>
-            <a href="#">本地优惠</a>
-            <a href="#">手机版</a> -->
-            <img style="cursor: pointer" src="${path}/img/ad.gif">
+             <a href="#">50元封顶</a>  
+           <!--  <a href="#">优惠券</a>-->
+            <a href="#">本地优惠(优惠券)</a>
+            <a href="#">手机版</a> 
+            <%-- <img style="cursor: pointer" src="${path}/img/ad.gif"> --%>
         </div>
         <div class="content">
             <div class="con dsb">
