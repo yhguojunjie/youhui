@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>导购网</title>
+    <title>帮you惠，优惠网！我喜欢</title>
     <link rel="stylesheet" href="${path}/css/reset.css"/>
     <link rel="stylesheet" href="${path}/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="${path}/css/style.css"/>
@@ -18,7 +18,7 @@
                <li><a href="#">亲，请登录</a><a href="#">注册</a></li>
                <li class="spacer"></li>
                <li data-toggle="arrowdown" id="arrow2" class="msg-info">
-                    <a href="#">我的导购</a>
+                    <a href="#">我的优惠</a>
                     <span class="down-icon"></span>
                 </li>
                 <li class="spacer"></li>
@@ -71,13 +71,13 @@
             <div class="top-right">
             <ul>
                 <li data-toggle="arrowdown" id="arrow3" class="user-name">
-                    <a href="#">我的导购</a>
+                    <a href="#">我的优惠</a>
                     <span class="down-icon"></span>
                 </li>
                 <li class="spacer"></li>
                 <li data-toggle="arrowdown" id="arrow4" class="user-name">
                     <i class="fa fa-shopping-cart fa-orange"></i>
-                    <a href="#">导购车</a>
+                    <a href="#">优惠车</a>
                     <span class="down-icon"></span>
                 </li>
                 <li class="spacer"></li>
@@ -146,7 +146,7 @@
             </div>
         </div>
         <div class="two-code">
-            <h3>手机导购</h3>
+            <h3>手机优惠</h3>
             <img src="${path}/img/code.png" />
             <div class="close-code"><i class="fa fa-times"></i></div>
         </div>
@@ -156,7 +156,7 @@
        </div>
     <div class="content-top">
        <div class="sidebar">
-           <h3>导购优惠分类</h3>
+           <h3>帮you惠优惠分类</h3>
          <div class="sidebar-info">
             <ul class="side-li">
                 <li class="s_1">服装内衣</li>
@@ -177,15 +177,16 @@
         </div>
     </div> 
     <div class="right-con">
-        <div class="nav">  
-            <a  href="#">商城优惠</a>
-            <a  href="#">宝贝优惠</a>
-            <span class="line-a">|</span>
-            <a class="spe" href="#">超高优惠</a>
+        <div class="nav">
+         <a class="spe" href="#">超高优惠</a>
             <a class="spe" href="#">限量特价抢购</a>
             <!-- <a class="spe" href="#">限时抢购</a> -->
             <!-- <a class="spe" href="#">多买多送</a> -->
-            <a class="spe" href="#">推荐商品</a>
+            <a class="spe" href="#">推荐商品</a>  
+           
+            <span class="line-a">|</span>
+            <a  href="#">商城优惠</a>
+            <a  href="#">宝贝优惠</a>
             <!-- <a href="#">特卖场</a> -->
             <span class="line-a">|</span>
             <a href="#">9.9包邮</a>
@@ -2044,7 +2045,7 @@
                         <div class="control2 to-right2"><i class="fa fa-angle-right"></i></div>
                     </div>
                     <div class="sub-right">
-                        <div class="nowPrice">导购价：<i>￥1020</i></div>
+                        <div class="nowPrice">优惠价：<i>￥1020</i></div>
                         <p class="desc"><a target="_blank" href="#">荣耀 6 Plus (PE-TL10) 白色 移动联通双4G手机 双卡双待双通</a></p>
                         <p class="consumer">已有<i>2309</i>人购买</p>
                     </div>
@@ -2065,7 +2066,7 @@
                         <div class="control2 to-right2"><i class="fa fa-angle-right"></i></div>
                     </div>
                     <div class="sub-right">
-                        <div class="nowPrice">导购价：<i>￥1020</i></div>
+                        <div class="nowPrice">优惠价：<i>￥1020</i></div>
                         <p class="desc"><a target="_blank" href="#">荣耀 6 Plus (PE-TL10) 白色 移动联通双4G手机 双卡双待双通</a></p>
                         <p class="consumer">已有<i>2309</i>人购买</p>
                     </div>
@@ -2086,7 +2087,7 @@
                         <div class="control2 to-right2"><i class="fa fa-angle-right"></i></div>
                     </div>
                     <div class="sub-right">
-                        <div class="nowPrice">导购价：<i>￥1020</i></div>
+                        <div class="nowPrice">优惠价：<i>￥1020</i></div>
                         <p class="desc"><a target="_blank" href="#">荣耀 6 Plus (PE-TL10) 白色 移动联通双4G手机 双卡双待双通</a></p>
                         <p class="consumer">已有<i>2309</i>人购买</p>
                     </div>
@@ -2107,7 +2108,7 @@
                         <div class="control2 to-right2"><i class="fa fa-angle-right"></i></div>
                     </div>
                     <div class="sub-right">
-                        <div class="nowPrice">导购价：<i>￥1020</i></div>
+                        <div class="nowPrice">优惠价：<i>￥1020</i></div>
                         <p class="desc"><a target="_blank" href="#">荣耀 6 Plus (PE-TL10) 白色 移动联通双4G手机 双卡双待双通</a></p>
                         <p class="consumer">已有<i>2309</i>人购买</p>
                     </div>
@@ -2139,10 +2140,10 @@
         <a class="help-a" href="#">货到付款</a>
     </div>
     <div class="help-info">
-        <h1><img src="${path}/img/help3.png"><span class="help-text">导购特色</span></h1>
-        <a class="help-a" href="#">导购指数</a>
+        <h1><img src="${path}/img/help3.png"><span class="help-text">优惠特色</span></h1>
+        <a class="help-a" href="#">优惠指数</a>
         <a class="help-a" href="#">淘公仔</a>
-        <a class="help-a" href="#">手机导购</a>
+        <a class="help-a" href="#">手机优惠</a>
         <a class="help-a" href="#">旺信</a>
     </div>
 </div>
@@ -2153,7 +2154,7 @@
             <a href="#">阿里巴巴国际站</a>|
             <a href="#">阿里巴巴中国站</a>|
             <a href="#">全球速卖通</a>|
-            <a href="#">导购网</a>|
+            <a href="#">优惠网</a>|
             <a href="#">天猫</a>|
             <a href="#">聚划算</a>|
             <a href="#">一淘</a>|
@@ -2169,7 +2170,7 @@
         </div>
         <div class="about-tao">
             <span class="gary-text">&copy; 2014 Taobao.com 版权所有</span>
-            <a href="#">关于导购</a>
+            <a href="#">关于优惠</a>
             <a href="#">合作伙伴</a>
             <a href="#">营销中心</a>
             <a href="#">廉正举报</a>
