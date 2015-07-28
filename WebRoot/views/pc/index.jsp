@@ -191,9 +191,9 @@
             <span class="line-a">|</span>
             <a href="#">9.9包邮</a>
             <a href="#">19.9包邮</a>
-             <a href="#">50元封顶</a>  
-           <!--  <a href="#">优惠券</a>-->
-            <a href="#">本地优惠(优惠券)</a>
+        <!--      <a href="#">50元封顶</a>  --> 
+             <a href="#">优惠券</a>
+            <a href="#">本地优惠(O2O)</a>
             <a href="#">手机版</a> 
             <%-- <img style="cursor: pointer" src="${path}/img/ad.gif"> --%>
         </div>
