@@ -66,10 +66,10 @@
 .scroll-logo{float:left;margin-right:15px}
 .scroll-list{float:left;min-width:200px;height:40px;line-height:40px;margin:0 8px}
 .scroll-list ul li{list-style:none;float:left;margin-right:12px;font-size:12px}
-.typeList{position: relative;width: 100%;}
+.typeList{position: relative;width: 100%;float:left;margin-bottom:40px;}
 .typeList .line{width: 100%;height: 41px;position: absolute;top:0;line-height: 0;border-bottom: 2px solid #B1191A;z-index: 9;}
-.content-top{/**/width:1190px;height:476px;margin:0 auto;clear:both;margin-bottom:40px;}
-.sidebar{float:left;width:152px;height:100%;background: #b61d1d;}
+.content-top{width:1190px;height:auto;margin:0 auto;clear:both;}
+.sidebar{float:left;width:152px;min-height:400px;background: #b61d1d;padding-bottom: 1px;}
 .sidebar h3 {width: 100%;height: 41px;line-height: 41px;text-align: center;font-size: 14px;background: #B1191A;color: #fff;}
 .sidebar .sidebar-info{position:relative;width:100%;border-top:none}
 .sidebar .side-li{position:relative;font-weight: 600;font-size: 14px;}
@@ -77,24 +77,26 @@
 .sidebar .side-li>li:hover{background:#fff;color:#b61d1d;}
 .sidebar .side-li>li.visited{background: #fff;color: #B61D1D;}
 
-.right-con{width:1038px;height:100%;float:left;position:relative;}
+.right-con{width:1038px;height:auto;float:left;position:relative;}
 .right-con .nav {width: 100%;height: 41px;line-height: 38px;font-weight: bold;font-size: 14px;}
 .right-con .nav > a {padding: 5px 5px;height: 32px;margin: 0 8px;color: #202020;}
 .right-con .nav > a.spe{color: #c40000;font-size: 16px;}
 .right-con .line-a {color: #efefef;padding: 5px;margin: 0 8px;}
 .right-con .nav img {vertical-align: middle;border: none;margin: 0 0px 0 40px;}
-.right-con .content{width: 100%;float: left;border:1px solid #eee;border-left-color: #fff;height: 434px;}
-.right-con .content.visited{border:1px solid #b61d1d;border-top: none;}
-.right-con .con{position:absolute;width:100%;height:100%;display:none;left:0;top:0;padding: 0 10px;}
-.right-con .con.dsb{display:block}
+.right-con .content{width: 100%;float: left;border:1px solid #eee;min-height: 434px;padding-bottom: 20px;}
+.right-con .content.visited{/* border:1px solid #b61d1d; */border-top: none;}
+.right-con .con{width:100%;height:auto;display:none;margin-left:0;margin-top:0;padding: 0 10px;float:left;}
+.right-con .con.dsb{display:block;}
 .right-con .con .cooper-logo{position:relative;float:left;display:block;width:141px;height:84px;margin:5px auto;border:2px solid #FFF;padding-top:8px;overflow:hidden;text-align:center;color:#999}
 .right-con .con .cooper-logo img{display:block;width:90px;height:40px;margin:5px auto;text-align:center}
-.right-con .con .cooper-logo.hover{border:2px solid #ffad21}
+.right-con .con .cooper-logo.hover{border:2px solid #ffad21;}
+.right-con .con .con-list{width:100%;height:auto;float:left;padding:20px;}
+.right-con .con .con-list a{width:125px;height:26px;line-height:26px;float:left;margin-right:48px;border-bottom: 1px solid #eee;padding:8px 0;}
 .content,.content-sub{position:relative;float:left;width:831px;height:100%;}
 .content-sub{height:179px;width:100%;margin-bottom:10px;overflow: hidden;}
-.imgBox2{position:absolute;clear:both;width:660px;list-style-type:none}
-.imgBox2>li{float:left;width:160px}
-.imgBox2 a{display:inline-block}
+.imgBox2{position:absolute;clear:both;width:660px;list-style-type:none;}
+.imgBox2>li{float:left;width:160px;}
+.imgBox2 a{display:inline-bloc;k}
 .imgBox2 img{height: 178px;}
 
 .main{width:1190px;margin:auto;min-height:4409px}
@@ -104,7 +106,7 @@
 .main-title h1{margin-left:20px;font-size:16px;text-shadow:2px 2px 2px #c4c4c4}
 .product-box{position:relative;float:left;width:466px;height:auto;border:1px solid #eee;box-shadow:rgba(0,0,0,.17) 1px 1px 2px;margin-top:20px;margin-right:23px}
 .product-box:hover{border-color:#c40000;box-shadow:none}
-.product-box:nth-child(2n+1){margin-right:0}
+.product-box:nth-child(2n+1){margin-right:0;}
 .box{width:100%}
 .box img{width:100%;height:327px}
 .box_activity{background:#333;width:212px;height:29px;position:absolute;top:0;right:0;color:#fff;line-height:29px;font-size:15px}
