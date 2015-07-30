@@ -20,20 +20,16 @@
                <li data-toggle="arrowdown" id="arrow2" class="msg-info">
                     <a href="#">我的优惠</a>
                     <span class="down-icon"></span>
-                </li>
-                <li class="spacer"></li>
-                <li><a href="#">我的订单</a></li>
-                </ul>
-                <div data-toggle="hidden-box" id="nav-box2" class="msg-box">
+                    <div data-toggle="hidden-box" id="nav-box2" class="msg-box">
 						<div class="userinfo">
 							<div class="u-pic">
-								<a href="#"><img src="http://i.jd.com/commons/img/no-img_mid_.jpg" width="60" height="60"></a>
+								
 							</div>
 							<div class="u-name u-login">
 								<a href="#" class="link-login">你好，请登录</a>
 							</div>
 							<div class="u-extra">
-								<a href="#">优惠券</a><a href="#">消息</a>
+								<a href="#">优惠券</a><span class="line-a">|</span><a href="#">消息</a>
 							</div>
 						</div>
 						<div class="otherlist">
@@ -67,43 +63,47 @@
 							</div>
 						</div>
                 </div>
+                </li>
+               <li class="spacer"></li>
+               <li><a href="#">我的订单</a></li>
+            </ul>        
             </div>
             <div class="top-right">
             <ul>
                 <li data-toggle="arrowdown" id="arrow3" class="user-name">
                     <a href="#">我的优惠</a>
                     <span class="down-icon"></span>
+                    <div data-toggle="hidden-box" id="nav-box3" class="my-taobao-box">
+                    <ul>
+                        <li>已购宝贝</li>
+                        <li>我的优惠</li>
+                    </ul>
+                </div>
                 </li>
                 <li class="spacer"></li>
                 <li data-toggle="arrowdown" id="arrow4" class="user-name">
                     <i class="fa fa-shopping-cart fa-orange"></i>
                     <a href="#">优惠车</a>
                     <span class="down-icon"></span>
+                    <div data-toggle="hidden-box" id="nav-box4" class="shopping-box">
+                    <span>您购物车里还没有任何宝贝。</span><a class="check-shopp" href="#">查看我的购物车</a>
+                </div>
                 </li>
                 <li class="spacer"></li>
                 <li data-toggle="arrowdown" id="arrow5" class="user-name">
                     <i class="fa fa-star fa-gray"></i>
                     <a href="#">收藏夹</a>
                     <span class="down-icon"></span>
-                </li>
-                <li class="spacer"></li>
-                <li href="#">商品分类</li>
-                <li data-toggle="hidden-box" id="nav-box3" class="my-taobao-box">
-                    <ul>
-                        <li>已购宝贝</li>
-                        <li>我的优惠</li>
-                    </ul>
-                </li>
-                <li data-toggle="hidden-box" id="nav-box4" class="shopping-box">
-                    <span>您购物车里还没有任何宝贝。</span><a class="check-shopp" href="#">查看我的购物车</a>
-                </li>
-                <li data-toggle="hidden-box" id="nav-box5" class="get-box">
+                    <div data-toggle="hidden-box" id="nav-box5" class="get-box">
                     <ul>
                         <li>收藏的宝贝</li>
                         <li>收藏的店铺</li>
                     </ul>
+                </div>
                 </li>
-                </ul>
+                <li class="spacer"></li>
+                <li href="#">商品分类</li>                   
+             </ul>
             </div>
         </div>
         <div class="scroll-search">
@@ -156,7 +156,7 @@
        </div>
     <div class="content-top">
        <div class="sidebar">
-           <h3>帮you惠优惠分类</h3>
+           <h3>优惠品分类</h3>
          <div class="sidebar-info">
             <ul class="side-li">
                 <li class="s_1">服装内衣</li>
@@ -182,20 +182,17 @@
             <a class="spe" href="#">限量特价抢购</a>
             <!-- <a class="spe" href="#">限时抢购</a> -->
             <!-- <a class="spe" href="#">多买多送</a> -->
-            <a class="spe" href="#">推荐商品</a>  
-           
+            <a class="spe" href="#">推荐商品</a>          
             <span class="line-a">|</span>
             <a  href="#">商城优惠</a>
             <a  href="#">宝贝优惠</a>
             <!-- <a href="#">特卖场</a> -->
-            <span class="line-a">|</span>
             <a href="#">9.9包邮</a>
             <a href="#">19.9包邮</a>
-        <!--      <a href="#">50元封顶</a>  --> 
+        <!--<a href="#">50元封顶</a>  --> 
              <a href="#">优惠券</a>
             <a href="#">本地优惠(O2O)</a>
-            <a href="#">手机版</a> 
-            <%-- <img style="cursor: pointer" src="${path}/img/ad.gif"> --%>
+            <a href="#">手机版</a>    
         </div>
         <div class="content">
             <div class="con dsb">
