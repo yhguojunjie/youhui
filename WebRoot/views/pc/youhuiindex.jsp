@@ -204,7 +204,7 @@
             
             
             <div class="con dsb" id="webShop">
-               <%--  <a href="#" class="cooper-logo">
+                 <a href="#" class="cooper-logo">
                     <img src="${path}/img/cooperlogo/dangdang.png" alt="App Store">优惠30%
                 </a>
                 <a href="#" class="cooper-logo">
@@ -257,7 +257,7 @@
 	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
 	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
 	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-                </div> --%>
+                </div> 
             </div>
             
             
