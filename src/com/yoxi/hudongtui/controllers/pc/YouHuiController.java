@@ -18,6 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.yoxi.hudongtui.constants.Globals;
 import com.yoxi.hudongtui.controllers.GlobalRequired;
 import com.yoxi.hudongtui.model.content.Banner;
+import com.yoxi.hudongtui.model.content.Goodsclassificat;
 import com.yoxi.hudongtui.model.plugin.Plugin;
 import com.yoxi.hudongtui.service.agent.IAgentBusService;
 import com.yoxi.hudongtui.service.agent.IAgentInfoService;
@@ -29,6 +30,7 @@ import com.yoxi.hudongtui.service.plugin.IPluginActService;
 import com.yoxi.hudongtui.service.plugin.IPluginBusService;
 import com.yoxi.hudongtui.service.plugin.IPluginService;
 import com.yoxi.hudongtui.service.user.IUserService;
+import com.yoxi.hudongtui.service.youhui.IGoodsclassificatService;
 import com.yoxi.hudongtui.utils.common.ConvertUtil;
 import com.yoxi.hudongtui.utils.common.JsonUtils;
 import com.yoxi.hudongtui.utils.common.SessionUtil;
@@ -41,18 +43,21 @@ import com.yoxi.hudongtui.vo.user.DevVO;
 
 /**
  * 
- * 模板相关controler
+ * 首页相关controler
  * 
- * @author wql
+ * @author guojunjie
  * 
- * @Date 2015年3月24日
+ * @Date 2015年8月2日
  * 
  */
 @GlobalRequired
-public class PluginController {
+public class YouHuiController {
 	private Log log = LogFactory.getLog(getClass());
 	@Autowired
 	private IPluginService pluginService;
+	@Autowired
+	private IGoodsclassificatService goodsclassificatService;
+
 	@Autowired
 	private IPluginBusService pluginBusService;
 	@Autowired
@@ -91,6 +96,12 @@ public class PluginController {
 	@SuppressWarnings("unchecked")
 	@Get("/list")
 	public String getPlugins(Invocation inv) throws Exception {
+
+		// 1.分类与商城展示信息处理
+		List<Goodsclassificat> goodsclassificatList = goodsclassificatService
+				.findGoodsclassificat();
+		inv.getRequest().setAttribute("goodsclassificatList",
+				goodsclassificatList);
 		// 1.代理商信息处理
 		// AgentInfoVO agentInfoVO = SessionUtil.getAgentInfo(inv.getRequest());
 		// inv.getRequest().setAttribute("agentInfoVO", agentInfoVO);
@@ -177,7 +188,7 @@ public class PluginController {
 				.getSession()
 				.setAttribute(Globals.SESSION_LASTURL,
 						inv.getRequest().getRequestURL());
-		return "index";
+		return "youhuiindex";
 	}
 
 	/**
