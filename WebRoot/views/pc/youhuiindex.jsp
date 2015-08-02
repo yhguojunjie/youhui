@@ -2067,6 +2067,24 @@
 <script src="${path}/js/img-show.js"></script>
 <script src="${path}/js/main.js"></script>
 <script >
+
+   function f(oldArray){
+	var newArray=new Array(); //目标数组
+
+	var m=oldArray.length;
+	for(var i=0;i<m;i++){
+	var flag=true;
+	var n=newArray.length;
+	for(var j=0;j<n;j++)
+	if(newArray[j] == oldArray[i])
+	flag=false;
+	if(flag)
+	newArray[n]=oldArray[i];
+	}
+	return newArray;
+	} 
+
+
 $(function() {
 $('.sidebar-info .side-li li').click(function(event) {
 	
@@ -2075,41 +2093,65 @@ $('.sidebar-info .side-li li').click(function(event) {
     $(this).addClass('visited').siblings().removeClass('visited');
      $(this).parents('.content-top').find('.right-con .content').addClass('visited');
      var fileAccessPath='${fileAccessPath}';
-     
+     var arr = new Array();
      
       $.ajax({
 			type: "GET",
          url: "${basePath}pc/youHui/ajaxList?id="+id,
          dataType: "json",
 			success : function(data) {
-				alert(data);
+				var secondnameStr='';
+				for (var j = 0; j < data.length; j++) {
+					 secondnameStr=secondnameStr+";"+data[j].secondname;
+				}
+				//var arr = [];
+				//var arr = new Array();
+				arr=secondnameStr.split(";");
+				var newarr=f(arr);
+				alert(secondnameStr);
+				alert(newarr);
+				
+				
+				
 				console.log("data.length="+data.length);
 				if(data.length != 0){
 					$("#webShop").html("");
 					var html = "";
-					 for (var i = 0; i < data.length; i++) {
-				 alert(data[i].secondname);
-						 if(data[i].secondname=='全部'){ 
+					for(var z=1;z<newarr.length;z++){
+					
+						 for (var i = 0; i < data.length; i++) {
+							 if(z==1){
 						 html +='<a href="#" class="cooper-logo">';
 						 html +='<img src="'+fileAccessPath+data[i].shopimge + '" alt="App Store">' + data[i].discountrate +'</a>';
+							 }
 						 }
+					
 						 
 						 html +='<div class="con-list">';
-						 if(data[i].secondname=='电脑'){
-						 html +='<h2>'+data[i].secondname+'</h2>';
-						 html +='<a href="#">' + data[i].shopname +'</a>';
+						 
+						 if(z!=1){
+						 html +='<h2>'+newarr[z]+'</h2>';
 						 }
-						// html +='<a href="#">' + data[i].shopname +'</a>';
-						// if(data[i].shopname==1){
-						// html +='<h2>电脑</h2>';
-						// }
-						if(data[i].secondname=='手机'){
+						 
+							 for (var i = 0; i < data.length; i++) {
+								 if(data[i].secondname==newarr[z]&&z!=1){	 
+						 html +='<a href="#">' + data[i].shopname +'</a>';
+						 
+							 }
+						 }
+						 
+						 
+						
+					/* 	if(data[i].secondname=='手机'){
 							html +='<h2>'+data[i].secondname+'</h2>';
 						 html +='<a href="#">' + data[i].shopname +'</a>';
-						}
+						} */
+						
+						
 						 html +='</div>'; 
 					
-                   }
+                  
+					}
 					$("#webShop").append(html);
 					
 				}else{
