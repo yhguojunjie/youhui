@@ -19,6 +19,7 @@ import com.yoxi.hudongtui.constants.Globals;
 import com.yoxi.hudongtui.controllers.GlobalRequired;
 import com.yoxi.hudongtui.model.content.Banner;
 import com.yoxi.hudongtui.model.content.Goodsclassificat;
+import com.yoxi.hudongtui.model.content.WebShop;
 import com.yoxi.hudongtui.model.plugin.Plugin;
 import com.yoxi.hudongtui.service.agent.IAgentBusService;
 import com.yoxi.hudongtui.service.agent.IAgentInfoService;
@@ -31,6 +32,7 @@ import com.yoxi.hudongtui.service.plugin.IPluginBusService;
 import com.yoxi.hudongtui.service.plugin.IPluginService;
 import com.yoxi.hudongtui.service.user.IUserService;
 import com.yoxi.hudongtui.service.youhui.IGoodsclassificatService;
+import com.yoxi.hudongtui.service.youhui.WebShopService;
 import com.yoxi.hudongtui.utils.common.ConvertUtil;
 import com.yoxi.hudongtui.utils.common.JsonUtils;
 import com.yoxi.hudongtui.utils.common.SessionUtil;
@@ -57,6 +59,9 @@ public class YouHuiController {
 	private IPluginService pluginService;
 	@Autowired
 	private IGoodsclassificatService goodsclassificatService;
+
+	@Autowired
+	private WebShopService webShopService;
 
 	@Autowired
 	private IPluginBusService pluginBusService;
@@ -189,6 +194,21 @@ public class YouHuiController {
 				.setAttribute(Globals.SESSION_LASTURL,
 						inv.getRequest().getRequestURL());
 		return "youhuiindex";
+	}
+
+	/**
+	 * 
+	 * @param inv
+	 * @param start
+	 * @throws Exception
+	 */
+	@Get("ajaxList")
+	public String getWebShopAjaxList(Invocation inv, @Param("id") int id)
+			throws Exception {
+
+		List<WebShop> webShops = webShopService.findWebShopList(id);
+		return "@json:" + JsonUtils.toJson(webShops);
+
 	}
 
 	/**

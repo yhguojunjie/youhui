@@ -2079,7 +2079,7 @@ $('.sidebar-info .side-li li').click(function(event) {
      
      $.ajax({
 			type: "GET",
-         url: "${basePath}pc/channel/ajaxList?currentPage=" + count + "&typeFlag=" + typeFlag + "&orderFlag=" + orderFlag + "&publishTime_Flag=" + publishTime_Flag + "&buyNum_Flag=" + buyNum_Flag + "&price_Flag=" + price_Flag + "&pageCount=4"+ "&start="+start,
+         url: "${basePath}pc/youHui/ajaxList?id="+id,
          dataType: "json",
 			success : function(data) {
 				console.log("data.length="+data.length);
@@ -2088,15 +2088,19 @@ $('.sidebar-info .side-li li').click(function(event) {
 					var html = "";
 					 for (var i = 0; i < data.length; i++) {
 				 
+						 
 						 html +='<a href="#" class="cooper-logo">';
-						 html +='<img src="${path}/img/cooperlogo/dangdang.png" alt="App Store">优惠30%</a>';
+						 html +='<img src="'+${path}/data[i].logo + '" alt="App Store">' + data[i].discountrate +'</a>';
 						 
 						 
 						 html +='<div class="con-list">';
-						 html +='<h2>手机</h2>';
+						// if(data[i].shopname==data[i+1].shopname){
+						// html +='<h2>'+data[i].secondname+'</h2>';
+						// }
 						 html +='<a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>';
-				        
-						 html +='<h2>电脑</h2>';
+						// if(data[i].shopname==1){
+						// html +='<h2>电脑</h2>';
+						// }
 						 html +='<a href="#">贝诗2</a><a href="#">贝诗2</a><a href="#">贝诗2</a><a href="#">贝诗</a>';
 				        
 						 html +='</div>';
