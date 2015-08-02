@@ -2104,14 +2104,8 @@ $('.sidebar-info .side-li li').click(function(event) {
 				for (var j = 0; j < data.length; j++) {
 					 secondnameStr=secondnameStr+";"+data[j].secondname;
 				}
-				//var arr = [];
-				//var arr = new Array();
 				arr=secondnameStr.split(";");
 				var newarr=f(arr);
-				alert(secondnameStr);
-				alert(newarr);
-				
-				
 				
 				console.log("data.length="+data.length);
 				if(data.length != 0){
@@ -2125,32 +2119,19 @@ $('.sidebar-info .side-li li').click(function(event) {
 						 html +='<img src="'+fileAccessPath+data[i].shopimge + '" alt="App Store">' + data[i].discountrate +'</a>';
 							 }
 						 }
-					
-						 
+
 						 html +='<div class="con-list">';
 						 
 						 if(z!=1){
 						 html +='<h2>'+newarr[z]+'</h2>';
-						 }
-						 
+						 }						 
 							 for (var i = 0; i < data.length; i++) {
 								 if(data[i].secondname==newarr[z]&&z!=1){	 
 						 html +='<a href="#">' + data[i].shopname +'</a>';
 						 
 							 }
 						 }
-						 
-						 
-						
-					/* 	if(data[i].secondname=='手机'){
-							html +='<h2>'+data[i].secondname+'</h2>';
-						 html +='<a href="#">' + data[i].shopname +'</a>';
-						} */
-						
-						
-						 html +='</div>'; 
-					
-                  
+						 html +='</div>';   
 					}
 					$("#webShop").append(html);
 					
