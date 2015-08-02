@@ -196,7 +196,7 @@
         <!--<a href="#">50元封顶</a>  --> 
              <a href="#">优惠券</a>
             <a href="#">本地优惠(O2O)</a>
-            <a href="#">手机版</a>    
+            <a href="#">商家活动</a>    
         </div>
         <div class="content">
             
@@ -2074,84 +2074,49 @@ $('.sidebar-info .side-li li').click(function(event) {
 	var id=$(this).attr("id");
     $(this).addClass('visited').siblings().removeClass('visited');
      $(this).parents('.content-top').find('.right-con .content').addClass('visited');
+     var fileAccessPath='${fileAccessPath}';
      
      
-     
-     $.ajax({
+      $.ajax({
 			type: "GET",
          url: "${basePath}pc/youHui/ajaxList?id="+id,
          dataType: "json",
 			success : function(data) {
+				alert(data);
 				console.log("data.length="+data.length);
 				if(data.length != 0){
-					$(".webShop").html("");
+					$("#webShop").html("");
 					var html = "";
 					 for (var i = 0; i < data.length; i++) {
-				 
-						 
+				 alert(data[i].secondname);
+						 if(data[i].secondname=='全部'){ 
 						 html +='<a href="#" class="cooper-logo">';
-						 html +='<img src="'+${path}/data[i].logo + '" alt="App Store">' + data[i].discountrate +'</a>';
-						 
+						 html +='<img src="'+fileAccessPath+data[i].shopimge + '" alt="App Store">' + data[i].discountrate +'</a>';
+						 }
 						 
 						 html +='<div class="con-list">';
-						// if(data[i].shopname==data[i+1].shopname){
-						// html +='<h2>'+data[i].secondname+'</h2>';
-						// }
-						 html +='<a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>';
+						 if(data[i].secondname=='电脑'){
+						 html +='<h2>'+data[i].secondname+'</h2>';
+						 html +='<a href="#">' + data[i].shopname +'</a>';
+						 }
+						// html +='<a href="#">' + data[i].shopname +'</a>';
 						// if(data[i].shopname==1){
 						// html +='<h2>电脑</h2>';
 						// }
-						 html +='<a href="#">贝诗2</a><a href="#">贝诗2</a><a href="#">贝诗2</a><a href="#">贝诗</a>';
-				        
-						 html +='</div>';
-						 
-                 
-                       //html += '<li class="hhjj" > <a href="'+url_otherPage+userId+'">';
-                       html += '<li class="hhjj" >';
-                       html += '<img src="'+data[i].logo + '" />';
-                       html += '<h3>';
-                       html += '<strong>' + data[i].name + '</strong>';
-                       if(data[i].type==1){
-	                    	  html += '<i class="wechat_ico">订</i>'; 
-	                      }
-                       if(data[i].type==2){
-                     	  html += '<i class="wechat_ico">服</i>';
-	                      }
-						  if(data[i].type==3){
-							  html += '<i class="wechat_ico">个</i>';
-						  }
-						  if(data[i].type==4){
-							  html += '<i class="sina_ico"></i>'; 						  
-						  }
-						  if(data[i].type==5){
-							  html += '<i class="web_ico"></i>'; 						  
-						  }
-						  if(data[i].type==6){
-							  html += '<i class="app_ico"></i>'; 						  
-						  }
-                       html += '</h3>';
-                       html += '<span  style="display:block;word-wrap:break-word;">' + data[i].introduce + '</span>';
-                       html += '<div class="space_5 clear"></div>';
-                       if(data[i].fansNum!=null){
-                    	  html += '<p>粉丝数：';
-                       html += '<em class="quot_left">'+data[i].fansNum+'万</em>';
-                       html += '</p>';
-                       }
-                       html += '<p>价位：';
-                       html += '<em class="quot_right">' + data[i].price + '元/条左右</em>';
-                       html += '</p>';
-                       //html += '</a></li>';
-                       html += '</li>';
+						if(data[i].secondname=='手机'){
+							html +='<h2>'+data[i].secondname+'</h2>';
+						 html +='<a href="#">' + data[i].shopname +'</a>';
+						}
+						 html +='</div>'; 
+					
                    }
-					$(".webShop").append(html);
-					/* ajaxload = false;
-					start = start + data.length; */
+					$("#webShop").append(html);
+					
 				}else{
-					/* ajaxload = true;
-					ajaxtip("已经到底了哦！"); */
+				
 				}
 			}
-			 });
+			 }); 
      
      
      

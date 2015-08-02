@@ -6,7 +6,7 @@ import net.paoding.rose.jade.annotation.DAO;
 import net.paoding.rose.jade.annotation.SQL;
 import net.paoding.rose.jade.annotation.SQLParam;
 
-import com.yoxi.hudongtui.model.content.WebShop;
+import com.yoxi.hudongtui.model.content.WebShopVO;
 import com.yoxi.hudongtui.model.plugin.Plugin;
 import com.yoxi.hudongtui.vo.plugin.PluginDetailVO;
 import com.yoxi.hudongtui.vo.plugin.PluginPicVo;
@@ -26,7 +26,7 @@ public interface WebShopDAO {
 	 * @return List<WebShop>
 	 */
 	@SQL("SELECT * FROM t_webshop a LEFT JOIN t_goods_webshop b on a.id=b.webshop_id ##(:condition)")
-	public List<WebShop> findwebShops(@SQLParam("condition") String condition)
+	public List<WebShopVO> findwebShops(@SQLParam("condition") String condition)
 			throws Exception;
 
 	/**
