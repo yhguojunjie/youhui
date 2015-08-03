@@ -8,14 +8,14 @@ import net.paoding.rose.web.annotation.rest.Get;
  * 
  * 首页跳转
  * 
- * @author wql
+ * @author guojuunjie
  * 
- *         2014-12-05
+ *         2015-8-02
  * 
  */
 @GlobalRequired
 @Path("")
-public class IndexController {
+public class YouHuiIndexController {
 
 	/**
 	 * 各版本主页跳转处理
@@ -25,7 +25,7 @@ public class IndexController {
 	 */
 	@Get("")
 	public void toIndex(Invocation inv) throws Exception {
-		inv.getRequest().getRequestDispatcher("/pc/youHui/list")
+		inv.getRequest().getRequestDispatcher("/pc/plugin/list")
 				.forward(inv.getRequest(), inv.getResponse());
 	}
 

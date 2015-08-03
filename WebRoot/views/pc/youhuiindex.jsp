@@ -159,8 +159,12 @@
            <h3>优惠品分类</h3>
          <div class="sidebar-info">
             <ul class="side-li">
-                <li class="s_1">服装内衣</li>
-                <li class="s_2">鞋包配饰</li>
+            	<c:forEach items="${goodsclassificatList}" var="goodsclassificat" varStatus="sta" >
+		
+		 <li class="s_${sta.index+1}" id="${goodsclassificat.id }">${goodsclassificat.name }</li>
+		        </c:forEach>
+               
+              <!--   <li class="s_2">鞋包配饰</li>
                 <li class="s_3">运动户外</li>
                 <li class="s_4">珠宝手表</li>
                 <li class="s_5">手机数码</li>
@@ -172,7 +176,7 @@
                 <li class="s_11">美食特产</li>
                 <li class="s_12">日用百货</li>
                 <li class="s_13">汽车摩托</li>
-                <li class="s_14">文化娱乐</li>
+                <li class="s_14">文化娱乐</li> -->
             </ul>
         </div>
     </div> 
@@ -195,8 +199,12 @@
             <a href="#">手机版</a>    
         </div>
         <div class="content">
-            <div class="con dsb">
-                <a href="#" class="cooper-logo">
+            
+            
+            
+            
+            <div class="con dsb" id="webShop">
+                 <a href="#" class="cooper-logo">
                     <img src="${path}/img/cooperlogo/dangdang.png" alt="App Store">优惠30%
                 </a>
                 <a href="#" class="cooper-logo">
@@ -239,6 +247,7 @@
                     <img src="${path}/img/cooperlogo/dangdang.png" alt="App Store">优惠30%
                 </a>        
                 <div class="con-list">
+                    <h2>女装</h2>
 	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
 	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
 	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
@@ -248,8 +257,18 @@
 	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
 	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
 	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-                </div>
+                </div> 
             </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             <div class="con">
                 <a href="#" class="cooper-logo">
                     <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
@@ -2047,5 +2066,97 @@
 <script src="${path}/js/jquery_1.9.js"></script>
 <script src="${path}/js/img-show.js"></script>
 <script src="${path}/js/main.js"></script>
+<script >
+$(function() {
+$('.sidebar-info .side-li li').click(function(event) {
+	
+	alert($(this).attr("id"));
+	var id=$(this).attr("id");
+    $(this).addClass('visited').siblings().removeClass('visited');
+     $(this).parents('.content-top').find('.right-con .content').addClass('visited');
+     
+     
+     
+     $.ajax({
+			type: "GET",
+         url: "${basePath}pc/channel/ajaxList?currentPage=" + count + "&typeFlag=" + typeFlag + "&orderFlag=" + orderFlag + "&publishTime_Flag=" + publishTime_Flag + "&buyNum_Flag=" + buyNum_Flag + "&price_Flag=" + price_Flag + "&pageCount=4"+ "&start="+start,
+         dataType: "json",
+			success : function(data) {
+				console.log("data.length="+data.length);
+				if(data.length != 0){
+					$(".webShop").html("");
+					var html = "";
+					 for (var i = 0; i < data.length; i++) {
+				 
+						 html +='<a href="#" class="cooper-logo">';
+						 html +='<img src="${path}/img/cooperlogo/dangdang.png" alt="App Store">优惠30%</a>';
+						 
+						 
+						 html +='<div class="con-list">';
+						 html +='<h2>手机</h2>';
+						 html +='<a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>';
+				        
+						 html +='<h2>电脑</h2>';
+						 html +='<a href="#">贝诗2</a><a href="#">贝诗2</a><a href="#">贝诗2</a><a href="#">贝诗</a>';
+				        
+						 html +='</div>';
+						 
+                 
+                       //html += '<li class="hhjj" > <a href="'+url_otherPage+userId+'">';
+                       html += '<li class="hhjj" >';
+                       html += '<img src="'+data[i].logo + '" />';
+                       html += '<h3>';
+                       html += '<strong>' + data[i].name + '</strong>';
+                       if(data[i].type==1){
+	                    	  html += '<i class="wechat_ico">订</i>'; 
+	                      }
+                       if(data[i].type==2){
+                     	  html += '<i class="wechat_ico">服</i>';
+	                      }
+						  if(data[i].type==3){
+							  html += '<i class="wechat_ico">个</i>';
+						  }
+						  if(data[i].type==4){
+							  html += '<i class="sina_ico"></i>'; 						  
+						  }
+						  if(data[i].type==5){
+							  html += '<i class="web_ico"></i>'; 						  
+						  }
+						  if(data[i].type==6){
+							  html += '<i class="app_ico"></i>'; 						  
+						  }
+                       html += '</h3>';
+                       html += '<span  style="display:block;word-wrap:break-word;">' + data[i].introduce + '</span>';
+                       html += '<div class="space_5 clear"></div>';
+                       if(data[i].fansNum!=null){
+                    	  html += '<p>粉丝数：';
+                       html += '<em class="quot_left">'+data[i].fansNum+'万</em>';
+                       html += '</p>';
+                       }
+                       html += '<p>价位：';
+                       html += '<em class="quot_right">' + data[i].price + '元/条左右</em>';
+                       html += '</p>';
+                       //html += '</a></li>';
+                       html += '</li>';
+                   }
+					$(".webShop").append(html);
+					/* ajaxload = false;
+					start = start + data.length; */
+				}else{
+					/* ajaxload = true;
+					ajaxtip("已经到底了哦！"); */
+				}
+			}
+			 });
+     
+     
+     
+     /*
+     var index=$(this).index();
+     $('.right-con .con').removeClass('dsb').eq(index).addClass('dsb'); */
+ });
+
+});
+</script>
 </body>
 </html>

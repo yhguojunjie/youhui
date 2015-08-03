@@ -194,10 +194,12 @@
     }, function() {
         $(this).removeClass('hover');
     });
-    $('.sidebar-info .side-li li').click(function(event) {
+  /*  $('.sidebar-info .side-li li').click(function(event) {
+    	
+    	
         $(this).addClass('visited').siblings().removeClass('visited');
         $(this).parents('.content-top').find('.right-con .content').addClass('visited');
         var index=$(this).index();
         $('.right-con .con').removeClass('dsb').eq(index).addClass('dsb');
-    });
+    });*/
 })(jQuery);
