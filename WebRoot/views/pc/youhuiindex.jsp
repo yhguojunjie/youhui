@@ -161,7 +161,13 @@
             <ul class="side-li">
             	<c:forEach items="${goodsclassificatList}" var="goodsclassificat" varStatus="sta" >
 		
+		<c:if test="${sta.index==0}"> 
+		  <li class="s_1 visited" id="${goodsclassificat.id }">${goodsclassificat.name }</li>
+		</c:if> 
+		<c:if test="${sta.index!=0}"> 
 		 <li class="s_${sta.index+1}" id="${goodsclassificat.id }">${goodsclassificat.name }</li>
+		
+		</c:if>
 		        </c:forEach>
                
               <!--   <li class="s_2">鞋包配饰</li>
@@ -196,7 +202,7 @@
         <!--<a href="#">50元封顶</a>  --> 
              <a href="#">优惠券</a>
             <a href="#">本地优惠(O2O)</a>
-            <a href="#">手机版</a>    
+            <a href="#">商家活动</a>    
         </div>
         <div class="content">
             
@@ -204,7 +210,7 @@
             
             
             <div class="con dsb" id="webShop">
-                 <a href="#" class="cooper-logo">
+                <%--  <a href="#" class="cooper-logo">
                     <img src="${path}/img/cooperlogo/dangdang.png" alt="App Store">优惠30%
                 </a>
                 <a href="#" class="cooper-logo">
@@ -257,1113 +263,9 @@
 	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
 	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
 	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-                </div> 
-            </div>
+                </div>  --%>
+            </div> 
             
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <div class="con">
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>               
-                <div class="con-list">
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-                </div>
-            </div>
-            <div class="con">
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <div class="con-list">
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-                </div>
-            </div>
-            <div class="con">
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <div class="con-list">
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-                </div>
-            </div>
-            <div class="con">       
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <div class="con-list">
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-                </div>
-            </div>
-            <div class="con"> 
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/suning.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/suning.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/suning.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/suning.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/suning.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/suning.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/suning.gif" alt="App Store">优惠30%
-                </a>
-                <div class="con-list">
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-                </div>
-            </div>
-            <div class="con">
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <div class="con-list">
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-                </div>
-            </div>
-            <div class="con">
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <div class="con-list">
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-                </div>
-            </div>
-            <div class="con">
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/jingdong.gif" alt="App Store">优惠30%
-                </a>
-                <div class="con-list">
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-                </div>
-            </div>
-            <div class="con">
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/meituan.gif" alt="App Store">优惠30%
-                </a>
-                <div class="con-list">
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-                </div>
-            </div>
-            <div class="con">
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/nuomi.png" alt="App Store">优惠30%
-                </a>
-                <div class="con-list">
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-                </div>
-            </div>
-            <div class="con">
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/suning.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/suning.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/suning.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/suning.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/suning.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/suning.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/suning.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/suning.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/suning.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/suning.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/suning.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/suning.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/suning.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/suning.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/suning.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/suning.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/suning.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/suning.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/suning.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/suning.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/suning.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/suning.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/suning.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/suning.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/suning.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/suning.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/suning.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/suning.gif" alt="App Store">优惠30%
-                </a>
-                <div class="con-list">
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-                </div>
-            </div>
-            <div class="con">
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/taobao.gif" alt="App Store">优惠30%
-                </a>
-                <div class="con-list">
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-                </div>
-            </div>
-            <div class="con">
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/xiecheng.png" alt="App Store">优惠30%
-                </a>
-                <div class="con-list">
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-	                <a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>
-                </div>
-            </div>
-            <div class="con">
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-                <a href="#" class="cooper-logo">
-                    <img src="${path}/img/cooperlogo/guomei.gif" alt="App Store">优惠30%
-                </a>
-            </div>
         </div>
     </div> 
     </div>
@@ -2067,87 +969,132 @@
 <script src="${path}/js/img-show.js"></script>
 <script src="${path}/js/main.js"></script>
 <script >
+
+   function f(oldArray){
+	var newArray=new Array(); //目标数组
+
+	var m=oldArray.length;
+	for(var i=0;i<m;i++){
+	var flag=true;
+	var n=newArray.length;
+	for(var j=0;j<n;j++)
+	if(newArray[j] == oldArray[i])
+	flag=false;
+	if(flag)
+	newArray[n]=oldArray[i];
+	}
+	return newArray;
+	} 
+
+
 $(function() {
+	var fileAccessPath='${fileAccessPath}';
+	 $.ajax({
+			type: "GET",
+     // url: "${basePath}pc/youHui/ajaxList?id="+idd,
+    		 url: "${basePath}pc/youHui/ajaxList?id=17",
+            dataType: "json",
+			success : function(data) {
+				var secondnameStr='';
+				for (var j = 0; j < data.length; j++) {
+					 secondnameStr=secondnameStr+";"+data[j].secondname;
+				}
+				arr=secondnameStr.split(";");
+				var newarr=f(arr);
+				
+				console.log("data.length="+data.length);
+				if(data.length != 0){
+					$("#webShop").html("");
+					var html = "";
+					for(var z=1;z<newarr.length;z++){
+					
+						 for (var i = 0; i < data.length; i++) {
+							 if(data[i].secondname==newarr[z]&&z==1){
+						 html +='<a href="#" class="cooper-logo">';
+						 html +='<img src="'+fileAccessPath+data[i].shopimge + '" alt="App Store">' + data[i].discountrate +'</a>';
+							 }
+						 }
+
+						 html +='<div class="con-list">';
+						 
+						 if(z!=1){
+						 html +='<h2>'+newarr[z]+'</h2>';
+						 }						 
+							 for (var i = 0; i < data.length; i++) {
+								 if(data[i].secondname==newarr[z]&&z!=1){	 
+						 html +='<a href="#">' + data[i].shopname +'</a>';
+						 
+							 }
+						 }
+						 html +='</div>';   
+					}
+					$("#webShop").append(html);
+					
+				}else{
+				
+				}
+			}
+			 }); 
+	
+	
+	
+	
+	
+	
+	
 $('.sidebar-info .side-li li').click(function(event) {
 	
-	alert($(this).attr("id"));
 	var id=$(this).attr("id");
     $(this).addClass('visited').siblings().removeClass('visited');
      $(this).parents('.content-top').find('.right-con .content').addClass('visited');
      
+     var arr = new Array();
      
-     
-     $.ajax({
+      $.ajax({
 			type: "GET",
-         url: "${basePath}pc/channel/ajaxList?currentPage=" + count + "&typeFlag=" + typeFlag + "&orderFlag=" + orderFlag + "&publishTime_Flag=" + publishTime_Flag + "&buyNum_Flag=" + buyNum_Flag + "&price_Flag=" + price_Flag + "&pageCount=4"+ "&start="+start,
+         url: "${basePath}pc/youHui/ajaxList?id="+id,
          dataType: "json",
 			success : function(data) {
+				var secondnameStr='';
+				for (var j = 0; j < data.length; j++) {
+					 secondnameStr=secondnameStr+";"+data[j].secondname;
+				}
+				arr=secondnameStr.split(";");
+				var newarr=f(arr);
+				
 				console.log("data.length="+data.length);
 				if(data.length != 0){
-					$(".webShop").html("");
+					$("#webShop").html("");
 					var html = "";
-					 for (var i = 0; i < data.length; i++) {
-				 
+					for(var z=1;z<newarr.length;z++){
+					
+						 for (var i = 0; i < data.length; i++) {
+							 if(data[i].secondname==newarr[z]&&z==1){
 						 html +='<a href="#" class="cooper-logo">';
-						 html +='<img src="${path}/img/cooperlogo/dangdang.png" alt="App Store">优惠30%</a>';
-						 
-						 
+						 html +='<img src="'+fileAccessPath+data[i].shopimge + '" alt="App Store">' + data[i].discountrate +'</a>';
+							 }
+						 }
+
 						 html +='<div class="con-list">';
-						 html +='<h2>手机</h2>';
-						 html +='<a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a><a href="#">贝诗</a>';
-				        
-						 html +='<h2>电脑</h2>';
-						 html +='<a href="#">贝诗2</a><a href="#">贝诗2</a><a href="#">贝诗2</a><a href="#">贝诗</a>';
-				        
-						 html +='</div>';
 						 
-                 
-                       //html += '<li class="hhjj" > <a href="'+url_otherPage+userId+'">';
-                       html += '<li class="hhjj" >';
-                       html += '<img src="'+data[i].logo + '" />';
-                       html += '<h3>';
-                       html += '<strong>' + data[i].name + '</strong>';
-                       if(data[i].type==1){
-	                    	  html += '<i class="wechat_ico">订</i>'; 
-	                      }
-                       if(data[i].type==2){
-                     	  html += '<i class="wechat_ico">服</i>';
-	                      }
-						  if(data[i].type==3){
-							  html += '<i class="wechat_ico">个</i>';
-						  }
-						  if(data[i].type==4){
-							  html += '<i class="sina_ico"></i>'; 						  
-						  }
-						  if(data[i].type==5){
-							  html += '<i class="web_ico"></i>'; 						  
-						  }
-						  if(data[i].type==6){
-							  html += '<i class="app_ico"></i>'; 						  
-						  }
-                       html += '</h3>';
-                       html += '<span  style="display:block;word-wrap:break-word;">' + data[i].introduce + '</span>';
-                       html += '<div class="space_5 clear"></div>';
-                       if(data[i].fansNum!=null){
-                    	  html += '<p>粉丝数：';
-                       html += '<em class="quot_left">'+data[i].fansNum+'万</em>';
-                       html += '</p>';
-                       }
-                       html += '<p>价位：';
-                       html += '<em class="quot_right">' + data[i].price + '元/条左右</em>';
-                       html += '</p>';
-                       //html += '</a></li>';
-                       html += '</li>';
-                   }
-					$(".webShop").append(html);
-					/* ajaxload = false;
-					start = start + data.length; */
+						 if(z!=1){
+						 html +='<h2>'+newarr[z]+'</h2>';
+						 }						 
+							 for (var i = 0; i < data.length; i++) {
+								 if(data[i].secondname==newarr[z]&&z!=1){	 
+						 html +='<a href="#">' + data[i].shopname +'</a>';
+						 
+							 }
+						 }
+						 html +='</div>';   
+					}
+					$("#webShop").append(html);
+					
 				}else{
-					/* ajaxload = true;
-					ajaxtip("已经到底了哦！"); */
+				
 				}
 			}
-			 });
+			 }); 
      
      
      

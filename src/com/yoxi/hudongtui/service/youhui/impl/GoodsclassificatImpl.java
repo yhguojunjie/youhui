@@ -15,7 +15,7 @@ public class GoodsclassificatImpl implements IGoodsclassificatService {
 	private GoodsclassificatDAO goodsclassificatDao;
 
 	/**
-	 * 查询分类列表
+	 * 查询分类
 	 * 
 	 * @return List<Goodsclassificat>
 	 */

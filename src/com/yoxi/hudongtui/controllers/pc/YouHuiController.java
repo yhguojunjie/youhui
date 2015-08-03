@@ -19,6 +19,7 @@ import com.yoxi.hudongtui.constants.Globals;
 import com.yoxi.hudongtui.controllers.GlobalRequired;
 import com.yoxi.hudongtui.model.content.Banner;
 import com.yoxi.hudongtui.model.content.Goodsclassificat;
+import com.yoxi.hudongtui.model.content.WebShopVO;
 import com.yoxi.hudongtui.model.plugin.Plugin;
 import com.yoxi.hudongtui.service.agent.IAgentBusService;
 import com.yoxi.hudongtui.service.agent.IAgentInfoService;
@@ -31,6 +32,7 @@ import com.yoxi.hudongtui.service.plugin.IPluginBusService;
 import com.yoxi.hudongtui.service.plugin.IPluginService;
 import com.yoxi.hudongtui.service.user.IUserService;
 import com.yoxi.hudongtui.service.youhui.IGoodsclassificatService;
+import com.yoxi.hudongtui.service.youhui.WebShopService;
 import com.yoxi.hudongtui.utils.common.ConvertUtil;
 import com.yoxi.hudongtui.utils.common.JsonUtils;
 import com.yoxi.hudongtui.utils.common.SessionUtil;
@@ -57,6 +59,9 @@ public class YouHuiController {
 	private IPluginService pluginService;
 	@Autowired
 	private IGoodsclassificatService goodsclassificatService;
+
+	@Autowired
+	private WebShopService webShopService;
 
 	@Autowired
 	private IPluginBusService pluginBusService;
@@ -192,6 +197,21 @@ public class YouHuiController {
 	}
 
 	/**
+	 * 
+	 * @param inv
+	 * @param start
+	 * @throws Exception
+	 */
+	@Get("ajaxList")
+	public String getWebShopAjaxList(Invocation inv, @Param("id") int id)
+			throws Exception {
+
+		List<WebShopVO> webShops = webShopService.findWebShopList(id);
+		return "@json:" + JsonUtils.toJson(webShops);
+
+	}
+
+	/**
 	 * 模板库页
 	 * 
 	 * @param typeCon
@@ -253,55 +273,6 @@ public class YouHuiController {
 		// Globals.PC_PLUGINLIST_NUM );
 		// inv.getRequest().setAttribute("pluginList",pluginList);
 		return "pluginIndex";
-	}
-
-	/**
-	 * 模板库列表接口
-	 * 
-	 * @param inv
-	 * @return
-	 * @throws Exception
-	 */
-	@Get("ajaxList")
-	public String getPluginList(Invocation inv,
-			@Param("typeFlag") String typeFlag,
-			@Param("orderFlag") String orderFlag,
-			@Param("publishTime_Flag") String publishTime_Flag,
-			@Param("buyNum_Flag") String buyNum_Flag,
-			@Param("price_Flag") String price_Flag,
-			@Param("start") final int start, @Param("count") int count)
-			throws Exception {
-
-		AgentInfoVO agentInfo = SessionUtil.getAgentInfo(inv.getRequest());
-
-		// 1.设置参数
-		String xFlag = "0";
-		// typeFlag 0表示全部，1.表示即买即用
-		// orderFlag 1表示发布时间publishTime，2.表示销量buyNum,3.表示价格price
-		if ("1".equals(orderFlag)) {
-			xFlag = publishTime_Flag;
-		} else if ("2".equals(orderFlag)) {
-			xFlag = buyNum_Flag;
-		} else if ("3".equals(orderFlag)) {
-			xFlag = price_Flag;
-		}
-		// 0表示降序，1表示升序
-		if (ValidateUtil.isEmpty(publishTime_Flag)
-				&& ValidateUtil.isEmpty(buyNum_Flag)
-				&& ValidateUtil.isEmpty(price_Flag)) {
-			publishTime_Flag = "0";
-			buyNum_Flag = "0";
-			price_Flag = "0";
-		}
-		String orderStrCon = pluginService.getAgentOrderFlag(orderFlag, xFlag);
-		String cond = " AND a.id NOT IN (SELECT d.pluginId FROM t_plugin_rec d) "
-				+ orderStrCon;
-		List<PluginDetailVO> pluginList = pluginService.getAgentPluginList(
-				agentInfo.getId(), cond, start, Globals.PC_PLUGINLIST_NUM);
-		// Pagination<PluginDetailVO> paginationPlugin =
-		// pluginService.findPlugins4Page(typeConStr, orderStrCon, currentPage,
-		// pageCount);
-		return "@json:" + JsonUtils.toJson(pluginList);
 	}
 
 	/**
