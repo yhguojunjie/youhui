@@ -1010,7 +1010,7 @@ $(function() {
 					
 						 for (var i = 0; i < data.length; i++) {
 							 if(data[i].secondname==newarr[z]&&z==1){
-						 html +='<a href="#" class="cooper-logo">';
+						 html +='<a href="'+data[i].shophref+'" class="cooper-logo">';
 						 html +='<img src="'+fileAccessPath+data[i].shopimge + '" alt="App Store">' + data[i].discountrate +'</a>';
 							 }
 						 }
@@ -1022,7 +1022,7 @@ $(function() {
 						 }						 
 							 for (var i = 0; i < data.length; i++) {
 								 if(data[i].secondname==newarr[z]&&z!=1){	 
-						 html +='<a href="#">' + data[i].shopname +'</a>';
+						 html +='<a href="'+data[i].shophref+'">' + data[i].shopname +'</a>';
 						 
 							 }
 						 }
@@ -1070,7 +1070,7 @@ $('.sidebar-info .side-li li').click(function(event) {
 					
 						 for (var i = 0; i < data.length; i++) {
 							 if(data[i].secondname==newarr[z]&&z==1){
-						 html +='<a href="#" class="cooper-logo">';
+						 html +='<a href="'+data[i].shophref+'" class="cooper-logo">';
 						 html +='<img src="'+fileAccessPath+data[i].shopimge + '" alt="App Store">' + data[i].discountrate +'</a>';
 							 }
 						 }
@@ -1082,7 +1082,7 @@ $('.sidebar-info .side-li li').click(function(event) {
 						 }						 
 							 for (var i = 0; i < data.length; i++) {
 								 if(data[i].secondname==newarr[z]&&z!=1){	 
-						 html +='<a href="#">' + data[i].shopname +'</a>';
+						 html +='<a href="'+data[i].shophref+'">' + data[i].shopname +'</a>';
 						 
 							 }
 						 }
