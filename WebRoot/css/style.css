@@ -140,7 +140,7 @@
 .inner-show ul li a{display:inline-block;margin:0 9px 10px}
 .inner-show>a img{width:100%}
 .inner-show h3{margin-top:3px;font-weight:lighter;font-size:12px;text-align:center;color:#6c6c6c}
-.inner-showº£ÃÅ h3:hover{color:#c40000}
+.inner-show h3:hover{color:#c40000}
 .inner-show h3>a{margin-right:6px;font-size:12px}
 .inner-show .show-right{margin:0 9px}
 .inner-show .show-right .nowPrice{font-size:8px;float:left;width:100%}
@@ -171,7 +171,7 @@
 .help-a,.help-a-litter{display:inline-block;margin:10px 70px 0 5px}
 .help-a-litter{margin:10px 10px 0 5px}
 .margin-r{margin-right:0}
-.footer{width:1190px;height:150px;margin:10px auto}
+.footer{width:1190px;min-height:50px;margin:10px auto}
 .footer-right{width:94%;height:100%;margin:auto;text-align:center}
 .tao-man{float:right}
 .footer-nav{width:100%;height:42px;line-height:42px;border-bottom:1px solid #ddd;color:#dedede}
