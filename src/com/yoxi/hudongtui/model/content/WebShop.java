@@ -23,9 +23,11 @@ public class WebShop implements java.io.Serializable {
 	/** 顺序 */
 	private java.lang.Integer seq;
 
+	/** 商城链接 */
+	private java.lang.String shophref;
+
 	/** 商城图片 */
 	private java.lang.String shopimge;
-
 	/** 商城名称 */
 	private java.lang.String shopname;
 
@@ -53,6 +55,10 @@ public class WebShop implements java.io.Serializable {
 		return seq;
 	}
 
+	public java.lang.String getShophref() {
+		return shophref;
+	}
+
 	public java.lang.String getShopimge() {
 		return shopimge;
 	}
@@ -72,14 +78,21 @@ public class WebShop implements java.io.Serializable {
 	public void setEnterTime(java.util.Date enterTime) {
 		this.enterTime = enterTime;
 	}
+
 	public void setId(java.lang.Integer id) {
 		this.id = id;
 	}
+
 	public void setSecondname(java.lang.String secondname) {
 		this.secondname = secondname;
 	}
+
 	public void setSeq(java.lang.Integer seq) {
 		this.seq = seq;
+	}
+
+	public void setShophref(java.lang.String shophref) {
+		this.shophref = shophref;
 	}
 
 	public void setShopimge(java.lang.String shopimge) {
