@@ -25,6 +25,9 @@ public class WebShopVO implements java.io.Serializable {
 	/** 顺序 */
 	private java.lang.Integer seq;
 
+	/** 商城链接 */
+	private java.lang.String shophref;
+
 	/** 商城图片 */
 	private java.lang.String shopimge;
 
@@ -60,6 +63,10 @@ public class WebShopVO implements java.io.Serializable {
 
 	public java.lang.Integer getSeq() {
 		return seq;
+	}
+
+	public java.lang.String getShophref() {
+		return shophref;
 	}
 
 	public java.lang.String getShopimge() {
@@ -100,6 +107,10 @@ public class WebShopVO implements java.io.Serializable {
 
 	public void setSeq(java.lang.Integer seq) {
 		this.seq = seq;
+	}
+
+	public void setShophref(java.lang.String shophref) {
+		this.shophref = shophref;
 	}
 
 	public void setShopimge(java.lang.String shopimge) {
