@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+    <div class="login-head">
+        <div class="logo">
+            <a href="#"><img src="img/logo2.png" alt="帮you惠" width="170" height="60">
+            </a><b></b>
+        </div>
+    </div>
+    <div class="login-wrap">
+        <div class="login-form">
+            <div class="mt">
+                <h1>帮you惠会员</h1>
+                <a href="#" target="_blank"><b></b>免费注册</a>
+            </div>
+            <div class="mc">
+                <form  id="loginForm" method="post"  action="">
+                    <div class="form">
+                        <div class="item item-fore1">
+                            <label for="loginname" class="login-label name-label"></label>
+                            <input type="text" class="itxt" name="username" id="username" placeholder="邮箱/用户名">
+                        </div>
+                        <div class="item item-fore2">
+                            <label class="login-label pwd-label" for="nloginpwd"></label>
+                            <input type="password" name="nloginpwd" class="itxt itxt-error" tabindex="2" autocomplete="off" placeholder="密码">
+                            <input type="hidden" name="password" id="password" class="hide">
+                            <span class="clear-btn"></span>
+                        </div>
+                        <div class="item item-fore3">
+                            <div class="safe">
+                                <span>
+                                    <input id="autoLogin" name="chkRememberMe" type="checkbox" class="jdcheckbox" >
+                                    <label>下次自动登录</label>
+                                </span>
+                                <span class="forget-pw-safe">
+                                    <a href="#" class="" target="_blank">忘记密码?</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="item item-fore5">
+                            <div class="login-btn">
+                                <a href="javascript:;" class="btn-img" id="btn">登&nbsp;&nbsp;&nbsp;&nbsp;录</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="coagent">
+                    <h5>使用合作网站账号登录帮you惠：</h5>
+                    <ul>
+                        <li><a href="#" class="f14"><i class="ico-login-otherway i-login-otherway-qq"></i>QQ</a></li>
+                        <li><a href="#"><i class="ico-login-otherway i-login-otherway-tb"></i>淘宝</a></li>
+                        <li><a href="#"><i class="ico-login-otherway i-login-otherway-sina"></i>新浪微博</a></li>
+                        <li><a href="#"><i class="ico-login-otherway i-login-otherway-weixin"></i>微信</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-right">
+            <div class="footer-nav">
+                <a href="#">阿里巴巴集团</a>|
+                <a href="#">阿里巴巴国际站</a>|
+                <a href="#">阿里巴巴中国站</a>|
+                <a href="#">全球速卖通</a>|
+                <a href="#">导购网</a>|
+                <a href="#">天猫</a>|
+                <a href="#">聚划算</a>|
+                <a href="#">一淘</a>|
+                <a href="#">阿里妈妈</a>|
+                <a href="#">阿里云计算</a>|
+                <a href="#">云OS</a>|
+                <a href="#">万网</a>|
+                <a href="#">支付宝</a>|
+                <a href="#">来往</a>
+            </div>
+            <div class="about-tao">
+                <span class="gary-text">Copyright©2004-2015  帮you惠byouh.com版权所有</span>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery.js" ></script>
+    <script type="text/javascript" src="js/img-show.js"></script>
+    <script type="text/javascript" src="js/validate/automail.js" ></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
