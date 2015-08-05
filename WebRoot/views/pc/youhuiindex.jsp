@@ -965,9 +965,10 @@
     <div id="backToTop-up" class="up-back"><i class="fa fa-angle-up"></i></div>
     <div id="backToTop-down" class="down-back"><i class="fa fa-angle-down"></i></div>
 </div>
-<script src="${path}/js/jquery_1.9.js"></script>
-<script src="${path}/js/img-show.js"></script>
-<script src="${path}/js/main.js"></script>
+<script type="text/javascript" src="${path}/js/jquery.js" ></script>
+<script type="text/javascript" src="${path}/js/img-show.js"></script>
+<script type="text/javascript" src="${path}/js/validate/automail.js" ></script>
+<script type="text/javascript" src="${path}/js/main.js"></script>
 <script >
 
    function f(oldArray){
