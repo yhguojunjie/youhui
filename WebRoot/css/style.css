@@ -10,11 +10,13 @@
 .top-wrapper .top-info .user-name:hover{border-right:1px solid #eee;border-left:1px solid #eee;background:#fff}
 .top-wrapper .top-info ul li.spacer{width:1px;height:12px;margin-top:12px;padding:0;background:#ddd;overflow:hidden}
 .top-wrapper .top-info .down-icon{display:inline-block;width:12px;height:12px;background:url(../img/arrow.png) no-repeat center center}
-.top-wrapper .top-info .top-left .msg-box,.top-wrapper .top-info .top-right .get-box,.top-wrapper .top-info .top-right .my-taobao-box,.top-wrapper .top-info .top-right .shopping-box{position:absolute;left:0;top:35px;display:none;border:1px solid #eee;border-top:none;overflow:hidden;background:#fff}
+.top-wrapper .top-info .top-left .msg-box,.top-wrapper .top-info .top-right .get-box,.top-wrapper .top-info .top-right .my-taobao-box,.top-wrapper .top-info .top-right .shopping-box{position:absolute;left:0;top:35px;display:none;border:1px solid #eee;border-top:none;overflow:hidden;background:#fff;z-index:2;}
+.top-wrapper .top-info .top-right .shopping-box{padding:7px;}
+.top-wrapper .top-info .top-right .get-box{width:77px;left: 152px;}
 .top-wrapper .top-info .top-left .msg-info{float:left;position:relative;height:36px;padding:0 8px;line-height:35px;border-right:1px solid #f5f5f5;border-left:1px solid #f5f5f5}
 .top-wrapper .top-info .top-left .msg-info:hover{border-right:1px solid #eee;border-left:1px solid #eee;background:#fff}
-.top-wrapper .top-info .top-left .msg-info .msg-box{width:270px;min-height:210px;box-shadow:1px 1px 1px #dfdfdf}
-.top-wrapper .top-info .top-left .msg-info .msg-box .userinfo{padding:10px 15px;overflow:hidden;height:80px}
+.top-wrapper .top-info .top-left .msg-info .msg-box{width:270px;min-height:190px;box-shadow:1px 1px 1px #dfdfdf;z-index:2;}
+.top-wrapper .top-info .top-left .msg-info .msg-box .userinfo{padding:10px 15px;overflow:hidden;height:70px}
 .top-wrapper .top-info .top-left .msg-info .msg-box .otherlist a{float:left;height:25px;line-height:25px}
 .top-wrapper .top-info .top-left .msg-info .msg-box .u-pic{float:left;margin-right:10px;width:60px;height:60px;background:url(../img/no-img_mid_.jpg) no-repeat center center;border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%}
 .top-wrapper .top-info .top-left .msg-info .msg-box .u-name{float:left;padding:6px 0 0;font-weight:700;width:140px;height:30px}
@@ -22,9 +24,9 @@
 .top-wrapper .top-info .top-left .msg-info .msg-box .u-extra .line-a{float:left;color:#666;margin:0 8px}
 .top-wrapper .top-info .top-left .msg-info .msg-box .otherlist{padding:0 10px;overflow:hidden;margin-bottom:10px}
 .top-wrapper .top-info .top-left .msg-box .fore2,.top-wrapper .top-info .top-left .msg-info .msg-box .fore1{float:left;width:90px;margin-right:30px}
-.top-wrapper .top-info .top-right .my-taobao-box{width:80px;min-height:60px}
-.top-wrapper .top-info .top-right .my-taobao-box li{width:95.5%;height:28px;line-height:28px;color:#6C6C6C;cursor:pointer;padding-left:4.5%}
-.top-wrapper .top-info .top-right .my-taobao-box li:hover{background:#f3f3f3}
+.top-wrapper .top-info .top-right .my-taobao-box{width:72px;min-height:60px}
+.top-wrapper .top-info .top-right .my-taobao-box li{height:28px;line-height:28px;color:#6C6C6C;cursor:pointer;width: 100%;padding: 0;}
+.top-wrapper .top-info .top-right .my-taobao-box li:hover{color:#b61d1d;}
 .top-wrapper .top-info .top-right .top-right .shopping-box{width:260px;padding-left:30px;height:40px;line-height:40px;left:72px}
 .top-wrapper .top-info .top-right .top-right .shopping-box .check-shopp{padding:5px 5px;background:#c40000;color:#fff}
 .top-wrapper .top-info .top-right .top-right .shopping-box .check-shopp:hover{color:#fff}
@@ -46,7 +48,7 @@
 .close-code{position:absolute;top:-1px;left:-21px;width:19px;height:18px;line-height:18px;border:1px solid #eee;font-size:14px;color:#d8d8d8;cursor:pointer}
 .close-code:hover{border-color:#c40000;background:#c40000;color:#fff}
 .two-code>h3{margin:9px 0;font-size:12px;text-align:center;color:#c40000}
-.scroll-search{display:none;position:relative;z-index:8888;margin:auto;padding-top:10px;clear:both;width:100%;height:42px;background:#fff;border-bottom:1px solid #eee;box-shadow:0 2px 2px #eee}
+.scroll-search{display:none;position:relative;margin:auto;padding-top:10px;clear:both;width:100%;height:42px;background:#fff;border-bottom:1px solid #eee;box-shadow:0 2px 2px #eee}
 .search-litter{width:1190px;margin:auto;overflow: hidden;}
 .scroll-logo{float:left;margin-right:15px}
 .scroll-list{float:left;min-width:200px;height:40px;line-height:40px;margin:0 8px}
