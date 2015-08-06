@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>登录</title>
-    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/common.css"/>
     <link rel="stylesheet" href="css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
     <div class="login-head">
         <div class="logo">
-            <a href="#"><img src="img/logo2.png" alt="帮you惠" width="170" height="60">
-            </a><b></b>
+            <a href="#">
+                <img src="img/logo2.png" alt="帮you惠">
+            </a>
         </div>
+        <h3>欢迎登录</h3>
     </div>
     <div class="login-wrap">
         <div class="login-form">
@@ -25,28 +27,26 @@
                     <div class="form">
                         <div class="item item-fore1">
                             <label for="loginname" class="login-label name-label"></label>
-                            <input type="text" class="itxt" name="username" id="username" placeholder="邮箱/用户名">
+                            <input type="text" class="itxt" name="" id="" placeholder="邮箱/用户名">
                         </div>
                         <div class="item item-fore2">
                             <label class="login-label pwd-label" for="nloginpwd"></label>
-                            <input type="password" name="nloginpwd" class="itxt itxt-error" tabindex="2" autocomplete="off" placeholder="密码">
-                            <input type="hidden" name="password" id="password" class="hide">
-                            <span class="clear-btn"></span>
+                            <input type="password" class="itxt" name=""  tabindex="2" autocomplete="off" placeholder="密码">
                         </div>
                         <div class="item item-fore3">
                             <div class="safe">
                                 <span>
-                                    <input id="autoLogin" name="chkRememberMe" type="checkbox" class="jdcheckbox" >
+                                    <input id="" name="" type="checkbox" class="" >
                                     <label>下次自动登录</label>
                                 </span>
                                 <span class="forget-pw-safe">
-                                    <a href="#" class="" target="_blank">忘记密码?</a>
+                                    <a href="#" class="" target="">忘记密码?</a>
                                 </span>
                             </div>
                         </div>
                         <div class="item item-fore5">
                             <div class="login-btn">
-                                <a href="javascript:;" class="btn-img" id="btn">登&nbsp;&nbsp;&nbsp;&nbsp;录</a>
+                                <a href="javascript:;" class="btn-img">登&nbsp;&nbsp;&nbsp;&nbsp;录</a>
                             </div>
                         </div>
                     </div>
@@ -86,9 +86,10 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="js/jquery.js" ></script>
-    <script type="text/javascript" src="js/img-show.js"></script>
-    <script type="text/javascript" src="js/validate/automail.js" ></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script src="js/jquery_1.9.js"></script>
+    <script src="js/img-show.js"></script>
+    <script src="js/validate/jquery.validate.min.js"></script>
+    <script src="js/validate/messages_cn.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

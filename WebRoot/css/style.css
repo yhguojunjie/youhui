@@ -1,5 +1,6 @@
 .fa-gray{margin:0 2px;color:#9c9c9c}
 .fa-orange{margin:2px;color:#c40000}
+
 .top-wrapper{position:fixed;top:0;z-index:10000;width:100%;height:35px;border-bottom:1px solid #eee;background-color:#f5f5f5}
 .top-wrapper .top-info{width:1190px;height:100%;margin:auto}
 .top-wrapper .top-info ul li{float:left;list-style:none;padding:0 8px}
@@ -168,25 +169,27 @@
 .up-back{background:#ECF0F1}
 .down-back{background:#BDC3C7;color:#fff}
 .btn-img{display:inline-block;margin:0;padding:0;border:0;text-align:center;cursor:pointer}
-.login-head{width:990px;margin:0 auto}
-.login-head .logo{position:relative;width:300px;margin:10px 0 0;height:60px}
-.login-head .logo b{display:block;width:110px;height:40px;position:absolute;right:0;top:10px;background:url(../img//l-icon.png) no-repeat}
-.login-wrap{position:relative;height:475px;margin:10px 0 0;z-index:5;background-color:#e93854}
-.login-wrap .login-form{position:absolute;z-index:4;width:306px;background:#fff;padding:20px;overflow:visible;top:40px;right:240px}
-.login-wrap .login-form .mt{display:inline-block;display:block;width:306px;overflow:visible;height:27px;margin-bottom:5px}
-.login-wrap .login-form .mt h1{position:relative;height:27px;line-height:27px;top:-5px;float:left;color:#666;font-size:20px}
+
+/*µÇÂ¼*/
+.login-head{width:990px;margin:0 auto;height: 60px;}
+.login-head .logo{position:relative;width:140px;padding:10px 0 0;height:60px;float: left;}
+.login-head .logo img{width: 140px;height: 50px;}
+.login-head h3{font-size: 26px;float: left;margin-top: 20px;color: #999;}
+.login-wrap{position:relative;height:475px;margin:10px 0 0;background-color:#e93854}
+.login-wrap .login-form{position:absolute;width:306px;background:#fff;padding:20px;top:40px;right:240px}
+.login-wrap .login-form .mt{display:block;width:306px;height:27px;margin-bottom:5px}
+.login-wrap .login-form .mt h1{height:27px;line-height:27px;top:-5px;float:left;color:#666;font-size:20px}
 .login-wrap .login-form .mt a{float:right;font-size:14px;color:#b61d1d}
 .login-wrap .login-form .mc .item{position:relative;margin-bottom:20px}
 .login-wrap .login-form .mc .item.item-fore1,.login-wrap .login-form .mc .item.item-fore2{border:1px solid #bdbdbd;height:38px;width:304px}
-.login-wrap .login-form .mc .item.item-fore3{z-index:5;margin-bottom:15px}
-.login-wrap .login-form .mc .item .login-label{position:absolute;z-index:3;top:0;left:0;width:38px;height:38px;border-right:1px solid #bdbdbd;background:url(../img/pwd-icons-new.png) no-repeat}
+.login-wrap .login-form .mc .item.item-fore3{margin-bottom:15px}
+.login-wrap .login-form .mc .item .login-label{position:absolute;top:0;left:0;width:38px;height:38px;border-right:1px solid #bdbdbd;background:url(../img/pwd-icons-new.png) no-repeat}
 .login-wrap .login-form .mc .item .login-label.pwd-label{background-position:-48px 0}
-.login-wrap .login-form .mc .item label{float:none}
-.login-wrap .login-form .mc .item .itxt{line-height:18px;height:18px;border:0;padding:10px 0 10px 50px;width:254px;float:none;overflow:hidden;font-size:14px;font-family:'\5b8b\4f53'}
-.login-wrap .login-form .mc .item .safe{position:relative;color:#666}
+.login-wrap .login-form .mc .item .itxt{line-height:18px;height:18px;border:0;padding:10px 0 10px 50px;width:254px;overflow:hidden;font-size:14px;}
+.login-wrap .login-form .mc .item .safe{color:#666}
 .login-wrap .login-form .mc .item .safe span{margin-right:15px}
 .login-wrap .login-form .mc .item .safe .forget-pw-safe{position:absolute;right:0;top:0;margin:0}
-.login-wrap .login-form .mc .item .login-btn{border:1px solid #cb2a2d;margin:0 auto;height:33px;position:relative}
+.login-wrap .login-form .mc .item .login-btn{border:1px solid #cb2a2d;margin:0 auto;height:33px;}
 .login-wrap .login-form .mc .item .login-btn .btn-img{border:1px solid #e85356;display:block;width:302px;background:#e4393c;height:31px;line-height:31px;color:#fff;font-size:20px;font-family:'\5fae\8f6f\96c5\9ed1'}
 .login-wrap .login-form .mc .coagent{line-height:22px;height:auto}
 .login-wrap .login-form .mc .coagent h5{font-weight:400;color:#999}
@@ -196,514 +199,85 @@
 .login-wrap .login-form .mc .coagent ul li a:hover { text-decoration: underline; } 
 .login-wrap .login-form .mc .coagent ul li a i { margin: 0 5px 3px 0; *margin: 0 5px 0 0; }
 
+/*×¢²á*/
 body.reg{background:#f2f2f2}
-.reg-wrap{width:990px;margin:auto;padding:30px 0 20px;border:1px solid #ddd;margin-top:60px;min-height:570px;background:#fff}
-.reg-wrap .form{width:700px;float:left;border-right:1px solid #e5e5e5}
-.reg-wrap .form .item{padding-top:9px;height:60px;line-height:34px;position:relative;z-index:1}
-.reg-wrap .form .item.verific-phone a{text-decoration:underline}
-.reg-wrap .item.authcodeDiv img{cursor:pointer;width:100px;height:36px;display:block}
-.reg-wrap .form .label{float:left;width:190px;text-align:right;font-size:14px;color:#999;padding-right:10px}
-.reg-wrap .form .label b{margin-right:5px;font-weight:400}
-.reg-wrap .form .item .item-ifo{float:left;position:relative;width:270px}
-.reg-wrap .item .ftx04{color:red}
-.reg-wrap .item.authcodeDiv .item-ifo{width:380px}
-.reg-wrap .item .checkbox{margin-top:10px}
-.reg-wrap .item a.blue:link{color:#005AA0}
-.reg-wrap .item .btn-regist{display:inline-block;border:0 none;font-weight:700;text-align:center;color:#fff;width:270px;height:36px;font-size:16px;text-indent:-9999px;overflow:hidden;background:url(../img/regist-btn.jpg) no-repeat}
-.reg-wrap .text{width:238px;height:16px;padding:10px 25px 10px 5px;border:1px solid #ccc;float:none;font-size:14px;font-family:arial,"å®‹ä½“";color:#999;overflow:hidden}
-.reg-wrap .item .text-1{width:100px;float:left}
-.reg-wrap .item .btn{margin-left:10px;border:1px solid #ddd;padding:0;width:106px;height:36px;background:#f4f4f4;margin-top:0;text-align:center;line-height:36px;text-decoration:none;display:inline-block}
-.reg-wrap .form input,.reg-wrap .form label,.reg-wrap .form select{float:left;font-size:12px}
-.reg-wrap .item .flk13 a:link,.reg-wrap .item .flk13 a:visited,.reg-wrap .item .ftx13,.reg-wrap .item a.flk13:link,.reg-wrap .item a.flk13:visited{color:#005AA0}
-.reg-wrap .item .ftx-05,.reg-wrap .item .ftx05,.reg-wrap .item a.ftx-05:link,.reg-wrap .item a.ftx-05:visited{color:#005ea7}
-.reg-wrap .item .ml5{margin-left:5px}
-.login-form{float:left;padding:30px 0 30px 50px;width:200px}
-.login-form h4{margin-bottom:10px;font-size:16px}
-.login-form .btn-outer{margin-bottom:25px}
-.login-form .btn-outer button{width:130px;height:35px;border:1px solid #ddd;border-radius:4px;background:#fff;font-family:'Microsoft YaHei'}
-.login-form p{margin-bottom:5px;font-size:14px}
-.login-form ul li{float:left;overflow:hidden;margin-bottom:10px;width:49%;height:20px}
-.login-form ul li a.f14{font-size:14px;font-family:arial}
-.login-form ul li a{display:inline-block;color:#666;text-decoration:none;font:12px;cursor:pointer}
-.login-form ul li a:hover{text-decoration:underline}
-.login-form ul li a i{margin:0 5px 3px 0}
-.login-form .ico-login-otherway{display:inline-block;overflow:hidden;margin:-2px 5px 0 0;width:16px;height:16px;background:url(../img/ico_login_otherway.png) no-repeat;vertical-align:middle}
-.login-form .i-login-otherway-qq{background-position:-16px 0}
-.login-form .i-login-otherway-tb{background-position:0 -16px}
-.login-form .i-login-otherway-sina{background-position:0 0}
-.login-form .i-login-otherway-weixin{background-position:0 -64px}
-
-.txt {
-	padding: 7px 8px;
-	height: 18px;
-	vertical-align: middle;
-	font: 14px/18px Simsun,arial;
-}
-
-.txt:focus,.txt.focus {
-	border-color: #008be4;
-	box-shadow: 1px 1px 1px rgba(0,0,0,0.15) inset,1px 1px 0 rgba(51,153,204,0.3),-1px -1px 0 rgba(51,153,204,0.3);
-}
-
-.txt-1 {
-	width: 222px;
-}
-
-.txt-2 {
-	width: 82px;
-}
-
-.ico-login-otherway {
-	display: inline-block;
-	overflow: hidden;
-	margin: -2px 5px 0 0;
-	width: 16px;
-	height: 16px;
-	background: url(http://i.fanhuan.com/images/site_master/ico_login_otherway.png) no-repeat;
-	vertical-align: middle;
-	*display: inline;
-	*zoom: 1;
-}
-
-.i-login-otherway-sina {
-	background-position: 0 0;
-}
-
-.i-login-otherway-qq {
-	background-position: -16px 0;
-}
-
-.i-login-otherway-tb {
-	background-position: 0 -16px;
-}
-
-.i-login-otherway-alipay {
-	background-position: -16px -16px;
-}
-
-.i-login-otherway-weixin {
-	background-position: 0 -64px;
-}
-
-a:hover .i-login-otherway-sina {
-	background-position: 0 -32px;
-}
-
-a:hover .i-login-otherway-qq {
-	background-position: -16px -32px;
-}
-
-a:hover .i-login-otherway-tb {
-	background-position: 0 -48px;
-}
-
-a:hover .i-login-otherway-alipay {
-	background-position: -16px -48px;
-}
-
-a:hover .i-login-otherway-weixin {
-	background-position: -16px -64px;
-}
-.form-item .btn-regist {
-	display: inline-block;
-	border: 0 none;
-	font-weight: 700;
-	text-align: center;
-	color: #fff;
-	width: 270px;
-	height: 36px;
-	font-size: 16px;
-	text-indent: -9999px;
-	overflow: hidden;
-	background: url(../img/regist-btn.jpg) no-repeat;
-	margin-top: 30px;
-}
-
-.btn {
-	padding-left: 15px;
-	background-position: left 0;
-}
-
-.btn span {
-	padding-right: 15px;
-	background-position: right 0;
-	text-align: center;
-}
-
-.btn:hover,.btn:hover span {
-	text-decoration: none;
-}
-
-.btn-1-40,.btn-1 {
-	padding-left: 20px;
-	background-position: 0 -94px;
-}
-
-.btn-1-40 span,.btn-1 span {
-	padding-right: 20px;
-	height: 40px;
-	background-position: right -94px;
-	color: #fff;
-	font: bold 14px/40px Simsun;
-}
-
-.btn-1-40:hover,.btn-1:hover {
-	background-position: 0 -136px;
-}
-
-.btn-1-40:hover span,.btn-1:hover span {
-	background-position: right -136px;
-}
-
-.btn-2-40,.btn-3 {
-	padding-left: 20px;
-	background-position: 0 -390px;
-}
-
-.btn-2-40 span,.btn-3 span {
-	padding-right: 20px;
-	height: 40px;
-	background-position: right -390px;
-	color: #fff;
-	font: bold 14px/40px Simsun;
-}
-
-.btn-2-40:hover,.btn-3:hover {
-	background-position: 0 -432px;
-}
-
-.btn-2-40:hover span,.btn-3:hover span {
-	background-position: right -432px;
-}
-
-.btn-3-40,.btn-2 {
-	padding-left: 20px;
-	background-position: 0 -687px;
-}
-
-.btn-3-40 span,.btn-2 span {
-	padding-right: 20px;
-	height: 40px;
-	background-position: right -687px;
-	color: #666;
-	font: 14px/40px Simsun;
-}
-
-.btn-3-40:hover,.btn-2:hover {
-	background-position: 0 -729px;
-}
-
-.btn-3-40:hover span,.btn-2:hover span {
-	background-position: right -729px;
-}
-
-.reg-content {
-	padding-bottom: 60px;
-	min-width: 960px;
-}
-
-.reg-content .box-reg {
-	margin: 70px auto 0;
-	overflow: hidden;
-	padding: 30px 0 35px 48px;
-	width: 910px;
-	border: 1px solid #dfdfdf;
-	border-radius: 10px;
-	background: #fff;
-	box-shadow: 0 2px 0 rgba(0,0,0,0.03);
-}
-
-.box-reg .con-1 {
-	float: left;
-	width: 612px;
-	border-right: 1px solid #e5e5e5;
-}
-
-.box-reg .con-2 {
-	margin: 55px 70px 0 653px;
-}
-
-.box-reg .con-2 h3 {
-	color: #333;
-	margin-bottom: 10px;
-	font-size: 14px;
-}
-
-.box-reg .con-2 .btn-outer {
-	margin-bottom: 25px;
-}
-
-.box-reg .con-2 p {
-	margin-bottom: 5px;
-}
-
-.box-reg .con-2 ul {
-	overflow: hidden;
-}
-
-.box-reg .con-2 ul li {
-	float: left;
-	overflow: hidden;
-	margin-bottom: 10px;
-	width: 49%;
-	height: 20px;
-}
-
-.box-reg .con-2 ul li a {
-	display: inline-block;
-	color: #666;
-	text-decoration: none;
-	cursor: pointer;
-}
-
-.box-reg .con-2 ul li a.f14 {
-	font-size: 14px;
-	font-family: arial;
-}
-
-.box-reg .con-2 ul li a:hover {
-	text-decoration: underline;
-}
-
-.box-reg .con-2 ul li a i {
-	margin: 0 5px 3px 0;
-	*margin: 0 5px 0 0;
-}
-
-.box-reg .con-2 .btn-2 {
-	padding-left: 0;
-	width: 120px;
-	height: 30px;
-	line-height: 30px;
-	text-align: center;
-	border: 1px solid #ddd;
-	display: block;
-}
-
-.box-reg .con-2 .btn-2 span {
-	padding-right: 20px;
-	width: 110px;
-	text-align: center;
-	font-size: 16px;
-}
-
-.form-reg .form-item {
-	position: relative;
-	margin-bottom: 20px;
-	padding-left: 70px;
-	_zoom: 1;
-}
-
-.form-reg .form-item .label {
-	float: left;
-	color: #999;
-	overflow: hidden;
-	margin-left: -70px;
-	margin-right: 4px;
-	width: 72px;
-	text-align: right;
-	white-space: nowrap;
-	font-size: 14px;
-	line-height: 34px;
-}
-.form-reg .form-item .label .require {
-	color: red;
-	margin-right: 5px;
-	font-weight: 400;
-}
-.form-reg .form-item .clear-btn {
-	position: absolute;
-	top: 1px;
-	left: 284px;
-	padding-left: 5px;
-	width: 20px;
-	height: 32px;
-	background: #fff;
-	color: #d9d9d9;
-	font: bold 18px/28px tahoma;
-}
-
-.form-reg .form-item .clear-btn:hover {
-	color: #666;
-	text-decoration: none;
-}
-
-.form-reg .form-item .clear-btn-focus {
-	box-shadow: -1px 1px 1px rgba(0,0,0,0.15) inset;
-}
-
-.form-reg .btn-1 span {
-	width: 200px;
-	text-align: center;
-}
-
-.form-reg .text-term {
-	margin-top: 8px;
-	color: #666;
-}
-
-.form-reg .text-term input {
-	margin: -2px 5px 0 0;
-	vertical-align: middle;
-	*margin-top: 0;
-}
-
-.form-reg .text-term a {
-	display: inline-block;
-	color: #005AA0;
-	text-decoration: none;
-	*vertical-align: text-top;
-	_vertical-align: middle;
-}
-.form-reg .text-term a.blue:link {
-	color: #005AA0;
-	text-decoration: none;
-}
-#reg_mail {
-	color: #a9a9a9;
-}
-
-.tiptext {
-	color: #b5b4b4;
-	margin-top: 8px; 
-	height:18px; 
-	line-height:18px;
-}
-
-.tiptext i {
-	display: inline-block;
-	overflow: hidden;
-	margin: -2px 5px 0 8px;
-	width: 15px;
-	height: 16px;
-	background: url(http://i.fanhuan.com/images/reg/new_20131231/ico_reg.png) 0 0 no-repeat;
-	vertical-align: middle;
-	*margin-top: 0;
-}
-
-.tiptext-info {
-	color: #b5b4b4;
-}
-
-.tiptext-error {
-	color: red;
-}
-
-.tiptext-ok {
-	color: #060;
-}
-
-.tiptext-loading {
-	display: inline-block;
-	margin: -2px 0 0 8px;
-	width: 16px;
-	height: 16px;
-	background: url(http://i.fanhuan.com/images/loading1.gif) 0 0 no-repeat;
-	vertical-align: middle;
-	*margin-top: 0;
-}
-
-.tiptext-info i {
-	background-position: 0 0;
-}
-
-.tiptext-ok i {
-	background-position: -16px 0;
-}
-
-.tiptext-error i {
-	background-position: -32px 0;
-}
-
-#reg_checkcode {
-	margin-left: 8px;
-	width: 80px;
-	height: 30px;
-	vertical-align: middle;
-	cursor: pointer;
-}
-
-.check-code-change {
-	color: #005AA0;
-}
-
-.check-code-change:hover {
-	color: #008be4;
-	text-decoration: none;
-}
-
-#auto_email {
-	position: absolute;
-	top: 34px;
-	left: 70px;
-	width: 240px;
-	border: 1px solid #ccc;
-	background: #fff;
-	_left: 73px;
-}
-
-#auto_email th {
-	background: #f6f6f6;
-	color: #666;
-	text-align: left;
-}
-
-#auto_email th,#auto_email td {
-	padding: 0 5px;
-	line-height: 30px;
-}
-
-#auto_email td {
-	color: #333;
-}
-
-#auto_email td.current {
-	background: #008be4;
-	color: #fff;
-}
-/* poptip-pass */
-.poptip-pass {
-	position: absolute;
-	top: 31px;
-	left: 65px;
-	left: 64px\9;
-	z-index: 2;
-	display: none;
-	width: 100px;
-	height: 27px;
-	box-shadow: 1px 1px 3px rgba(0,0,0,0.18);
-	color: #444;
-	text-align: center;
-	line-height: 27px;
-	_zoom: 1;
-	_left: 66px;
-	_top: 32px;
-}
-
-.poptip-pass .bg {
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: -1;
-	width: 100%;
-	height: 25px;
-	border: 1px solid #8eacc0;
-	background: #fff;
-}
-
-.poptip-pass b {
-	position: absolute;
-	top: -5px;
-	left: 10px;
-	z-index: 0;
-	font: 12px/1 Simsun;
-}
-
-.poptip-pass .wai {
-	color: #8eacc0;
-}
-
-.poptip-pass .nei {
-	top: -3px;
-	color: #fff;
-}
+.txt{padding:7px 8px;height:18px;vertical-align:middle;font:14px/18px Simsun,arial}
+.txt.focus,.txt:focus{border-color:#008be4;box-shadow:1px 1px 1px rgba(0,0,0,.15) inset,1px 1px 0 rgba(51,153,204,.3),-1px -1px 0 rgba(51,153,204,.3)}
+.txt-1{width:222px}
+.txt-2{width:82px}
+.ico-login-otherway{display:inline-block;overflow:hidden;margin:-2px 5px 0 0;width:16px;height:16px;background:url(http://i.fanhuan.com/images/site_master/ico_login_otherway.png) no-repeat;vertical-align:middle}
+.i-login-otherway-sina{background-position:0 0}
+.i-login-otherway-qq{background-position:-16px 0}
+.i-login-otherway-tb{background-position:0 -16px}
+.i-login-otherway-alipay{background-position:-16px -16px}
+.i-login-otherway-weixin{background-position:0 -64px}
+a:hover .i-login-otherway-sina{background-position:0 -32px}
+a:hover .i-login-otherway-qq{background-position:-16px -32px}
+a:hover .i-login-otherway-tb{background-position:0 -48px}
+a:hover .i-login-otherway-alipay{background-position:-16px -48px}
+a:hover .i-login-otherway-weixin{background-position:-16px -64px}
+.form-item .btn-regist{display:inline-block;border:0 none;font-weight:700;text-align:center;color:#fff;width:270px;height:36px;font-size:16px;text-indent:-9999px;overflow:hidden;background:url(../img/regist-btn.jpg) no-repeat;margin-top:30px}
+.btn{padding-left:15px;background-position:left 0}
+.btn span{padding-right:15px;background-position:right 0;text-align:center}
+.btn:hover,.btn:hover span{text-decoration:none}
+.btn-1,.btn-1-40{padding-left:20px;background-position:0 -94px}
+.btn-1 span,.btn-1-40 span{padding-right:20px;height:40px;background-position:right -94px;color:#fff;font:700 14px/40px Simsun}
+.btn-1-40:hover,.btn-1:hover{background-position:0 -136px}
+.btn-1-40:hover span,.btn-1:hover span{background-position:right -136px}
+.btn-2-40,.btn-3{padding-left:20px;background-position:0 -390px}
+.btn-2-40 span,.btn-3 span{padding-right:20px;height:40px;background-position:right -390px;color:#fff;font:700 14px/40px Simsun}
+.btn-2-40:hover,.btn-3:hover{background-position:0 -432px}
+.btn-2-40:hover span,.btn-3:hover span{background-position:right -432px}
+.btn-2,.btn-3-40{padding-left:20px;background-position:0 -687px}
+.btn-2 span,.btn-3-40 span{padding-right:20px;height:40px;background-position:right -687px;color:#666;font:14px/40px Simsun}
+.btn-2:hover,.btn-3-40:hover{background-position:0 -729px}
+.btn-2:hover span,.btn-3-40:hover span{background-position:right -729px}
+.reg-content{padding-bottom:60px;min-width:960px}
+.reg-content .box-reg{margin:70px auto 0;overflow:hidden;padding:30px 0 35px 48px;width:910px;border:1px solid #dfdfdf;border-radius:10px;background:#fff;box-shadow:0 2px 0 rgba(0,0,0,.03)}
+.box-reg .con-1{float:left;width:612px;border-right:1px solid #e5e5e5}
+.box-reg .con-2{margin:55px 70px 0 653px}
+.box-reg .con-2 h3{color:#333;margin-bottom:10px;font-size:14px}
+.box-reg .con-2 .btn-outer{margin-bottom:25px}
+.box-reg .con-2 p{margin-bottom:5px}
+.box-reg .con-2 ul{overflow:hidden}
+.box-reg .con-2 ul li{float:left;overflow:hidden;margin-bottom:10px;width:49%;height:20px}
+.box-reg .con-2 ul li a{display:inline-block;color:#666;text-decoration:none;cursor:pointer}
+.box-reg .con-2 ul li a.f14{font-size:14px;font-family:arial}
+.box-reg .con-2 ul li a:hover{text-decoration:underline}
+.box-reg .con-2 ul li a i{margin:0 5px 3px 0}
+.box-reg .con-2 .btn-2{padding-left:0;width:120px;height:30px;line-height:30px;text-align:center;border:1px solid #ddd;display:block}
+.box-reg .con-2 .btn-2 span{padding-right:20px;width:110px;text-align:center;font-size:16px}
+.form-reg .form-item{position:relative;margin-bottom:20px;padding-left:70px}
+.form-reg .form-item .label{float:left;color:#999;overflow:hidden;margin-left:-70px;margin-right:4px;width:72px;text-align:right;white-space:nowrap;font-size:14px;line-height:34px}
+.form-reg .form-item .label .require{color:red;margin-right:5px;font-weight:400}
+.form-reg .form-item .clear-btn{position:absolute;top:1px;left:284px;padding-left:5px;width:20px;height:32px;background:#fff;color:#d9d9d9;font:700 18px/28px tahoma}
+.form-reg .form-item .clear-btn:hover{color:#666;text-decoration:none}
+.form-reg .form-item .clear-btn-focus{box-shadow:-1px 1px 1px rgba(0,0,0,.15) inset}
+.form-reg .btn-1 span{width:200px;text-align:center}
+.form-reg .text-term{margin-top:8px;color:#666}
+.form-reg .text-term input{margin:-2px 5px 0 0;vertical-align:middle}
+.form-reg .text-term a{display:inline-block;color:#005AA0;text-decoration:none}
+.form-reg .text-term a.blue:link{color:#005AA0;text-decoration:none}
+#reg_mail{color:#a9a9a9}
+.tiptext{color:#b5b4b4;margin-top:8px;height:18px;line-height:18px}
+.tiptext i{display:inline-block;overflow:hidden;margin:-2px 5px 0 8px;width:15px;height:16px;background:url(http://i.fanhuan.com/images/reg/new_20131231/ico_reg.png) 0 0 no-repeat;vertical-align:middle}
+.tiptext-info{color:#b5b4b4}
+.tiptext-error{color:red}
+.tiptext-ok{color:#060}
+.tiptext-loading{display:inline-block;margin:-2px 0 0 8px;width:16px;height:16px;background:url(http://i.fanhuan.com/images/loading1.gif) 0 0 no-repeat;vertical-align:middle}
+.tiptext-info i{background-position:0 0}
+.tiptext-ok i{background-position:-16px 0}
+.tiptext-error i{background-position:-32px 0}
+#reg_checkcode{margin-left:8px;width:80px;height:30px;vertical-align:middle;cursor:pointer}
+.check-code-change{color:#005AA0}
+.check-code-change:hover{color:#008be4;text-decoration:none}
+#auto_email{position:absolute;top:34px;left:70px;width:240px;border:1px solid #ccc;background:#fff}
+#auto_email th{background:#f6f6f6;color:#666;text-align:left}
+#auto_email td,#auto_email th{padding:0 5px;line-height:30px}
+#auto_email td{color:#333}
+#auto_email td.current{background:#008be4;color:#fff}
+.poptip-pass{position:absolute;top:31px;left:65px;z-index:2;display:none;width:100px;height:27px;box-shadow:1px 1px 3px rgba(0,0,0,.18);color:#444;text-align:center;line-height:27px}
+.poptip-pass .bg{position:absolute;top:0;left:0;z-index:-1;width:100%;height:25px;border:1px solid #8eacc0;background:#fff}
+.poptip-pass b{position:absolute;top:-5px;left:10px;z-index:0;font:12px/1 Simsun}
+.poptip-pass .wai{color:#8eacc0}
+.poptip-pass .nei{top:-3px;color:#fff}

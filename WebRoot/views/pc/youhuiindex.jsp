@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>帮you惠，优惠网！我喜欢</title>
-    <link rel="stylesheet" href="${path}/css/reset.css"/>
+    <link rel="stylesheet" href="${path}/css/common.css"/>
     <link rel="stylesheet" href="${path}/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="${path}/css/style.css"/>
 
