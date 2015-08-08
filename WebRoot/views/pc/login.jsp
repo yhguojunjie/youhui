@@ -80,7 +80,7 @@ e.printStackTrace();
                         </div>
                         <div class="item item-fore5">
                             <div class="login-btn">
-                                <a onclick="verify_submit();" class="btn-img">登&nbsp;&nbsp;&nbsp;&nbsp;录</a>
+                                <a onclick="verify_submit();" id="butt" class="btn-img">登&nbsp;&nbsp;&nbsp;&nbsp;录</a>
                             </div>
                         </div>
                     </div>
@@ -128,9 +128,56 @@ e.printStackTrace();
 </body>
 
 <script>
+
+
+$(function(){
+	$('#email').blur(function(){
+		if($('#email').val()!=null&&$('#email').val()!=''){
+			insertNotice($("#email"),"");
+		}else{
+			insertNotice($("#email"),"请输入邮箱或者用户名 ");
+		}
+	});
+	
+	$('#password').blur(function(){
+		if($('#password').val()!=null&&$('#password').val()!=''){
+			insertNotice($("#password"),"");
+		}else{
+			insertNotice($("#password"),"请输入密码");
+		}
+	});
+});
+
+
+
+
+
+
+function checkAccount(account){
+	var isAccountExist = false;
+	$.ajax({
+			type: "POST",
+			url : "${path }/register/checkAccount",
+			async: false,
+			data:{account:account},
+			dataType: "json",
+			success: function(data){
+				if(data.state == '0'){
+					isAccountExist = true;
+				}
+			}
+	}); 
+	return isAccountExist;
+}
+
+
 function verify_submit(){
 	var name=$("#email").val();
 	var password=$("#password").val();
+	var flag=$("#flag").val();
+	insertNotice($("#email"),"");
+	insertNotice($("#password"),"");
+	insertNotice($("#butt"),"");
 	if(name==""){
 		insertNotice($("#email"),"请输入邮箱或者用户名 ");
 		return;
@@ -140,7 +187,27 @@ function verify_submit(){
     	return;
 	}
    
-   document.form1.submit();
+    
+    //ajax提交登入
+	$.ajax({
+		type: "POST",
+		url : "${basePath}login/doLoginajax",
+		async: false,
+		data:{email:name,password:password,flag:flag},
+		dataType: "json",
+		success: function(data){
+			console.log(data);
+			if(data.state == '0'){
+				location.href="${basePath}";
+			}else{
+				insertNotice($("#butt"),"用户名或者密码错误  ");
+			}
+		}
+     }); 
+    
+    
+    
+  // document.form1.submit();
 	
 }
 

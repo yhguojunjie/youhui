@@ -383,6 +383,75 @@ public class LoginController {
 	}
 
 	/**
+	 * 注册用户登录(ajax)
+	 * 
+	 * @param inv
+	 * @return
+	 * @throws Exception
+	 */
+	@Post("doLoginajax")
+	// @Token(needRemoveToken = true)
+	public String doLoginAjax(HttpServletRequest request,
+			HttpServletResponse response, Invocation inv, LoginVO loginVO)
+			throws Exception {
+		String email = request.getParameter("email");
+		String getStr = " email LIKE '" + email + "' ";
+		String password = request.getParameter("password");
+		String autoLogin = request.getParameter("autoLogin");
+		User user = userService.getByStr(getStr);
+		String basePath = WebApplicationUtils.getBasePath();
+		if (user != null) {
+			String decryptStr = PasswordUtil.decrypt(user.getPassword(),
+					password, PasswordUtil.getStaticSalt());
+			if (user.getEmail().equals(decryptStr)) {
+				// 正常登录
+				// 选择下次自动登录，cookie处理
+				if (autoLogin != null && !"".equals(autoLogin)) {
+					/*
+					 * if (loginVO.getAutoLogin().equals("on")) {
+					 * CookieUtil.saveCookie(user, inv.getResponse()); }
+					 */
+					request.getSession().setAttribute("flag", autoLogin);
+					// set cookie
+					if (autoLogin != null && !"".equals(autoLogin)
+							&& loginVO.getAutoLogin().equals("1")) {
+						Cookie cookie = new Cookie("cookie_user", email + "-"
+								+ password);
+						cookie.setMaxAge(60 * 60 * 24 * 30); // cookie 保存30天
+						response.addCookie(cookie);
+					} else {
+						Cookie cookie = new Cookie("cookie_user", email + "-"
+								+ null);
+						cookie.setMaxAge(60 * 60 * 24 * 30); // cookie 保存30天
+						response.addCookie(cookie);
+					}
+				}
+
+				// Integer agentId = user.getAgentId();
+				// String domain = agentInfoService.getDomainById(agentId);
+
+				if (SessionUtil.getUser(inv.getRequest()) != null) {
+					// 如果有登陆先注销
+					SessionUtil.destroy(inv.getRequest(), Globals.SESSION_USER);
+				}
+				SessionUtil.setSessionUserAttr(inv.getRequest(), user);
+				// 检查是否绑定微信号
+				Integer uid = wxUserInfoService.userExist(user.getUserId());
+
+				// 登录后回到上次发起登录页面处理
+				return "@json:" + "{\"state\":0}";// 账号密码正确
+			} else {
+				return "@json:" + "{\"state\":1}";// 密码错误
+			}
+
+		} else {
+			return "@json:" + "{\"state\":1}";// 账号错误
+		}
+		// return "";
+
+	}
+
+	/**
 	 * 微信网站登录
 	 * 
 	 * @param inv
