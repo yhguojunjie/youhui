@@ -82,7 +82,6 @@ e.printStackTrace();
                             <div class="login-btn">
                                 <a onclick="verify_submit();" id="butt" class="btn-img">登&nbsp;&nbsp;&nbsp;&nbsp;录</a>
                             </div>
-                         
                         </div>
                     </div>
                 </form>
@@ -201,7 +200,7 @@ function verify_submit(){
 			if(data.state == '0'){
 				location.href="${basePath}";
 			}else{
-				insertNotice($("#password"),"用户名或者密码错误  ");
+				insertNotice($("#butt"),"用户名或者密码错误  ");
 			}
 		}
      }); 
