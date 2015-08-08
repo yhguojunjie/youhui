@@ -35,7 +35,6 @@ import com.yoxi.hudongtui.service.user.EmailValidationCodeService;
 import com.yoxi.hudongtui.service.user.IUserService;
 import com.yoxi.hudongtui.service.wx.IWxUserBusService;
 import com.yoxi.hudongtui.service.wx.IWxUserInfoService;
-import com.yoxi.hudongtui.utils.common.ConvertUtil;
 import com.yoxi.hudongtui.utils.common.MailSender;
 import com.yoxi.hudongtui.utils.common.PasswordUtil;
 import com.yoxi.hudongtui.utils.common.ReadProperties;
@@ -97,7 +96,8 @@ public class LoginController {
 	 */
 	@Get("toFindPwd")
 	// @Token(needSaveToken = true)
-	public String toFindPwd(HttpServletRequest request, Invocation inv) throws Exception {
+	public String toFindPwd(HttpServletRequest request, Invocation inv)
+			throws Exception {
 		return "pc/findPwd";
 	}
 
@@ -111,16 +111,20 @@ public class LoginController {
 	 */
 	@Post("resetPassWord")
 	// @Token(needRemoveToken = true)
-	public String resetPassWord(HttpServletRequest request, LoginVO loginVO) throws Exception {
+	public String resetPassWord(HttpServletRequest request, LoginVO loginVO)
+			throws Exception {
 		// String userId=request.getParameter("userId");
-		String getStr = " userId LIKE '" + Integer.parseInt(loginVO.getUserId()) + "' ";
+		String getStr = " userId LIKE '"
+				+ Integer.parseInt(loginVO.getUserId()) + "' ";
 		User user = userService.getByStr(getStr);
-		user.setPassword(PasswordUtil.encrypt(user.getAccount(), loginVO.getPassword(), PasswordUtil.getStaticSalt()));
+		user.setPassword(PasswordUtil.encrypt(user.getAccount(),
+				loginVO.getPassword(), PasswordUtil.getStaticSalt()));
 		String str = " , password ='" + user.getPassword() + "'";
 		userService.updataUserSetPassWord(user.getUserId(), str);
 		String msg = "密码重置成功！";
 		request.setAttribute("message2", msg);
-		WebApplicationUtils.sendRedirectMsg("密码重置成功", "", WebApplicationUtils.getBasePath() + "/login/", true);
+		WebApplicationUtils.sendRedirectMsg("密码重置成功", "",
+				WebApplicationUtils.getBasePath() + "/login/", true);
 		return null;
 	}
 
@@ -136,52 +140,68 @@ public class LoginController {
 	@SuppressWarnings("unused")
 	@Post("findPassWord")
 	// @Token(needRemoveToken = true)
-	public String findPassWord(HttpServletRequest request, LoginVO loginVO) throws Exception {
+	public String findPassWord(HttpServletRequest request, LoginVO loginVO)
+			throws Exception {
 
 		String getStr = " account LIKE '" + loginVO.getAccount() + "' ";
 		User user = userService.getByStr(getStr);
 		EmailValidationCode emailValidationCode = new EmailValidationCode();
-		EmailValidationCodeExsitVO emailValidationCodeExsitVO = emailValidationCodeService.findExistByuserId(String.valueOf(user.getUserId()));
+		EmailValidationCodeExsitVO emailValidationCodeExsitVO = emailValidationCodeService
+				.findExistByuserId(String.valueOf(user.getUserId()));
 
 		if (user != null) {
 			String toMail = user.getAccount();
 			// String basePath = this.getBasePath();
 
 			String secretKey = UUID.randomUUID().toString(); // 密钥
-			Timestamp outDate = new Timestamp(System.currentTimeMillis() + 30 * 60 * 1000);// 30分钟后过期
+			Timestamp outDate = new Timestamp(
+					System.currentTimeMillis() + 30 * 60 * 1000);// 30分钟后过期
 			long date = outDate.getTime() / 1000 * 1000; // 忽略毫秒数
 			emailValidationCode.setOutDate(outDate);
 			emailValidationCode.setValidationCode(secretKey.trim());
 			emailValidationCode.setUserId(user.getUserId());
 			// userService.updataUserSet(user); // 保存到数据库
 			if (emailValidationCodeExsitVO != null) {
-				emailValidationCodeService.removeEmailValidationCode(String.valueOf(emailValidationCodeExsitVO.getUserId()));
+				emailValidationCodeService.removeEmailValidationCode(String
+						.valueOf(emailValidationCodeExsitVO.getUserId()));
 			}
 			emailValidationCodeService.save(emailValidationCode);
 			String key = user.getNickName() + "$" + date + "$" + secretKey;
-			String digitalSignature = MD5.sign(user.getNickName(), secretKey, "UTF-8");// 数字签名
+			String digitalSignature = MD5.sign(user.getNickName(), secretKey,
+					"UTF-8");// 数字签名
 
 			String emailTitle = "密码找回";
 			String path = request.getContextPath();
-			String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
+			String basePath = request.getScheme() + "://"
+					+ request.getServerName() + ":" + request.getServerPort()
+					+ path + "/";
 
-			String resetPassHref = basePath + "login/" + "checkResetLink?sid=" + digitalSignature + "&userId=" + user.getUserId();
-			String emailContent = "请勿回复本邮件.点击下面的链接,重设密码:" + resetPassHref + "。 notice:本邮件超过30分钟,链接将会失效，需要重新申请'找回密码'";
+			String resetPassHref = basePath + "login/" + "checkResetLink?sid="
+					+ digitalSignature + "&userId=" + user.getUserId();
+			String emailContent = "请勿回复本邮件.点击下面的链接,重设密码:" + resetPassHref
+					+ "。 notice:本邮件超过30分钟,链接将会失效，需要重新申请'找回密码'";
 
-			boolean flag = MailSender.getInstance().sentEmail(emailContent, emailTitle, toMail);
+			boolean flag = MailSender.getInstance().sentEmail(emailContent,
+					emailTitle, toMail);
 			if (flag) {
 				request.setAttribute("message", "重置密码邮件已经发送，请登陆邮箱进行重置！");
-				WebApplicationUtils.sendRedirectMsg("邮件已经发送成功", "", WebApplicationUtils.getBasePath() + "/login/", true);
+				WebApplicationUtils.sendRedirectMsg("邮件已经发送成功", "",
+						WebApplicationUtils.getBasePath() + "/login/", true);
 				return null;
 			} else {
 				request.setAttribute("message", "操作失败，轻稍后重新尝试！");
-				WebApplicationUtils.sendRedirectMsg("操作失败，轻稍后重新尝试！", "", WebApplicationUtils.getBasePath() + "/login/toFindPwd/", true);
+				WebApplicationUtils
+						.sendRedirectMsg("操作失败，轻稍后重新尝试！", "",
+								WebApplicationUtils.getBasePath()
+										+ "/login/toFindPwd/", true);
 				return null;
 			}
 
 		} else {
 			request.setAttribute("message2", "当前的用户名不存在！");
-			WebApplicationUtils.sendRedirectMsg("当前的用户名不存在！", "", WebApplicationUtils.getBasePath() + "/login/toFindPwd/", true);
+			WebApplicationUtils.sendRedirectMsg("当前的用户名不存在！", "",
+					WebApplicationUtils.getBasePath() + "/login/toFindPwd/",
+					true);
 			return null;
 		}
 
@@ -204,14 +224,17 @@ public class LoginController {
 
 		User user = userService.getByStr(getStr);
 		// String getStr2 = " userId LIKE '" + userId + "' ";
-		EmailValidationCode emailValidationCode = emailValidationCodeService.getByStr(getStr);
+		EmailValidationCode emailValidationCode = emailValidationCodeService
+				.getByStr(getStr);
 
 		String msg = "";
 		if (sid.equals("") || user.getNickName().equals("")) {
 			msg = "链接不完整,请重新生成";
 			// model.addObject("msg",msg) ;
 			request.setAttribute("message2", msg);
-			WebApplicationUtils.sendRedirectMsg(msg, "", WebApplicationUtils.getBasePath() + "/login/toFindPwd/", true);
+			WebApplicationUtils.sendRedirectMsg(msg, "",
+					WebApplicationUtils.getBasePath() + "/login/toFindPwd/",
+					true);
 			return null;
 		}
 
@@ -219,7 +242,9 @@ public class LoginController {
 			msg = "链接错误,无法找到匹配用户,请重新申请找回密码.";
 			// model.addObject("msg",msg) ;
 			request.setAttribute("message2", msg);
-			WebApplicationUtils.sendRedirectMsg(msg, "", WebApplicationUtils.getBasePath() + "/login/toFindPwd/", true);
+			WebApplicationUtils.sendRedirectMsg(msg, "",
+					WebApplicationUtils.getBasePath() + "/login/toFindPwd/",
+					true);
 			return null;
 		}
 
@@ -244,18 +269,24 @@ public class LoginController {
 			msg = "链接已经过期,请重新申请找回密码.";
 			// model.addObject("msg",msg) ;
 			request.setAttribute("message2", msg);
-			WebApplicationUtils.sendRedirectMsg(msg, "", WebApplicationUtils.getBasePath() + "/login/toFindPwd/", true);
+			WebApplicationUtils.sendRedirectMsg(msg, "",
+					WebApplicationUtils.getBasePath() + "/login/toFindPwd/",
+					true);
 			return null;
 		}
 
-		String key = user.getAccount() + "$" + outDate.getTime() / 1000 * 1000 + "$" + emailValidationCode.getValidationCode(); // 数字签名
-		String digitalSignature = MD5.sign(user.getNickName(), emailValidationCode.getValidationCode(), "UTF-8");// 数字签名
+		String key = user.getAccount() + "$" + outDate.getTime() / 1000 * 1000
+				+ "$" + emailValidationCode.getValidationCode(); // 数字签名
+		String digitalSignature = MD5.sign(user.getNickName(),
+				emailValidationCode.getValidationCode(), "UTF-8");// 数字签名
 		System.out.println(key + "\t" + digitalSignature);
 		if (!digitalSignature.equals(sid)) {
 			msg = "链接不正确,是否已经过期了?重新申请吧";
 			// model.addObject("msg",msg) ;
 			request.setAttribute("message2", msg);
-			WebApplicationUtils.sendRedirectMsg(msg, "", WebApplicationUtils.getBasePath() + "/login/toFindPwd/", true);
+			WebApplicationUtils.sendRedirectMsg(msg, "",
+					WebApplicationUtils.getBasePath() + "/login/toFindPwd/",
+					true);
 			return null;
 		}
 		// model.setViewName("user/reset_password"); //返回到修改密码的界面
@@ -274,65 +305,80 @@ public class LoginController {
 	 */
 	@Post("doLogin")
 	// @Token(needRemoveToken = true)
-	public String doLogin(HttpServletRequest request, HttpServletResponse response, Invocation inv, LoginVO loginVO) throws Exception {
-		String getStr = " account LIKE '" + loginVO.getAccount() + "' ";
+	public String doLogin(HttpServletRequest request,
+			HttpServletResponse response, Invocation inv, LoginVO loginVO)
+			throws Exception {
+		String email = request.getParameter("email");
+		String getStr = " email LIKE '" + email + "' ";
+		String password = request.getParameter("password");
+		String autoLogin = request.getParameter("autoLogin");
 		User user = userService.getByStr(getStr);
+		String basePath = WebApplicationUtils.getBasePath();
 		if (user != null) {
-			String decryptStr = PasswordUtil.decrypt(user.getPassword(), loginVO.getPassword(), PasswordUtil.getStaticSalt());
-			if (user.getAccount().equals(decryptStr)) {
+			String decryptStr = PasswordUtil.decrypt(user.getPassword(),
+					password, PasswordUtil.getStaticSalt());
+			if (user.getEmail().equals(decryptStr)) {
 				// 正常登录
 				// 选择下次自动登录，cookie处理
-				if (loginVO.getAutoLogin() != null) {
+				if (autoLogin != null && !"".equals(autoLogin)) {
 					/*
 					 * if (loginVO.getAutoLogin().equals("on")) {
 					 * CookieUtil.saveCookie(user, inv.getResponse()); }
 					 */
-					request.getSession().setAttribute("flag", loginVO.getAutoLogin());
+					request.getSession().setAttribute("flag", autoLogin);
 					// set cookie
-					if (loginVO.getAutoLogin() != null && loginVO.getAutoLogin().equals("1")) {
-						Cookie cookie = new Cookie("cookie_user", loginVO.getAccount() + "-" + loginVO.getPassword());
+					if (autoLogin != null && !"".equals(autoLogin)
+							&& loginVO.getAutoLogin().equals("1")) {
+						Cookie cookie = new Cookie("cookie_user", email + "-"
+								+ password);
 						cookie.setMaxAge(60 * 60 * 24 * 30); // cookie 保存30天
 						response.addCookie(cookie);
 					} else {
-						Cookie cookie = new Cookie("cookie_user", loginVO.getAccount() + "-" + null);
+						Cookie cookie = new Cookie("cookie_user", email + "-"
+								+ null);
 						cookie.setMaxAge(60 * 60 * 24 * 30); // cookie 保存30天
 						response.addCookie(cookie);
 					}
 				}
-				// 查找所属代理商信息
-				Integer agentId = user.getAgentId();
-				String domain = agentInfoService.getDomainById(agentId);
-				if (!StringUtils.isNullBlank(user.getHeadimgUrl())) {
-					user.setHeadimgUrl(ConvertUtil.procImgPath(user.getHeadimgUrl()));
-				}
-				if(SessionUtil.getUser(inv.getRequest()) != null){
-					//如果有登陆先注销
-					SessionUtil.destroy(inv.getRequest(),Globals.SESSION_USER);
+
+				// Integer agentId = user.getAgentId();
+				// String domain = agentInfoService.getDomainById(agentId);
+
+				if (SessionUtil.getUser(inv.getRequest()) != null) {
+					// 如果有登陆先注销
+					SessionUtil.destroy(inv.getRequest(), Globals.SESSION_USER);
 				}
 				SessionUtil.setSessionUserAttr(inv.getRequest(), user);
 				// 检查是否绑定微信号
 				Integer uid = wxUserInfoService.userExist(user.getUserId());
 				if (uid == null) {// 没有绑定公众号
-					inv.getResponse().sendRedirect(domain + "/pc/third/toWetChatBind/" + user.getUserId());
+					inv.getResponse().sendRedirect(basePath);
 					return null;
 				}
 				// 登录后回到上次发起登录页面处理
 
-				inv.getResponse().sendRedirect(domain);
+				inv.getResponse().sendRedirect(basePath);
 				return null;
 			} else {
 				// 密码错误
 				request.setAttribute("message", "密码错误,请重新输入密码！");
 				// inv.getResponse().sendRedirect("/hudongtui/login/");
+				WebApplicationUtils.redirectMsg("密码错误,请重新输入密码！!", "", basePath
+						+ "/login" + "", true);
+				// return null;
 				return "pc/login";
 			}
 
 		} else {
 			// 账号不存在
 			request.setAttribute("message", "账号不存在,请重新输入账号！");
+			WebApplicationUtils.redirectMsg("密码错误,请重新输入密码！!", "", basePath
+					+ "/login" + "", true);
 			// inv.getResponse().sendRedirect(WebApplicationUtils.getContextPath()+"/login/");
 			return "pc/login";
+			// /return null;
 		}
+		// return "";
 
 	}
 
@@ -343,11 +389,15 @@ public class LoginController {
 	 * @return
 	 * @throws Exception
 	 */
-//	@Get("wechat")
+	// @Get("wechat")
 	public String wxWebLogin(Invocation inv) {
 		try {
-			String redircUrl = URLEncoder.encode(ReadProperties.getPara("wx_open_authordomain") + "/login/wechatRedirect", "UTF-8");
-			String wechatUrl = OpenConstanst.getWebOauthaccessSnsapiLogin().replace("APPID", ReadProperties.getPara("wx_open_appid")).replace("REDIRECT_URI", redircUrl)
+			String redircUrl = URLEncoder.encode(
+					ReadProperties.getPara("wx_open_authordomain")
+							+ "/login/wechatRedirect", "UTF-8");
+			String wechatUrl = OpenConstanst.getWebOauthaccessSnsapiLogin()
+					.replace("APPID", ReadProperties.getPara("wx_open_appid"))
+					.replace("REDIRECT_URI", redircUrl)
 					.replace("STATE", "tchajian12099988");
 			inv.getResponse().sendRedirect(wechatUrl);
 		} catch (UnsupportedEncodingException e1) {
@@ -365,8 +415,9 @@ public class LoginController {
 	 * @return
 	 * @throws Exception
 	 */
-//	@Get("wechatRedirect")
-	public String wxWebRedirc(Invocation inv, @Param("role") String role) throws Exception {
+	// @Get("wechatRedirect")
+	public String wxWebRedirc(Invocation inv, @Param("role") String role)
+			throws Exception {
 
 		ThirdVO thirdVO = wxUserBusService.webLogin(inv.getRequest(), role);
 		User user = userService.findByUserId(thirdVO.getUserId());
@@ -374,7 +425,8 @@ public class LoginController {
 		String lastUrl = WebApplicationUtils.getBasePath() + "/pc/my/actList";
 		if (inv.getRequest().getSession().getAttribute(Globals.SESSION_LASTURL) != null) {
 			if (!StringUtils.isNullBlank(lastUrl)) {
-				lastUrl = inv.getRequest().getSession().getAttribute(Globals.SESSION_LASTURL).toString();
+				lastUrl = inv.getRequest().getSession()
+						.getAttribute(Globals.SESSION_LASTURL).toString();
 			}
 		}
 		inv.getResponse().sendRedirect(lastUrl);
@@ -392,8 +444,9 @@ public class LoginController {
 	 * @return
 	 * @throws Exception
 	 */
-//	@Get("wechatmp/{scope}")
-	public String wxMpLogin(Invocation inv, @Param("scope") Integer scope, @Param("role") String role) throws Exception {
+	// @Get("wechatmp/{scope}")
+	public String wxMpLogin(Invocation inv, @Param("scope") Integer scope,
+			@Param("role") String role) throws Exception {
 
 		String oauthUrl = MpConstants.getOauthAccessBase();
 		if (scope != null) {
@@ -401,7 +454,8 @@ public class LoginController {
 				oauthUrl = MpConstants.getOauthAccessUserinfo();
 			}
 		}
-		String redircUrl = URLEncoder.encode(ReadProperties.getPara("httpPath") + "/login/wechatmpRedirect/" + String.valueOf(scope), "UTF-8");
+		String redircUrl = URLEncoder.encode(ReadProperties.getPara("httpPath")
+				+ "/login/wechatmpRedirect/" + String.valueOf(scope), "UTF-8");
 		oauthUrl = oauthUrl.replace("REDIRECT_URI", redircUrl);
 		try {
 			inv.getResponse().sendRedirect(oauthUrl);
@@ -422,14 +476,15 @@ public class LoginController {
 	 * @return
 	 * @throws Exception
 	 */
-//	@Get("wechatmpRedirect/{scope}")
-	public String wxMpRedirc(Invocation inv, @Param("scope") Integer scope, @Param("role") String role) throws Exception {
+	// @Get("wechatmpRedirect/{scope}")
+	public String wxMpRedirc(Invocation inv, @Param("scope") Integer scope,
+			@Param("role") String role) throws Exception {
 
-		MpThirdVO thirdVO = wxUserBusService.mpLogin(inv.getRequest(), scope, role);
+		MpThirdVO thirdVO = wxUserBusService.mpLogin(inv.getRequest(), scope,
+				role);
 		inv.getRequest().setAttribute("userInfo", thirdVO);
 		return null;
 	}
-
 
 	/**
 	 * qq 网页登录
@@ -437,11 +492,12 @@ public class LoginController {
 	 * @param inv
 	 * @throws Exception
 	 */
-//	@Get("/qq")
+	// @Get("/qq")
 	public void qqLogin(Invocation inv) throws Exception {
 		inv.getResponse().setContentType("text/html;charset=utf-8");
 		try {
-			inv.getResponse().sendRedirect(new Oauth().getAuthorizeURL(inv.getRequest()));
+			inv.getResponse().sendRedirect(
+					new Oauth().getAuthorizeURL(inv.getRequest()));
 		} catch (QQConnectException e) {
 			e.printStackTrace();
 		}
@@ -455,8 +511,9 @@ public class LoginController {
 	 * @return
 	 * @throws Exception
 	 */
-//	@Get("/qqRedirect")
-	public String qqRedirect(Invocation inv, @Param("role") String role) throws Exception {
+	// @Get("/qqRedirect")
+	public String qqRedirect(Invocation inv, @Param("role") String role)
+			throws Exception {
 
 		ThirdVO thirdVO = qqConnectService.login(inv.getRequest(), role);
 		User user = userService.findByUserId(thirdVO.getUserId());
@@ -464,13 +521,13 @@ public class LoginController {
 		String lastUrl = WebApplicationUtils.getBasePath() + "/pc/my/actList";
 		if (inv.getRequest().getSession().getAttribute(Globals.SESSION_LASTURL) != null) {
 			if (!StringUtils.isNullBlank(lastUrl)) {
-				lastUrl = inv.getRequest().getSession().getAttribute(Globals.SESSION_LASTURL).toString();
+				lastUrl = inv.getRequest().getSession()
+						.getAttribute(Globals.SESSION_LASTURL).toString();
 			}
 		}
 		inv.getResponse().sendRedirect(lastUrl);
 		return null;
 	}
-
 
 	/**
 	 * 重新登录

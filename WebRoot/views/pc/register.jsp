@@ -1,351 +1,262 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ include file="constant.jsp"%>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<%@ include file="resource.jsp"%>
-	<script type="text/javascript" src="${path }/js/lrz.pc.min.js"></script>
-	<title>注册</title>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="${path}/css/common.css"/>
+    <link rel="stylesheet" href="${path}/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="${path}/css/style.css"/>
+    <!--[if !IE]><!-->
+    <style>
+        .form-reg .form-item .auto_input{ width:205px; padding-right:25px !important;}
+    </style>
+    <!--<![endif]-->
 </head>
-<body>
-	<!-- 头部 开始 -->
-		<%@ include file="header.jsp" %>
-	<!-- 头部 结束 -->
-	<!-- 注册 开始 -->
-	<div class="w1190 register">
-		<form class="cont" action="${path }/register/doRegister" onsubmit="return verify_submit()" method="post">
-			<h2>注册</h2>
-			<div class="row">
-				<span class="fl">账号</span>
-				<div class="fr">
-					<input class="verify_mail" type="text" name="account" placeholder="邮箱" verify="false" />
-					<i>*</i><em></em>
-				</div>
-				<div class="clear"></div>
-			</div>
-			<div class="row">
-				<span class="fl">设置密码</span>
-				<div class="fr">
-					<input class="verify_pass1" type="password" name="password" maxlength="16" verify="false" />
-					<i>*</i><b>长度为6~16位字符</b><em></em>
-				</div>
-				<div class="clear"></div>
-			</div>
-			 <input type="hidden" name="token" value="${token}"> 
-			<div class="row">
-				<span class="fl">确认密码</span>
-				<div class="fr">
-					<input class="verify_pass2" type="password" maxlength="16" verify="false" />
-					<i>*</i><em></em>
-				</div>
-				<div class="clear"></div>
-			</div>
-			<div class="row">
-				<span class="fl">品牌名称</span>
-				<div class="fr">
-					<input class="verify_name" name="nickName" maxLength=100 type="text" />
-					<i>*</i><em></em>
-				</div>
-				<div class="clear"></div>
-			</div>
-			<div class="space_10"></div>
-			<div class="row">
-				<span class="fl">品牌LOGO</span>
-				<div class="fr">
-					<input id="preview" name="headimgbase64" type="hidden" verify="false" />
-					<img class="preview" src="${path}/images/registerlogo.png" />
-					<div class="uploadimg"><input class="verify_logo" onchange="imgToBase64(this)" type="file" verify="true" />上传图片</div>
-					<i>*</i><b>推荐150X150或等比尺寸</b>
-				</div>
-				<div class="clear"></div>
-			</div>
-			<div class="space_10"></div>
-			<div class="row">
-				<span class="fl">验证码</span>
-				<div class="fr">
-					<input class="verify_vcode" style="width:80px;" type="text" name="identifyCode" verify="true"  />
-					<img class="vcode" src="${path}/RandomValidateCodeServlet" />
-					<div class="change_vcode" onclick="reloadImage();">换一张</div>
-					<i>*</i><em></em>
-				</div>
-				<div class="clear"></div>
-			</div>
-			<div class="row">
-				<span class="fl">&nbsp;</span>
-				<div class="fr">
-					<label>
-						<input class="verify_protocol" type="checkbox" verify="false" />我已经阅读并同意<a href="${path }/register/agreeMent">《注册协议》</a>
-					</label>
-				</div>
-				<div class="clear"></div>
-			</div>
-			<div class="space_20"></div>
-			<div class="row">
-				<span class="fl">&nbsp;</span>
-				<div class="fr">
-					<input type="submit" value="注 册" />&nbsp;&nbsp;
-					<b>已有帐号<a href="${basePath }login">马上登录</a></b>
-				</div>
-				<div class="clear space_20"></div>
-			</div>
-		</form>
-	</div>
-	<!-- 注册 结束 -->
-	<!-- 底部 开始 -->
-		<%@ include file="footer.jsp" %>
-	<!-- 底部 结束 -->
+<body class="reg">
+   <div class="top-wrapper">
+     <div class="top-info">
+        <div class="top-left">
+            <ul>
+               <li><a href="${basePath}login">亲，请登录</a><a href="#">注册</a></li>
+               <li class="spacer"></li>
+               <li data-toggle="arrowdown" id="arrow2" class="msg-info">
+                <a href="#">我的优惠</a>
+                <span class="down-icon"></span>
+                <div data-toggle="hidden-box" id="nav-box2" class="msg-box">
+                    <div class="userinfo">
+                        <div class="u-pic">
+
+                        </div>
+                        <div class="u-name u-login">
+                            <a href="${basePath}login" class="link-login">你好，请登录</a>
+                        </div>
+                        <div class="u-extra">
+                            <a href="#">优惠券</a><span class="line-a">|</span><a href="#">消息</a>
+                        </div>
+                    </div>
+                    <div class="otherlist">
+                        <div class="fore1">
+                            <div class="item">
+                                <a href="#" clstag="" target="_blank">待处理订单</a>
+                            </div>
+                            <div class="item">
+                                <a href="#" clstag="" target="_blank">咨询回复<span id="num-consultation"></span></a>
+                            </div>
+                            <div class="item">
+                                <a href="#" clstag="" target="_blank">降价商品<span id="num-reduction"></span></a>
+                            </div>
+                            <div class="item">
+                                <a href="#" clstag="" target="_blank">返修退换货</a>
+                            </div>
+                        </div>
+                        <div class="fore2">
+                            <div class="item">
+                                <a href="#" clstag="" target="_blank">我的关注</a>
+                            </div>
+                            <div class="item">
+                                <a href="#" clstag="" target="_blank">我的京豆</a>
+                            </div>
+                            <div class="item">
+                                <a href="#" clstag="" target="_blank">我的理财</a>
+                            </div>
+                            <div class="item baitiao hide" style="display:block">
+                                <a href="#" clstag="jr|keycount|njdhome|wdbaitiao" target="_blank">我的白条</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="spacer"></li>
+            <li><a href="#">我的订单</a></li>
+        </ul>        
+    </div>
+    <div class="top-right">
+        <ul>
+            <li data-toggle="arrowdown" id="arrow3" class="user-name">
+                <a href="#">我的优惠</a>
+                <span class="down-icon"></span>
+                <div data-toggle="hidden-box" id="nav-box3" class="my-taobao-box">
+                    <ul>
+                        <li>已购宝贝</li>
+                        <li>我的优惠</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="spacer"></li>
+            <li data-toggle="arrowdown" id="arrow4" class="user-name">
+                <i class="fa fa-shopping-cart fa-orange"></i>
+                <a href="#">优惠车</a>
+                <span class="down-icon"></span>
+                <div data-toggle="hidden-box" id="nav-box4" class="shopping-box">
+                    <span>您购物车里还没有任何宝贝。</span><a class="check-shopp" href="#">查看我的购物车</a>
+                </div>
+            </li>
+            <li class="spacer"></li>
+            <li data-toggle="arrowdown" id="arrow5" class="user-name">
+                <i class="fa fa-star fa-gray"></i>
+                <a href="#">收藏夹</a>
+                <span class="down-icon"></span>
+                <div data-toggle="hidden-box" id="nav-box5" class="get-box">
+                    <ul>
+                        <li>收藏的宝贝</li>
+                        <li>收藏的店铺</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="spacer"></li>
+            <li href="#">商品分类</li>                   
+        </ul>
+    </div>
+</div>
+</div>
+<div class="reg-content">
+    <div class="box-reg">
+        <div class="con-1">
+            <form action="${basePath}register/doRegister" class="form-reg" id="form_reg" name="form2" method="post" >
+                <div class="form-item">
+                    <label for="reg_mail" class="label">
+                        <b class="require">*</b>常用邮箱：
+                    </label>
+                    <input verify="true" type="text" autocomplete="off" maxlength="40" name="email" id="reg_mail" class="txt txt-1 auto_input" value="" tabindex="1" />
+                    <span class="tiptext tiptext-info"></span>
+                    <a href="javascript:;" class="clear-btn" style="display:none;">×</a>
+                    <table id="auto_email" style=" display:none;" border="0" cellpadding="0" cellspacing="0">
+                        <thead>
+                            <tr><th>请选择或继续输入…</th></tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div class="form-item">
+                    <label for="reg_password" class="label">
+                        <b class="require">*</b>设置密码：
+                    </label>
+                    <input verify="true" type="password" name="password" id="reg_password" class="txt txt-1" tabindex="2" />
+                    <span class="tiptext tiptext-ok"></span>
+                    <div class="poptip-pass">
+                        <b class="wai">◆</b>
+                        <b class="nei">◆</b>
+                        <div class="bg"></div>大写锁定已打开
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label for="reg_password_again" class="label"><b class="require">*</b>确认密码：</label>
+                    <input verify="true" type="password" name="password_again" id="reg_password_again" class="txt txt-1" disabled="disabled" tabindex="3" />
+                    <span class="tiptext tiptext-error"></span>
+                    <div class="poptip-pass">
+                        <b class="wai">◆</b>
+                        <b class="nei">◆</b>
+                        <div class="bg"></div>大写锁定已打开
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label for="reg_check_code" class="label">
+                        <b class="require">*</b>验证码：
+                    </label>
+                    <input type="text" id="reg_check_code" maxlength="4" name="checkcode" class="txt txt-2" tabindex="4" verify="true" />
+                    <!--   <img onclick="RefreshCheckcode($('#reg_checkcode'));" id="reg_checkcode" src="img/code.jpg" title="点击刷新验证码" alt ="点击刷新验证码" /> -->
+                    <img id="reg_checkcode" onclick="reloadImage();" src="${path}/RandomValidateCodeServlet" title="点击刷新验证码" alt ="点击刷新验证码"/>
+                    看不清？
+                    <a id="check-code-change" class="check-code-change" onclick="reloadImage();">换一张</a>
+                    <p class="tiptext"></p>
+                    
+                    <!-- <p class="tiptextt"></p> -->
+                </div>
+                <div class="form-item">
+                    <p class="text-term">
+                        <label for="CheckTerm">
+                            <input type="checkbox" checked="checked" id="CheckTerm" />我已阅读并同意
+                            <a href="#" class="blue">《帮you惠用户注册协议》</a>
+                        </label>
+                        <span class="tiptext tiptext-error" style=" display:none; margin-left:45px;"><i></i>您还未同意返还网的服务条款</span>
+                    </p>
+                    <!-- <a href="#" class="btn btn-1" id="reg_submit" tabindex="5" onclick="return RegisterByEmail($(this),true);" >
+                        <span>立即注册</span>
+                    </a> -->
+                    <input  type="button"  onclick="verify_submit();" class="btn-regist" value="立即注册">
+                   <!--  onclick="verify_submit();" -->
+                </div>
+            </form>
+        </div>
+        <div class="con-2">
+            <h3>已有帮you惠帐号？</h3>
+            <div class="btn-outer"><a href="${basePath}login" class="btn btn-2">登&nbsp;录</a></div>
+            <p>使用合作网站账号登录帮you惠</p>
+            <ul>
+                <li><a href="#" class="f14"><i class="ico-login-otherway i-login-otherway-qq"></i>QQ</a></li>
+                <li><a href="#"><i class="ico-login-otherway i-login-otherway-tb"></i>淘宝</a></li>
+                <li><a href="#"><i class="ico-login-otherway i-login-otherway-sina"></i>新浪微博</a></li>
+                <li><a href="#"><i class="ico-login-otherway i-login-otherway-weixin"></i>微信</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="footer-right">
+        <div class="footer-nav">
+            <a href="#">阿里巴巴集团</a>|
+            <a href="#">阿里巴巴国际站</a>|
+            <a href="#">阿里巴巴中国站</a>|
+            <a href="#">全球速卖通</a>|
+            <a href="#">导购网</a>|
+            <a href="#">天猫</a>|
+            <a href="#">聚划算</a>|
+            <a href="#">一淘</a>|
+            <a href="#">阿里妈妈</a>|
+            <a href="#">阿里云计算</a>|
+            <a href="#">云OS</a>|
+            <a href="#">万网</a>|
+            <a href="#">支付宝</a>|
+            <a href="#">来往</a>
+        </div>
+        <div class="about-tao">
+            <span class="gary-text">Copyright©2004-2015  帮you惠byouh.com版权所有</span>
+        </div>
+    </div>
+</div>
+<div class="backtoTop" id="backToTop1">
+    <div id="backToTop-up" class="up-back"><i class="fa fa-angle-up"></i></div>
+    <div id="backToTop-down" class="down-back"><i class="fa fa-angle-down"></i></div>
+</div>
+<script type="text/javascript" src="${path}/js/jquery.js" ></script>
+<script src="${path}/js/img-show.js"></script>
+<script type="text/javascript" src="${path}/js/validate/automail.js" ></script>
+<script src="${path}/js/main.js"></script>
+<script>
+
+//更换验证码
+	function reloadImage(){
+		 $("#reg_checkcode").attr("disable","true");
+		 $("#reg_checkcode").attr("src",'<%=path%>/RandomValidateCodeServlet?ts='+new Date().getTime());
+		 $("#reg_checkcode").attr("disable","false");
+	} 
 	
-</body>
-</html>
-<script type="text/javascript">
-	//图片上传预览
-	function imgToBase64(file){
-		if (file.files && file.files[0]){
-			var reader = new FileReader();
-			reader.onload = function(evt){
-				$(file).parent().prev().attr("src",evt.target.result);
-				$('#preview').attr("value",evt.target.result);
-			}
-			reader.readAsDataURL(file.files[0]);
-		}
-	}
-
-	//屏蔽复制密码
-	$(function(){
-		$("input:password").bind("copy cut paste",function(e){
-			return false;
-		});
-	});
 
 
-	//验证用户名
-	$(function(){
-		$('.verify_mail').blur(function(){
-			if($(this).val()){
-				if(!verify($(this).val(),'email','')){
-					insertNotice($(this),"请输入正确的邮箱格式");
-					$(this).attr("verify","false");
-					return false;
-				}else{
-					///////////////////lll....
-					var state = checkAccount($(this).val());
-					if(state){//帐号已被注册
-						insertNotice($(this),'该账号已被注册<a href="http://wpa.qq.com/msgrd?v=3&uin=${agentInfoConst.serviceqq }&site=qq&menu=yes">点击申诉</a>');
-						$(this).attr("verify","false");
-						return false;
-					}else{
-						insertNotice($(this),'<img src="${path}/images/pc/done_ico.png">');
-						$(this).attr("verify","true");
-						return true;
-					}
-				}
-			}else{
-				insertNotice($(this),"请输入内容");
-				$(this).attr("verify","false");
-				return false;
-			}
-		});
-	});
 
-	
-	//检查账号是否注册过
-	
-	function checkAccount(account){
-		var isAccountExist = false;
-		$.ajax({
-				type: "POST",
-				url : "${path }/register/checkAccount",
-				async: false,
-				data:{account:account},
-				dataType: "json",
-				success: function(data){
-					if(data.state == '0'){
-						isAccountExist = true;
-					}
-				}
-		}); 
-		return isAccountExist;
-	}
-	
-	//验证密码//检查验证码是否正解
-		$(function(){
-			$('.verify_pass1').blur(function(){
-				$(".verify_pass2").blur();
-				if($(this).val()){
-					if($(this).val().length > 5){
-						insertNotice($(this),'<img src="${path}/images/pc/done_ico.png">');
-						$(this).attr("verify","true");
-						return true;
-					}else{
-						insertNotice($(this),"请输入合适的密码长度");
-						$(this).attr("verify","false");
-						return false;
-					}
-				}else{
-					insertNotice($(this),"请输入密码");
-					$(this).attr("verify","false");
-					return false;
-				}
-			});
-			$('.verify_pass2').blur(function(){
-				if($(this).val()){
-					if($(this).val().length > 5){
-						if($('.verify_pass1').val() == $('.verify_pass2').val()){
-							insertNotice($(this),'<img src="${path}/images/pc/done_ico.png">');
-							$(this).attr("verify","true");
-							return true;
-						}else{
-							insertNotice($(this),'两次输入密码不一致');
-							$(this).attr("verify","false");
-							return false;
-						}
-					}else{
-						insertNotice($(this),"请输入合适的密码长度");
-						$(this).attr("verify","false");
-						return false;
-					}
-				}else{
-					insertNotice($(this),"请输入密码");
-					$(this).attr("verify","false");
-					return false;
-				}
-			});
-		});
-
-	//验证品牌标志是否上传
-/* 	$(function(){
-		$('.verify_logo').change(function(){
-			insertNotice($(this).parent(),'<img src="${path}/images/pc/done_ico.png">');
-			$(this).attr("verify","true");
-			return true;
-		});
-	}); */
-
-	//验证品牌名称
-	$(function(){
-		$('.verify_name').blur(function(){
-			if($(this).val()){
-				insertNotice($(this),'<img src="${path}/images/pc/done_ico.png">');
-				$(this).attr("verify","true");
-				return true;
-			}else{
-				insertNotice($(this),"请输入品牌名称");
-				$(this).attr("verify","false");
-				return false;
-			}
-		});
-	});
-	
-	//检查品牌logo
-	$(function(){
-		$('#preview').blur(function(){
-			if($(this).val()){
-				insertNotice($(this),'<img src="${path}/images/pc/done_ico.png">');
-				$(this).attr("verify","true");
-				return true;
-			}else{
-				insertNotice($(this),"请选择品牌LOGO");
-				$(this).attr("verify","false");
-				return false;
-			}
-		});
-	}); 
-
-	//验证验证码
-	$(function(){
-		$('.verify_vcode').blur(function(){
-			if($(this).val()){
-				$(this).attr("verify","true");
-				//return true;
-				////mmlllll
-				//alert("11==="+$(this).val());
-				var code=$(this).val();
-				$.ajax({
-				type: "POST",
-				url : "${path }/common/checkIdentifyCodeU",
-				data:{randomCode:code},
-				dataType: "json",
-				success: function(data){
-					//alert(data.state);
-					if(data.state == true){
-						//checkState = true;
-						insertNotice($(".verify_vcode"),'<img src="${path}/images/pc/done_ico.png">');
-						$(this).attr("verify","true");
-						return true;
-					}else{
-						insertNotice($(".verify_vcode"),"验证码有误");
-						$(this).attr("verify","false");
-						return false;
-					}
-				}
-		}); 		
-			}else{
-				insertNotice($(this),"请输入验证码");
-				$(this).attr("verify","false");
-				return false;
-			}
-		});
-	});
-
-	//验证是否同意协议
-	$(function(){
-		$('.verify_protocol').change(function(){
-			if($(this).prop("checked") == true){
-				$(this).attr("verify","true");
-				return true;
-			}else{
-				$(this).attr("verify","false");
-				return false;
-			}
-		});
-	});
-
-	var flag=true;
+	//var flag=true;
 	//提交表单前端验证
 	function verify_submit(){
 		var verify = 0;
-		$('input[type="text"],input[type="password"],.verify_protocol,input[id="preview"]').each(function(){
+		$('input[type="text"],input[type="password"]').each(function(){
 			$(this).blur();
 			if($(this).attr("verify") == "false"){
 				verify += 1;
 			}
 		});
+		//alert(verify);
 		if(verify > 0){
-			return false;
+			return;
 		}else{
-			//防止表单重复提交
-			if (flag==false){
-				return false;
-				window.location.reload();//刷新当前页面.
-				}
-				flag=false;
-				return true;
-				window.location.reload();//刷新当前页面.
+			//alert("33---");
+			 document.form2.submit();
 		}
-	}
-
-	//回到顶部
-	$(function(){
-		$(".gotop").click(function(){
-			$("body,html").animate({scrollTop:0},300);
-		});
-		$(window).scroll(function(){
-			if($(window).scrollTop() > 10){
-				$('.gotop').attr("style","display:block;");
-			}else{
-				$('.gotop').attr("style","display:none;");
-			}
-		});
-	});
 	
-	//更换验证码
-	function reloadImage(){
-		 $(".vcode").attr("disable","true");
-		 $(".vcode").attr("src",'<%=path%>/RandomValidateCodeServlet?ts='+new Date().getTime());
-		 $(".vcode").attr("disable","false");
-	} 
+	}
+	
 </script>
 
-
-
+</body>
+</html>

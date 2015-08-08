@@ -1,12 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ include file="constant.jsp"%>
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<%@ include file="resource.jsp"%>
-	<title>登录</title>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <%@ include file="resource.jsp"%>
+    <link rel="stylesheet" href="${path}/css/common.css"/>
+    <link rel="stylesheet" href="${path}/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="${path}/css/style.css"/>
 </head>
 <% String flag = (String)session.getAttribute("flag")==null?"":(String)session.getAttribute("flag");
 String name = "";
@@ -33,100 +35,116 @@ e.printStackTrace();
 }
 %>
 <body>
-	<!-- 头部 开始 -->
-		<%@ include file="header.jsp" %>
-	<!-- 头部 结束 -->
-		<!-- 登录 开始 -->
-	<div class="w1190 login">
-		<div class="cont">
-			<h2>
-				<span>登录<em>登录后即可免费试用所有模板，新增配置活动，体验全部付费功能</em></span>
-				<!-- <strong>登录超时，请重新登录</strong> -->
-			</h2>
-			<form class="fl" action="${path }/login/doLogin" method="post" onsubmit="return login()" >
-				<div class="row">
-					<span>帐号</span>
-					<input class="username" name="account" type="text" value="<%=name %>" placeholder="请输入邮箱" />
-				</div>
-				<div class="row">
-					<span>密码</span>
-					<input class="password" name="password" type="password" value="<%=password %>"/>
-					<div>
-						<label>
+    <div class="login-head">
+        <div class="logo">
+            <a href="${basePath}">
+                <img src="${path}/img/logo2.png" alt="帮you惠">
+            </a>
+        </div>
+        <h3>欢迎登录</h3>
+    </div>
+    <div class="login-wrap">
+        <div class="login-form">
+            <div class="mt">
+                <h1>帮you惠会员</h1>
+                <a href="${basePath}register/pc" target="_blank"><b></b>免费注册</a>
+            </div>
+            <div class="mc">
+                <form  id="loginForm" method="post" name="form1" action="${basePath}login/doLogin">
+                    <div class="form">
+                        <div class="item item-fore1">
+                            <label for="loginname" class="login-label name-label"></label>
+                            <input type="text" class="itxt" name="email" value="<%=name %>" id="email" placeholder="邮箱/用户名">
+                        </div>
+                        <div class="item item-fore2">
+                            <label class="login-label pwd-label" for="nloginpwd"></label>
+                            <input type="password" class="itxt" name="password" id="password" value="<%=password %>" tabindex="2" autocomplete="off" placeholder="密码">
+                        </div>
+                        <div class="item item-fore3">
+                            <div class="safe">
+                                <span>
+                                 <!--    <input id="" name="" type="checkbox" class="" > -->
+                                   <!--  <label>下次自动登录</label> -->
+                                    <label>
 					
 						<!-- 
 							<input type="checkbox" name="autoLogin" />下次自动登录
 						 -->
 						 <input type="checkbox" name="autoLogin" id="flag" value="1" <%if(flag!=null && flag.equals("1")){%> checked ; value ="1"; <%}else {%> value="0" <%;}%> />记住密码
 						</label>
-						<a href="${path}/login/toFindPwd" class="forget">忘记密码</a>
-					</div>
-				</div>
-				<%String message=(String)request.getAttribute("message");
-				if(message==null){
-					message="";
-				}
-				%>
-				<div class="row " style="color:red;" >
-					<%=message %>
-				</div>
-				   <input type="hidden" name="token" value="${token}"> 
-				<div class="row ">
-					<input type="submit" value="提 交" />
-				</div>
-			</form>
-			<dl class="fr">
-				<dd>
-					还没有帐号？<a href="${basePath }register/pc">立即注册</a>
-				</dd>
-<%-- 				<dd>
-					其他登录方式：
-				</dd>
-				<dt><a href="#">
-					<img src="${path}/images/wechat.png" />
-					<span>微信登录</span>
-				</a></dt> --%>
-			</dl>
-			<div class="clear"></div>
-		</div>
-	</div>
-	<!-- 登录 结束 -->
-	<!-- 底部 开始 -->
-		<%@ include file="footer.jsp" %>
-	<!-- 底部 结束 -->
+                                </span>
+                                <span class="forget-pw-safe">
+                                    <a href="${path}/login/toFindPwd" class="" target="">忘记密码?</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="item item-fore5">
+                            <div class="login-btn">
+                                <a onclick="verify_submit();" class="btn-img">登&nbsp;&nbsp;&nbsp;&nbsp;录</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="coagent">
+                    <h5>使用合作网站账号登录帮you惠：</h5>
+                    <ul>
+                        <li><a href="#" class="f14"><i class="ico-login-otherway i-login-otherway-qq"></i>QQ</a></li>
+                        <li><a href="#"><i class="ico-login-otherway i-login-otherway-tb"></i>淘宝</a></li>
+                        <li><a href="#"><i class="ico-login-otherway i-login-otherway-sina"></i>新浪微博</a></li>
+                        <li><a href="#"><i class="ico-login-otherway i-login-otherway-weixin"></i>微信</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-right">
+            <div class="footer-nav">
+                <a href="#">阿里巴巴集团</a>|
+                <a href="#">阿里巴巴国际站</a>|
+                <a href="#">阿里巴巴中国站</a>|
+                <a href="#">全球速卖通</a>|
+                <a href="#">导购网</a>|
+                <a href="#">天猫</a>|
+                <a href="#">聚划算</a>|
+                <a href="#">一淘</a>|
+                <a href="#">阿里妈妈</a>|
+                <a href="#">阿里云计算</a>|
+                <a href="#">云OS</a>|
+                <a href="#">万网</a>|
+                <a href="#">支付宝</a>|
+                <a href="#">来往</a>
+            </div>
+            <div class="about-tao">
+                <span class="gary-text">Copyright©2004-2015  帮you惠byouh.com版权所有</span>
+            </div>
+        </div>
+    </div>
+    <script src="${path}/js/jquery_1.9.js"></script>
+    <script src="${path}/js/img-show.js"></script>
+    <script src="${path}/js/validate/jquery.validate.min.js"></script>
+    <script src="${path}/js/validate/messages_cn.js"></script>
+    <script src="${path}/js/main.js"></script>
 </body>
-</html>
-<script type="text/javascript">
-	var flag=true;
-	function login(){
-		if(!$('.username').val() || !$('.password').val()){
-			alert("帐号密码不能为空！");
-			return false;
-		}else{
-			//防止表单重复提交
-			if (flag==false){
-				return false;
-				window.location.reload();//刷新当前页面.
-				}
-				flag=false;
-				return true;
-				window.location.reload();//刷新当前页面.
-		}
+
+<script>
+function verify_submit(){
+	var name=$("#email").val();
+	var password=$("#password").val();
+	if(name==""){
+		insertNotice($("#email"),"请输入邮箱或者用户名 ");
+		return;
 	}
+    if(password==""){
+    	insertNotice($("#password"),"请输入密码");
+    	return;
+	}
+   
+   document.form1.submit();
+	
+}
 
-	//回到顶部
-	$(function(){
-		$(".gotop").click(function(){
-			$("body,html").animate({scrollTop:0},300);
-		});
-		$(window).scroll(function(){
-			if($(window).scrollTop() > 10){
-				$('.gotop').attr("style","display:block;");
-			}else{
-				$('.gotop').attr("style","display:none;");
-			}
-		});
-	});
+
+
 </script>
-
-
+</html>
