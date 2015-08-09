@@ -270,25 +270,26 @@
     <div class="main-left">
         <div class="main-title">
             <h1>超高优惠</h1>
-            <span class="show-list">
-                    <ul>
-                        <li>服装内衣</li>
-                        <li>鞋包配饰</li>
-                        <li>运动户外</li>
-                        <li>珠宝手表</li>
-                        <li>手机数码</li>
-                        <li>家电办公</li>
-                        <li>护肤彩妆</li>
-                        <li>母婴用品</li>
-                        <li>家纺居家</li>
-                        <li>家具建材</li>
-                        <li>美食特产</li>
-                        <li>日用百货</li>
-                        <li>汽车摩托</li>
-                        <li>文化娱乐</li>
-                    </ul>
-            </span>
         </div>
+               <div class="show-list">
+                    <ul>
+                        <li class="current"><a href="#">全部(100)</a></li>
+                        <li><a href="#">服装内衣(12)</a></li>
+                        <li><a href="#">鞋包配饰(12)</li>
+                        <li><a href="#">运动户外(12)</li>
+                        <li><a href="#">珠宝手表(12)</li>
+                        <li><a href="#">手机数码(12)</li>
+                        <li><a href="#">家电办公(12)</li>
+                        <li><a href="#">护肤彩妆(12)</li>
+                        <li><a href="#">母婴用品(12)</li>
+                        <li><a href="#">家纺居家(12)</li>
+                        <li><a href="#">家具建材(12)</li>
+                        <!-- <li><a href="#">美食特产</a></li>
+                        <li><a href="#">日用百货</a></li>
+                        <li><a href="#">汽车摩托</a></li>
+                        <li><a href="#">文化娱乐</a></li> -->
+                    </ul>
+            </div>
         <div class="product-box">
             <div class="box">
               <div class="logo">
@@ -1106,46 +1107,9 @@
         <a class="help-a" href="#">旺信</a>
     </div>
 </div>
-<div class="footer">
-    <div class="footer-right">
-        <div class="footer-nav">
-            <a href="#">阿里巴巴集团</a>|
-            <a href="#">阿里巴巴国际站</a>|
-            <a href="#">阿里巴巴中国站</a>|
-            <a href="#">全球速卖通</a>|
-            <a href="#">优惠网</a>|
-            <a href="#">天猫</a>|
-            <a href="#">聚划算</a>|
-            <a href="#">一淘</a>|
-            <a href="#">阿里妈妈</a>|
-            <a href="#">阿里云计算</a>|
-            <a href="#">云OS</a>|
-            <a href="#">万网</a>|
-            <a href="#">支付宝</a>|
-            <a href="#">来往</a>
-        </div>
-        <div class="some-info">
-            <img src="${path}/img/some.png" />
-        </div>
-        <div class="about-tao">
-            <span class="gary-text">&copy; 2014 Taobao.com 版权所有</span>
-            <a href="#">关于优惠</a>
-            <a href="#">合作伙伴</a>
-            <a href="#">营销中心</a>
-            <a href="#">廉正举报</a>
-            <a href="#">联系客服</a>
-            <a href="#">开放平台</a>
-            <a href="#">诚征英才</a>
-            <a href="#">联系我们</a>
-            <a href="#">网站地图</a>
-            <a href="#">法律声明</a>
-        </div>
-    </div>
-</div>
-<div class="backtoTop" id="backToTop1">
-    <div id="backToTop-up" class="up-back"><i class="fa fa-angle-up"></i></div>
-    <div id="backToTop-down" class="down-back"><i class="fa fa-angle-down"></i></div>
-</div>
+<!-- 底部 开始 -->
+		<%@ include file="footer.jsp" %>
+<!-- 底部 结束 -->
 <script type="text/javascript" src="${path}/js/jquery.js" ></script>
 <script type="text/javascript" src="${path}/js/img-show.js"></script>
 <script type="text/javascript" src="${path}/js/validate/automail.js" ></script>

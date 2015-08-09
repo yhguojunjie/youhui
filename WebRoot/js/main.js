@@ -189,8 +189,10 @@
         }).html('还没有新的消息...');
     });
 
-    //优惠品分类
-    $()
+    //超高优惠
+    $('.show-list li').click(function(){
+    	$(this).addClass('current').siblings().removeClass('current');
+    });
     //合作伙伴
     $('.right-con .cooper-logo').hover(function() {
         $(this).addClass('hover');

@@ -6,7 +6,7 @@
  <link rel="stylesheet" href="${path}/css/common.css"/>
     <link rel="stylesheet" href="${path}/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="${path}/css/style.css"/>
-	<div class="w1190 head" id="header">
+	<div id="header">
 		<div class="top-wrapper">
         <div class="top-info">
             <div class="top-left">

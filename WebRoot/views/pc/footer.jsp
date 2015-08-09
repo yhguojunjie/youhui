@@ -5,8 +5,7 @@
 <script type="text/javascript">
 	BizQQWPA.addCustom({aty: '1', a: '1', nameAccount: '${agentInfoConst.serviceqq }', selector: 'BizQQWPAFooter'});
 </script>
-	<div class="w1190 foot">
-		<div class="footer">
+<div class="footer">
     <div class="footer-right">
         <div class="footer-nav">
             <a href="#">阿里巴巴集团</a>|
@@ -42,11 +41,13 @@
         </div>
     </div>
 </div>
-		
-	</div>
+<div class="backtoTop" id="backToTop1">
+    <div id="backToTop-up" class="up-back"><i class="fa fa-angle-up"></i></div>
+    <div id="backToTop-down" class="down-back"><i class="fa fa-angle-down"></i></div>
+</div>
 	<!-- 底部 结束 -->
 	<!-- 浮动菜单 开始 -->
-	<div class="float_menu" style="display:none;">
+<%-- 	<div class="float_menu" style="display:none;">
 		<ul class="clearfix">
 			<li class="sliding0">
 				<a><em class="phone_ico"></em><span>${agentInfoConst.servicePhone }</span></a>
@@ -74,9 +75,9 @@
 				<a><em class="gotop_ico">返回顶部</em></a>
 			</li>
 		</ul>
-	</div>
+	</div> --%>
   
-  
+<!--   
 <script type="text/javascript">
 	$(function(){
 		$(".gotop").click(function(){
@@ -115,4 +116,4 @@
 			}); 
 		}
 	});
-</script>
+</script> -->

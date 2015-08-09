@@ -7,41 +7,33 @@
 	<%@ include file="resource.jsp"%>
 	<title>找回密码</title>
 </head>
-<body>
+<body class="reg">
 	<!-- 头部 开始 -->
 		<%@ include file="header.jsp" %>
 	<!-- 头部 结束 -->
 	<!-- 找回密码开始 -->
-	<div class="w1190 register">
+	<div class="forgetPwd">
 		<form class="cont" action="${path }/login/findPassWord" onsubmit="return verifyy_submit()" method="post" >
 			<h2>找回密码</h2>
 			<div class="row">
-				<span class="fl">账号</span>
-				<div class="fr">
+				<label>账号</label>
+				<div class="email">
 					<input class="verifyy_mail" name="account" type="text" placeholder="邮箱" verify="false" />
 					<i>*</i><em></em>
-					<b style="display:block;margin-top:-20px;">友情提示：如该邮箱不是您现在使用的邮箱，请<a href="http://wpa.qq.com/msgrd?v=3&uin=${agentInfoConst.serviceqq }&site=qq&menu=yes">联系在线客服</a>进行密码重置。</b>
 				</div>
-				<div class="clear"></div>
 			</div>
-			<!--  
-			<div class="row">
-				<span class="fl">验证码</span>
-				<div class="fr">
-					<input class="verify_vcode" style="width:120px;" type="text" verify="false" />
-					<a class="getvcode">获取验证码</a>
-					<i>*</i><em></em>
+			<p class="tip">友情提示：如该邮箱不是您现在使用的邮箱，请<a href="http://wpa.qq.com/msgrd?v=3&uin=${agentInfoConst.serviceqq }&site=qq&menu=yes">联系在线客服</a>进行密码重置。</p>
+		<!-- 	<div class="row">
+				<label>验证码</label>
+				<div class="email code">
+					<input class="verify_vcode" type="text" verify="false" />
+					<a class="getvcode"><i>*</i>获取验证码</a>
+					<em></em>
 				</div>
-				<div class="clear"></div>
-			</div>-->
-			<div class="space_20"></div>
+			</div> -->
 			 <input type="hidden" name="token" value="${token}"> 
 			<div class="row">
-				<span class="fl">&nbsp;</span>
-				<div class="fr">
-					<input type="submit"  value="发送验证邮件" />
-				</div>
-				<div class="clear space_20"></div>
+				<input type="submit"  value="发送验证邮件" />
 			</div>
 		</form>
 	</div>
@@ -49,27 +41,6 @@
 	<!-- 底部 开始 -->
 		<%@ include file="footer.jsp" %>
 	<!-- 底部 结束 -->
-	<!-- 浮动菜单 开始 -->
-	<div class="float_menu">
-		<ul>
-			<li class="sliding">
-				<a><em class="phone_ico"></em><span>0592-7127103</span></a>
-			</li>
-			<li class="clear"></li>
-			<li class="sliding">
-				<a href="http://wpa.qq.com/msgrd?v=3&uin=${agentInfoConst.serviceqq }&site=qq&menu=yes"><em class="qq_ico"></em><span>点击QQ交谈</span></a>
-			</li>
-			<li class="clear"></li>
-			<li id="float_menucode">
-				<a href="#" class="sliding"><img src="${path}/images/pc/float_code.jpg"></a>
-			</li>
-			<li class="clear"></li>
-			<li class="gotop">
-				<a><em class="gotop_ico">返回顶部</em></a>
-			</li>
-		</ul>
-	</div>
-	<!-- 浮动菜单 结束 -->
 </body>
 </html>
 <script type="text/javascript">

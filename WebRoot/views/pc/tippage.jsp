@@ -14,17 +14,15 @@ request.setAttribute("frontTitle","信息提示");
 <html>
 <head>
 	<%@ include file="resource.jsp"%>
-	<title>提交申请成功！</title>
-	
+	<title>提交申请成功！</title>	
 </head>
-<body>
+<body class="reg">
 	<!-- 头部 开始 -->
 	 <%@ include file="header.jsp" %> 
 	<!-- 头部 结束 -->
 	
 	<!-- 提醒 开始 -->
-	
-    <div class="w1190">
+    <div class="regSuccess">
 		<div class="doneskip">
 			<h2>
 				<img src="${path }/images/pc/registerdone.jpg" />
@@ -45,7 +43,7 @@ request.setAttribute("frontTitle","信息提示");
 
 <c:if test="${redirect_autoRedirect}">
 <script type="text/javascript">
-	//自动跳转
+//自动跳转
 	$(function(){
 		var count = 10;
 		var countdown = setInterval(function(){
@@ -56,7 +54,7 @@ request.setAttribute("frontTitle","信息提示");
 				clearInterval(countdown);
 			}
 		},1000);
-	});
+	}); 
 </script>
 </c:if>
 </html>

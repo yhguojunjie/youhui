@@ -97,29 +97,9 @@ e.printStackTrace();
             </div>
         </div>
     </div>
-    <div class="footer">
-        <div class="footer-right">
-            <div class="footer-nav">
-                <a href="#">阿里巴巴集团</a>|
-                <a href="#">阿里巴巴国际站</a>|
-                <a href="#">阿里巴巴中国站</a>|
-                <a href="#">全球速卖通</a>|
-                <a href="#">导购网</a>|
-                <a href="#">天猫</a>|
-                <a href="#">聚划算</a>|
-                <a href="#">一淘</a>|
-                <a href="#">阿里妈妈</a>|
-                <a href="#">阿里云计算</a>|
-                <a href="#">云OS</a>|
-                <a href="#">万网</a>|
-                <a href="#">支付宝</a>|
-                <a href="#">来往</a>
-            </div>
-            <div class="about-tao">
-                <span class="gary-text">Copyright©2004-2015  帮you惠byouh.com版权所有</span>
-            </div>
-        </div>
-    </div>
+  <!-- 底部 开始 -->
+		<%@ include file="footer.jsp" %>
+<!-- 底部 结束 -->
     <script src="${path}/js/jquery_1.9.js"></script>
     <script src="${path}/js/img-show.js"></script>
     <script src="${path}/js/validate/jquery.validate.min.js"></script>
