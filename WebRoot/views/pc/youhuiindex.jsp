@@ -192,15 +192,18 @@
             <!-- <a class="spe" href="#">多买多送</a> -->
             <a class="spe" href="#">推荐商品</a>          
             <span class="line-a">|</span>
+            <a  href="#">淘宝优惠</a>
             <a  href="#">商城优惠</a>
-            <a  href="#">宝贝优惠</a>
+            
+           
+           <!--  <a  href="#">宝贝优惠</a> -->
             <!-- <a href="#">特卖场</a> -->
             <a href="#">9.9包邮</a>
             <a href="#">19.9包邮</a>
         <!--<a href="#">50元封顶</a>  --> 
              <a href="#">优惠券</a>
             <a href="#">本地优惠(O2O)</a>
-            <a href="#">商家活动</a>    
+            <a href="#">商家活动专场</a>    
         </div>
         <div class="content">
             <div class="con" id="webShop">
@@ -1165,14 +1168,14 @@
 	return newArray;
 	} 
 
-
-$(function() {
-	var fileAccessPath='${fileAccessPath}';
-	 $.ajax({
+   var fileAccessPath='${fileAccessPath}';
+   function ajaxa(){
+	   
+	   $.ajax({
 			type: "GET",
-     // url: "${basePath}pc/youHui/ajaxList?id="+idd,
-    		 url: "${basePath}pc/youHui/ajaxList?id=17",
-            dataType: "json",
+    // url: "${basePath}pc/youHui/ajaxList?id="+idd,
+   		 url: "${basePath}pc/youHui/ajaxList?id=17",
+           dataType: "json",
 			success : function(data) {
 				var secondnameStr='';
 				for (var j = 0; j < data.length; j++) {
@@ -1185,27 +1188,28 @@ $(function() {
 				if(data.length != 0){
 					$("#webShop").html("");
 					var html = "";
-					for(var z=1;z<newarr.length;z++){
+					//for(var z=1;z<newarr.length;z++){
 					
 						 for (var i = 0; i < data.length; i++) {
-							 if(data[i].secondname==newarr[z]&&z==1){
+							 //if(data[i].secondname==newarr[z]&&z==1){
 						 html +='<a href="'+data[i].shophref+'" class="cooper-logo">';
 						 html +='<img src="'+fileAccessPath+data[i].shopimge + '" alt="App Store">' + data[i].discountrate +'</a>';
-							 }
-						 }
+							// }
+						 
 
-						 html +='<div class="con-list">';
+						// html +='<div class="con-list">';
 						 
-						 if(z!=1){
-						 html +='<h2>'+newarr[z]+'</h2>';
-						 }						 
-							 for (var i = 0; i < data.length; i++) {
-								 if(data[i].secondname==newarr[z]&&z!=1){	 
-						 html +='<a href="'+data[i].shophref+'">' + data[i].shopname +'</a>';
+						// if(z!=1){
+						// html +='<h2>'+newarr[z]+'</h2>';
+						// }						 
+							// for (var i = 0; i < data.length; i++) {
+								// if(data[i].secondname==newarr[z]&&z!=1){	 
+						// html +='<a href="'+data[i].shophref+'">' + data[i].shopname +'</a>';
 						 
-							 }
-						 }
-						 html +='</div>';   
+							// }
+						 //}
+						 ///html +='</div>';   
+					//}
 					}
 					$("#webShop").append(html);
 					
@@ -1215,11 +1219,13 @@ $(function() {
 			}
 			 }); 
 	
-	
-	
-	
-	
-	
+	   
+   }
+   
+   
+
+$(function() {
+	ajaxa();
 	
 $('.sidebar-info .side-li li').click(function(event) {
 	var id=$(this).attr("id");
@@ -1228,6 +1234,7 @@ $('.sidebar-info .side-li li').click(function(event) {
       */
      var arr = new Array();
      
+      if(id!=17){
       $.ajax({
 			type: "GET",
          url: "${basePath}pc/youHui/ajaxList?id="+id,
@@ -1274,7 +1281,9 @@ $('.sidebar-info .side-li li').click(function(event) {
 			}
 			 }); 
      
-     
+      }else{	  
+    	  ajaxa();
+      }
      
      /*
      var index=$(this).index();
