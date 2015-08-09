@@ -89,49 +89,38 @@
 .main-title{width:100%;height:50px;margin-left:-1px;line-height:50px;border:1px solid #eee;border-top:none}
 .show-title{font-size:12px;margin-right:20px;font-weight:lighter;float:right}
 .main-title h1{margin-left:20px;font-size:16px;text-shadow:2px 2px 2px #c4c4c4}
-.product-box{position:relative;float:left;width:466px;height:auto;border:1px solid #eee;box-shadow:rgba(0,0,0,.17) 1px 1px 2px;margin-top:20px;margin-right:23px}
+
+.product-box{position:relative;float:left;width:464px;height:auto;border:2px solid #eee;box-shadow:rgba(0,0,0,.17) 1px 1px 2px;margin-top:20px;margin-right:23px}
 .product-box:hover{border-color:#c40000;box-shadow:none}
 .product-box:nth-child(2n+1){margin-right:0}
-.box{width:100%}
-.box img{width:100%;height:327px}
-.box_activity{background:#333;width:212px;height:29px;position:absolute;top:0;right:0;color:#fff;line-height:29px;font-size:15px}
-.box_activity span{margin-left:5px}
-.box_activity i{margin:5px 5px 0 5px;font-size:20px;float:left}
-.box_activity p span{padding-left:10px;color:#fff;line-height:29px;font-size:15px}
-.box_hover{background:url(../img/pro_hover-bg.png) repeat;color:#FFF;font-weight:700;height:33px;left:0;line-height:34px;position:absolute;top:294px;width:100%}
-.box_hover .sale{padding-left:5px;float:left}
-.box_hover .money{padding-right:5px;float:right}
-.box_list{padding:20px;height:auto;overflow:hidden;position: relative;}
-.box_list h3{font-size:20px;height:32px;overflow:hidden;line-height:32px;border-bottom:1px dotted #d5d5d5;padding-bottom:8px;margin-bottom:10px}
-.box_list h3 a{font-size:18px}
-.box_list .box_listl{float:left;width:100%;}
-.pb_Price{margin:5px 0;font-size:14px;color:#f40;float:left;width:100%}
-.pb_Price span {
-font-family: Tahoma;
-font-size: 20px;
-color: #f33131;
-font-weight: bold;
-float:left;
-padding-right:5px;
-}
-.pb_Price .ico-you {
-background: url("../img/youbl.png") no-repeat;
-width: 84px;
-height: 20px;
-line-height: 19px;
-padding-left: 9px;
-float:left;
-font-size: 12px;color:#fff;
-}
-.pb_Price p{color:#000;height:30px;line-height:30px}
-.box_list .list_logo{width:100%;height:32px;line-height:32px;float:left}
-.box_list .list_logo img{width:40px;height:30px;vertical-align:middle}
-.box_list .list_logo .price-new {color: #000;font-size: 20px;font-family: Tahoma;font-weight: bold;margin-left: 4px;}
-.box_list .list_logo .price-new em {font: 20px/1 Microsoft YaHei,Arial;}
-.box_list .list_logo .price-other {margin: 3px 0 0 10px;}
-.box_list .list_logo .price-old {color: #999;margin-left: 3px;font-style: normal;font: 12px/1 Microsoft YaHei,Arial;}
-.box_list .box_listr{position: absolute;width:135px;text-align:center;overflow:hidden;right:20px;}
-.box_listr a{display:block;background:#c40000;padding:16px 18px;color:#fff;font-weight:600;font-size:18px;}
+.product-box .box{width:100%}
+.product-box .box .logo{height:40px;position:absolute;}
+.product-box .box .logo .bg-cgf {background:url(../img/new-1.png) no-repeat;float: left;display: block;width: 45px;height: 43px;margin-right: 3px;text-align:center;color:#fff;line-height: 15px;padding-top: 4px;}
+.product-box .box .logo .ico-tag1 {background:url(../img/new-1.png) no-repeat;padding-top: 10px;}
+.product-box .box .logo .ico-tag2 {background:url(../img/new-2.png) no-repeat;padding-top: 10px;}
+.product-box .box .logo .ico-tag3 {background:url(../img/new-3.png) no-repeat;padding-top: 10px;}
+.product-box .box .logo .ico-tag4 {background:url(../img/new-4.png) no-repeat;}
+
+.product-box .box img{width:100%;height:327px}
+.product-box .box .box_activity{background:#333;width:212px;height:29px;position:absolute;top:0;right:0;color:#fff;line-height:29px;font-size:15px}
+.product-box .box .box_activity i{margin:5px 5px 0 5px;font-size:20px;float:left}
+.product-box .box .box_activity span{margin-left:5px}
+.product-box .box .box_hover{background:url(../img/pro_hover.png) repeat;color:#FFF;font-weight:700;height:33px;left:0;line-height:34px;position:absolute;top:294px;width:100%}
+.product-box .box .box_hover .sale{padding-left:5px;float:left}
+.product-box .box .box_hover .money{padding-right:5px;float:right}
+.product-box .box_list{padding:15px 20px;height:auto;overflow:hidden;position: relative;}
+.product-box .box_list a{display:block;font-size:20px;height:40px;overflow:hidden;line-height:40px;border-bottom:1px dotted #d5d5d5;margin-bottom:10px}
+.product-box .box_list a img{width:50px;height:30px;vertical-align: middle;margin-right: 5px;}
+.product-box .box_list .list_logo{width:100%;height:32px;line-height:32px;float:left}
+.product-box .box_list .list_logo .price-new {color: #000;font-size: 20px;font-family: Tahoma;font-weight: bold;margin-left: 4px;}
+.product-box .box_list .list_logo .price-new em {font: 20px/1 Microsoft YaHei,Arial;}
+.product-box .box_list .list_logo .price-old {color: #999;margin-left: 3px;font-style: normal;font: 14px/1 Microsoft YaHei,Arial;}
+.product-box .box_list .box_listl{float:left;width:100%;margin:5px 0;font-size:14px;color:#f40;}
+.product-box .box_list .box_listl span{font-family:Tahoma;font-size:20px;color:#f33131;font-weight:700;float:left;padding-right:5px}
+.product-box .box_list .box_listl .ico-you{background:url(../img/youbl.png) no-repeat;width:84px;height:20px;line-height:19px;padding-left:9px;float:left;font-size:12px;color:#fff}
+.product-box .box_list .box_listr{position: absolute;width:135px;text-align:center;overflow:hidden;right:20px;top: 70px;}
+.product-box .box_list .box_listr a{display:block;background:#c40000;padding:6px 18px;color:#fff;font-weight:600;font-size:18px;border-bottom: none;}
+
 .main-right{float:right;width:178px}
 .time-go{position:relative;width:100%;height:auto;border:1px solid #ddd}
 .time-cell{width:100%;height:auto;margin:16px auto}
