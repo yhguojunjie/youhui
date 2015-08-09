@@ -23,7 +23,7 @@ public class LogoutController {
 		// HttpServletResponse response = inv.getResponse();
 		SessionUtil.destroy(inv.getRequest(), Globals.SESSION_USER);
 		// CookieUtil.clearCookie(response);
-		inv.getResponse().sendRedirect(WebApplicationUtils.getBasePath() + "/pc/plugin/list");
+		inv.getResponse().sendRedirect(WebApplicationUtils.getBasePath());
 		return null;
 	}
 }

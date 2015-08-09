@@ -442,7 +442,7 @@ function insertNotice(obj,str){
 	if(obj.parent().find('em').prop("nodeName") == "EM"){
 		obj.parent().find('em').html(str);
 	}else{
-		obj.parent().append("<em>" + str + "</em>");
+		obj.parent().append("<em style='color:red'>" + str + "</em>");
 	}
 	
 }

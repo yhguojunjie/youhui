@@ -18,7 +18,7 @@ request.setAttribute("frontTitle","信息提示");
 </head>
 <body>
 	<!-- 头部 开始 -->
-	<%@ include file="header.jsp" %>
+	 <%@ include file="header.jsp" %> 
 	<!-- 头部 结束 -->
 	
 	<!-- 提醒 开始 -->

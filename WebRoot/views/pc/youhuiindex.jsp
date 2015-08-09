@@ -1,4 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page language="java" import="com.yoxi.hudongtui.model.user.User" %>
+<%@ page language="java" import="com.yoxi.hudongtui.constants.Globals" %>
+<%@ page language="java" import="com.yoxi.hudongtui.vo.agent.AgentInfoVO" %>
+<%@ page language="java" import="com.yoxi.hudongtui.utils.common.ConvertUtil" %>
 <%@ include file="constant.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -15,8 +19,20 @@
         <div class="top-info">
             <div class="top-left">
             <ul>
-               <li><a href="#">亲，请登录</a><a href="#">注册</a></li>
-               <li class="spacer"></li>
+            
+            				<% if(request.getSession().getAttribute(Globals.SESSION_USER) == null){ %>
+					 <li><a href="${basePath}login">亲，请登录</a><a href="${basePath}register/pc">注册</a></li>
+             
+				<% }else{ 
+					User userHeader = (User)request.getSession().getAttribute(Globals.SESSION_USER); 
+					if(userHeader.getHeadimgUrl() != null){
+						userHeader.setHeadimgUrl(ConvertUtil.procImgPath(userHeader.getHeadimgUrl()));
+					}
+				%>
+				
+				 <li><a href="#"><%=userHeader.getEmail() %></a><a href="${basePath}logout">(退出)</a></li>
+             <% } %>
+			   <li class="spacer"></li>
                <li data-toggle="arrowdown" id="arrow2" class="msg-info">
                     <a href="#">我的优惠</a>
                     <span class="down-icon"></span>
@@ -25,7 +41,7 @@
 							<div class="u-pic">
 								
 							</div>
-							<div class="u-name u-login">
+							<div class="u-name u-login">			
 								<a href="#" class="link-login">你好，请登录</a>
 							</div>
 							<div class="u-extra">

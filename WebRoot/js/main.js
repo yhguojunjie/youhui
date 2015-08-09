@@ -490,47 +490,99 @@ return false;
     // 邮箱检测
     function CheckEmail(email, oBtn) {
         if (oBtn) {
+        	$("#reg_mail").attr("verify","false");
             return {
                 content: "请填写您常用的邮箱作为登录帐号",
                 state: "info"
             }
         }
         if (email == "") {
+        	$("#reg_mail").attr("verify","false");
             return {
                 content: "邮箱不能为空",
                 state: "error"
             }
         }
         if (!/^[\.a-zA-Z0-9_-]+@([a-zA-Z0-9_-]+\.)+[a-zA-Z]{2,3}$/.test(email)) {
-            return {
+        	$("#reg_mail").attr("verify","false");
+        	return {
                 content: "邮箱格式出错啦",
                 state: "error"
             }
         }
+        
+        
+        
+        
+        var state = checkAccount($("#reg_mail").val());
+		if(state){//帐号已被注册
+		
+			return {
+                content: "该账号已被注册",
+                state: "error"
+            }
+			$("#reg_mail").attr("verify","false");
+		}
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        $("#reg_mail").attr("verify","true");
         return {
             content: "",
             state: "ok"
         }
     }
+    
+    
+
+	//检查账号是否注册过
+	
+	function checkAccount(account){
+		var isAccountExist = false;
+		$.ajax({
+				type: "POST",
+				url : "checkAccount",
+				async: false,
+				data:{account:account},
+				dataType: "json",
+				success: function(data){
+					if(data.state == '0'){
+						isAccountExist = true;
+					}
+				}
+		}); 
+		return isAccountExist;
+	}
 
     //密码
     function CheckPassword(value, oBtn) {
         if (oBtn) {
+        	$("#reg_password").attr("verify","false");
             return {
                 content: "密码由数字、字母组成，字母区分大小写",
                 state: "info"
             }
         }
         if (value == "") {
+        	$("#reg_password").attr("verify","false");
             return {
                 content: "密码不能为空",
                 state: "error"
             }
         }
         if ($("#reg_mail").val() == "") {
+        	
             $(".tiptext").eq(0).removeClass("tiptext-info").addClass("tiptext-error").html("<i></i>请输入您的常用邮箱");
         }
+        $("#reg_password").attr("verify","true");
         return {
+        	
             content: "",
             state: "ok"
         }
@@ -539,27 +591,31 @@ return false;
     //确认密码
     function CheckPasswordAgain(value1, value2, oBtn) {
         if (oBtn) {
+        	$("#reg_password_again").attr("verify","false");
             return {
                 content: "再输一次密码",
                 state: "info"
             }
         }
         if (value1 != value2) {
+        	$("#reg_password_again").attr("verify","false");
             return {
                 content: "两次密码不一致",
                 state: "error"
             }
         } else {
+        	$("#reg_password_again").attr("verify","true");
             return {
                 content: "",
                 state: "ok"
             }
         }
     }
-
+    var flagc=false;
     // 校验验证码
     function CheckCheckcode(value, oBtn) {
         if (oBtn) {
+        	$("#reg_check_code").attr("verify","true");
             return {
                 content: "",
                 state: "ok"
@@ -567,27 +623,74 @@ return false;
         }
         var reg = /^\w+$/g;
         if (value == "") {
+        	$("#reg_check_code").attr("verify","false");
             return {
                 content: "请输入验证码",
                 state: "error"
             };
         }
         if (!reg.test(value)) {
+        	$("#reg_check_code").attr("verify","false");
             return {
                 content: "验证码格式错误",
                 state: "error"
             }
         }
         if (value.length != 4) {
+        	$("#reg_check_code").attr("verify","false");
             return {
                 content: "验证码长度错误",
                 state: "error"
             };
         }
-        return {
-            content: "",
-            state: "ok"
-        }
+    
+		var code=$('#reg_check_code').val();
+				if(code!=null&&code!=''){
+					//alert("uuuuuuu");
+        $.ajax({
+			type: "POST",
+			url : "checkIdentifyCodeU",
+			data:{randomCode:code},
+			dataType: "json",
+			success: function(data){
+				//alert(data.state);
+				if(data.state){
+					flagc=false;
+					//$("#reg_check_code").attr("verify","true");
+					//return true;
+				}else{
+					//alert("001");
+					flagc=true;
+					
+					//alert(flagc);
+					//$("#reg_check_code").attr("verify","false");
+					//return false;
+				}
+			}
+	}); 	
+        
+				}
+				
+	if(flagc){
+//alert();	
+		$("#reg_check_code").attr("verify","false");
+		 return {
+             content: "验证码错误",
+             state: "error"
+         };
+	}else{
+		$("#reg_check_code").attr("verify","true");
+	}
+	$("#reg_check_code").attr("verify","true");
+		 return {
+	            content: "",
+	            state: "ok"
+	        }
+		
+			
+				
+				
+     
     }
 
     // 提示
@@ -634,6 +737,7 @@ return false;
             "&regpage=" + encodeURIComponent(location.href) +
             "&callback=RegisterCallback&_=" + Math.random() + "";
             btn.addClass(_reggingClass);
+            //CreateJScript("register", "http://passport.fanhuan.com/ajax/RegByEmail?" + data);
             CreateJScript("register", "http://passport.fanhuan.com/ajax/RegByEmail?" + data);
         }
         return false;
