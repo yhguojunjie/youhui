@@ -2,6 +2,7 @@ abbr,address,article,aside,audio,b,blockquote,body,canvas,caption,cite,code,dd,d
 body{font-family:'microsoft yahei',Arial,Helvetica,sans-serif;font-size:12px;line-height:1;background:#fff}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
 ul{list-style:none}
+ul li{list-style:none;float: left;}
 blockquote,q{quotes:none}
 blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}
 a{margin:0;padding:0;text-decoration:none;font-size:100%;vertical-align:baseline;background:0 0;color:#6c6c6c}

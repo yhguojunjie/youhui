@@ -125,24 +125,6 @@
         <div class="scroll-search">
             <div class="search-litter">
                 <img class="scroll-logo" src="${path}/img/logo2.png" />
-                <div class="scroll-list">
-                    <ul>
-                        <li>服装内衣</li>
-                        <li>鞋包配饰</li>
-                        <li>运动户外</li>
-                        <li>珠宝手表</li>
-                        <li>手机数码</li>
-                        <li>家电办公</li>
-                        <li>护肤彩妆</li>
-                        <li>母婴用品</li>
-                        <li>家纺居家</li>
-                        <li>家具建材</li>
-                        <li>美食特产</li>
-                        <li>日用百货</li>
-                        <li>汽车摩托</li>
-                        <li>文化娱乐</li>
-                    </ul>
-                </div>
                 <div class="search-wrapper-scroll">
                     <div class="search-box-scroll">
                         <input class="search-in-scroll" type="text" placeholder="想要的商品吧~" />
@@ -284,7 +266,25 @@
 <div class="main">
     <div class="main-left">
         <div class="main-title">
-            <h1>超高优惠<span class="show-title">下面有30个特色市场等你来逛哦！</span></h1>
+            <h1>超高优惠</h1>
+            <span class="show-list">
+                    <ul>
+                        <li>服装内衣</li>
+                        <li>鞋包配饰</li>
+                        <li>运动户外</li>
+                        <li>珠宝手表</li>
+                        <li>手机数码</li>
+                        <li>家电办公</li>
+                        <li>护肤彩妆</li>
+                        <li>母婴用品</li>
+                        <li>家纺居家</li>
+                        <li>家具建材</li>
+                        <li>美食特产</li>
+                        <li>日用百货</li>
+                        <li>汽车摩托</li>
+                        <li>文化娱乐</li>
+                    </ul>
+            </span>
         </div>
         <div class="product-box">
             <div class="box">
