@@ -174,7 +174,8 @@
         $('html, body').animate({
             scrollTop: 0
         }, 500);
-    }); /*点击到底部*/
+    }); 
+    /*点击到底部*/
     $('#backToTop-down').click(function() {
         $('html, body').animate({
             scrollTop: $(document).height()
@@ -188,6 +189,8 @@
         }).html('还没有新的消息...');
     });
 
+    //优惠品分类
+    $()
     //合作伙伴
     $('.right-con .cooper-logo').hover(function() {
         $(this).addClass('hover');

@@ -72,8 +72,7 @@
 .right-con .nav img{vertical-align:middle;border:none;margin:0 0 0 40px}
 .right-con .content{width:100%;float:left;border:1px solid #eee;min-height:434px;padding-bottom:20px}
 .right-con .content.visited{border-top:none}
-.right-con .con{width:100%;height:auto;display:none;margin-left:0;margin-top:0;padding:0 10px;float:left}
-.right-con .con.dsb{display:block}
+.right-con .con{width:100%;height:auto;margin-left:0;margin-top:0;padding:0 10px;float:left}
 .right-con .con .cooper-logo{position:relative;float:left;display:block;width:141px;height:84px;margin:5px auto;border:2px solid #FFF;padding-top:8px;overflow:hidden;text-align:center;color:#999}
 .right-con .con .cooper-logo img{display:block;width:90px;height:40px;margin:5px auto;text-align:center}
 .right-con .con .cooper-logo.hover{border:2px solid #ffad21}
@@ -102,18 +101,37 @@
 .box_hover{background:url(../img/pro_hover-bg.png) repeat;color:#FFF;font-weight:700;height:33px;left:0;line-height:34px;position:absolute;top:294px;width:100%}
 .box_hover .sale{padding-left:5px;float:left}
 .box_hover .money{padding-right:5px;float:right}
-.box_list{padding:20px;height:auto;overflow:hidden}
+.box_list{padding:20px;height:auto;overflow:hidden;position: relative;}
 .box_list h3{font-size:20px;height:32px;overflow:hidden;line-height:32px;border-bottom:1px dotted #d5d5d5;padding-bottom:8px;margin-bottom:10px}
 .box_list h3 a{font-size:18px}
-.box_list .box_listl{float:left;margin-left:77px;min-width:90px;text-align:center}
-.pb_Price{margin:15px 0;font-size:14px;color:#f40;float:left;width:100%}
-.pb_Price span{font-size:16px;font-weight:700}
+.box_list .box_listl{float:left;width:100%;}
+.pb_Price{margin:5px 0;font-size:14px;color:#f40;float:left;width:100%}
+.pb_Price span {
+font-family: Tahoma;
+font-size: 20px;
+color: #f33131;
+font-weight: bold;
+float:left;
+padding-right:5px;
+}
+.pb_Price .ico-you {
+background: url("../img/youbl.png") no-repeat;
+width: 84px;
+height: 20px;
+line-height: 19px;
+padding-left: 9px;
+float:left;
+font-size: 12px;color:#fff;
+}
 .pb_Price p{color:#000;height:30px;line-height:30px}
-.box_list .list_logo{width:86px;height:50px;margin-top:20px;float:left}
-.box_list .list_logo img{width:80px;height:30px;vertical-align:middle}
-.box_list .box_listr{float:right;padding-top:20px;width:135px;text-align:center;overflow:hidden}
-.box_listr a{background:#c40000;padding:8px 29px;color:#fff;font-weight:600;font-size:18px}
-.box_listr p{margin-top:20px;font-weight:700;color:#c40000}
+.box_list .list_logo{width:100%;height:32px;line-height:32px;float:left}
+.box_list .list_logo img{width:40px;height:30px;vertical-align:middle}
+.box_list .list_logo .price-new {color: #000;font-size: 20px;font-family: Tahoma;font-weight: bold;margin-left: 4px;}
+.box_list .list_logo .price-new em {font: 20px/1 Microsoft YaHei,Arial;}
+.box_list .list_logo .price-other {margin: 3px 0 0 10px;}
+.box_list .list_logo .price-old {color: #999;margin-left: 3px;font-style: normal;font: 12px/1 Microsoft YaHei,Arial;}
+.box_list .box_listr{position: absolute;width:135px;text-align:center;overflow:hidden;right:20px;}
+.box_listr a{display:block;background:#c40000;padding:16px 18px;color:#fff;font-weight:600;font-size:18px;}
 .main-right{float:right;width:178px}
 .time-go{position:relative;width:100%;height:auto;border:1px solid #ddd}
 .time-cell{width:100%;height:auto;margin:16px auto}
