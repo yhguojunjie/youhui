@@ -19,6 +19,7 @@ import com.yoxi.hudongtui.constants.Globals;
 import com.yoxi.hudongtui.controllers.GlobalRequired;
 import com.yoxi.hudongtui.model.content.Banner;
 import com.yoxi.hudongtui.model.content.Goodsclassificat;
+import com.yoxi.hudongtui.model.content.SuperhuiGoods;
 import com.yoxi.hudongtui.model.content.WebShopVO;
 import com.yoxi.hudongtui.model.plugin.Plugin;
 import com.yoxi.hudongtui.service.agent.IAgentBusService;
@@ -32,6 +33,7 @@ import com.yoxi.hudongtui.service.plugin.IPluginBusService;
 import com.yoxi.hudongtui.service.plugin.IPluginService;
 import com.yoxi.hudongtui.service.user.IUserService;
 import com.yoxi.hudongtui.service.youhui.IGoodsclassificatService;
+import com.yoxi.hudongtui.service.youhui.ISuperhuiGoodsService;
 import com.yoxi.hudongtui.service.youhui.WebShopService;
 import com.yoxi.hudongtui.utils.common.ConvertUtil;
 import com.yoxi.hudongtui.utils.common.JsonUtils;
@@ -59,6 +61,9 @@ public class YouHuiController {
 	private IPluginService pluginService;
 	@Autowired
 	private IGoodsclassificatService goodsclassificatService;
+
+	@Autowired
+	private ISuperhuiGoodsService superhuiGoodsService;
 
 	@Autowired
 	private WebShopService webShopService;
@@ -107,6 +112,12 @@ public class YouHuiController {
 				.findGoodsclassificat();
 		inv.getRequest().setAttribute("goodsclassificatList",
 				goodsclassificatList);
+
+		// 2.超级优惠商品
+		List<SuperhuiGoods> superhuiGoodsList = superhuiGoodsService
+				.findSuperhuiGoods();
+		inv.getRequest().setAttribute("superhuiGoodsList", superhuiGoodsList);
+
 		// 1.代理商信息处理
 		// AgentInfoVO agentInfoVO = SessionUtil.getAgentInfo(inv.getRequest());
 		// inv.getRequest().setAttribute("agentInfoVO", agentInfoVO);
