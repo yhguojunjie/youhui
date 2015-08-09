@@ -15,9 +15,7 @@ request.setAttribute("frontTitle","信息提示");
 <head>
 	<%@ include file="resource.jsp"%>
 	<title>提交申请成功！</title>
-	 <link rel="stylesheet" href="${path}/css/common.css"/>
-    <link rel="stylesheet" href="${path}/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="${path}/css/style.css"/>
+	
 </head>
 <body>
 	<!-- 头部 开始 -->

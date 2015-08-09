@@ -3,7 +3,9 @@
 <%@ page language="java" import="com.yoxi.hudongtui.constants.Globals" %>
 <%@ page language="java" import="com.yoxi.hudongtui.vo.agent.AgentInfoVO" %>
 <%@ page language="java" import="com.yoxi.hudongtui.utils.common.ConvertUtil" %>
-
+ <link rel="stylesheet" href="${path}/css/common.css"/>
+    <link rel="stylesheet" href="${path}/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="${path}/css/style.css"/>
 	<div class="w1190 head" id="header">
 		<div class="top-wrapper">
         <div class="top-info">
