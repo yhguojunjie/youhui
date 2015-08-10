@@ -925,7 +925,7 @@
     <div class="main-right">
         <div class="time-go">
             <div class="time-cell">
-                <h1>今日限购特价商品<span class="now-news">更新<span class="">3</span></span></h1>
+                <h1>今日限量特价商品<span class="now-news">更新<span class="">3</span></span></h1>
                 <div class="inner-show">
                     <ul>
                         <li>
