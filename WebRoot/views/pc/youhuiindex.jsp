@@ -153,7 +153,7 @@
        <div class="line">
        </div>
     <div class="content-top">
-       <div class="sidebar">
+       <div class="sidebar font">
            <h3>优惠品分类</h3>
          <div class="sidebar-info">
             <ul class="side-li">
@@ -185,7 +185,7 @@
         </div>
     </div> 
     <div class="right-con">
-        <div class="nav">
+        <div class="nav font">
          <a class="spe" href="#">超高优惠</a>
             <a class="spe" href="#">限量特价抢购</a>
             <!-- <a class="spe" href="#">限时抢购</a> -->
@@ -268,9 +268,10 @@
 </div> 
 <div class="main">
     <div class="main-left">
-        <div class="main-title">
+        <div class="main-title font">
             <h1>超高优惠</h1>
-        </div>
+<!--             <div class="tab"><ul><li class="tab-item"><a href="#">单品推荐</a></li><li class="tab-item"><a href="#">品牌专场</a></li></ul></div>    
+ -->        </div>
                <div class="show-list">
                     <ul>
                         <li class="current"><a href="#">全部(100)</a></li>
@@ -924,7 +925,7 @@
     </div>
     <div class="main-right">
         <div class="time-go">
-            <div class="time-cell">
+            <div class="time-cell font">
                 <h1>今日限量特价商品<span class="now-news">更新<span class="">3</span></span></h1>
                 <div class="inner-show">
                     <ul>
@@ -988,7 +989,7 @@
         </div>
         <div class="fix-right-sub">
             <div class="gogo-choose">
-                <h1>今日推荐商品</h1>
+                <h1 class="font">今日推荐商品</h1>
                 <div class="sub-show">
                     <div class="content-sub">
                         <ul class="imgBox2">
