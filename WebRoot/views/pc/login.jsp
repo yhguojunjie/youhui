@@ -8,6 +8,8 @@
     <%@ include file="resource.jsp"%>
     <link rel="stylesheet" href="${path}/css/common.css"/>
     <link rel="stylesheet" href="${path}/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="${path}/css/owlCarousel/owl.carousel.css" >
+    <link rel="stylesheet" href="${path}/css/owlCarousel/owl.theme.css" >
     <link rel="stylesheet" href="${path}/css/style.css"/>
 </head>
 <% String flag = (String)session.getAttribute("flag")==null?"":(String)session.getAttribute("flag");
@@ -44,10 +46,21 @@ e.printStackTrace();
         <h3>欢迎登录</h3>
     </div>
     <div class="login-wrap">
+       <div id="owl-demo" class="owl-carousel">
+            <a class="item"><img src="${path}/img/logo/logo1.png" alt=""></a>
+            <a class="item"><img src="${path}/img/logo/logo2.png" alt=""></a>
+            <a class="item"><img src="${path}/img/logo/logo3.png" alt=""></a>
+            <a class="item"><img src="${path}/img/logo/logo4.png" alt=""></a>
+            <a class="item"><img src="${path}/img/logo/logo5.png" alt=""></a>
+        </div>
         <div class="login-form">
             <div class="mt">
                 <h1>帮you惠会员</h1>
                 <a href="${basePath}register/pc" target="_blank"><b></b>免费注册</a>
+            </div>
+            <div class="msg-wrap">
+                <div class="msg-warn"><b></b>公共场所不建议记住密码，以防账号丢失</div>
+                <div class="msg-error" style="/* display: none; */"><b></b></div>
             </div>
             <div class="mc">
                 <form  id="loginForm" method="post" name="form1" action="${basePath}login/doLogin">
@@ -100,10 +113,9 @@ e.printStackTrace();
   <!-- 底部 开始 -->
 		<%@ include file="footer.jsp" %>
 <!-- 底部 结束 -->
-    <script src="${path}/js/jquery_1.9.js"></script>
+    <script src="${path}/js/jquery.js"></script>
     <script src="${path}/js/img-show.js"></script>
-    <script src="${path}/js/validate/jquery.validate.min.js"></script>
-    <script src="${path}/js/validate/messages_cn.js"></script>
+    <script src="${path}/js/owlCarousel/owl.carousel.js"></script>
     <script src="${path}/js/main.js"></script>
 </body>
 
