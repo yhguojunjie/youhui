@@ -11,6 +11,8 @@
     <title>帮you惠，优惠网！我喜欢</title>
     <link rel="stylesheet" href="${path}/css/common.css"/>
     <link rel="stylesheet" href="${path}/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="${path}/css/owlCarousel/owl.carousel.css" >
+	<link rel="stylesheet" href="${path}/css/owlCarousel/owl.theme.css" >
     <link rel="stylesheet" href="${path}/css/style.css"/>
 
 </head>
@@ -274,7 +276,8 @@
  -->        </div>
                <div class="show-list">
                     <ul>
-                        <li class="current"><a href="#">全部(100)</a></li>
+                     <!--   <li class="current"><a href="#">全部(100)</a></li>  
+             
                         <li><a href="#">服装内衣(12)</a></li>
                         <li><a href="#">鞋包配饰(12)</li>
                         <li><a href="#">运动户外(12)</li>
@@ -284,7 +287,23 @@
                         <li><a href="#">护肤彩妆(12)</li>
                         <li><a href="#">母婴用品(12)</li>
                         <li><a href="#">家纺居家(12)</li>
-                        <li><a href="#">家具建材(12)</li>
+                        <li><a href="#">家具建材(12)</li>  -->
+                        
+                        
+                         <li class="current">全部(100)</li>
+                        <li><div>服装内衣(12)</div></li>
+                        <li>鞋包配饰(12)</li>
+                        <li>运动户外(12)</li>
+                        <li>珠宝手表(12)</li>
+                        <li>手机数码(12)</li>
+                        <li>家电办公(12)</li>
+                        <li>护肤彩妆(12)</li>
+                        <li>母婴用品(12)</li>
+                        <li>家纺居家(12)</li>
+                        <li>家具建材(12)</li> 
+                        
+                        
+                        
                         <!-- <li><a href="#">美食特产</a></li>
                         <li><a href="#">日用百货</a></li>
                         <li><a href="#">汽车摩托</a></li>
@@ -357,7 +376,7 @@
                         <div class="ico-you">购买后减67%</div>
                 </div>
                 <div class="box_listr">
-                    <a href="#" class="" target="_blank">品牌专场</a>
+                    <a href="#" class="" target="_blank">立即购买</a>
                 </div>
             </div>
         </div>
@@ -1135,7 +1154,9 @@
 <script type="text/javascript" src="${path}/js/jquery.js" ></script>
 <script type="text/javascript" src="${path}/js/img-show.js"></script>
 <script type="text/javascript" src="${path}/js/validate/automail.js" ></script>
+<script type="text/javascript" src="${path}/js/owlCarousel/owl.carousel.js"></script>
 <script type="text/javascript" src="${path}/js/main.js"></script>
+<script type="text/javascript" src="${path}/js/page.js"></script>
 <script >
 
    function f(oldArray){

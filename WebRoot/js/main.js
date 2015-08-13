@@ -22,6 +22,29 @@
 		}, 500);
 		$(this).slideUp(100);
 	});
+	//下拉框
+	var num = 0;
+	$('[data-toggle=arrowdown]').hover(function() {
+		var _id = $(this).attr('id');
+		num = _id.substring(5, _id.length);
+		$(this).find('span').removeClass('run-down').addClass('run-up');
+		$('#nav-box' + num).slideDown(100);
+	}, function() {
+		$(this).find('span').removeClass('run-up').addClass('run-down');
+		$('#nav-box' + num).hide();
+	});
+	$('[data-toggle=hidden-box]').hover(function() {
+		var _id = $(this).attr('id');
+		num = _id.substring(7, _id.length);
+		$('#arrow' + num).addClass('nav-hover').find('span').removeClass('run-down').addClass('run-up');
+		$(this).show();
+	}, function() {
+		$('#arrow' + num).removeClass('nav-hover').find('span').removeClass('run-up').addClass('run-down');
+		setTimeout(function() {
+			$('#arrow' + num).find('span').removeClass('run-down');
+		}, 500);
+		$(this).slideUp(100);
+	});
 
 	//滚动出现固定导航
 	$(window).scroll(function() {
@@ -123,6 +146,32 @@
 			break;
 		}
 
+	//滚动出现固定导航
+	$(window).scroll(function() {
+		var scTop = $(window).scrollTop(),
+			$scS = $('.scroll-search'),
+			$frS = $('.fix-right-sub'),
+			rW;
+		rW = ($(window).width() - 1190) / 2;
+		scTop >= 200 ? $scS.slideDown(200) : $scS.slideUp(200);
+		if (scTop >= 2700 && scTop < 4400) {
+			$frS.css({
+				position: 'fixed',
+				top: '-541px',
+				right: rW,
+				marginTop: ''
+			});
+		} else if (scTop >= 4400) {
+			$frS.css({
+				position: '',
+				marginTop: 1728
+			});
+		} else {
+			$frS.css({
+				position: ''
+			});
+		}
+	});
 		$('#hiden-' + num).fadeIn(200);
 		beginH = 138;
 	}, function() {
@@ -136,9 +185,127 @@
 		});
 	});
 
+	//sidebar
+	var scTop = 0,
+		beginH = 138,
+		wW = $(window).width(),
+		classN, num;
+	$(window).scroll(function() {
+		scTop = $(window).scrollTop();
+		beginH = 138;
+		switch (scTop) {
+		case 600:
+			beginH -= 45;
+			break;
+		case 500:
+			beginH -= 50;
+			break;
+		case 400:
+			beginH -= 55;
+			break;
+		case 300:
+			beginH -= 60;
+			break;
+		case 200:
+			beginH -= 65;
+			break;
+		default:
+			beginH = 138;
+			break;
+		}
+	});
+	$('.side-li > li').hover(function() {
+		$(this).find('h3').css({
+			border: 'none'
+		}).end().find('span').css({
+			color: "#f40"
+		});
+		classN = $(this).attr('class');
+		num = classN.substring(2, classN.length);
+
+		switch (scTop) {
+		case 0:
+			if (num > 14) {
+				beginH += 120
+			} else if (num >= 12) {
+				beginH += 41
+			};
+			break;
+		case 100:
+			if (num == 1) {
+				beginH -= 27
+			} else if (num == 16) {
+				beginH += 7
+			};
+			break;
+		case 200:
+			num < 5 ? beginH -= 60 : beginH -= 30;
+			break;
+		case 300:
+			num < 8 ? beginH -= 60 : beginH -= 40;
+			break;
+		case 400:
+			num <= 11 ? beginH -= 50 : beginH += 10;
+			break;
+		case 500:
+			num < 14 ? beginH -= 50 : '';
+			break;
+		case 600:
+			num <= 16 ? beginH -= 50 : '';
+			break;
+		default:
+			beginH = 138;
+			break;
+		}
+	/**
+	 * 回到顶部
+	 */
+	$(window).scroll(function() { //滚动时触发
+		var top = $(document).scrollTop(),
+			//获取滚动条到顶部的垂直高度
+			height = $(window).height(); //获得可视浏览器的高度
+		if (top > 100) {
+			$("#backToTop1").show(200, function() {
+				$("#backToTop1").css({
+					top: height + top - 100
+				});
+			});
+		}
+	});
+
+		$('#hiden-' + num).fadeIn(200);
+		beginH = 138;
+	}, function() {
+		$(this).find('h3').css({
+			border: ''
+		}).end().find('span').css({
+			color: ""
+		});
+		$('.hiden-box').hide().css({
+			width: '0'
+		});
+	});
+	/*点击回到顶部*/
+	$('#backToTop-up').click(function() {
+		$('html, body').animate({
+			scrollTop: 0
+		}, 500);
+	}); /*点击到底部*/
+	$('#backToTop-down').click(function() {
+		$('html, body').animate({
+			scrollTop: $(document).height()
+		}, 500);
+	});
+
 	//关二维码
 	$('.close-code').click(function() {
 		$('.two-code').fadeOut(200);
+	});
+	//msg-close
+	$('.close-msg').click(function() {
+		$('.read-info').css({
+			textAlign: 'center'
+		}).html('还没有新的消息...');
 	});
 
 	/**
@@ -156,26 +323,6 @@
 			});
 		}
 	});
-
-	/*点击回到顶部*/
-	$('#backToTop-up').click(function() {
-		$('html, body').animate({
-			scrollTop: 0
-		}, 500);
-	}); /*点击到底部*/
-	$('#backToTop-down').click(function() {
-		$('html, body').animate({
-			scrollTop: $(document).height()
-		}, 500);
-	});
-
-	//msg-close
-	$('.close-msg').click(function() {
-		$('.read-info').css({
-			textAlign: 'center'
-		}).html('还没有新的消息...');
-	});
-
 	//超高优惠
 	$('.show-list li').click(function() {
 		$(this).addClass('current').siblings().removeClass('current');
@@ -194,16 +341,155 @@
 	});
 })(jQuery);
 
+	/*点击回到顶部*/
+	$('#backToTop-up').click(function() {
+		$('html, body').animate({
+			scrollTop: 0
+		}, 500);
+	}); /*点击到底部*/
+	$('#backToTop-down').click(function() {
+		$('html, body').animate({
+			scrollTop: $(document).height()
+		}, 500);
+	});
 //登录
-//$(function() {
-//	$('#owl-demo').owlCarousel({
-//		items: 1,
-//		autoPlay: false,
-//		navigation: true,
-//		pagination: false,
-//		lazyEffect: 'fade'
-//	});
-//});
+$(function() {
+	$('#owl-demo').owlCarousel({
+		items: 1,
+		autoPlay: false,
+		navigation: true,
+		pagination: false,
+		lazyEffect: 'fade'
+	});
+});
+
+	//msg-close
+	$('.close-msg').click(function() {
+		$('.read-info').css({
+			textAlign: 'center'
+		}).html('还没有新的消息...');
+	});
+
+
+//注册
+$(function() {
+	//光标停靠输入框右侧
+	$("#form_reg").find("label.label").live("click", function() {
+		var input = $(this).siblings("input.txt").eq(0);
+		if (!input.attr("disabled")) {
+			input.focus();
+			var rng = $(this).siblings("input.txt").get(0).createTextRange();
+			rng.collapse(false);
+			rng.select();
+		}
+	});
+
+	$("#reg_checkcode").trigger("click");
+	if ($("#reg_password").val() == "") {
+		$("#reg_password_again").css({
+			"background": "#EBEBE4"
+		})
+	}
+
+	//判断IE 和 IE6
+	var isIE = false,
+		isIE_6 = false,
+		isIE_10 = false;
+	if ($.browser.msie) {
+		isIE = true;
+		if ($.browser.version == "6.0") {
+			isIE_6 = true;
+		} else if (parseInt($.browser.version) >= 10) {
+			isIE_10 = true;
+		}
+	}
+	var maxIndex = 1;
+	//页面刷新时，判断输入框
+	if (!isIE) {
+		$("#reg_mail").css({
+			//"padding-right": "25px",
+			"width": "205px"
+		})
+	}
+	if ($("#reg_mail").val() != "") {
+		$("#reg_mail").css({
+			"color": "#666"
+		});
+		if (!isIE) {
+			$("#reg_mail").siblings(".clear-btn").removeClass("clear-btn-focus").show();
+		}
+	}
+	$("#form_reg").find("input[class~='txt']").bind({
+		"focus": function() {
+			maxIndex++;
+			$(this).addClass("focus").parent(".form-item").css("z-index", maxIndex);
+		},
+		"blur": function() {
+			$(this).removeClass("focus").parent(".form-item");
+		},
+		"keyup": function(e) {
+			if (e.keyCode == 13) {
+				RegisterByEmail($("#reg_submit"), true);
+			}
+		}
+	});
+
+    //超高优惠
+    $('.show-list li').click(function(){
+    	console.log("111");
+    	//$(this).addClass('current');
+    	$(this).addClass('current').siblings().removeClass('current');
+    });
+    //合作伙伴
+    $('.right-con .cooper-logo').hover(function() {
+        $(this).addClass('hover');
+    }, function() {
+        $(this).removeClass('hover');
+    });
+    $('.sidebar-info .side-li li').click(function(event) {
+        $(this).addClass('visited').siblings().removeClass('visited');
+        $(this).parents('.content-top').find('.right-con .content').addClass('visited');
+        var index = $(this).index();
+        $('.right-con .con').removeClass('dsb').eq(index).addClass('dsb');
+    });
+
+	//超高优惠
+	$('.show-list li').click(function() {
+		$(this).addClass('current').siblings().removeClass('current');
+	});
+	//合作伙伴
+	$('.right-con .cooper-logo').hover(function() {
+		$(this).addClass('hover');
+	}, function() {
+		$(this).removeClass('hover');
+	});
+	$('.sidebar-info .side-li li').click(function(event) {
+		$(this).addClass('visited').siblings().removeClass('visited');
+		$(this).parents('.content-top').find('.right-con .content').addClass('visited');
+		var index = $(this).index();
+		$('.right-con .con').removeClass('dsb').eq(index).addClass('dsb');
+	});
+})(jQuery);
+	//表单验证
+	$("#form_reg input[name='email'],#form_reg input[name='password'],#form_reg input[name='password_again'],#form_reg input[name='checkcode']").bind({
+		"focus": function() {
+			CheckInput($(this), true);
+		},
+		"blur": function() {
+			CheckInput($(this));
+		}
+	});
+
+//登录
+$(function() {
+	$('#owl-demo').owlCarousel({
+		items: 1,
+		autoPlay: false,
+		navigation: true,
+		pagination: false,
+		lazyEffect: 'fade'
+	});
+});
 
 //注册
 $(function() {
@@ -747,6 +1033,22 @@ function RegisterCallback(response) {
 		return;
 	}
 	$("." + _reggingClass).removeClass(_reggingClass);
+}
+
+// 注册成功后跳转
+function JumpAfterReg() {
+	$(window).unbind("resize");
+	$('#FH_Taobao_css').remove();
+	var lp = decodeURIComponent(request("lp"));
+	$.cookie("FH_TaobaoOrTmallGuider_over", "true");
+	if (/^\/(taobao)|(tianmao)\/?$/.test(location.pathname)) {
+		window.top.location.href = "taobao.html";
+	} else if (lp == "" || lp == undefined || lp.indexOf("passport.fanhuan.com") > -1) {
+		window.top.location.href = "welcome.html";
+	} else {
+		$(".con-phonetip").hide();
+		window.top.location.href = lp;
+	}
 }
 
 // 注册成功后跳转
