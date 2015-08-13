@@ -1,5 +1,5 @@
 abbr,address,article,aside,audio,b,blockquote,body,canvas,caption,cite,code,dd,del,details,dfn,div,dl,dt,em,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,p,pre,q,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,ul,var,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:0 0}
-body{font-family:'microsoft yahei',Arial,Helvetica,sans-serif;font-size:12px;line-height:1;background:#fff}
+body{font: 12px/150% Arial,Verdana,"\5b8b\4f53";font-size:12px;line-height:1;background:#fff}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
 ul{list-style:none}
 ul li{list-style:none;float: left;}
@@ -15,3 +15,4 @@ table{border-collapse:collapse;border-spacing:0}
 hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
 input,select{vertical-align:middle}
 input[type=submit],p{font-family: 'microsoft yahei',Arial,Helvetica,sans-serif;}
+.font{font-family: 'microsoft yahei',Arial,Helvetica,sans-serif;}

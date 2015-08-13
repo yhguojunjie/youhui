@@ -61,7 +61,7 @@
 .sidebar h3{width:100%;height:41px;line-height:41px;text-align:center;font-size:14px;background:#B1191A;color:#fff}
 .sidebar .sidebar-info{position:relative;width:100%;border-top:none}
 .sidebar .side-li{position:relative;font-weight:600;font-size:14px}
-.sidebar .side-li>li{width:100%;margin:auto;height:31px;line-height:32px;text-align:center;border-left:1px solid #b61d1d;cursor:pointer;color:#fff}
+.sidebar .side-li>li{position:relative;width:100%;margin:auto;height:31px;line-height:32px;text-align:center;border-left:1px solid #b61d1d;cursor:pointer;color:#fff}
 .sidebar .side-li>li:hover{background:#fff;color:#b61d1d}
 .sidebar .side-li>li.visited{background:#fff;color:#B61D1D}
 .right-con{width:1038px;height:auto;float:left;position:relative}
@@ -70,7 +70,7 @@
 .right-con .nav>a.spe{color:#c40000;font-size:16px}
 .right-con .line-a{color:#efefef;padding:5px;margin:0 8px}
 .right-con .nav img{vertical-align:middle;border:none;margin:0 0 0 40px}
-.right-con .content{width:100%;float:left;border:1px solid #eee;min-height:434px;padding-bottom:20px}
+.right-con .content{width:100%;float:left;border:1px solid #eee;min-height:475px;padding-bottom:20px}
 .right-con .content.visited{border-top:none}
 .right-con .con{width:100%;height:auto;margin-left:0;margin-top:0;padding:0 10px;float:left}
 .right-con .con .cooper-logo{position:relative;float:left;display:block;width:141px;height:84px;margin:5px auto;border:2px solid #FFF;padding-top:8px;overflow:hidden;text-align:center;color:#999}
@@ -85,9 +85,12 @@
 .imgBox2 a{display:inline-block;}
 .imgBox2 img{height:178px}
 .main{width:1190px;margin:auto;min-height:100px;overflow: hidden;}
-.main-left{width:960px;float:left;border:1px solid #eee;border-top:2px solid #ddd;border-right:none;border-left:none}
-.main-title{width:100%;height:50px;margin-left:-1px;line-height:50px;border:1px solid #eee;border-top:none}
+.main-left{width:960px;float:left;border-right:none;border-left:none}
+.main-title{width:100%;height:40px;border-bottom:1px solid #c81623;margin-left:-1px;line-height:45px;border-top:none}
 .main-title h1{float:left;margin-left:20px;font-size:16px;text-shadow:2px 2px 2px #c4c4c4}
+.main-title .tab{float:right;margin-top: 1px;}
+.main-title .tab li.tab-item{float: left;height: 34px;position: relative;z-index: 2;}
+.main-title .tab li.tab-item a {float: left;height: 34px;padding: 0 16px;text-decoration: none;line-height: 34px;overflow: hidden;background: #fff;border-left: solid 1px #fff;border-right: solid 1px #fff;white-space: nowrap;}
 .show-list{width:100%;float: left;height: 40px;margin-top: 10px;}
 .show-list ul li {margin-right: 16px;font-size: 12px;height: 30px;line-height: 30px;}
 .show-list ul li.current a {display: block;font-weight: bold;color: #FFF;background: #c40000;border-radius: 2px;padding: 0 9px;}
@@ -110,7 +113,7 @@
 .product-box .box .box_hover .sale{padding-left:5px;float:left}
 .product-box .box .box_hover .money{padding-right:5px;float:right}
 .product-box .box_list{padding:15px 20px;height:auto;overflow:hidden;position: relative;}
-.product-box .box_list a{display:block;font-size:20px;height:40px;overflow:hidden;line-height:40px;border-bottom:1px dotted #d5d5d5;margin-bottom:10px}
+.product-box .box_list a{display:block;font-size:20px;font-family: 'microsoft yahei',Arial,Helvetica,sans-serif;height:40px;overflow:hidden;line-height:40px;border-bottom:1px dotted #d5d5d5;margin-bottom:10px}
 .product-box .box_list a img{width:50px;height:30px;vertical-align: middle;margin-right: 5px;}
 .product-box .box_list .list_logo{width:100%;height:32px;line-height:32px;float:left}
 .product-box .box_list .list_logo .price-new {color: #000;font-size: 20px;font-family: Tahoma;font-weight: bold;margin-left: 4px;}
@@ -123,7 +126,7 @@
 .product-box .box_list .box_listr a{display:block;background:#c40000;padding:6px 18px;color:#fff;font-weight:600;font-size:18px;border-bottom: none;}
 
 .main-right{float:right;width:178px}
-.time-go{position:relative;width:100%;height:auto;border:1px solid #ddd}
+.time-go{position:relative;float:left;width:99%;height:auto;border:1px solid #ddd}
 .time-cell{width:100%;height:auto;margin:16px auto}
 .time-cell h1{padding-left:12px;line-height:30px;margin-bottom:10px;font-size:16px}
 .time-cell a{font-size:16px}
@@ -147,7 +150,7 @@
 .time-circle{position:absolute;top:744px;left:-6px;width:8px;height:8px;border:1px solid #fff;border-radius:10px;background:#ccc;cursor:pointer}
 .bottom-circle{top:962px}
 .time-circle:hover{background:#c40000}
-.gogo-choose{float:left;margin-top:20px;width:100%;height:auto;border:1px solid #ddd}
+.gogo-choose{float:left;margin-top:20px;width:99%;height:auto;border:1px solid #ddd}
 .gogo-choose>h1{font-size:16px;padding-left:10px;line-height:30px;margin-bottom:10px}
 .sub-show{margin-top:20px;margin:0 9px 20px;height:auto;float:left}
 .sub-right .oriPrice{font-size:8px;float:left}
@@ -182,18 +185,26 @@
 .login-head{width:990px;margin:0 auto;height: 60px;}
 .login-head .logo{position:relative;width:140px;padding:10px 0 0;height:60px;float: left;}
 .login-head .logo img{width: 140px;height: 50px;}
-.login-head h3{font-size: 26px;float: left;margin-top: 20px;color: #999;}
-.login-wrap{position:relative;height:475px;margin:10px 0 0;background-color:#e93854}
-.login-wrap .login-form{position:absolute;width:306px;background:#fff;padding:20px;top:40px;right:240px}
-.login-wrap .login-form .mt{display:block;width:306px;height:27px;margin-bottom:5px}
-.login-wrap .login-form .mt h1{height:27px;line-height:27px;top:-5px;float:left;color:#666;font-size:20px}
+.login-head h3{font-size: 26px;float: left;margin-top: 20px;font-weight: 400;}
+.login-wrap{position:relative;height:475px;margin:10px 0 0;width: 100%;}
+.login-wrap #owl-demo { width: 100%; margin-left: auto; margin-right: auto;height: 100%;}
+.login-wrap #owl-demo .item{ display: block;}
+.login-wrap #owl-demo img { display: block; width: 100%;}
+.login-wrap .login-form{position:absolute;width:306px;background:#fff;padding:20px;top:40px;right:160px;border-radius: 4px;}
+.login-wrap .login-form .mt{display:block;width:306px;height:27px;margin-bottom:7px}
+.login-wrap .login-form .mt h1{height:27px;line-height:27px;top:-5px;float:left;color:#666;font-size:20px;font-weight: 400;}
 .login-wrap .login-form .mt a{float:right;font-size:14px;color:#b61d1d}
+.login-wrap .login-form .msg-wrap{min-height:31px;height:auto!important;height:31px;margin:2px 0 5px}
+.login-wrap .login-form .msg-warn{position:relative;background:#fff6d2;color:#666;border:1px solid #ffe57d;padding:3px 10px 3px 40px;line-height:18px;height:18px}
+.login-wrap .login-form .msg-warn b{position:absolute;top:50%;left:10px;display:block;margin-top:-8px;width:16px;height:17px;overflow:hidden;background:url(../img/logo/pwd-icons-new.png) -104px -22px no-repeat}
+.login-wrap .login-form .msg-error{position:relative;background:#ffebeb;color:#e4393c;border:1px solid #e4393c;padding:3px 10px 3px 40px;line-height:18px;min-height:18px;display:none;}
+.login-wrap .login-form .msg-error b{position:absolute;top:50%;left:10px;display:block;margin-top:-8px;width:16px;height:16px;overflow:hidden;background:url(../img/logo/pwd-icons-new.png) -104px -49px no-repeat}
 .login-wrap .login-form .mc .item{position:relative;margin-bottom:20px}
 .login-wrap .login-form .mc .item.item-fore1,.login-wrap .login-form .mc .item.item-fore2{border:1px solid #bdbdbd;height:38px;width:304px}
 .login-wrap .login-form .mc .item.item-fore3{margin-bottom:15px}
 .login-wrap .login-form .mc .item .login-label{position:absolute;top:0;left:0;width:38px;height:38px;border-right:1px solid #bdbdbd;background:url(../img/pwd-icons-new.png) no-repeat}
 .login-wrap .login-form .mc .item .login-label.pwd-label{background-position:-48px 0}
-.login-wrap .login-form .mc .item .itxt{line-height:18px;height:18px;border:0;padding:10px 0 10px 50px;width:254px;overflow:hidden;font-size:14px;}
+.login-wrap .login-form .mc .item .itxt{line-height:18px;height:18px;border:0;margin-left: 38px;padding:10px 0 10px 12px;width:254px;overflow:hidden;font-size:14px;}
 .login-wrap .login-form .mc .item .safe{color:#666}
 .login-wrap .login-form .mc .item .safe span{margin-right:15px}
 .login-wrap .login-form .mc .item .safe .forget-pw-safe{position:absolute;right:0;top:0;margin:0}

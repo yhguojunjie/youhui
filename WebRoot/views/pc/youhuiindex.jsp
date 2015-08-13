@@ -4,8 +4,8 @@
 <%@ page language="java" import="com.yoxi.hudongtui.vo.agent.AgentInfoVO" %>
 <%@ page language="java" import="com.yoxi.hudongtui.utils.common.ConvertUtil" %>
 <%@ include file="constant.jsp"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
     <meta charset="UTF-8">
     <title>帮you惠，优惠网！我喜欢</title>
@@ -268,12 +268,14 @@
 </div> 
 <div class="main">
     <div class="main-left">
-        <div class="main-title">
+        <div class="main-title font">
             <h1>超高优惠</h1>
-        </div>
+<!--             <div class="tab"><ul><li class="tab-item"><a href="#">单品推荐</a></li><li class="tab-item"><a href="#">品牌专场</a></li></ul></div>    
+ -->        </div>
                <div class="show-list">
                     <ul>
-                        <li class="current"><a href="#">全部(100)</a></li>
+                     <!--   <li class="current"><a href="#">全部(100)</a></li>  
+             
                         <li><a href="#">服装内衣(12)</a></li>
                         <li><a href="#">鞋包配饰(12)</li>
                         <li><a href="#">运动户外(12)</li>
@@ -283,7 +285,23 @@
                         <li><a href="#">护肤彩妆(12)</li>
                         <li><a href="#">母婴用品(12)</li>
                         <li><a href="#">家纺居家(12)</li>
-                        <li><a href="#">家具建材(12)</li>
+                        <li><a href="#">家具建材(12)</li>  -->
+                        
+                        
+                         <li class="current">全部(100)</li>
+                        <li><div>服装内衣(12)</div></li>
+                        <li>鞋包配饰(12)</li>
+                        <li>运动户外(12)</li>
+                        <li>珠宝手表(12)</li>
+                        <li>手机数码(12)</li>
+                        <li>家电办公(12)</li>
+                        <li>护肤彩妆(12)</li>
+                        <li>母婴用品(12)</li>
+                        <li>家纺居家(12)</li>
+                        <li>家具建材(12)</li> 
+                        
+                        
+                        
                         <!-- <li><a href="#">美食特产</a></li>
                         <li><a href="#">日用百货</a></li>
                         <li><a href="#">汽车摩托</a></li>

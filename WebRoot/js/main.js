@@ -191,6 +191,8 @@
 
     //超高优惠
     $('.show-list li').click(function(){
+    	console.log("111");
+    	//$(this).addClass('current');
     	$(this).addClass('current').siblings().removeClass('current');
     });
     //合作伙伴
