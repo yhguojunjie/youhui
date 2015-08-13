@@ -127,7 +127,7 @@
                 <img class="scroll-logo" src="${path}/img/logo2.png" />
                 <div class="search-wrapper-scroll">
                     <div class="search-box-scroll">
-                        <input class="search-in-scroll" type="text" placeholder="想要的商品吧~" />
+                        <input class="search-in-scroll" type="text" placeholder="输入想要的商品吧~" />
                         <input type="button" class="search-but-scroll" value="搜索">
                     </div>
                 </div>
@@ -139,7 +139,7 @@
         <img src="${path}/img/logo.png" />
         <div class="search-wrapper">
             <div class="search-box">
-                <input class="search-in" type="text" placeholder="输入你想要的商品吧~">
+                <input class="search-in" type="text" placeholder="输入想要的商品吧~">
                 <input type="button" class="search-but" value="搜索">
             </div>
         </div>
@@ -153,7 +153,7 @@
        <div class="line">
        </div>
     <div class="content-top">
-       <div class="sidebar">
+       <div class="sidebar font">
            <h3>优惠品分类</h3>
          <div class="sidebar-info">
             <ul class="side-li">
@@ -185,7 +185,7 @@
         </div>
     </div> 
     <div class="right-con">
-        <div class="nav">
+        <div class="nav font">
          <a class="spe" href="#">超高优惠</a>
             <a class="spe" href="#">限量特价抢购</a>
             <!-- <a class="spe" href="#">限时抢购</a> -->
@@ -942,7 +942,7 @@
     </div>
     <div class="main-right">
         <div class="time-go">
-            <div class="time-cell">
+            <div class="time-cell font">
                 <h1>今日限量特价商品<span class="now-news">更新<span class="">3</span></span></h1>
                 <div class="inner-show">
                     <ul>
@@ -1006,7 +1006,28 @@
         </div>
         <div class="fix-right-sub">
             <div class="gogo-choose">
-                <h1>今日推荐商品</h1>
+                <h1 class="font">今日推荐商品</h1>
+                <div class="sub-show">
+                    <div class="content-sub">
+                        <ul class="imgBox2">
+                            <li><a href="#"><img src="${path}/img/sub1.jpg"></a></li>
+                            <li><a href="#"><img src="${path}/img/sub2.jpg"></a></li>
+                            <li><a href="#"><img src="${path}/img/sub3.jpg"></a></li>
+                        </ul>
+                        <div class="currentNum-sub">
+                            <span class="imgNum2 mark-color"></span>
+                            <span class="imgNum2"></span>
+                            <span class="imgNum2"></span>
+                        </div>
+                        <div class="control2 to-left2"><i class="fa fa-angle-left"></i></div>
+                        <div class="control2 to-right2"><i class="fa fa-angle-right"></i></div>
+                    </div>
+                    <div class="sub-right">
+                        <div class="nowPrice">优惠价：<i>￥1020</i></div>
+                        <p class="desc"><a target="_blank" href="#">荣耀 6 Plus (PE-TL10) 白色 移动联通双4G手机 双卡双待双通</a></p>
+                        <p class="consumer">已有<i>2309</i>人购买</p>
+                    </div>
+                </div>
                 <div class="sub-show">
                     <div class="content-sub">
                         <ul class="imgBox2">
