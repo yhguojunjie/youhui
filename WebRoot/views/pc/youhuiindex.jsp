@@ -357,7 +357,7 @@
                         <div class="ico-you">购买后减67%</div>
                 </div>
                 <div class="box_listr">
-                    <a href="#" class="" target="_blank">立即购买</a>
+                    <a href="#" class="" target="_blank">品牌专场</a>
                 </div>
             </div>
         </div>

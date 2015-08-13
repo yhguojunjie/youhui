@@ -195,15 +195,15 @@
 })(jQuery);
 
 //登录
-$(function() {
-	$('#owl-demo').owlCarousel({
-		items: 1,
-		autoPlay: false,
-		navigation: true,
-		pagination: false,
-		lazyEffect: 'fade'
-	});
-});
+//$(function() {
+//	$('#owl-demo').owlCarousel({
+//		items: 1,
+//		autoPlay: false,
+//		navigation: true,
+//		pagination: false,
+//		lazyEffect: 'fade'
+//	});
+//});
 
 //注册
 $(function() {
