@@ -112,7 +112,7 @@
 <div class="reg-content">
     <div class="box-reg">
         <div class="con-1">
-            <form action="" class="form-reg" id="form_reg">
+            <form  class="form-reg" id="form_reg" action="">
                 <div class="form-item">
                     <label for="reg_mail" class="label">
                         <b class="require">*</b>常用邮箱：
@@ -171,7 +171,7 @@
                     <!-- <a href="#" class="btn btn-1" id="reg_submit" tabindex="5" onclick="return RegisterByEmail($(this),true);" >
                         <span>立即注册</span>
                     </a> -->
-                    <input type="button" class="btn-regist" value="立即注册">
+                    <input type="button" class="btn-regist" id="reg_submit" tabindex="5" value="立即注册" onclick="return RegisterByEmail($(this),true);">
                 </div>
             </form>
         </div>

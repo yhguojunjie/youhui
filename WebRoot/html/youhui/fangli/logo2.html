@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<head>
+		<title>注册 - 返还网</title>
+		<link rel="stylesheet" type="text/css" media="screen" href="css-js/global.css"/>
+		<link rel="stylesheet" type="text/css" media="screen" href="css-js/base.css"/>
+		<style>
+			
+			body{ height: auto; min-height:100%; font: 12px/1.5 tahoma,arial; color: #333; background: url(http://i.fanhuan.com/images/reg/new_20131231/bg.png) 0 0 repeat;}
+			.txt{ vertical-align: middle; height: 18px; padding:7px 8px; font: 14px/18px Simsun,arial;}
+			.txt:focus,.txt.focus{ border-color: #008be4; /*box-shadow: 0 0 3px #008be4,0 2px 1px rgba(0,0,0,0.15) inset;*/ box-shadow: 1px 1px 1px rgba(0,0,0,0.15) inset,1px 1px 0 rgba(51,153,204,0.3),-1px -1px 0 rgba(51,153,204,0.3);}
+			.txt-1{ width: 222px;}
+			.txt-2{ width: 82px;}
+			
+	/** 
+	* ico-login-otherway
+	*/
+	.ico-login-otherway{ width:16px; height: 16px; display:inline-block; *display:inline; *zoom:1; overflow:hidden; background:url(http://i.fanhuan.com/images/site_master/ico_login_otherway.png) no-repeat; vertical-align:middle; margin:-2px 5px 0 0;}
+	.i-login-otherway-sina{ background-position:0 0;}
+	.i-login-otherway-qq{ background-position:-16px 0;}
+	.i-login-otherway-tb{ background-position:0 -16px;}
+	.i-login-otherway-alipay{ background-position:-16px -16px;}
+	.i-login-otherway-weixin{background-position:0 -64px}
+	
+	a:hover .i-login-otherway-sina{ background-position:0 -32px;}
+	a:hover .i-login-otherway-qq{ background-position:-16px -32px;}
+	a:hover .i-login-otherway-tb{ background-position:0 -48px;}
+	a:hover .i-login-otherway-alipay{ background-position:-16px -48px;}
+	a:hover .i-login-otherway-weixin{background-position:-16px -64px;}
+	/* btn
+	 * by cjf 2013-09-26
+	 */
+	 .btn,.btn span{ display:inline-block; background:url(http://i.fanhuan.com/images/site_master/btn_site.png?v=20140522) 0 0 no-repeat; cursor:pointer;}
+	 .btn{ padding-left:15px; background-position:left 0;}
+	 .btn span{ padding-right:15px; text-align:center; background-position:right 0;}
+	 .btn:hover,.btn:hover span{ text-decoration:none; }
+
+	 .btn-1-40,.btn-1{ padding-left:20px; background-position:0 -94px;}
+	 .btn-1-40 span,.btn-1 span{ height:40px; padding-right:20px; font:bold 14px/40px Simsun; color:#fff; background-position:right -94px;}
+	 .btn-1-40:hover,.btn-1:hover{ background-position:0 -136px;}
+	 .btn-1-40:hover span,.btn-1:hover span{ background-position:right -136px;}
+	 .btn-2-40,.btn-3{ padding-left:20px; background-position:0 -390px;}
+	 .btn-2-40 span,.btn-3 span{ height:40px; padding-right:20px; font:bold 14px/40px Simsun; color:#fff; background-position:right -390px;}
+	 .btn-2-40:hover,.btn-3:hover{ background-position:0 -432px;}
+	 .btn-2-40:hover span,.btn-3:hover span{ background-position:right -432px;}
+	 .btn-3-40,.btn-2{ padding-left:20px; background-position:0 -687px;}
+	 .btn-3-40 span,.btn-2 span{ height:40px; padding-right:20px; font:14px/40px Simsun; color:#666; background-position:right -687px;}
+	 .btn-3-40:hover,.btn-2:hover{ background-position:0 -729px;}
+	 .btn-3-40:hover span,.btn-2:hover span{ background-position:right -729px;}
+
+	 .header{ min-width: 960px; padding: 16px 0; border-bottom:1px solid #e3e3e3; background: #fff;}
+	 .header .inner{ width: 960px; margin:0 auto;}
+	 .header .logo{ display:inline-block; float: left; width: 185px; height: 58px; background: url(http://i.fanhuan.com/images/logo2.png) 0 0 no-repeat; overflow:hidden; position:relative;}
+	 .header .nav{ float: right; margin-top: 15px;}
+	 .header .nav a{ color: #999; text-decoration: none;}
+	 .header .nav a:hover{ color: #008be4;}
+	 .header .nav span{ color: #ccc; padding:0 15px;}
+	 
+	 .content{ min-width: 960px; padding-bottom: 60px; }
+	 .content .step-reg{ width: 844px; height: 45px; margin: 38px auto; background: url(http://i.fanhuan.com/images/reg/new_20131231/bg_step.png) 0 0 no-repeat;}
+	 .content .box-reg{ width:910px;  padding:30px 0 35px 48px; margin: 0 auto; border:1px solid #dfdfdf; border-radius:10px; background: #fff; box-shadow:0 2px 0 rgba(0,0,0,0.03);}
+	 .box-reg .con-1{ float: left; width: 612px; border-right:1px solid #e5e5e5;}
+	 .box-reg .con-1 h2{ width: 240px; height: 24px; margin-bottom: 40px; background: url(http://i.fanhuan.com/images/reg/new_20131231/ico_reg.png) 0 -16px no-repeat;}
+	 .box-reg .con-2{ margin:55px 70px 0 653px;}
+	 .box-reg .con-2 h4{ font: 16px/36px Simsun; color: #333;}
+	 .box-reg .con-2 .btn-outer{ margin-bottom:25px;}
+	 .box-reg .con-2 p{ margin-bottom: 5px; font:14px/30px Simsun;}
+	 .box-reg .con-2 ul{ overflow:hidden;}
+	 .box-reg .con-2 ul li{ float:left; width:49%; height: 20px; overflow: hidden; margin-bottom:10px;}
+	 .box-reg .con-2 ul li a{ display:inline-block; font:12px/1.5 Simsun; color:#666; text-decoration:none; cursor:pointer;}
+	 .box-reg .con-2 ul li a.f14{ font-size:14px;	font-family: arial;}
+	 .box-reg .con-2 ul li a:hover{ text-decoration:underline;}
+	 .box-reg .con-2 ul li a i{ margin:0 5px 3px 0; *margin:0 5px 0 0; }
+	 .box-reg .con-2 .btn-2{ padding-left: 20px;}
+	 .box-reg .con-2 .btn-2 span{ width:110px; text-align:center; padding-right: 20px; font-size: 16px;}
+
+	 .form-reg{}
+	 .form-reg .form-item{ position:relative; padding-left: 70px; margin-bottom: 20px; _zoom:1;}
+	 .form-reg .form-item .label{ float:left; width: 56px; margin-left: -70px; white-space: nowrap; overflow: hidden; text-align: right; font: 14px/34px Simsun;}
+	 .form-reg .form-item .clear-btn{ position: absolute; left: 284px; top:1px; width: 20px; height: 32px; padding-left: 5px; color: #d9d9d9; font:bold 18px/28px tahoma; background: #fff;}
+	 .form-reg .form-item .clear-btn:hover{ color: #666; text-decoration: none;}
+	 .form-reg .form-item .clear-btn-focus{ box-shadow:  -1px 1px 1px rgba(0,0,0,0.15) inset;}
+
+	 .form-reg .btn-1 span{ width: 200px; text-align: center;}
+	 .form-reg .text-term{ margin-top: 8px; color: #666;}
+	 .form-reg .text-term input{ margin: -2px 5px 0 0; *margin-top:0; vertical-align: middle;}
+	 .form-reg .text-term a{ display:inline-block; border-bottom:1px solid #666; color: #666; text-decoration: none; *vertical-align:text-top; _vertical-align:middle;}
+	 .form-reg .text-term a:hover{ color: #008be4; text-decoration:none; border-color:#008be4;}
+	 #reg_mail{ color: #a9a9a9;}
+
+	 .tiptext{ color: #b5b4b4;}
+	 .tiptext i{ display: inline-block; width: 15px; height: 16px; background: url(http://i.fanhuan.com/images/reg/new_20131231/ico_reg.png) 0 0 no-repeat; overflow: hidden; vertical-align: middle; margin:-2px 5px 0 8px; *margin-top:0;}
+	 .tiptext-info{ color: #b5b4b4;}
+	 .tiptext-error{ color: red;}
+	 .tiptext-ok{ color: #060;}
+	 .tiptext-loading{ display: inline-block; width: 16px; height: 16px; background:url(http://i.fanhuan.com/images/loading1.gif) 0 0 no-repeat; vertical-align: middle; margin: -2px 0 0 8px; *margin-top: 0;}
+	 .tiptext-info i{ background-position: 0 0;}
+	 .tiptext-ok i{ background-position: -16px 0;}
+	 .tiptext-error i{ background-position: -32px 0;}
+	 
+	 #reg_checkcode{ width: 80px; height: 30px; margin-left: 8px; vertical-align: middle; cursor: pointer;}
+	 .check-code-change{ margin-left: 8px; color: #a9a9a9;}
+	 .check-code-change:hover{ color: #008be4; text-decoration: none;}
+
+	 #auto_email{ position: absolute; left: 70px; _left:73px; top:34px; width: 240px; border: 1px solid #ccc; background: #fff;}
+	 #auto_email th{ text-align: left; background: #f6f6f6; color: #666;}
+	 #auto_email th,#auto_email td{ padding: 0 5px; line-height: 30px;}
+	 #auto_email td{ color: #333;}
+	 #auto_email td.current{ background: #008be4; color:#fff;}
+	 /* poptip-pass */
+	 .poptip-pass{ display: none; _zoom:1; position:absolute; left:65px; left:64px\9; _left:66px; top:31px; _top:32px; z-index:2; width:100px; height:27px; line-height:27px; text-align:center; color:#444; box-shadow:1px 1px 3px rgba(0,0,0,0.18);}
+	 .poptip-pass .bg{ position:absolute; left:0; top:0; z-index:-1; width:100%; height:25px; background:#fff; /*opacity:0.85; filter:alpha(opacity=85);*/ border:1px solid #8eacc0;}
+	 .poptip-pass b{ position:absolute; left:10px; top:-5px; z-index:0; font:12px/1 Simsun;}
+	 .poptip-pass .wai{ color:#8eacc0;}
+	 .poptip-pass .nei{ top:-3px; color:#fff;}
+
+	 #footer{ background: none; border-top:1px solid #fff;}
+	</style>
+
+</head>
+<body>
+	
+
+
+
+
+	<!--[if !IE]><!-->
+	<style>
+		.form-reg .form-item .auto_input{ width:205px; padding-right:25px !important;}
+	</style>
+	<!--<![endif]-->
+	<div class="header">
+		<div class="inner clearfix">
+			<a class="logo" href="http://www.fanhuan.com/"></a>
+			<div class="nav">
+				<a href="javascript:Login()">登录返还网</a><span>|</span><a href="http://www.fanhuan.com/">全网返还</a><span>|</span><a href="http://taobao.fanhuan.com/">淘宝返还</a><span>|</span><a href="http://zhi.fanhuan.com/">超值购</a><span>|</span><a href="http://quan.fanhuan.com/">优惠券</a>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<div class="step-reg"></div>
+		<div class="box-reg clearfix">
+			<div class="con-1">
+				<h2></h2>
+				<form action="" class="form-reg" id="form_reg">
+					<div class="form-item clearfix">
+						<label for="reg_mail" class="label">常用邮箱</label>
+						<input type="text" autocomplete="off" maxlength="40" name="email" id="reg_mail" class="txt txt-1 auto_input" value="" tabindex="1" />
+						<span class="tiptext tiptext-info"></span>
+						<a href="javascript:;" class="clear-btn" style="display:none;">×</a>
+						<table id="auto_email" style=" display:none;" border="0" cellpadding="0" cellspacing="0">
+							<thead>
+								<tr><th>请选择或继续输入…</th></tr>
+							</thead>
+							<tbody></tbody>
+						</table>
+					</div>
+					<div class="form-item clearfix">
+						<label for="reg_password" class="label">创建密码</label>
+						<input type="password" name="password" id="reg_password" class="txt txt-1" tabindex="2" />
+						<span class="tiptext tiptext-ok"></span>
+						<div class="poptip-pass"><b class="wai">◆</b><b class="nei">◆</b><div class="bg"></div>大写锁定已打开</div>
+					</div>
+					<div class="form-item clearfix">
+						<label for="reg_password_again" class="label">确认密码</label>
+						<input type="password" name="password_again" id="reg_password_again" class="txt txt-1" disabled="disabled" tabindex="3" />
+						<span class="tiptext tiptext-error"></span>
+						<div class="poptip-pass"><b class="wai">◆</b><b class="nei">◆</b><div class="bg"></div>大写锁定已打开</div>
+					</div>
+					<div class="form-item clearfix">
+						<label for="reg_check_code" class="label">验证码</label>
+						<input type="text" id="reg_check_code" maxlength="4" name="checkcode" class="txt txt-2" tabindex="4" />
+						<img onclick="RefreshCheckcode($('#reg_checkcode'));" id = "reg_checkcode" _src = "http://passport.fanhuan.com/checkcode/reg/" title="点击刷新验证码" alt = "点击刷新验证码" />
+						<a href="javascript:;" class="check-code-change" onclick="RefreshCheckcode($('#reg_checkcode'));">换一张</a>
+						<p class="tiptext" style=" margin-top: 8px; height:18px; line-height:18px;"></p>
+					</div>
+					<div class="form-item clearfix">
+						<a href="javascript:;" class="btn btn-1" id="reg_submit" tabindex="5" onclick="return RegisterByEmail($(this),true);" ><span>立即注册</span></a>
+						<p class="text-term"><label for="CheckTerm"><input type="checkbox" checked="checked" id="CheckTerm" />我已阅读并同意返还网的<a href="http://www.fanhuan.com/privacy.html" target="_blank">服务条款</a></label><span class="tiptext tiptext-error" style=" display:none; margin-left:45px;"><i></i>您还未同意返还网的服务条款</span></p>
+					</div>
+				</form>
+			</div>
+			<div class="con-2">
+				<h4>已有返还网帐号？</h4>
+				<div class="btn-outer"><a href="javascript:Login()" class="btn btn-2"><span>登&nbsp;录</span></a></div>
+				<p>用合作站帐号登录</p>
+				<ul class="clearfix">
+					<li><a href="javascript:LoginFrom('qq');" class="f14"><i class="ico-login-otherway i-login-otherway-qq"></i>QQ</a></li>
+					<li><a href="javascript:LoginFrom('taobao');"><i class="ico-login-otherway i-login-otherway-tb"></i>淘宝</a></li>
+					<li><a href="javascript:LoginFrom('sina');"><i class="ico-login-otherway i-login-otherway-sina"></i>新浪微博</a></li>
+					<li><a href="javascript:LoginFrom('wechat');"><i class="ico-login-otherway i-login-otherway-weixin"></i>微信</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="footer" class="footer">
+		<div class="footer-inner">
+			<div class="footer_tips clearfix">
+				<a class="ftips1" target="_blank" href="http://www.fanhuan.com/help/#cctv">CCTV央视专题报道</a>
+				
+				<a class="ftips2" target="_blank" href="http://www.51honest.org/wscredit/detail.credit?action=preLevel&amp;credcode=NO.20000035756&amp;axbFlag=axb">信用之星好评网站</a>
+				<a class="ftips3" target="_blank" href="https://ss.cnnic.cn/verifyseal.dll?sn=e12020935020010975301505&amp;ct=df&amp;pa=866312">可信网站值得信赖</a>
+				<a class="ftips4" target="_blank" href="http://www.315online.com.cn/member/315120006.html">交易保障放心购物</a>
+				<a class="ftips5" target="_blank" href="http://www.miibeian.gov.cn/">工信备案备案网站</a>
+			</div>
+			<p class="footer_link">
+				<span class="copyright">&nbsp;&copy;2008-2015返还网 fanhuan.com</span><a target = "_blank" href="http://www.fanhuan.com/kexinma/" rel="nofollow">关于返还网</a><span>|</span><a target = "_blank" href="http://www.fanhuan.com/joinus.html" rel="nofollow">人才招聘</a><span>|</span><a target = "_blank" href="http://www.fanhuan.com/privacy.html" rel="nofollow">隐私政策</a><span>|</span><a target = "_blank" href="http://www.fanhuan.com/links/" rel="nofollow">友情链接</a><span>|</span><a target = "_blank" href="http://www.fanhuan.com/help/">帮助</a><span>|</span><a target = "_blank" href="http://www.xixiaoyou.com/">美柚</a><span>|</span><a target = "_blank" href="http://www.tataquan.com/">美柚她她圈</a>
+			</p>
+		</div>
+	</div>
+	
+	
+
+	<script type="text/javascript" src="css-js/jquery.js" ></script>
+	<script type="text/javascript" src="css-js/base.js" ></script>
+	<script type="text/javascript" src="css-js/thickbox.js" ></script>
+	<script type="text/javascript" src="css-js/automail.js" ></script>
+	<script>
+		$(function () {
+        //光标停靠输入框右侧
+        $("#form_reg").find("label.label").live("click", function () {
+        	var input = $(this).siblings("input.txt").eq(0);
+        	if (!input.attr("disabled")) {
+        		input.focus();
+        		var rng = $(this).siblings("input.txt").get(0).createTextRange();
+        		rng.collapse(false);
+        		rng.select();
+        	}
+        });
+
+        $("#reg_checkcode").trigger("click");
+        if ($("#reg_password").val() == "") {
+        	$("#reg_password_again").css({
+        		"background": "#EBEBE4"
+        	})
+        }
+        //判断IE 和 IE6
+        var isIE = false,
+        isIE_6 = false,
+        isIE_10 = false;
+        if ($.browser.msie) {
+        	isIE = true;
+        	if ($.browser.version == "6.0") {
+        		isIE_6 = true;
+        	} else if (parseInt($.browser.version) >= 10) {
+        		isIE_10 = true;
+        	}
+        }
+        var maxIndex = 1;
+
+        //页面刷新时，判断输入框
+        if (!isIE) {
+        	$("#reg_mail").css({
+                //"padding-right": "25px",
+                "width": "205px"
+            })
+        }
+        if ($("#reg_mail").val() != "") {
+        	$("#reg_mail").css({
+        		"color": "#666"
+        	});
+        	if (!isIE) {
+        		$("#reg_mail").siblings(".clear-btn").removeClass("clear-btn-focus").show();
+        	}
+        }
+        $("#form_reg").find("input[class~='txt']").bind({
+        	"focus": function () {
+        		maxIndex++;
+        		$(this).addClass("focus").parent(".form-item").css("z-index", maxIndex);
+        	},
+        	"blur": function () {
+        		$(this).removeClass("focus").parent(".form-item");
+        	},
+        	"keyup": function (e) {
+        		if (e.keyCode == 13) {
+        			RegisterByEmail($("#reg_submit"), true);
+        		}
+        	}
+        });
+        //表单验证
+        $("#form_reg input[name='email'],#form_reg input[name='password'],#form_reg input[name='password_again'],#form_reg input[name='checkcode']").bind({
+        	"focus": function () {
+        		CheckInput($(this), true);
+        	},
+        	"blur": function () {
+        		CheckInput($(this));
+        	}
+        });
+        //“X”清空已输入
+        $("#form_reg").find(".clear-btn").live("click", function () {
+        	$(this).hide().siblings("input").val("").focus();
+        });
+        //密码框是否大写
+        if (!isIE) {
+        	$("#form_reg").find("input[type='password']").bind({
+        		"keypress": function (event) {
+        			var e = event || window.event;
+        			var target = e.target || e.srcElement;
+                    var keyCode = e.keyCode || e.which; //按键的keyCode
+                    var isShift = e.shiftKey || (keyCode == 16) || false;   //shift键是否按住
+                    if ((keyCode >= 65 && keyCode <= 90) || ((keyCode >= 97 && keyCode <= 122) && isShift)) {
+                    	$(this).siblings(".poptip-pass").show();
+                    } else {
+                    	$(this).siblings(".poptip-pass").hide();
+                    }
+                },
+                "blur": function () {
+                	$(this).siblings(".poptip-pass").hide();
+                },
+                "keyup": function () {
+                	if ($.trim($(this).val()) == "") {
+                		$(this).siblings(".poptip-pass").hide();
+                	}
+                },
+                "keydown": function () {
+                	if ($.trim($(this).val()) == "") {
+                		$(this).siblings(".poptip-pass").hide();
+                	}
+                }
+            });
+}
+        //邮箱事件
+        $("#reg_mail").bind({
+        	"focus": function () {
+        		if ($.trim($(this).val()) == "") {
+        			$(this).val("").css({
+        				"color": "#666"
+        			});
+        		}
+        		if (!isIE && $.trim($(this).val()) != "") {
+        			$(this).siblings(".clear-btn").addClass("clear-btn-focus").show();
+        		}
+        	},
+        	"blur": function () {
+        		var _this = $(this),
+        		value = $.trim($("#reg_mail").val()),
+        		result = CheckEmail(value);
+        		if (value != "") {
+        			$(this).css({
+        				"color": "#666"
+        			});
+        			if (!isIE) {
+        				$(this).siblings(".clear-btn").removeClass("clear-btn-focus").show();
+        			}
+        		} else {
+        			if (!isIE) {
+        				$(this).siblings(".clear-btn").removeClass("clear-btn-focus").hide();
+        			}
+        		}
+        	},
+        	"keyup": function () {
+        		if (!isIE && $("#reg_mail").val() != "") {
+        			$(this).siblings(".clear-btn").addClass("clear-btn-focus").show();
+        		} else {
+        			$(this).siblings(".clear-btn").hide();
+        		}
+        	}
+        });
+        //密码事件
+        //密码提示控制
+        var oBtnPassAgain = false;
+        $("#reg_password").bind({
+        	"keyup": function () {
+        		if ($(this).val().length > 0) {
+        			$("#reg_password_again").removeAttr("disabled").css({
+        				"background": "#fff"
+        			});
+        			if (oBtnPassAgain && ($("#reg_password_again").val() != "")) {
+        				CheckInput($("#reg_password_again"));
+        			}
+        		} else {
+                    //oBtnPassAgain = false;
+                    $("#reg_password_again").attr("disabled", "disabled").css({
+                    	"background": "#EBEBE4"
+                    });
+                    $("#reg_password_again").siblings(".tiptext").hide();
+                }
+            }
+        });
+        $("#reg_password_again").bind({
+        	"focus": function () {
+        		oBtnPassAgain = true;
+        	}
+        });
+    });
+    //服务条款事件
+    $("#CheckTerm").change(function () {
+    	if ($(this).is(":checked")) {
+    		$(this).parents(".text-term").find(".tiptext").hide();
+    	} else {
+    		$(this).parents(".text-term").find(".tiptext").show();
+    	}
+    });
+    //联合登录
+    function LoginFrom(site) {
+    	window.open("http://passport.fanhuan.com/ajax/" + site + "/", "_blank");
+        //window.top.location.href = "http://passport.fanhuan.com/ajax/" + site + "/"; 
+    }
+    var aYetMail = {
+    	mail: [],
+    	result: []
+    };
+    var oCheckEmailBtn = false;
+    //表单验证
+    function CheckInput(element, oBtn) {
+    	var result;
+    	var isFocus = false;
+    	if (oBtn) {
+    		isFocus = true;
+    	}
+    	var value = $.trim(element.val());
+    	switch (element.attr("name")) {
+    		case "email":
+    		result = CheckEmail(value, oBtn);
+    		break;
+    		case "password":
+    		value = element.val();
+    		result = CheckPassword(value, oBtn);
+    		break;
+    		case "password_again":
+    		var pass_val = $("#reg_password").val();
+    		value = element.val();
+    		result = CheckPasswordAgain(pass_val, value, oBtn);
+    		break;
+    		case "checkcode":
+    		value = element.val();
+    		result = CheckCheckcode(value, oBtn);
+    		break;
+    		default:
+    		return;
+    	}
+    	if (result != null) {
+    		if (element.attr("name") == "email" && result.state == "ok" && !isFocus) {
+    			if (aYetMail.mail.length > 0) {
+    				for (var i = 0; i < aYetMail.mail.length; i++) {
+    					if (value == aYetMail.mail[i]) {
+    						ShowTiptext(element, aYetMail.result[i].content, aYetMail.result[i].state);
+    						if (aYetMail.result[i].state == "ok") {
+    							return true;
+    						}
+    						return false;
+    					}
+    				}
+    			}
+                //element.siblings(".tiptext").attr("class", "").addClass("tiptext tiptext-loading").html("");
+                // 检测用户名和邮箱是否已存在
+                $.ajax({
+                	type: "GET",
+                	url: "http://passport.fanhuan.com/ajax/existedIdentifier",
+                	cache: false,
+                	data: "identifier=" + encodeURIComponent(value),
+                	success: function (response) {
+                		var response = eval(response);
+                		if (response.Error != null) {
+                			result = {
+                				content: response.Error.Msg,
+                				state: "error"
+                			}
+                			oCheckEmailBtn = false;
+                		}
+                		if (response.Result == null) {
+                			result = {
+                				content: "",
+                				state: "ok"
+                			}
+                			oCheckEmailBtn = true;
+                		}
+                		if (response.Result != null) {
+                			if (response.Result.Succeed) {
+                				result = {
+                					content: "该邮箱已被注册",
+                					state: "error"
+                				}
+                				oCheckEmailBtn = false;
+                			}
+                			else {
+                				result = {
+                					content: "",
+                					state: "ok"
+                				}
+                				oCheckEmailBtn = true;
+                			}
+                		}
+                		aYetMail.mail.push(value);
+                		aYetMail.result.push(result);
+
+                		ShowTiptext(element, result.content, result.state);
+                	}
+                });
+} else {
+	ShowTiptext(element, result.content, result.state);
+	if (result.state == "ok") {
+		return true;
+	}
+}
+}
+return false;
+}
+    // 邮箱检测
+    function CheckEmail(email, oBtn) {
+    	if (oBtn) {
+    		return {
+    			content: "请填写您常用的邮箱作为登录帐号",
+    			state: "info"
+    		}
+    	}
+    	if (email == "") {
+    		return {
+    			content: "邮箱不能为空",
+    			state: "error"
+    		}
+    	}
+    	if (!/^[\.a-zA-Z0-9_-]+@([a-zA-Z0-9_-]+\.)+[a-zA-Z]{2,3}$/.test(email)) {
+    		return {
+    			content: "邮箱格式出错啦",
+    			state: "error"
+    		}
+    	}
+    	return {
+    		content: "",
+    		state: "ok"
+    	}
+    }
+    //密码
+    function CheckPassword(value, oBtn) {
+    	if (oBtn) {
+    		return {
+    			content: "密码由数字、字母组成，字母区分大小写",
+    			state: "info"
+    		}
+    	}
+    	if (value == "") {
+    		return {
+    			content: "密码不能为空",
+    			state: "error"
+    		}
+    	}
+    	if ($("#reg_mail").val() == "") {
+    		$(".tiptext").eq(0).removeClass("tiptext-info").addClass("tiptext-error").html("<i></i>请输入您的常用邮箱");
+    	}
+    	return {
+    		content: "",
+    		state: "ok"
+    	}
+    }
+    //确认密码
+    function CheckPasswordAgain(value1, value2, oBtn) {
+    	if (oBtn) {
+    		return {
+    			content: "再输一次密码",
+    			state: "info"
+    		}
+    	}
+    	if (value1 != value2) {
+    		return {
+    			content: "两次密码不一致",
+    			state: "error"
+    		}
+    	} else {
+    		return {
+    			content: "",
+    			state: "ok"
+    		}
+    	}
+    }
+    // 校验验证码
+    function CheckCheckcode(value, oBtn) {
+    	if (oBtn) {
+    		return {
+    			content: "",
+    			state: "ok"
+    		}
+    	}
+    	var reg = /^\w+$/g;
+    	if (value == "") {
+    		return {
+    			content: "请输入验证码",
+    			state: "error"
+    		};
+    	}
+    	if (!reg.test(value)) {
+    		return {
+    			content: "验证码格式错误",
+    			state: "error"
+    		}
+    	}
+    	if (value.length != 4) {
+    		return {
+    			content: "验证码长度错误",
+    			state: "error"
+    		};
+    	}
+    	return {
+    		content: "",
+    		state: "ok"
+    	}
+    }
+    // 提示
+    // param	state   ok,error,info
+    var timeShowTip = {};
+    function ShowTiptext(input, content, state) {
+    	var name = input.attr('name');
+    	clearTimeout(timeShowTip[name]);
+    	timeShowTip[name] = setTimeout(function () {
+    		input.siblings(".tiptext").attr("class", "tiptext").addClass("tiptext-" + state).html('<i></i>' + content).show();
+    		if (input.attr("name") == "checkcode") {
+    			input.siblings(".tiptext").find("i").remove();
+    		}
+    	}, 150);
+    }
+    // 刷新验证码
+    function RefreshCheckcode(img) {
+    	var imgUrl = img.attr("_src") + "?" + Math.random();
+    	img.attr("src", imgUrl);
+    	img.parents(".checkcode").css("display", "");
+    }
+    // 邮件注册
+    var _reggingClass = "regging";
+    function RegisterByEmail(btn, setPassword) {
+    	if (btn.hasClass(_reggingClass)) {
+    		return false;
+    	}
+    	if ((CheckInput($("#form_reg input[name='email']")) || oCheckEmailBtn) && CheckInput($("#form_reg input[name='password']")) && CheckInput($("#form_reg input[name='password_again']")) && CheckInput($("#form_reg input[name='checkcode']"))) {
+    		if (!$("#CheckTerm").is(":checked")) {
+    			$("#CheckTerm").parents(".text-term").find(".tiptext").show();
+    			return false;
+    		}
+    		var email = $.trim($("#form_reg input[name='email']")[0].value),
+    		password = $("#form_reg input[name='password']")[0].value,
+    		checkcode = $("#form_reg input[name='checkcode']")[0].value,
+    		qqNum = "";
+    		var data = "email=" + encodeURIComponent(email) +
+    		"&setpassword=" + setPassword +
+    		"&password=" + encodeURIComponent(password) +
+    		"&checkcode=" + encodeURIComponent(checkcode) +
+    		"&qq=" + qqNum +
+    		"&regpage=" + encodeURIComponent(location.href) +
+    		"&callback=RegisterCallback&_=" + Math.random() + "";
+    		btn.addClass(_reggingClass);
+    		CreateJScript("register", "http://passport.fanhuan.com/ajax/RegByEmail?" + data);
+    	}
+    	return false;
+    }
+    // 注册回调
+    function RegisterCallback(response) {
+    	if (response.Error != null) {
+    		if (response.Error.Keyword == "checkcode") {
+    			$("#reg_checkcode").trigger("click");
+    			CheckInput($("#reg_checkcode"));
+    			ShowTiptext($("#reg_checkcode"), response.Error.Msg, "error");
+    			$("#reg_checkcode").find("i").remove();
+    			$("#reg_check_code").siblings(".tiptext").attr("class","").addClass("tiptext tiptext-error").html(response.Error.Msg);
+    			alert(response.Error.Msg);
+    		} else if (response.Error.Keyword == "existed_email") {
+    			CheckInput($("#reg_mail"));
+    			ShowLoginBox($.trim($(":input[name=email]")[0].value), "您的邮箱已注册过返还网，请输入密码直接登录");
+    		} else { alert(response.Error.Msg); }
+    	}
+    	else if (response.Result.Succeed) {
+    		JumpAfterReg();
+    		return;
+    	}
+    	$("." + _reggingClass).removeClass(_reggingClass);
+    }
+    // 注册成功后跳转
+    function JumpAfterReg() {
+    	$(window).unbind("resize");
+    	$('#FH_Taobao_css').remove();
+    	var lp = decodeURIComponent(request("lp"));
+    	$.cookie("FH_TaobaoOrTmallGuider_over", "true");
+    	if (/^\/(taobao)|(tianmao)\/?$/.test(location.pathname)) {
+    		window.top.location.href = "http://www.fanhuan.com/taobao.html";
+    	}
+    	else if (lp == "" || lp == undefined || lp.indexOf("passport.fanhuan.com") >-1 ) {
+    		window.top.location.href = "http://www.fanhuan.com/welcome.html";
+    	} else {
+    		$(".con-phonetip").hide();
+    		window.top.location.href = lp;
+    	}
+    }
+</script>
+
+
+<script type = "text/javascript">
+//        (function () {
+//            var ga = document.createElement('script'); ga.type = 'text/javascript';
+//            ga.async = true; ga.src = 'http://www.google-analytics.com/ga.js';
+//            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+//        })();
+</script>
+
+<script type="text/javascript">
+	var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+	document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ff5261c1181209ad55dcfc28d9d0624d4' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+	UrlTj("");
+	var unneedtj = ["/my", "/ajax", "/login"]; var tj = true; for (var i = 0; i < unneedtj.length; i++) { if (_path.toLowerCase().indexOf(unneedtj[i]) == 0) { tj = false; break; } }
+	if (tj) { var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F29a7ebc4f6a8c90821d8b062a0bf830e' type='text/javascript'%3E%3C/script%3E")); }
+</script>
+<script type="text/javascript">    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cspan id='cnzz_stat_icon_1000300453'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s5.cnzz.com/z_stat.php%3Fid%3D1000300453' type='text/javascript'%3E%3C/script%3E"));</script>
+</body>
+</html>
