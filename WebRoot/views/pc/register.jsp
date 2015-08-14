@@ -135,21 +135,21 @@
                     </label>
                     <input verify="true" type="password" name="password" id="reg_password" class="txt txt-1" tabindex="2" />
                     <span class="tiptext tiptext-ok"></span>
-                    <div class="poptip-pass">
+                   <!--  <div class="poptip-pass">
                         <b class="wai">◆</b>
                         <b class="nei">◆</b>
                         <div class="bg"></div>大写锁定已打开
-                    </div>
+                    </div> -->
                 </div>
                 <div class="form-item">
                     <label for="reg_password_again" class="label"><b class="require">*</b>确认密码：</label>
                     <input verify="true" type="password" name="password_again" id="reg_password_again" class="txt txt-1" disabled="disabled" tabindex="3" />
                     <span class="tiptext tiptext-error"></span>
-                    <div class="poptip-pass">
+                    <!-- <div class="poptip-pass">
                         <b class="wai">◆</b>
                         <b class="nei">◆</b>
                         <div class="bg"></div>大写锁定已打开
-                    </div>
+                    </div> -->
                 </div>
                 <div class="form-item">
                     <label for="reg_check_code" class="label">

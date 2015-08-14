@@ -1093,27 +1093,6 @@
                         <p class="consumer">已有<i>2309</i>人购买</p>
                     </div>
                 </div>
-                <div class="sub-show">
-                    <div class="content-sub">
-                        <ul class="imgBox2">
-                            <li><a href="#"><img src="${path}/img/sub1.jpg"></a></li>
-                            <li><a href="#"><img src="${path}/img/sub2.jpg"></a></li>
-                            <li><a href="#"><img src="${path}/img/sub3.jpg"></a></li>
-                        </ul>
-                        <div class="currentNum-sub">
-                            <span class="imgNum2 mark-color"></span>
-                            <span class="imgNum2"></span>
-                            <span class="imgNum2"></span>
-                        </div>
-                        <div class="control2 to-left2"><i class="fa fa-angle-left"></i></div>
-                        <div class="control2 to-right2"><i class="fa fa-angle-right"></i></div>
-                    </div>
-                    <div class="sub-right">
-                        <div class="nowPrice">优惠价：<i>￥1020</i></div>
-                        <p class="desc"><a target="_blank" href="#">荣耀 6 Plus (PE-TL10) 白色 移动联通双4G手机 双卡双待双通</a></p>
-                        <p class="consumer">已有<i>2309</i>人购买</p>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -1229,18 +1208,12 @@
 	   
    }
    
-   
-
 $(function() {
 	ajaxa();
 	
 $('.sidebar-info .side-li li').click(function(event) {
 	var id=$(this).attr("id");
-/*     $(this).addClass('visited').siblings().removeClass('visited');
-    $(this).parents('.content-top').find('.right-con .content').addClass('visited');
-      */
      var arr = new Array();
-     
       if(id!=17){
       $.ajax({
 			type: "GET",
@@ -1280,8 +1253,7 @@ $('.sidebar-info .side-li li').click(function(event) {
 						 }
 						 html +='</div>';   
 					}
-					$("#webShop").append(html);
-					
+					$("#webShop").append(html);					
 				}else{
 				
 				}
@@ -1291,13 +1263,10 @@ $('.sidebar-info .side-li li').click(function(event) {
       }else{	  
     	  ajaxa();
       }
-     
-     /*
-     var index=$(this).index();
-     $('.right-con .con').removeClass('dsb').eq(index).addClass('dsb'); */
  });
-
 });
+
+
 </script>
 </body>
 </html>
