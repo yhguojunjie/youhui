@@ -188,7 +188,7 @@
     </div> 
     <div class="right-con">
         <div class="nav font">
-         <a class="spe" href="#">超高优惠</a>
+         <a class="spe" href="${basePath}pc/superhuiGoods/list">超高优惠</a>
             <a class="spe" href="#">限量特价抢购</a>
             <!-- <a class="spe" href="#">限时抢购</a> -->
             <!-- <a class="spe" href="#">多买多送</a> -->
@@ -275,7 +275,7 @@
 <!--             <div class="tab"><ul><li class="tab-item"><a href="#">单品推荐</a></li><li class="tab-item"><a href="#">品牌专场</a></li></ul></div>    
  -->        </div>
                <div class="show-list">
-                    <ul>
+                    <ul class="show-listjj">
                      <!--   <li class="current"><a href="#">全部(100)</a></li>  
              
                         <li><a href="#">服装内衣(12)</a></li>
@@ -291,7 +291,13 @@
                         
                         
                          <li class="current">全部(100)</li>
-                        <li><div>服装内衣(12)</div></li>
+                         <c:forEach items="${goodsclassificatList}" var="goodsclassificat" varStatus="sta" >
+		<c:if test="${goodsclassificat.name!='热门商家'||goodsclassificat.name!='综合商城'}"> 
+				 <li >${goodsclassificat.name }</li>
+		  
+		</c:if> 
+		        </c:forEach>
+            <!--             <li><div>服装内衣(12)</div></li>
                         <li>鞋包配饰(12)</li>
                         <li>运动户外(12)</li>
                         <li>珠宝手表(12)</li>
@@ -300,7 +306,7 @@
                         <li>护肤彩妆(12)</li>
                         <li>母婴用品(12)</li>
                         <li>家纺居家(12)</li>
-                        <li>家具建材(12)</li> 
+                        <li>家具建材(12)</li>  -->
                         
                         
                         
@@ -310,6 +316,12 @@
                         <li><a href="#">文化娱乐</a></li> -->
                     </ul>
             </div>
+            
+            <br>
+            <br>
+            <br>
+            <br>
+            
         <div class="product-box">
             <div class="box">
               <div class="logo">
@@ -345,7 +357,9 @@
                 </div>
             </div>
         </div>
-        <div class="product-box">
+        
+        
+        <%-- <div class="product-box">
             <div class="box">
               <div class="logo">
 	                <span class="bg-cgf ico-tag1">今日</span>
@@ -379,8 +393,11 @@
                     <a href="#" class="" target="_blank">立即购买</a>
                 </div>
             </div>
-        </div>
-        <div class="product-box">
+        </div> --%>
+        
+        
+        
+        <%-- <div class="product-box">
             <div class="box">
               <div class="logo">
 	                <span class="bg-cgf ico-tag1">今日</span>
@@ -414,8 +431,8 @@
                     <a href="#" class="" target="_blank">立即购买</a>
                 </div>
             </div>
-        </div>
-        <div class="product-box">
+        </div> --%>
+        <%-- <div class="product-box">
             <div class="box">
               <div class="logo">
 	                <span class="bg-cgf ico-tag1">今日</span>
@@ -449,8 +466,8 @@
                     <a href="#" class="" target="_blank">立即购买</a>
                 </div>
             </div>
-        </div>
-        <div class="product-box">
+        </div> --%>
+        <%-- <div class="product-box">
             <div class="box">
               <div class="logo">
 	                <span class="bg-cgf ico-tag1">今日</span>
@@ -484,8 +501,8 @@
                     <a href="#" class="" target="_blank">立即购买</a>
                 </div>
             </div>
-        </div>
-        <div class="product-box">
+        </div> --%>
+        <%-- <div class="product-box">
             <div class="box">
               <div class="logo">
 	                <span class="bg-cgf ico-tag1">今日</span>
@@ -519,8 +536,8 @@
                     <a href="#" class="" target="_blank">立即购买</a>
                 </div>
             </div>
-        </div>
-        <div class="product-box">
+        </div> --%>
+        <%-- <div class="product-box">
             <div class="box">
               <div class="logo">
 	                <span class="bg-cgf ico-tag1">今日</span>
@@ -554,8 +571,8 @@
                     <a href="#" class="" target="_blank">立即购买</a>
                 </div>
             </div>
-        </div>
-        <div class="product-box">
+        </div> --%>
+        <%-- <div class="product-box">
             <div class="box">
               <div class="logo">
 	                <span class="bg-cgf ico-tag1">今日</span>
@@ -589,8 +606,8 @@
                     <a href="#" class="" target="_blank">立即购买</a>
                 </div>
             </div>
-        </div>
-        <div class="product-box">
+        </div> --%>
+        <%-- <div class="product-box">
             <div class="box">
               <div class="logo">
 	                <span class="bg-cgf ico-tag1">今日</span>
@@ -624,8 +641,8 @@
                     <a href="#" class="" target="_blank">立即购买</a>
                 </div>
             </div>
-        </div>
-        <div class="product-box">
+        </div> --%>
+        <%-- <div class="product-box">
             <div class="box">
               <div class="logo">
 	                <span class="bg-cgf ico-tag1">今日</span>
@@ -659,8 +676,8 @@
                     <a href="#" class="" target="_blank">立即购买</a>
                 </div>
             </div>
-        </div>
-        <div class="product-box">
+        </div> --%>
+        <%-- <div class="product-box">
             <div class="box">
               <div class="logo">
 	                <span class="bg-cgf ico-tag1">今日</span>
@@ -694,8 +711,8 @@
                     <a href="#" class="" target="_blank">立即购买</a>
                 </div>
             </div>
-        </div>
-        <div class="product-box">
+        </div> --%>
+        <%-- <div class="product-box">
             <div class="box">
               <div class="logo">
 	                <span class="bg-cgf ico-tag1">今日</span>
@@ -729,8 +746,8 @@
                     <a href="#" class="" target="_blank">立即购买</a>
                 </div>
             </div>
-        </div>
-        <div class="product-box">
+        </div> --%>
+        <%-- <div class="product-box">
             <div class="box">
               <div class="logo">
 	                <span class="bg-cgf ico-tag1">今日</span>
@@ -764,8 +781,8 @@
                     <a href="#" class="" target="_blank">立即购买</a>
                 </div>
             </div>
-        </div>
-        <div class="product-box">
+        </div> --%>
+        <%-- <div class="product-box">
             <div class="box">
               <div class="logo">
 	                <span class="bg-cgf ico-tag1">今日</span>
@@ -799,8 +816,8 @@
                     <a href="#" class="" target="_blank">立即购买</a>
                 </div>
             </div>
-        </div>
-        <div class="product-box">
+        </div> --%>
+        <%-- <div class="product-box">
             <div class="box">
               <div class="logo">
 	                <span class="bg-cgf ico-tag1">今日</span>
@@ -834,8 +851,8 @@
                     <a href="#" class="" target="_blank">立即购买</a>
                 </div>
             </div>
-        </div>
-        <div class="product-box">
+        </div> --%>
+        <%-- <div class="product-box">
             <div class="box">
               <div class="logo">
 	                <span class="bg-cgf ico-tag1">今日</span>
@@ -869,8 +886,8 @@
                     <a href="#" class="" target="_blank">立即购买</a>
                 </div>
             </div>
-        </div>
-        <div class="product-box">
+        </div> --%>
+        <%-- <div class="product-box">
             <div class="box">
               <div class="logo">
 	                <span class="bg-cgf ico-tag1">今日</span>
@@ -904,8 +921,8 @@
                     <a href="#" class="" target="_blank">立即购买</a>
                 </div>
             </div>
-        </div>
-        <div class="product-box">
+        </div> --%>
+        <%-- <div class="product-box">
             <div class="box">
               <div class="logo">
 	                <span class="bg-cgf ico-tag1">今日</span>
@@ -939,7 +956,7 @@
                     <a href="#" class="" target="_blank">立即购买</a>
                 </div>
             </div>
-        </div>
+        </div> --%>
 
     </div>
     <div class="main-right">
@@ -1209,8 +1226,64 @@
    }
    
 $(function() {
-	ajaxa();
 	
+	// 超级优惠商品分类
+	$('.show-list .show-listjj li').click(function(event) {
+	alert();
+	
+	  $.ajax({
+			type: "GET",
+       url: "${basePath}pc/youHui/ajaxList?id="+id,
+       dataType: "json",
+			success : function(data) {
+				var secondnameStr='';
+				for (var j = 0; j < data.length; j++) {
+					 secondnameStr=secondnameStr+";"+data[j].secondname;
+				}
+				arr=secondnameStr.split(";");
+				var newarr=f(arr);
+				
+				console.log("data.length="+data.length);
+				if(data.length != 0){
+					$("#webShop").html("");
+					var html = "";
+					for(var z=1;z<newarr.length;z++){
+					
+						 for (var i = 0; i < data.length; i++) {
+							 if(data[i].secondname==newarr[z]&&z==1){
+						 html +='<a href="'+data[i].shophref+'" class="cooper-logo">';
+						 html +='<img src="'+fileAccessPath+data[i].shopimge + '" alt="App Store">' + data[i].discountrate +'</a>';
+							 }
+						 }
+
+						 html +='<div class="con-list">';
+						 
+						 if(z!=1){
+						 html +='<h2>'+newarr[z]+'</h2>';
+						 }						 
+							 for (var i = 0; i < data.length; i++) {
+								 if(data[i].secondname==newarr[z]&&z!=1){	 
+						 html +='<a href="'+data[i].shophref+'">' + data[i].shopname +'</a>';
+						 
+							 }
+						 }
+						 html +='</div>';   
+					}
+					$("#webShop").append(html);					
+				}else{
+				
+				}
+			}
+			 }); 
+	
+	
+	
+	
+	
+	 });
+	
+	//商品分类
+	ajaxa();
 $('.sidebar-info .side-li li').click(function(event) {
 	var id=$(this).attr("id");
      var arr = new Array();
