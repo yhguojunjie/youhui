@@ -115,7 +115,7 @@ public class YouHuiController {
 
 		// 2.超级优惠商品
 		List<SuperhuiGoods> superhuiGoodsList = superhuiGoodsService
-				.findSuperhuiGoods();
+				.findAllSuperhuiGoods();
 		inv.getRequest().setAttribute("superhuiGoodsList", superhuiGoodsList);
 
 		// 1.代理商信息处理

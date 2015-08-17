@@ -15,15 +15,30 @@ public class SuperhuiGoodsImpl implements ISuperhuiGoodsService {
 	private SuperhuiGoodsDAO superhuiGoodsDAO;
 
 	/**
-	 * 超级优惠商品
+	 * 超级优惠商品列表
 	 * 
 	 * @return List<SuperhuiGoods>
 	 */
 	@Override
-	public List<SuperhuiGoods> findSuperhuiGoods() throws Exception {
-		List<SuperhuiGoods> superhuiGoodsList = superhuiGoodsDAO
-				.findSuperhuiGoods();
-		return superhuiGoodsList;
+	public List<SuperhuiGoods> findAllSuperhuiGoods() throws Exception {
+
+		List<SuperhuiGoods> superhuiGoods = superhuiGoodsDAO
+				.findAllSuperhuiGoods();
+		return superhuiGoods;
+	}
+
+	/**
+	 * 超级优惠商品列表
+	 * 
+	 * @return List<SuperhuiGoods>
+	 */
+	@Override
+	public List<SuperhuiGoods> findSuperhuiGoodsList(int id) throws Exception {
+		// 根据台排序字段组织语句
+		String condition = "where b.goods_id='" + id + "'";
+		List<SuperhuiGoods> superhuiGoods = superhuiGoodsDAO
+				.findSuperhuiGoods(condition);
+		return superhuiGoods;
 	}
 
 }
