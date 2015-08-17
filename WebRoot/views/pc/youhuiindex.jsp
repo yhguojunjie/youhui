@@ -1297,6 +1297,7 @@ $(function() {
 					  
 								console.log('结果'+html);
 
+					console.log('结果'+html);
 					$("#webShop").append(html);					
 				}else{
 				
