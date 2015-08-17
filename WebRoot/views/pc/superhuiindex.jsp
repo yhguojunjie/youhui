@@ -355,22 +355,22 @@
  -->        </div>
                <div class="show-list">
                     <ul>
-                        <li class="current"><a href="#">全部(100)</a></li>
-                        <li><a href="#">服装内衣(12)</a></li>
-                        <li><a href="#">鞋包配饰(12)</a></li><a href="#">
-                        </a><li><a href="#"></a><a href="#">运动户外(12)</a></li><a href="#">
-                        </a><li><a href="#"></a><a href="#">珠宝手表(12)</a></li><a href="#">
-                        </a><li><a href="#"></a><a href="#">手机数码(12)</a></li><a href="#">
-                        </a><li><a href="#"></a><a href="#">家电办公(12)</a></li><a href="#">
-                        </a><li><a href="#"></a><a href="#">护肤彩妆(12)</a></li><a href="#">
-                        </a><li><a href="#"></a><a href="#">母婴用品(12)</a></li><a href="#">
-                        </a><li><a href="#"></a><a href="#">家纺居家(12)</a></li><a href="#">
-                        </a><li><a href="#"></a><a href="#">家具建材(12)</a></li><a href="#">
+                        <li class="current">全部(100)</li>
+                        <li>服装内衣(12)</li>
+                        <li>鞋包配饰(12)</li>
+                        <li>运动户外(12)</li>
+                        <li>珠宝手表(12)</li>
+                        <li>手机数码(12)</li>
+                        <li>家电办公(12)</li>
+                        <li>护肤彩妆(12)</li>
+                        <li>母婴用品(12)</li>
+                        <li>家纺居家(12)</li>
+                        <li>家具建材(12)</li>
                         <!-- <li><a href="#">美食特产</a></li>
                         <li><a href="#">日用百货</a></li>
                         <li><a href="#">汽车摩托</a></li>
                         <li><a href="#">文化娱乐</a></li> -->
-                    </a></ul><a href="#">
+                    </a></ul>
             </a></div>
             <a href="#">
         </a>

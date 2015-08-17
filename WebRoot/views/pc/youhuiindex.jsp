@@ -1313,6 +1313,7 @@ $(function() {
 	ajaxa();
 $('.sidebar-info .side-li li').click(function(event) {
 	var id=$(this).attr("id");
+	$(this).addClass('visited').siblings('li').removeClass('visited');
      var arr = new Array();
       if(id!=17){
       $.ajax({
