@@ -317,12 +317,13 @@
                     </ul>
             </div>
             
-            <br>
-            <br>
-            <br>
-            <br>
             
-        <div class="product-box">
+            
+             <c:forEach items="${superhuiGoodsList}" var="superhuiGoods" varStatus="sta" >
+
+
+
+<div class="product-box">
             <div class="box">
               <div class="logo">
 	                <span class="bg-cgf ico-tag1">今日</span>
@@ -357,6 +358,15 @@
                 </div>
             </div>
         </div>
+
+
+
+
+
+		        </c:forEach>
+   
+            
+        
         
         
         <%-- <div class="product-box">
@@ -1157,7 +1167,6 @@
 
    function f(oldArray){
 	var newArray=new Array(); //目标数组
-
 	var m=oldArray.length;
 	for(var i=0;i<m;i++){
 	var flag=true;
@@ -1233,42 +1242,61 @@ $(function() {
 	
 	  $.ajax({
 			type: "GET",
-       url: "${basePath}pc/youHui/ajaxList?id="+id,
+       url: "${basePath}pc/superhuiGoods/ajaxList?id="+id,
        dataType: "json",
 			success : function(data) {
-				var secondnameStr='';
-				for (var j = 0; j < data.length; j++) {
-					 secondnameStr=secondnameStr+";"+data[j].secondname;
-				}
-				arr=secondnameStr.split(";");
-				var newarr=f(arr);
+				
 				
 				console.log("data.length="+data.length);
 				if(data.length != 0){
-					$("#webShop").html("");
+				//	$("#webShop").html("");
 					var html = "";
-					for(var z=1;z<newarr.length;z++){
 					
 						 for (var i = 0; i < data.length; i++) {
-							 if(data[i].secondname==newarr[z]&&z==1){
-						 html +='<a href="'+data[i].shophref+'" class="cooper-logo">';
-						 html +='<img src="'+fileAccessPath+data[i].shopimge + '" alt="App Store">' + data[i].discountrate +'</a>';
-							 }
+							
+			
+						 html +='<div class="product-box">';
+						 html +='<div class="box">';
+						 html +='<div class="logo">';
+						 html +='<span class="bg-cgf ico-tag1">'+今日+'</span>';
+						 html +='<span class="bg-cgf ico-tag2">'+活动+'</span>';
+						 html +='<span class="bg-cgf ico-tag3">'+品牌+'</span>';
+						 html +='<span class="bg-cgf ico-tag4">'+限量+'<br>'+100件+'</span>';
+						 html +='</div>';
+						 html +='  <a target="_blank" href="#">';
+						 html +='             <img src="'+${path}/img/show1.png+'">';
+						 html +='       </a>';
+						 html +='          <span class="box_activity">';
+					     html +='              <i class="fa fa-clock-o"></i>';
+						html +='         距活动结束<span>00:04:56:15</span>';
+						html +='           </span>';
+						html +='          <div class="box_hover">';
+						html +='             <span class="sale">已售0份</span>';
+				                 
+						html +='       </div>';
+						html +='       </div>';
+						html +='         <div class="box_list">';
+						html +='           <h3><a target="_blank" href="#"><img src="${path}/img/cooperlogo/maibaobao.gif" />荣耀 6 Plus (PE-TL10) 白色 移动联通双4G手机 双卡双待双通</a></h3>';
+						html +='         <div class="list_logo">';
+						html +='          <span class="price-new"><em>¥</em>79</span>';
+						html +='           <del class="price-old"><em>¥</em>339</del>';
+						html +='         </div>';
+						html +='        <div class="box_listl">';
+						 html +='             <span>-53.3</span>';
+						html +='          <div class="ico-you">购买后减67%</div>';
+						html +='       </div>';
+						html +='       <div class="box_listr">';
+						html +='        <a href="#" class="" target="_blank">立即购买</a>';
+						html +='        </div>';
+						html +='       </div>';
+						html +='        </div>';
+ 
 						 }
 
-						 html +='<div class="con-list">';
-						 
-						 if(z!=1){
-						 html +='<h2>'+newarr[z]+'</h2>';
-						 }						 
-							 for (var i = 0; i < data.length; i++) {
-								 if(data[i].secondname==newarr[z]&&z!=1){	 
-						 html +='<a href="'+data[i].shophref+'">' + data[i].shopname +'</a>';
-						 
-							 }
-						 }
-						 html +='</div>';   
-					}
+					
+					  
+								console.log('结果'+html);
+
 					$("#webShop").append(html);					
 				}else{
 				

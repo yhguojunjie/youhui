@@ -141,9 +141,9 @@ $(function () {
             $("#reg_mail").css({
                 "color": "#666"
             });
-            if (!isIE) {
+           /* if (!isIE) {
                 $("#reg_mail").siblings(".clear-btn").removeClass("clear-btn-focus").show();
-            }
+            }*/
         }
         $("#form_reg").find("input[class~='txt']").bind({
             "focus": function () {
@@ -176,7 +176,7 @@ $(function () {
         });
 
         //密码框是否大写
-        if (!isIE) {
+ /*       if (!isIE) {
             $("#form_reg").find("input[type='password']").bind({
                 "keypress": function (event) {
                     var e = event || window.event;
@@ -203,7 +203,7 @@ $(function () {
                     }
                 }
             });
-}
+}*/
         //邮箱事件
         $("#reg_mail").bind({
             "focus": function () {
