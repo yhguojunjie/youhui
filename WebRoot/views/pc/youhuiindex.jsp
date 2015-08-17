@@ -1293,10 +1293,26 @@ $(function() {
  
 						 }
 
+<<<<<<< HEAD
 					
 					  
 								console.log('结果'+html);
 
+=======
+						 html +='<div class="con-list">';
+						 
+						 if(z!=1){
+						 html +='<h2>'+newarr[z]+'</h2>';
+						 }						 
+							 for (var i = 0; i < data.length; i++) {
+								 if(data[i].secondname==newarr[z]&&z!=1){	 
+						 html +='<a href="'+data[i].shophref+'">' + data[i].shopname +'</a>';
+						 
+							 }
+						 }
+						 html +='</div>';   
+					}
+>>>>>>> branch 'master' of https://github.com/yhguojunjie/youhui.git
 					console.log('结果'+html);
 					$("#webShop").append(html);					
 				}else{
