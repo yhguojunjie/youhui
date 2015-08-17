@@ -1157,7 +1157,6 @@
 
    function f(oldArray){
 	var newArray=new Array(); //目标数组
-
 	var m=oldArray.length;
 	for(var i=0;i<m;i++){
 	var flag=true;
@@ -1269,6 +1268,7 @@ $(function() {
 						 }
 						 html +='</div>';   
 					}
+					console.log('结果'+html);
 					$("#webShop").append(html);					
 				}else{
 				
