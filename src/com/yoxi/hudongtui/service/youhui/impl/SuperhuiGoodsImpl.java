@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.yoxi.hudongtui.dao.youhui.SuperhuiGoodsDAO;
 import com.yoxi.hudongtui.model.content.SuperhuiGoods;
+import com.yoxi.hudongtui.model.content.SuperhuiGoodsVo;
 import com.yoxi.hudongtui.service.youhui.ISuperhuiGoodsService;
 
 @Service
@@ -33,10 +34,10 @@ public class SuperhuiGoodsImpl implements ISuperhuiGoodsService {
 	 * @return List<SuperhuiGoods>
 	 */
 	@Override
-	public List<SuperhuiGoods> findSuperhuiGoodsList(int id) throws Exception {
+	public List<SuperhuiGoodsVo> findSuperhuiGoodsList(int id) throws Exception {
 		// 根据台排序字段组织语句
 		String condition = "where b.goods_id='" + id + "'";
-		List<SuperhuiGoods> superhuiGoods = superhuiGoodsDAO
+		List<SuperhuiGoodsVo> superhuiGoods = superhuiGoodsDAO
 				.findSuperhuiGoods(condition);
 		return superhuiGoods;
 	}

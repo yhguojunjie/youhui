@@ -7,6 +7,7 @@ import net.paoding.rose.jade.annotation.SQL;
 import net.paoding.rose.jade.annotation.SQLParam;
 
 import com.yoxi.hudongtui.model.content.SuperhuiGoods;
+import com.yoxi.hudongtui.model.content.SuperhuiGoodsVo;
 
 /**
  * 超级优惠商品DAO
@@ -31,7 +32,7 @@ public interface SuperhuiGoodsDAO {
 	 *            查询条件
 	 * @return List<WebShop>
 	 */
-	@SQL("SELECT * FROM t_superhui_goods a LEFT JOIN t_goods_webshop b on a.id=b.webshop_id ##(:condition)")
-	public List<SuperhuiGoods> findSuperhuiGoods(
+	@SQL("SELECT * FROM t_superhui_goods a LEFT JOIN t_goods_superhuigoods b on a.id=b.superhuiGoods_id ##(:condition)")
+	public List<SuperhuiGoodsVo> findSuperhuiGoods(
 			@SQLParam("condition") String condition) throws Exception;
 }
