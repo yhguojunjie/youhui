@@ -22,8 +22,9 @@ public interface SuperhuiGoodsDAO {
 	 * @return List<WebShop>
 	 */
 
-	@SQL("SELECT * FROM t_superhui_goods ")
-	public List<SuperhuiGoods> findAllSuperhuiGoods() throws Exception;
+	@SQL("SELECT * FROM t_superhui_goods LIMIT :1,:2")
+	public List<SuperhuiGoods> findAllSuperhuiGoods(int startRow, int pageSize)
+			throws Exception;
 
 	/**
 	 * 查询超级优惠商品列表信息（更新分类查询）
@@ -32,7 +33,8 @@ public interface SuperhuiGoodsDAO {
 	 *            查询条件
 	 * @return List<WebShop>
 	 */
-	@SQL("SELECT * FROM t_superhui_goods a LEFT JOIN t_goods_superhuigoods b on a.id=b.superhuiGoods_id ##(:condition)")
+	@SQL("SELECT * FROM t_superhui_goods a LEFT JOIN t_goods_superhuigoods b on a.id=b.superhuiGoods_id ##(:condition) LIMIT :2,:3")
 	public List<SuperhuiGoodsVo> findSuperhuiGoods(
-			@SQLParam("condition") String condition) throws Exception;
+			@SQLParam("condition") String condition, int startRow, int pageSize)
+			throws Exception;
 }

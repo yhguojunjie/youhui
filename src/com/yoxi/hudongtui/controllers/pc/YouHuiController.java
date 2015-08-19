@@ -19,7 +19,6 @@ import com.yoxi.hudongtui.constants.Globals;
 import com.yoxi.hudongtui.controllers.GlobalRequired;
 import com.yoxi.hudongtui.model.content.Banner;
 import com.yoxi.hudongtui.model.content.Goodsclassificat;
-import com.yoxi.hudongtui.model.content.SuperhuiGoods;
 import com.yoxi.hudongtui.model.content.WebShopVO;
 import com.yoxi.hudongtui.model.plugin.Plugin;
 import com.yoxi.hudongtui.service.agent.IAgentBusService;
@@ -114,9 +113,10 @@ public class YouHuiController {
 				goodsclassificatList);
 
 		// 2.超级优惠商品
-		List<SuperhuiGoods> superhuiGoodsList = superhuiGoodsService
-				.findAllSuperhuiGoods();
-		inv.getRequest().setAttribute("superhuiGoodsList", superhuiGoodsList);
+		// List<SuperhuiGoods> superhuiGoodsList = superhuiGoodsService
+		// .findAllSuperhuiGoods();
+		// inv.getRequest().setAttribute("superhuiGoodsList",
+		// superhuiGoodsList);
 
 		// 1.代理商信息处理
 		// AgentInfoVO agentInfoVO = SessionUtil.getAgentInfo(inv.getRequest());
