@@ -120,9 +120,11 @@ public class SuperhuiGoodsController {
 	 * @throws Exception
 	 */
 	@Get("ajaxAllList")
-	public String ajaxAllList(Invocation inv) throws Exception {
+	public String ajaxAllList(Invocation inv, @Param("start") int start)
+			throws Exception {
+		int pageSize = 6;
 		List<SuperhuiGoods> superhuiGoods = superhuiGoodsService
-				.findAllSuperhuiGoods();
+				.findAllSuperhuiGoods(start, pageSize);
 
 		// List<WebShopVO> webShops = webShopService.findWebShopList(id);
 		// return "@json:" + JsonUtils.toJson(webShops);
@@ -137,10 +139,11 @@ public class SuperhuiGoodsController {
 	 * @throws Exception
 	 */
 	@Get("ajaxList")
-	public String getWebShopAjaxList(Invocation inv, @Param("id") int id)
-			throws Exception {
+	public String getWebShopAjaxList(Invocation inv, @Param("id") int id,
+			@Param("start") int start) throws Exception {
+		int pageSize = 6;
 		List<SuperhuiGoodsVo> superhuiGoods = superhuiGoodsService
-				.findSuperhuiGoodsList(id);
+				.findSuperhuiGoodsList(id, start, pageSize);
 
 		// List<WebShopVO> webShops = webShopService.findWebShopList(id);
 		// return "@json:" + JsonUtils.toJson(webShops);

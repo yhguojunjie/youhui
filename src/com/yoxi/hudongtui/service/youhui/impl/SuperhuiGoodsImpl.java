@@ -21,10 +21,11 @@ public class SuperhuiGoodsImpl implements ISuperhuiGoodsService {
 	 * @return List<SuperhuiGoods>
 	 */
 	@Override
-	public List<SuperhuiGoods> findAllSuperhuiGoods() throws Exception {
+	public List<SuperhuiGoods> findAllSuperhuiGoods(int startRow, int pageSize)
+			throws Exception {
 
 		List<SuperhuiGoods> superhuiGoods = superhuiGoodsDAO
-				.findAllSuperhuiGoods();
+				.findAllSuperhuiGoods(startRow, pageSize);
 		return superhuiGoods;
 	}
 
@@ -34,11 +35,12 @@ public class SuperhuiGoodsImpl implements ISuperhuiGoodsService {
 	 * @return List<SuperhuiGoods>
 	 */
 	@Override
-	public List<SuperhuiGoodsVo> findSuperhuiGoodsList(int id) throws Exception {
+	public List<SuperhuiGoodsVo> findSuperhuiGoodsList(int id, int startRow,
+			int pageSize) throws Exception {
 		// 根据台排序字段组织语句
 		String condition = "where b.goods_id='" + id + "'";
 		List<SuperhuiGoodsVo> superhuiGoods = superhuiGoodsDAO
-				.findSuperhuiGoods(condition);
+				.findSuperhuiGoods(condition, startRow, pageSize);
 		return superhuiGoods;
 	}
 
