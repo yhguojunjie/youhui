@@ -17,6 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.yoxi.hudongtui.constants.Globals;
 import com.yoxi.hudongtui.controllers.GlobalRequired;
+import com.yoxi.hudongtui.model.content.Goodsclassificat;
 import com.yoxi.hudongtui.model.content.SuperhuiGoods;
 import com.yoxi.hudongtui.model.content.SuperhuiGoodsVo;
 import com.yoxi.hudongtui.model.plugin.Plugin;
@@ -104,7 +105,11 @@ public class SuperhuiGoodsController {
 	@SuppressWarnings("unchecked")
 	@Get("/list")
 	public String getAllLists(Invocation inv) throws Exception {
-
+		// 1.分类与商城展示信息处理
+		List<Goodsclassificat> goodsclassificatList = goodsclassificatService
+				.findGoodsclassificat();
+		inv.getRequest().setAttribute("goodsclassificatList",
+				goodsclassificatList);
 		inv.getRequest()
 				.getSession()
 				.setAttribute(Globals.SESSION_LASTURL,
