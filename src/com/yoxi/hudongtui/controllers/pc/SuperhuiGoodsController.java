@@ -18,6 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.yoxi.hudongtui.constants.Globals;
 import com.yoxi.hudongtui.controllers.GlobalRequired;
 import com.yoxi.hudongtui.model.content.SuperhuiGoods;
+import com.yoxi.hudongtui.model.content.SuperhuiGoodsVo;
 import com.yoxi.hudongtui.model.plugin.Plugin;
 import com.yoxi.hudongtui.service.agent.IAgentBusService;
 import com.yoxi.hudongtui.service.agent.IAgentInfoService;
@@ -112,16 +113,37 @@ public class SuperhuiGoodsController {
 	}
 
 	/**
+	 * 全部优惠商品
+	 * 
+	 * @param inv
+	 * @param start
+	 * @throws Exception
+	 */
+	@Get("ajaxAllList")
+	public String ajaxAllList(Invocation inv, @Param("start") int start)
+			throws Exception {
+		int pageSize = 6;
+		List<SuperhuiGoods> superhuiGoods = superhuiGoodsService
+				.findAllSuperhuiGoods(start, pageSize);
+
+		// List<WebShopVO> webShops = webShopService.findWebShopList(id);
+		// return "@json:" + JsonUtils.toJson(webShops);
+		return "@json:" + JsonUtils.toJson(superhuiGoods);
+	}
+
+	/**
+	 * 分类下的优惠商品
 	 * 
 	 * @param inv
 	 * @param start
 	 * @throws Exception
 	 */
 	@Get("ajaxList")
-	public String getWebShopAjaxList(Invocation inv, @Param("id") int id)
-			throws Exception {
-		List<SuperhuiGoods> superhuiGoods = superhuiGoodsService
-				.findSuperhuiGoodsList(id);
+	public String getWebShopAjaxList(Invocation inv, @Param("id") int id,
+			@Param("start") int start) throws Exception {
+		int pageSize = 6;
+		List<SuperhuiGoodsVo> superhuiGoods = superhuiGoodsService
+				.findSuperhuiGoodsList(id, start, pageSize);
 
 		// List<WebShopVO> webShops = webShopService.findWebShopList(id);
 		// return "@json:" + JsonUtils.toJson(webShops);

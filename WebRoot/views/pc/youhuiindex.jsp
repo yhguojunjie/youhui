@@ -290,10 +290,11 @@
                         <li><a href="#">家具建材(12)</li>  -->
                         
                         
-                         <li class="current">全部(100)</li>
+                         <li class="current" gjj="全部">全部(100)</li>
                          <c:forEach items="${goodsclassificatList}" var="goodsclassificat" varStatus="sta" >
-		<c:if test="${goodsclassificat.name!='热门商家'||goodsclassificat.name!='综合商城'}"> 
-				 <li >${goodsclassificat.name }</li>
+		
+		<c:if test="${goodsclassificat.id!=17&&goodsclassificat.id!=18}"> 
+				 <li id="${goodsclassificat.id }"  gjj="${goodsclassificat.name }" >${goodsclassificat.name }</li>
 		  
 		</c:if> 
 		        </c:forEach>
@@ -318,8 +319,36 @@
             </div>
             
             
+            <div id="superhuishops"> 
             
-             <c:forEach items="${superhuiGoodsList}" var="superhuiGoods" varStatus="sta" >
+          <!--   <div class="product-box">
+            <div class="box"><div class="logo">
+            <span class="bg-cgf ico-tag1">今日 </span>
+            <span class="bg-cgf ico-tag2">活动</span>
+            <span class="bg-cgf ico-tag3">品牌</span>
+            <span class="bg-cgf ico-tag4">限量<br>100件</span></div>
+            <a target="_blank" href="#"><img src="http://115.28.169.210:29099/group1/M00/00/22/cxyp0lXSAjmAf0ibAACEqMHE_O8772.png"></a>
+            <span class="box_activity"><i class="fa fa-clock-o"></i>距活动结束<span>00:04:56:15</span></span>
+            <div class="box_hover"><span class="sale">已售1000份</span></div></div>
+            <div class="box_list"><h3>
+            <a target="_blank" href="#"><img src="/hudongtui/img/cooperlogo/maibaobao.gif" />荣耀 6 Plus (PE-TL10) 白色 移动联通双4G手机 双卡双待双通</a></h3>
+            <div class="list_logo">
+            <span class="price-new"><em>¥</em>58</span>
+            <del class="price-old"><em>¥</em>98</del></div>
+            <div class="box_listl"><span>-53.3</span>
+            <div class="ico-you">购买后减67%</div></div>
+            <div class="box_listr"><a href="#" class="" target="_blank">立即购买</a></div></div>  </div>
+            
+            
+            <div class="product-box"><div class="box"><div class="logo"><span class="bg-cgf ico-tag1">今日 </span><span class="bg-cgf ico-tag2">活动</span><span class="bg-cgf ico-tag3">品牌</span><span class="bg-cgf ico-tag4">限量<br>100件</span></div><a target="_blank" href="#"><img src="http://115.28.169.210:29099/group1/M00/00/22/cxyp0lXTMQeADJQ1AACEqMHE_O8496.png"></a><span class="box_activity"><i class="fa fa-clock-o"></i>距活动结束<span>00:04:56:15</span></span><div class="box_hover"><span class="sale">已售356份</span></div></div><div class="box_list"><h3><a target="_blank" href="#"><img src="/hudongtui/img/cooperlogo/maibaobao.gif" />荣耀 6 Plus (PE-TL10) 白色 移动联通双4G手机 双卡双待双通</a></h3><div class="list_logo"><span class="price-new"><em>¥</em>666</span><del class="price-old"><em>¥</em>888</del></div><div class="box_listl"><span>-53.3</span><div class="ico-you">购买后减67%</div></div><div class="box_listr"><a href="#" class="" target="_blank">立即购买</a></div></div>
+            
+            </div>
+             -->
+            
+            
+            	<div class="get_more"><span>努力加载中...</span></div>
+            </div>
+             <%-- <c:forEach items="${superhuiGoodsList}" var="superhuiGoods" varStatus="sta" >
 
 
 
@@ -363,575 +392,11 @@
 
 
 
-		        </c:forEach>
+		        </c:forEach> --%>
    
             
-        
-        
-        
-        <%-- <div class="product-box">
-            <div class="box">
-              <div class="logo">
-	                <span class="bg-cgf ico-tag1">今日</span>
-	                <span class="bg-cgf ico-tag2">活动</span>
-	                <span class="bg-cgf ico-tag3">品牌</span>
-	                <span class="bg-cgf ico-tag4">限量<br>100件</span>
-             </div>
-                <a target="_blank" href="#">
-                    <img src="${path}/img/show1.png">
-                </a>
-                <span class="box_activity">
-                    <i class="fa fa-clock-o"></i>
-                    距活动结束<span>00:04:56:15</span>
-                </span>
-                <div class="box_hover">
-                    <span class="sale">已售0份</span>
-                    <!-- <span class="money">定金¥1,000.00</span> -->
-                </div>
-            </div>
-            <div class="box_list">
-                <h3><a target="_blank" href="#"><img src="${path}/img/cooperlogo/maibaobao.gif" />荣耀 6 Plus (PE-TL10) 白色 移动联通双4G手机 双卡双待双通</a></h3>
-                <div class="list_logo">
-                  <span class="price-new"><em>¥</em>79</span>
-                  <del class="price-old"><em>¥</em>339</del>
-                </div>
-                <div class="box_listl">
-                        <span>-53.3</span>
-                        <div class="ico-you">购买后减67%</div>
-                </div>
-                <div class="box_listr">
-                    <a href="#" class="" target="_blank">立即购买</a>
-                </div>
-            </div>
-        </div> --%>
-        
-        
-        
-        <%-- <div class="product-box">
-            <div class="box">
-              <div class="logo">
-	                <span class="bg-cgf ico-tag1">今日</span>
-	                <span class="bg-cgf ico-tag2">活动</span>
-	                <span class="bg-cgf ico-tag3">品牌</span>
-	                <span class="bg-cgf ico-tag4">限量<br>100件</span>
-             </div>
-                <a target="_blank" href="#">
-                    <img src="${path}/img/show1.png">
-                </a>
-                <span class="box_activity">
-                    <i class="fa fa-clock-o"></i>
-                    距活动结束<span>00:04:56:15</span>
-                </span>
-                <div class="box_hover">
-                    <span class="sale">已售0份</span>
-                    <!-- <span class="money">定金¥1,000.00</span> -->
-                </div>
-            </div>
-            <div class="box_list">
-                <h3><a target="_blank" href="#"><img src="${path}/img/cooperlogo/maibaobao.gif" />荣耀 6 Plus (PE-TL10) 白色 移动联通双4G手机 双卡双待双通</a></h3>
-                <div class="list_logo">
-                  <span class="price-new"><em>¥</em>79</span>
-                  <del class="price-old"><em>¥</em>339</del>
-                </div>
-                <div class="box_listl">
-                        <span>-53.3</span>
-                        <div class="ico-you">购买后减67%</div>
-                </div>
-                <div class="box_listr">
-                    <a href="#" class="" target="_blank">立即购买</a>
-                </div>
-            </div>
-        </div> --%>
-        <%-- <div class="product-box">
-            <div class="box">
-              <div class="logo">
-	                <span class="bg-cgf ico-tag1">今日</span>
-	                <span class="bg-cgf ico-tag2">活动</span>
-	                <span class="bg-cgf ico-tag3">品牌</span>
-	                <span class="bg-cgf ico-tag4">限量<br>100件</span>
-             </div>
-                <a target="_blank" href="#">
-                    <img src="${path}/img/show1.png">
-                </a>
-                <span class="box_activity">
-                    <i class="fa fa-clock-o"></i>
-                    距活动结束<span>00:04:56:15</span>
-                </span>
-                <div class="box_hover">
-                    <span class="sale">已售0份</span>
-                    <!-- <span class="money">定金¥1,000.00</span> -->
-                </div>
-            </div>
-            <div class="box_list">
-                <h3><a target="_blank" href="#"><img src="${path}/img/cooperlogo/maibaobao.gif" />荣耀 6 Plus (PE-TL10) 白色 移动联通双4G手机 双卡双待双通</a></h3>
-                <div class="list_logo">
-                  <span class="price-new"><em>¥</em>79</span>
-                  <del class="price-old"><em>¥</em>339</del>
-                </div>
-                <div class="box_listl">
-                        <span>-53.3</span>
-                        <div class="ico-you">购买后减67%</div>
-                </div>
-                <div class="box_listr">
-                    <a href="#" class="" target="_blank">立即购买</a>
-                </div>
-            </div>
-        </div> --%>
-        <%-- <div class="product-box">
-            <div class="box">
-              <div class="logo">
-	                <span class="bg-cgf ico-tag1">今日</span>
-	                <span class="bg-cgf ico-tag2">活动</span>
-	                <span class="bg-cgf ico-tag3">品牌</span>
-	                <span class="bg-cgf ico-tag4">限量<br>100件</span>
-             </div>
-                <a target="_blank" href="#">
-                    <img src="${path}/img/show1.png">
-                </a>
-                <span class="box_activity">
-                    <i class="fa fa-clock-o"></i>
-                    距活动结束<span>00:04:56:15</span>
-                </span>
-                <div class="box_hover">
-                    <span class="sale">已售0份</span>
-                    <!-- <span class="money">定金¥1,000.00</span> -->
-                </div>
-            </div>
-            <div class="box_list">
-                <h3><a target="_blank" href="#"><img src="${path}/img/cooperlogo/maibaobao.gif" />荣耀 6 Plus (PE-TL10) 白色 移动联通双4G手机 双卡双待双通</a></h3>
-                <div class="list_logo">
-                  <span class="price-new"><em>¥</em>79</span>
-                  <del class="price-old"><em>¥</em>339</del>
-                </div>
-                <div class="box_listl">
-                        <span>-53.3</span>
-                        <div class="ico-you">购买后减67%</div>
-                </div>
-                <div class="box_listr">
-                    <a href="#" class="" target="_blank">立即购买</a>
-                </div>
-            </div>
-        </div> --%>
-        <%-- <div class="product-box">
-            <div class="box">
-              <div class="logo">
-	                <span class="bg-cgf ico-tag1">今日</span>
-	                <span class="bg-cgf ico-tag2">活动</span>
-	                <span class="bg-cgf ico-tag3">品牌</span>
-	                <span class="bg-cgf ico-tag4">限量<br>100件</span>
-             </div>
-                <a target="_blank" href="#">
-                    <img src="${path}/img/show1.png">
-                </a>
-                <span class="box_activity">
-                    <i class="fa fa-clock-o"></i>
-                    距活动结束<span>00:04:56:15</span>
-                </span>
-                <div class="box_hover">
-                    <span class="sale">已售0份</span>
-                    <!-- <span class="money">定金¥1,000.00</span> -->
-                </div>
-            </div>
-            <div class="box_list">
-                <h3><a target="_blank" href="#"><img src="${path}/img/cooperlogo/maibaobao.gif" />荣耀 6 Plus (PE-TL10) 白色 移动联通双4G手机 双卡双待双通</a></h3>
-                <div class="list_logo">
-                  <span class="price-new"><em>¥</em>79</span>
-                  <del class="price-old"><em>¥</em>339</del>
-                </div>
-                <div class="box_listl">
-                        <span>-53.3</span>
-                        <div class="ico-you">购买后减67%</div>
-                </div>
-                <div class="box_listr">
-                    <a href="#" class="" target="_blank">立即购买</a>
-                </div>
-            </div>
-        </div> --%>
-        <%-- <div class="product-box">
-            <div class="box">
-              <div class="logo">
-	                <span class="bg-cgf ico-tag1">今日</span>
-	                <span class="bg-cgf ico-tag2">活动</span>
-	                <span class="bg-cgf ico-tag3">品牌</span>
-	                <span class="bg-cgf ico-tag4">限量<br>100件</span>
-             </div>
-                <a target="_blank" href="#">
-                    <img src="${path}/img/show1.png">
-                </a>
-                <span class="box_activity">
-                    <i class="fa fa-clock-o"></i>
-                    距活动结束<span>00:04:56:15</span>
-                </span>
-                <div class="box_hover">
-                    <span class="sale">已售0份</span>
-                    <!-- <span class="money">定金¥1,000.00</span> -->
-                </div>
-            </div>
-            <div class="box_list">
-                <h3><a target="_blank" href="#"><img src="${path}/img/cooperlogo/maibaobao.gif" />荣耀 6 Plus (PE-TL10) 白色 移动联通双4G手机 双卡双待双通</a></h3>
-                <div class="list_logo">
-                  <span class="price-new"><em>¥</em>79</span>
-                  <del class="price-old"><em>¥</em>339</del>
-                </div>
-                <div class="box_listl">
-                        <span>-53.3</span>
-                        <div class="ico-you">购买后减67%</div>
-                </div>
-                <div class="box_listr">
-                    <a href="#" class="" target="_blank">立即购买</a>
-                </div>
-            </div>
-        </div> --%>
-        <%-- <div class="product-box">
-            <div class="box">
-              <div class="logo">
-	                <span class="bg-cgf ico-tag1">今日</span>
-	                <span class="bg-cgf ico-tag2">活动</span>
-	                <span class="bg-cgf ico-tag3">品牌</span>
-	                <span class="bg-cgf ico-tag4">限量<br>100件</span>
-             </div>
-                <a target="_blank" href="#">
-                    <img src="${path}/img/show1.png">
-                </a>
-                <span class="box_activity">
-                    <i class="fa fa-clock-o"></i>
-                    距活动结束<span>00:04:56:15</span>
-                </span>
-                <div class="box_hover">
-                    <span class="sale">已售0份</span>
-                    <!-- <span class="money">定金¥1,000.00</span> -->
-                </div>
-            </div>
-            <div class="box_list">
-                <h3><a target="_blank" href="#"><img src="${path}/img/cooperlogo/maibaobao.gif" />荣耀 6 Plus (PE-TL10) 白色 移动联通双4G手机 双卡双待双通</a></h3>
-                <div class="list_logo">
-                  <span class="price-new"><em>¥</em>79</span>
-                  <del class="price-old"><em>¥</em>339</del>
-                </div>
-                <div class="box_listl">
-                        <span>-53.3</span>
-                        <div class="ico-you">购买后减67%</div>
-                </div>
-                <div class="box_listr">
-                    <a href="#" class="" target="_blank">立即购买</a>
-                </div>
-            </div>
-        </div> --%>
-        <%-- <div class="product-box">
-            <div class="box">
-              <div class="logo">
-	                <span class="bg-cgf ico-tag1">今日</span>
-	                <span class="bg-cgf ico-tag2">活动</span>
-	                <span class="bg-cgf ico-tag3">品牌</span>
-	                <span class="bg-cgf ico-tag4">限量<br>100件</span>
-             </div>
-                <a target="_blank" href="#">
-                    <img src="${path}/img/show1.png">
-                </a>
-                <span class="box_activity">
-                    <i class="fa fa-clock-o"></i>
-                    距活动结束<span>00:04:56:15</span>
-                </span>
-                <div class="box_hover">
-                    <span class="sale">已售0份</span>
-                    <!-- <span class="money">定金¥1,000.00</span> -->
-                </div>
-            </div>
-            <div class="box_list">
-                <h3><a target="_blank" href="#"><img src="${path}/img/cooperlogo/maibaobao.gif" />荣耀 6 Plus (PE-TL10) 白色 移动联通双4G手机 双卡双待双通</a></h3>
-                <div class="list_logo">
-                  <span class="price-new"><em>¥</em>79</span>
-                  <del class="price-old"><em>¥</em>339</del>
-                </div>
-                <div class="box_listl">
-                        <span>-53.3</span>
-                        <div class="ico-you">购买后减67%</div>
-                </div>
-                <div class="box_listr">
-                    <a href="#" class="" target="_blank">立即购买</a>
-                </div>
-            </div>
-        </div> --%>
-        <%-- <div class="product-box">
-            <div class="box">
-              <div class="logo">
-	                <span class="bg-cgf ico-tag1">今日</span>
-	                <span class="bg-cgf ico-tag2">活动</span>
-	                <span class="bg-cgf ico-tag3">品牌</span>
-	                <span class="bg-cgf ico-tag4">限量<br>100件</span>
-             </div>
-                <a target="_blank" href="#">
-                    <img src="${path}/img/show1.png">
-                </a>
-                <span class="box_activity">
-                    <i class="fa fa-clock-o"></i>
-                    距活动结束<span>00:04:56:15</span>
-                </span>
-                <div class="box_hover">
-                    <span class="sale">已售0份</span>
-                    <!-- <span class="money">定金¥1,000.00</span> -->
-                </div>
-            </div>
-            <div class="box_list">
-                <h3><a target="_blank" href="#"><img src="${path}/img/cooperlogo/maibaobao.gif" />荣耀 6 Plus (PE-TL10) 白色 移动联通双4G手机 双卡双待双通</a></h3>
-                <div class="list_logo">
-                  <span class="price-new"><em>¥</em>79</span>
-                  <del class="price-old"><em>¥</em>339</del>
-                </div>
-                <div class="box_listl">
-                        <span>-53.3</span>
-                        <div class="ico-you">购买后减67%</div>
-                </div>
-                <div class="box_listr">
-                    <a href="#" class="" target="_blank">立即购买</a>
-                </div>
-            </div>
-        </div> --%>
-        <%-- <div class="product-box">
-            <div class="box">
-              <div class="logo">
-	                <span class="bg-cgf ico-tag1">今日</span>
-	                <span class="bg-cgf ico-tag2">活动</span>
-	                <span class="bg-cgf ico-tag3">品牌</span>
-	                <span class="bg-cgf ico-tag4">限量<br>100件</span>
-             </div>
-                <a target="_blank" href="#">
-                    <img src="${path}/img/show1.png">
-                </a>
-                <span class="box_activity">
-                    <i class="fa fa-clock-o"></i>
-                    距活动结束<span>00:04:56:15</span>
-                </span>
-                <div class="box_hover">
-                    <span class="sale">已售0份</span>
-                    <!-- <span class="money">定金¥1,000.00</span> -->
-                </div>
-            </div>
-            <div class="box_list">
-                <h3><a target="_blank" href="#"><img src="${path}/img/cooperlogo/maibaobao.gif" />荣耀 6 Plus (PE-TL10) 白色 移动联通双4G手机 双卡双待双通</a></h3>
-                <div class="list_logo">
-                  <span class="price-new"><em>¥</em>79</span>
-                  <del class="price-old"><em>¥</em>339</del>
-                </div>
-                <div class="box_listl">
-                        <span>-53.3</span>
-                        <div class="ico-you">购买后减67%</div>
-                </div>
-                <div class="box_listr">
-                    <a href="#" class="" target="_blank">立即购买</a>
-                </div>
-            </div>
-        </div> --%>
-        <%-- <div class="product-box">
-            <div class="box">
-              <div class="logo">
-	                <span class="bg-cgf ico-tag1">今日</span>
-	                <span class="bg-cgf ico-tag2">活动</span>
-	                <span class="bg-cgf ico-tag3">品牌</span>
-	                <span class="bg-cgf ico-tag4">限量<br>100件</span>
-             </div>
-                <a target="_blank" href="#">
-                    <img src="${path}/img/show1.png">
-                </a>
-                <span class="box_activity">
-                    <i class="fa fa-clock-o"></i>
-                    距活动结束<span>00:04:56:15</span>
-                </span>
-                <div class="box_hover">
-                    <span class="sale">已售0份</span>
-                    <!-- <span class="money">定金¥1,000.00</span> -->
-                </div>
-            </div>
-            <div class="box_list">
-                <h3><a target="_blank" href="#"><img src="${path}/img/cooperlogo/maibaobao.gif" />荣耀 6 Plus (PE-TL10) 白色 移动联通双4G手机 双卡双待双通</a></h3>
-                <div class="list_logo">
-                  <span class="price-new"><em>¥</em>79</span>
-                  <del class="price-old"><em>¥</em>339</del>
-                </div>
-                <div class="box_listl">
-                        <span>-53.3</span>
-                        <div class="ico-you">购买后减67%</div>
-                </div>
-                <div class="box_listr">
-                    <a href="#" class="" target="_blank">立即购买</a>
-                </div>
-            </div>
-        </div> --%>
-        <%-- <div class="product-box">
-            <div class="box">
-              <div class="logo">
-	                <span class="bg-cgf ico-tag1">今日</span>
-	                <span class="bg-cgf ico-tag2">活动</span>
-	                <span class="bg-cgf ico-tag3">品牌</span>
-	                <span class="bg-cgf ico-tag4">限量<br>100件</span>
-             </div>
-                <a target="_blank" href="#">
-                    <img src="${path}/img/show1.png">
-                </a>
-                <span class="box_activity">
-                    <i class="fa fa-clock-o"></i>
-                    距活动结束<span>00:04:56:15</span>
-                </span>
-                <div class="box_hover">
-                    <span class="sale">已售0份</span>
-                    <!-- <span class="money">定金¥1,000.00</span> -->
-                </div>
-            </div>
-            <div class="box_list">
-                <h3><a target="_blank" href="#"><img src="${path}/img/cooperlogo/maibaobao.gif" />荣耀 6 Plus (PE-TL10) 白色 移动联通双4G手机 双卡双待双通</a></h3>
-                <div class="list_logo">
-                  <span class="price-new"><em>¥</em>79</span>
-                  <del class="price-old"><em>¥</em>339</del>
-                </div>
-                <div class="box_listl">
-                        <span>-53.3</span>
-                        <div class="ico-you">购买后减67%</div>
-                </div>
-                <div class="box_listr">
-                    <a href="#" class="" target="_blank">立即购买</a>
-                </div>
-            </div>
-        </div> --%>
-        <%-- <div class="product-box">
-            <div class="box">
-              <div class="logo">
-	                <span class="bg-cgf ico-tag1">今日</span>
-	                <span class="bg-cgf ico-tag2">活动</span>
-	                <span class="bg-cgf ico-tag3">品牌</span>
-	                <span class="bg-cgf ico-tag4">限量<br>100件</span>
-             </div>
-                <a target="_blank" href="#">
-                    <img src="${path}/img/show1.png">
-                </a>
-                <span class="box_activity">
-                    <i class="fa fa-clock-o"></i>
-                    距活动结束<span>00:04:56:15</span>
-                </span>
-                <div class="box_hover">
-                    <span class="sale">已售0份</span>
-                    <!-- <span class="money">定金¥1,000.00</span> -->
-                </div>
-            </div>
-            <div class="box_list">
-                <h3><a target="_blank" href="#"><img src="${path}/img/cooperlogo/maibaobao.gif" />荣耀 6 Plus (PE-TL10) 白色 移动联通双4G手机 双卡双待双通</a></h3>
-                <div class="list_logo">
-                  <span class="price-new"><em>¥</em>79</span>
-                  <del class="price-old"><em>¥</em>339</del>
-                </div>
-                <div class="box_listl">
-                        <span>-53.3</span>
-                        <div class="ico-you">购买后减67%</div>
-                </div>
-                <div class="box_listr">
-                    <a href="#" class="" target="_blank">立即购买</a>
-                </div>
-            </div>
-        </div> --%>
-        <%-- <div class="product-box">
-            <div class="box">
-              <div class="logo">
-	                <span class="bg-cgf ico-tag1">今日</span>
-	                <span class="bg-cgf ico-tag2">活动</span>
-	                <span class="bg-cgf ico-tag3">品牌</span>
-	                <span class="bg-cgf ico-tag4">限量<br>100件</span>
-             </div>
-                <a target="_blank" href="#">
-                    <img src="${path}/img/show1.png">
-                </a>
-                <span class="box_activity">
-                    <i class="fa fa-clock-o"></i>
-                    距活动结束<span>00:04:56:15</span>
-                </span>
-                <div class="box_hover">
-                    <span class="sale">已售0份</span>
-                    <!-- <span class="money">定金¥1,000.00</span> -->
-                </div>
-            </div>
-            <div class="box_list">
-                <h3><a target="_blank" href="#"><img src="${path}/img/cooperlogo/maibaobao.gif" />荣耀 6 Plus (PE-TL10) 白色 移动联通双4G手机 双卡双待双通</a></h3>
-                <div class="list_logo">
-                  <span class="price-new"><em>¥</em>79</span>
-                  <del class="price-old"><em>¥</em>339</del>
-                </div>
-                <div class="box_listl">
-                        <span>-53.3</span>
-                        <div class="ico-you">购买后减67%</div>
-                </div>
-                <div class="box_listr">
-                    <a href="#" class="" target="_blank">立即购买</a>
-                </div>
-            </div>
-        </div> --%>
-        <%-- <div class="product-box">
-            <div class="box">
-              <div class="logo">
-	                <span class="bg-cgf ico-tag1">今日</span>
-	                <span class="bg-cgf ico-tag2">活动</span>
-	                <span class="bg-cgf ico-tag3">品牌</span>
-	                <span class="bg-cgf ico-tag4">限量<br>100件</span>
-             </div>
-                <a target="_blank" href="#">
-                    <img src="${path}/img/show1.png">
-                </a>
-                <span class="box_activity">
-                    <i class="fa fa-clock-o"></i>
-                    距活动结束<span>00:04:56:15</span>
-                </span>
-                <div class="box_hover">
-                    <span class="sale">已售0份</span>
-                    <!-- <span class="money">定金¥1,000.00</span> -->
-                </div>
-            </div>
-            <div class="box_list">
-                <h3><a target="_blank" href="#"><img src="${path}/img/cooperlogo/maibaobao.gif" />荣耀 6 Plus (PE-TL10) 白色 移动联通双4G手机 双卡双待双通</a></h3>
-                <div class="list_logo">
-                  <span class="price-new"><em>¥</em>79</span>
-                  <del class="price-old"><em>¥</em>339</del>
-                </div>
-                <div class="box_listl">
-                        <span>-53.3</span>
-                        <div class="ico-you">购买后减67%</div>
-                </div>
-                <div class="box_listr">
-                    <a href="#" class="" target="_blank">立即购买</a>
-                </div>
-            </div>
-        </div> --%>
-        <%-- <div class="product-box">
-            <div class="box">
-              <div class="logo">
-	                <span class="bg-cgf ico-tag1">今日</span>
-	                <span class="bg-cgf ico-tag2">活动</span>
-	                <span class="bg-cgf ico-tag3">品牌</span>
-	                <span class="bg-cgf ico-tag4">限量<br>100件</span>
-             </div>
-                <a target="_blank" href="#">
-                    <img src="${path}/img/show1.png">
-                </a>
-                <span class="box_activity">
-                    <i class="fa fa-clock-o"></i>
-                    距活动结束<span>00:04:56:15</span>
-                </span>
-                <div class="box_hover">
-                    <span class="sale">已售0份</span>
-                    <!-- <span class="money">定金¥1,000.00</span> -->
-                </div>
-            </div>
-            <div class="box_list">
-                <h3><a target="_blank" href="#"><img src="${path}/img/cooperlogo/maibaobao.gif" />荣耀 6 Plus (PE-TL10) 白色 移动联通双4G手机 双卡双待双通</a></h3>
-                <div class="list_logo">
-                  <span class="price-new"><em>¥</em>79</span>
-                  <del class="price-old"><em>¥</em>339</del>
-                </div>
-                <div class="box_listl">
-                        <span>-53.3</span>
-                        <div class="ico-you">购买后减67%</div>
-                </div>
-                <div class="box_listr">
-                    <a href="#" class="" target="_blank">立即购买</a>
-                </div>
-            </div>
-        </div> --%>
+       
+      
         <%-- <div class="product-box">
             <div class="box">
               <div class="logo">
@@ -1234,19 +699,225 @@
 	   
    }
    
-$(function() {
+   
+   function allsuiper(){
+		 $.ajax({
+				type: "GET",
+	       url: "${basePath}pc/superhuiGoods/ajaxAllList?start=0",
+	       dataType: "json",
+				success : function(data) {
+					
+					
+					console.log("data.length="+data.length);
+					if(data.length != 0){
+						$("#superhuishops").html("");
+						var html = " ";
+						
+							 for (var i = 0; i < data.length; i++) {
+								
+								 console.log("data.i="+i);
+								 
+							 html +='<div class="product-box">';	 
+							 html +='<div class="box">';
+							 html +='<div class="logo">';
+							 html +='<span class="bg-cgf ico-tag1">今日 </span>';
+							 html +='<span class="bg-cgf ico-tag2">活动</span>';
+							 html +='<span class="bg-cgf ico-tag3">品牌</span>';
+							html +='<span class="bg-cgf ico-tag4">限量<br>100件</span>';
+							 html +='</div>';
+							 html +='<a target="_blank" href="#">';
+							 html +='<img src="'+fileAccessPath+data[i].goodsicon+'">';
+							 html +='</a>';
+							 html +='<span class="box_activity">';
+						     html +='<i class="fa fa-clock-o"></i>';
+							html +='距活动结束<span>00:04:56:15</span>';
+							html +='</span>';
+							html +='<div class="box_hover">';
+							html +='<span class="sale">已售'+data[i].buyNum+'份</span>';
+					                 
+							html +='</div>';
+							html +='</div>';
+							html +='<div class="box_list">';
+							html +='<h3><a target="_blank" href="#"><img src="${path}/img/cooperlogo/maibaobao.gif" />荣耀 6 Plus (PE-TL10) 白色 移动联通双4G手机 双卡双待双通</a></h3>';
+							html +='<div class="list_logo">';
+							html +='<span class="price-new"><em>¥</em>'+data[i].chuprice+'</span>';
+							html +='<del class="price-old"><em>¥</em>'+data[i].normalprice+'</del>';
+							html +='</div>';
+							html +='<div class="box_listl">';
+							 html +='<span>-53.3</span>';
+							html +='<div class="ico-you">购买后减67%</div>';
+							html +='</div>';
+							html +='<div class="box_listr">';
+							html +='<a href="#" class="" target="_blank">立即购买</a>';
+							html +='</div>';
+							html +='</div>';
+							html +='</div>';
+							 }
+
+							 //alert(html);
+								$("#superhuishops").append(html);
+						
+						console.log('结果'+html);
+											
+					}else{
+					
+					}
+				}
+				 }); 
+	   
+	   
+	   
+   }
+   
+   
+   
+   function scroll(){
+	   alert("1---");
+		$(window).scroll(
+				function() {
+					var wst = $(window).scrollTop();
+					var bodyHeight = $(document).height();
+					if (!ajaxload) {
+						console.log("start="+start);
+						if (wst + winHeight > bodyHeight - 20) {
+							ajaxtip("努力加载中...");
+							console.log("inajax");
+							if (iisstop==0) {
+								iisstop=1; //锁定
+								ff();
+								ajaxxx();
+							iisstop=0; //解除锁定
+							}
+							}
+							}
+						});
+	}
+   
+   
+   
+   
+   
+	//加载更多渠道
+	var start = 6;
+	var count = 20;
+	var ajaxload = false; 
+	var iisstop=0;
+	winHeight = $(window).height();
+	alert("hjjhhhh"+winHeight);
+	scroll();
+	function ff(){
+		ajaxload = true;
+	}
+	function ajaxxx(){
+		
+		var id=$(".current").attr("id");
+		alert(id);
+		$.ajax({
+			type: "GET",
+           url: "${basePath}pc/superhuiGoods/ajaxList?id="+id+"&start=" + start,
+           dataType: "json",
+			success : function(data) {
+				//console.log("data.length="+data.length);
+				console.log("data.length="+data.length);
+				if(data.length != 0){
+					//$("#superhuishops").html("");
+					var html = " ";
+					
+						 for (var i = 0; i < data.length; i++) {
+							
+							 console.log("data.i="+i);
+							 
+						 html +='<div class="product-box">';	 
+						 html +='<div class="box">';
+						 html +='<div class="logo">';
+						 html +='<span class="bg-cgf ico-tag1">今日 </span>';
+						 html +='<span class="bg-cgf ico-tag2">活动</span>';
+						 html +='<span class="bg-cgf ico-tag3">品牌</span>';
+						html +='<span class="bg-cgf ico-tag4">限量<br>100件</span>';
+						 html +='</div>';
+						 html +='<a target="_blank" href="#">';
+						 html +='<img src="'+fileAccessPath+data[i].goodsicon+'">';
+						 html +='</a>';
+						 html +='<span class="box_activity">';
+					     html +='<i class="fa fa-clock-o"></i>';
+						html +='距活动结束<span>00:04:56:15</span>';
+						html +='</span>';
+						html +='<div class="box_hover">';
+						html +='<span class="sale">已售'+data[i].buyNum+'份</span>';
+				                 
+						html +='</div>';
+						html +='</div>';
+						html +='<div class="box_list">';
+						html +='<h3><a target="_blank" href="#"><img src="${path}/img/cooperlogo/maibaobao.gif" />荣耀 6 Plus (PE-TL10) 白色 移动联通双4G手机 双卡双待双通</a></h3>';
+						html +='<div class="list_logo">';
+						html +='<span class="price-new"><em>¥</em>'+data[i].chuprice+'</span>';
+						html +='<del class="price-old"><em>¥</em>'+data[i].normalprice+'</del>';
+						html +='</div>';
+						html +='<div class="box_listl">';
+						 html +='<span>-53.3</span>';
+						html +='<div class="ico-you">购买后减67%</div>';
+						html +='</div>';
+						html +='<div class="box_listr">';
+						html +='<a href="#" class="" target="_blank">立即购买</a>';
+						html +='</div>';
+						html +='</div>';
+						html +='</div>';
+						 }
+
+						 //alert(html);
+							$("#superhuishops").append(html);
+					
+					console.log('结果'+html);
 	
+					ajaxload = false;
+					start = start + 6;
+				}else{
+					ajaxload = true;
+					ajaxtip("已经到底了哦！");
+				}
+			}
+			 });
+	}
+function ajaxtip(txt) {
+ $(".get_more span").html(txt);
+}
+   
+   
+   
+   
+   
+   
+   
+   
+   
+$(function() {
+	//默认加载（全部）
+    allsuiper();
+	
+	
+	 
 	// 超级优惠商品分类
 	$('.show-list .show-listjj li').click(function(event) {
-	alert();
-	
+		//var id=$(this).attr("id");
+		var id=$(this).attr("id");
+		
+		var name=$(this).attr("gjj");
+		ajaxload = false; 
+	    iisstop=0;
+		winHeight = $(window).height();
+	alert("hjj"+winHeight);
+	if(name=="全部"){
+		
+		allsuiper();	
+		scroll();
+	}else{
 	  $.ajax({
 			type: "GET",
-       url: "${basePath}pc/superhuiGoods/ajaxList?id="+id,
+       url: "${basePath}pc/superhuiGoods/ajaxList?start=0&id="+id,
        dataType: "json",
 			success : function(data) {
-				
-				
+				$("#superhuishops").html("");
+				//alert();
 				console.log("data.length="+data.length);
 				if(data.length != 0){
 				//	$("#webShop").html("");
@@ -1258,13 +929,13 @@ $(function() {
 						 html +='<div class="product-box">';
 						 html +='<div class="box">';
 						 html +='<div class="logo">';
-						 html +='<span class="bg-cgf ico-tag1">'+今日+'</span>';
-						 html +='<span class="bg-cgf ico-tag2">'+活动+'</span>';
-						 html +='<span class="bg-cgf ico-tag3">'+品牌+'</span>';
+						 html +='<span class="bg-cgf ico-tag1">今日 </span>';
+						 html +='<span class="bg-cgf ico-tag2">活动</span>';
+						 html +='<span class="bg-cgf ico-tag3">品牌</span>';
 						// html +='<span class="bg-cgf ico-tag4">'+限量+'<br>'+100件+'</span>';
 						 html +='</div>';
 						 html +='  <a target="_blank" href="#">';
-						 html +='             <img src="'+${path}/img/show1.png+'">';
+						 html +='             <img src="'+fileAccessPath+data[i].goodsicon+'">';
 						 html +='       </a>';
 						 html +='          <span class="box_activity">';
 					     html +='              <i class="fa fa-clock-o"></i>';
@@ -1289,27 +960,28 @@ $(function() {
 						html +='        <a href="#" class="" target="_blank">立即购买</a>';
 						html +='        </div>';
 						html +='       </div>';
-						html +='        </div>';
+						html +='       </div>';
  
 						 }
 
 					 
 					
 					console.log('结果'+html);
-					$("#webShop").append(html);					
+					$("#superhuishops").append(html);					
 				}else{
 				
 				}
 			}
+	  
 			 }); 
 	
-	
-	
+	  scroll();
+	}
 	
 	
 	 });
 	
-	//商品分类
+	//商城分类
 	ajaxa();
 $('.sidebar-info .side-li li').click(function(event) {
 	var id=$(this).attr("id");
