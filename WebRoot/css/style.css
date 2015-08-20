@@ -109,7 +109,7 @@
 .product-box .box .box_activity{background:#333;width:212px;height:29px;position:absolute;top:0;right:0;color:#fff;line-height:29px;font-size:15px}
 .product-box .box .box_activity i{margin:5px 5px 0 5px;font-size:20px;float:left}
 .product-box .box .box_activity span{margin-left:5px}
-.product-box .box .box_hover{background:url(../img/pro_hover.png) repeat;color:#FFF;font-weight:700;height:33px;left:0;line-height:34px;position:absolute;top:294px;width:100%}
+.product-box .box .box_hover{background:url(../img/pro_hover.png) repeat;color:#FFF;font-weight:700;height:33px;left:0;line-height:34px;position:absolute;top:267px;width:100%}
 .product-box .box .box_hover .sale{padding-left:5px;float:left}
 .product-box .box .box_hover .money{padding-right:5px;float:right}
 .product-box .box_list{padding:15px 20px;height:auto;overflow:hidden;position: relative;}
