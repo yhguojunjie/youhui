@@ -8,11 +8,6 @@
     <link rel="stylesheet" href="${path}/css/common.css"/>
     <link rel="stylesheet" href="${path}/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="${path}/css/style.css"/>
-    <!--[if !IE]><!-->
-    <style>
-        .form-reg .form-item .auto_input{ width:205px; padding-right:25px !important;}
-    </style>
-    <!--<![endif]-->
 </head>
 <body class="reg">
    <div class="top-wrapper">
@@ -114,69 +109,42 @@
 <div class="reg-content">
     <div class="box-reg">
         <div class="con-1">
-            <form action="${basePath}register/doRegister" class="form-reg" id="form_reg" name="form2" method="post" >
+            <form action="${basePath}register/doRegister" id="form_reg" name="form2" method="post" >
                 <div class="form-item">
                     <label for="reg_mail" class="label">
                         <b class="require">*</b>常用邮箱：
                     </label>
-                    <input verify="true" type="text" autocomplete="off" maxlength="40" name="email" id="reg_mail" class="txt txt-1 auto_input" value="" tabindex="1" />
-                    <span class="tiptext tiptext-info"></span>
-                    <a href="javascript:;" class="clear-btn" style="display:none;">×</a>
-                    <table id="auto_email" style=" display:none;" border="0" cellpadding="0" cellspacing="0">
-                        <thead>
-                            <tr><th>请选择或继续输入…</th></tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>
+                    <input verify="true" type="text" name="email" id="email" class="txt auto_input" value=""/>
                 </div>
                 <div class="form-item">
                     <label for="reg_password" class="label">
                         <b class="require">*</b>设置密码：
                     </label>
-                    <input verify="true" type="password" name="password" id="reg_password" class="txt txt-1" tabindex="2" />
-                    <span class="tiptext tiptext-ok"></span>
-                   <!--  <div class="poptip-pass">
-                        <b class="wai">◆</b>
-                        <b class="nei">◆</b>
-                        <div class="bg"></div>大写锁定已打开
-                    </div> -->
+                    <input verify="true" type="password" name="password" id="password" class="txt"/>
                 </div>
                 <div class="form-item">
                     <label for="reg_password_again" class="label"><b class="require">*</b>确认密码：</label>
-                    <input verify="true" type="password" name="password_again" id="reg_password_again" class="txt txt-1" disabled="disabled" tabindex="3" />
-                    <span class="tiptext tiptext-error"></span>
-                    <!-- <div class="poptip-pass">
-                        <b class="wai">◆</b>
-                        <b class="nei">◆</b>
-                        <div class="bg"></div>大写锁定已打开
-                    </div> -->
+                    <input verify="true" type="password" name="repass" id="repass" class="txt" disabled="disabled" tabindex="3" />
                 </div>
                 <div class="form-item">
                     <label for="reg_check_code" class="label">
                         <b class="require">*</b>验证码：
                     </label>
-                    <input type="text" id="reg_check_code" maxlength="4" name="checkcode" class="txt txt-2" tabindex="4" verify="true" />
-                    <!--   <img onclick="RefreshCheckcode($('#reg_checkcode'));" id="reg_checkcode" src="img/code.jpg" title="点击刷新验证码" alt ="点击刷新验证码" /> -->
+                    <input type="text" id="reg_check_code" name="checkcode" class="txt txt-1" verify="true" />
                     <img id="reg_checkcode" onclick="reloadImage();" src="${path}/RandomValidateCodeServlet" title="点击刷新验证码" alt ="点击刷新验证码"/>
                     看不清？
                     <a id="check-code-change" class="check-code-change" onclick="reloadImage();">换一张</a>
-                    <p class="tiptext"></p>
-                    
-                    <!-- <p class="tiptextt"></p> -->
+                    <p class="tiptext"></p>              
                 </div>
                 <div class="form-item">
                     <p class="text-term">
                         <label for="CheckTerm">
                             <input type="checkbox" checked="checked" id="CheckTerm" />我已阅读并同意
-                            <a href="#" class="blue">《帮you惠用户注册协议》</a>
+                            <a href="#">《帮you惠用户注册协议》</a>
                         </label>
-                        <span class="tiptext tiptext-error" style=" display:none; margin-left:45px;"><i></i>您还未同意返还网的服务条款</span>
+                        <span class="tiptext tiptext-error"><i></i>您还未同意返还网的服务条款</span>
                     </p>
-                    <!-- <a href="#" class="btn btn-1" id="reg_submit" tabindex="5" onclick="return RegisterByEmail($(this),true);" >
-                        <span>立即注册</span>
-                    </a> -->
-                    <input  type="button"  onclick="verify_submit();" class="btn-regist" value="立即注册">
-                   <!--  onclick="verify_submit();" -->
+                    <input  type="submit"  onclick="verify_submit();" class="btn-regist" value="立即注册">
                 </div>
             </form>
         </div>
@@ -197,21 +165,17 @@
 		<%@ include file="footer.jsp" %>
 	<!-- 底部 结束 -->
 <script type="text/javascript" src="${path}/js/jquery.js" ></script>
-<script src="${path}/js/img-show.js"></script>
-<script type="text/javascript" src="${path}/js/validate/automail.js" ></script>
-<script src="${path}/js/main.js"></script>
+<script type="text/javascript" src="${path}/js/img-show.js"></script>
+<script type="text/javascript" src="${path}/js/validate/jquery.validate.min.js" ></script>
+<script type="text/javascript" src="${path}/js/validate/messages_cn.js" ></script>
+<script type="text/javascript" src="${path}/js/main.js"></script>
 <script>
-
 //更换验证码
 	function reloadImage(){
 		 $("#reg_checkcode").attr("disable","true");
 		 $("#reg_checkcode").attr("src",'<%=path%>/RandomValidateCodeServlet?ts='+new Date().getTime());
 		 $("#reg_checkcode").attr("disable","false");
 	} 
-	
-
-
-
 	//var flag=true;
 	//提交表单前端验证
 	function verify_submit(){
@@ -231,8 +195,6 @@
 		}
 	
 	}
-	
 </script>
-
 </body>
 </html>

@@ -19,7 +19,7 @@
 .top-wrapper .top-info .top-left .msg-info .msg-box{width:270px;min-height:190px;box-shadow:1px 1px 1px #dfdfdf;z-index:2;}
 .top-wrapper .top-info .top-left .msg-info .msg-box .userinfo{padding:10px 15px;overflow:hidden;height:70px}
 .top-wrapper .top-info .top-left .msg-info .msg-box .otherlist a{float:left;height:25px;line-height:25px}
-.top-wrapper .top-info .top-left .msg-info .msg-box .u-pic{float:left;margin-right:10px;width:60px;height:60px;background:url(../img/no-img_mid_.jpg) no-repeat center center;border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%}
+.top-wrapper .top-info .top-left .msg-info .msg-box .u-pic{float:left;margin-right:10px;width:60px;height:60px;cborder-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%}
 .top-wrapper .top-info .top-left .msg-info .msg-box .u-name{float:left;padding:6px 0 0;font-weight:700;width:140px;height:30px}
 .top-wrapper .top-info .top-left .msg-info .msg-box .u-extra{float:left;width:140px;height:30px}
 .top-wrapper .top-info .top-left .msg-info .msg-box .u-extra .line-a{float:left;color:#666;margin:0 8px}
@@ -54,7 +54,7 @@
 .scroll-logo{float:left;margin-right:15px}
 .scroll-list{float:left;min-width:200px;height:40px;line-height:40px;margin:0 8px}
 .scroll-list ul li{margin-right:12px;font-size:12px}
-.typeList{position:relative;width:100%;float:left;margin-bottom:40px;}
+.typeList{position:relative;width:100%;float:left;margin-bottom:40px}
 .typeList .line{width:100%;height:41px;position:absolute;top:0;line-height:0;border-bottom:2px solid #B1191A;z-index:9}
 .content-top{width:1190px;height:auto;margin:0 auto;clear:both}
 .sidebar{float:left;width:152px;min-height:400px;background:#b61d1d;padding-bottom:1px}
@@ -64,7 +64,7 @@
 .sidebar .side-li>li{position:relative;width:100%;margin:auto;height:31px;line-height:32px;text-align:center;border-left:1px solid #b61d1d;cursor:pointer;color:#fff}
 .sidebar .side-li>li:hover{background:#fff;color:#b61d1d}
 .sidebar .side-li>li.visited{background:#fff;color:#B61D1D}
-.right-con{width:1038px;height:auto;float:left;position:relative;z-index: 12;}
+.right-con{width:1038px;height:auto;float:left;position:relative}
 .right-con .nav{width:100%;height:41px;line-height:38px;font-weight:700;font-size:14px}
 .right-con .nav>a{padding:5px 5px;height:32px;margin:0 8px;color:#202020}
 .right-con .nav>a.spe{color:#c40000;font-size:16px}
@@ -92,12 +92,12 @@
 .main-title .tab{float:right;margin-top: 1px;}
 .main-title .tab li.tab-item{float: left;height: 34px;position: relative;z-index: 2;}
 .main-title .tab li.tab-item a {float: left;height: 34px;padding: 0 16px;text-decoration: none;line-height: 34px;overflow: hidden;background: #fff;border-left: solid 1px #fff;border-right: solid 1px #fff;white-space: nowrap;}
-.show-list{width:100%;float: left;height:auto;margin-top: 10px;}
-.show-list ul li {margin-right: 16px;font-size: 12px;height: 30px;line-height: 30px;cursor:pointer;}
-.show-list ul li.current {font-weight: bold;color: #FFF;background: #c40000;border-radius: 2px;padding: 0 9px;}
-.product-box{position:relative;float:left;width:461px;height:auto;border:2px solid #eee;/* box-shadow:rgba(0,0,0,.17) 1px 1px 2px; */margin-bottom:30px;margin-right:30px}
+.show-list{width:100%;float: left;height: 40px;margin-top: 10px;}
+.show-list ul li {margin-right: 16px;font-size: 12px;height: 30px;line-height: 30px;}
+.show-list ul li.current a {display: block;font-weight: bold;color: #FFF;background: #c40000;border-radius: 2px;padding: 0 9px;}
+.product-box{position:relative;float:left;width:461px;height:auto;border:2px solid #eee;box-shadow:rgba(0,0,0,.17) 1px 1px 2px;margin-bottom:30px;margin-right:30px}
 .product-box:hover{border-color:#c40000;box-shadow:none}
-.product-box:nth-child(2n){margin-right:0}
+.product-box:nth-child(2n+1){margin-right:0}
 .product-box .box{width:100%}
 .product-box .box .logo{height:40px;position:absolute;}
 .product-box .box .logo .bg-cgf {background:url(../img/new-1.png) no-repeat;float: left;display: block;width: 45px;height: 43px;margin-right: 3px;text-align:center;color:#fff;line-height: 15px;padding-top: 4px;}
@@ -226,7 +226,6 @@
 .forgetPwd .cont .row .email{width:700px;float:left}
 .forgetPwd .cont .row .email input[type=text]{width:220px;height:20px;border-radius:3px;border:1px solid #ccc;padding:5px}
 .forgetPwd .cont .row .email.code input[type=text]{width:120px;}
-
 .forgetPwd .cont .row i{font-style:normal;color:#e0848f;margin:0 5px}
 .forgetPwd .cont .row em{font-size:12px;color:#c40000;}
 .forgetPwd .cont .row a{color:#c40000;margin:0 3px}
@@ -236,40 +235,31 @@
 
 /*×¢²á*/
 body.reg{background:#f2f2f2}
-.txt{padding:7px 8px;height:18px;vertical-align:middle;font:14px/18px Simsun,arial}
-.txt.focus,.txt:focus{border-color:#008be4;box-shadow:1px 1px 1px rgba(0,0,0,.15) inset,1px 1px 0 rgba(51,153,204,.3),-1px -1px 0 rgba(51,153,204,.3)}
-.txt-1{width:222px}
-.txt-2{width:82px}
-.ico-login-otherway{display:inline-block;overflow:hidden;margin:-2px 5px 0 0;width:16px;height:16px;background:url(http://i.fanhuan.com/images/site_master/ico_login_otherway.png) no-repeat;vertical-align:middle}
-.i-login-otherway-sina{background-position:0 0}
-.i-login-otherway-qq{background-position:-16px 0}
-.i-login-otherway-tb{background-position:0 -16px}
-.i-login-otherway-alipay{background-position:-16px -16px}
-.i-login-otherway-weixin{background-position:0 -64px}
-a:hover .i-login-otherway-sina{background-position:0 -32px}
-a:hover .i-login-otherway-qq{background-position:-16px -32px}
-a:hover .i-login-otherway-tb{background-position:0 -48px}
-a:hover .i-login-otherway-alipay{background-position:-16px -48px}
-a:hover .i-login-otherway-weixin{background-position:-16px -64px}
-.form-item .btn-regist{display:inline-block;border:0 none;font-weight:700;text-align:center;color:#fff;width:270px;height:36px;font-size:16px;text-indent:-9999px;overflow:hidden;background:url(../img/regist-btn.jpg) no-repeat;margin-top:30px}
-.btn{padding-left:15px;background-position:left 0}
-.btn span{padding-right:15px;background-position:right 0;text-align:center}
-.btn:hover,.btn:hover span{text-decoration:none}
-.btn-1,.btn-1-40{padding-left:20px;background-position:0 -94px}
-.btn-1 span,.btn-1-40 span{padding-right:20px;height:40px;background-position:right -94px;color:#fff;font:700 14px/40px Simsun}
-.btn-1-40:hover,.btn-1:hover{background-position:0 -136px}
-.btn-1-40:hover span,.btn-1:hover span{background-position:right -136px}
-.btn-2-40,.btn-3{padding-left:20px;background-position:0 -390px}
-.btn-2-40 span,.btn-3 span{padding-right:20px;height:40px;background-position:right -390px;color:#fff;font:700 14px/40px Simsun}
-.btn-2-40:hover,.btn-3:hover{background-position:0 -432px}
-.btn-2-40:hover span,.btn-3:hover span{background-position:right -432px}
-.btn-2,.btn-3-40{padding-left:20px;background-position:0 -687px}
-.btn-2 span,.btn-3-40 span{padding-right:20px;height:40px;background-position:right -687px;color:#666;font:14px/40px Simsun}
-.btn-2:hover,.btn-3-40:hover{background-position:0 -729px}
-.btn-2:hover span,.btn-3-40:hover span{background-position:right -729px}
 .reg-content{padding-bottom:60px;min-width:960px}
 .reg-content .box-reg{margin:70px auto 0;overflow:hidden;padding:30px 0 35px 48px;width:910px;border:1px solid #dfdfdf;border-radius:10px;background:#fff;box-shadow:0 2px 0 rgba(0,0,0,.03)}
 .box-reg .con-1{float:left;width:612px;border-right:1px solid #e5e5e5;}
+.box-reg .con-1 .txt{padding:7px 8px;height:18px;vertical-align:middle;width:222px;}
+.box-reg .con-1 .txt-1{width:82px}
+.box-reg .con-1 .form-item .tip{ margin-top: 8px; height: 18px; line-height: 18px; } 
+.box-reg .con-1 .form-item .tip i { display: inline-block; overflow: hidden; margin: -2px 5px 0 8px; width: 15px; height: 16px; background: url(../img/logo/ico_reg.png) no-repeat; vertical-align: middle; } 
+.box-reg .con-1 .form-item .warn{color: #b5b4b4;} .warn i{background-position:0 0;} 
+.box-reg .con-1 .form-item .err{ color: red; background-position:-32px 0; } 
+.box-reg .con-1 .form-item .err i { background-position:-32px 0; }
+.box-reg .con-1 .form-item{position:relative;margin-bottom:20px;padding-left:70px}
+.box-reg .con-1 .form-item .label{float:left;color:#999;overflow:hidden;margin-left:-70px;margin-right:10px;width:72px;text-align:right;white-space:nowrap;font-size:14px;line-height:34px}
+.box-reg .con-1 .form-item .label .require{color:red;margin-right:5px;font-weight:400;font-size: 18px;}
+.box-reg .con-1 .form-item .text-term{margin-top:8px;color:#666}
+.box-reg .con-1 .form-item .text-term input{margin:-2px 5px 0 0;vertical-align:middle}
+.box-reg .con-1 .form-item .text-term a{display:inline-block;color:#005AA0;text-decoration:none}
+.box-reg .con-1 .form-item .text-term a:link{color:#005AA0;text-decoration:none}
+.box-reg .con-1 .form-item .btn-regist{display:inline-block;border:0 none;font-weight:700;text-align:center;color:#fff;width:270px;height:36px;font-size:16px;text-indent:-9999px;overflow:hidden;background:url(../img/regist-btn.jpg) no-repeat;margin-top:30px}
+.box-reg .con-1 .form-item .tiptext{color:#b5b4b4;margin-top:8px;height:18px;line-height:18px}
+.box-reg .con-1 .form-item .tiptext i{display:inline-block;overflow:hidden;margin:-2px 5px 0 8px;width:15px;height:16px;background:url(http://i.fanhuan.com/images/reg/new_20131231/ico_reg.png) 0 0 no-repeat;vertical-align:middle}
+.box-reg .con-1 .form-item .tiptext .tiptext-error{color:red;display:none; margin-left:45px;}
+.box-reg .con-1 .form-item .tiptext .tiptext-error i{background-position:-32px 0}
+.box-reg .con-1 .form-item #reg_checkcode{margin-left:8px;width:80px;height:30px;vertical-align:middle;cursor:pointer}
+.box-reg .con-1 .form-item .check-code-change{color:#005AA0}
+.box-reg .con-1 .form-item .check-code-change:hover{color:#008be4;text-decoration:none}
 .box-reg .con-2{margin:55px 70px 0 653px}
 .box-reg .con-2 h3{color:#333;margin-bottom:10px;font-size:14px}
 .box-reg .con-2 .btn-outer{margin-bottom:25px}
@@ -280,42 +270,19 @@ a:hover .i-login-otherway-weixin{background-position:-16px -64px}
 .box-reg .con-2 ul li a.f14{font-size:14px;font-family:arial}
 .box-reg .con-2 ul li a:hover{text-decoration:underline}
 .box-reg .con-2 ul li a i{margin:0 5px 3px 0}
+.box-reg .con-2 ul li a:hover .i-login-otherway-sina{background-position:0 -32px}
+.box-reg .con-2 ul li a:hover .i-login-otherway-qq{background-position:-16px -32px}
+.box-reg .con-2 ul li a:hover .i-login-otherway-tb{background-position:0 -48px}
+.box-reg .con-2 ul li a:hover .i-login-otherway-alipay{background-position:-16px -48px}
+.box-reg .con-2 ul li a:hover .i-login-otherway-weixin{background-position:-16px -64px}
+.box-reg .con-2 .ico-login-otherway{display:inline-block;overflow:hidden;margin:-2px 5px 0 0;width:16px;height:16px;background:url(http://i.fanhuan.com/images/site_master/ico_login_otherway.png) no-repeat;vertical-align:middle}
+.box-reg .con-2 .i-login-otherway-sina{background-position:0 0}
+.box-reg .con-2 .i-login-otherway-qq{background-position:-16px 0}
+.box-reg .con-2 .i-login-otherway-tb{background-position:0 -16px}
+.box-reg .con-2 .i-login-otherway-alipay{background-position:-16px -16px}
+.box-reg .con-2 .i-login-otherway-weixin{background-position:0 -64px}
+.box-reg .con-2 .btn{padding-left:15px;background-position:left 0}
 .box-reg .con-2 .btn-2{padding-left:0;width:120px;height:30px;line-height:30px;text-align:center;border:1px solid #ddd;display:block}
-.box-reg .con-2 .btn-2 span{padding-right:20px;width:110px;text-align:center;font-size:16px}
-.form-reg .form-item{position:relative;margin-bottom:20px;padding-left:70px}
-.form-reg .form-item .label{float:left;color:#999;overflow:hidden;margin-left:-70px;margin-right:4px;width:72px;text-align:right;white-space:nowrap;font-size:14px;line-height:34px}
-.form-reg .form-item .label .require{color:red;margin-right:5px;font-weight:400}
-.form-reg .form-item .clear-btn{position:absolute;top:1px;left:284px;padding-left:5px;width:20px;height:32px;background:#fff;color:#d9d9d9;font:700 18px/28px tahoma}
-.form-reg .form-item .clear-btn:hover{color:#666;text-decoration:none}
-.form-reg .form-item .clear-btn-focus{box-shadow:-1px 1px 1px rgba(0,0,0,.15) inset}
-.form-reg .btn-1 span{width:200px;text-align:center}
-.form-reg .text-term{margin-top:8px;color:#666}
-.form-reg .text-term input{margin:-2px 5px 0 0;vertical-align:middle}
-.form-reg .text-term a{display:inline-block;color:#005AA0;text-decoration:none}
-.form-reg .text-term a.blue:link{color:#005AA0;text-decoration:none}
-#reg_mail{color:#a9a9a9}
-.tiptext{color:#b5b4b4;margin-top:8px;height:18px;line-height:18px}
-.tiptext i{display:inline-block;overflow:hidden;margin:-2px 5px 0 8px;width:15px;height:16px;background:url(http://i.fanhuan.com/images/reg/new_20131231/ico_reg.png) 0 0 no-repeat;vertical-align:middle}
-.tiptext-info{color:#b5b4b4}
-.tiptext-error{color:red}
-.tiptext-ok{color:#060}
-.tiptext-loading{display:inline-block;margin:-2px 0 0 8px;width:16px;height:16px;background:url(http://i.fanhuan.com/images/loading1.gif) 0 0 no-repeat;vertical-align:middle}
-.tiptext-info i{background-position:0 0}
-.tiptext-ok i{background-position:-16px 0}
-.tiptext-error i{background-position:-32px 0}
-#reg_checkcode{margin-left:8px;width:80px;height:30px;vertical-align:middle;cursor:pointer}
-.check-code-change{color:#005AA0}
-.check-code-change:hover{color:#008be4;text-decoration:none}
-#auto_email{position:absolute;top:34px;left:70px;width:240px;border:1px solid #ccc;background:#fff}
-#auto_email th{background:#f6f6f6;color:#666;text-align:left}
-#auto_email td,#auto_email th{padding:0 5px;line-height:30px}
-#auto_email td{color:#333}
-#auto_email td.current{background:#008be4;color:#fff}
-.poptip-pass{position:absolute;top:31px;left:65px;z-index:2;display:none;width:100px;height:27px;box-shadow:1px 1px 3px rgba(0,0,0,.18);color:#444;text-align:center;line-height:27px}
-.poptip-pass .bg{position:absolute;top:0;left:0;z-index:-1;width:100%;height:25px;border:1px solid #8eacc0;background:#fff}
-.poptip-pass b{position:absolute;top:-5px;left:10px;z-index:0;font:12px/1 Simsun}
-.poptip-pass .wai{color:#8eacc0}
-.poptip-pass .nei{top:-3px;color:#fff}
 
 /*×¢²á³É¹¦*/
 .regSuccess{width:990px;margin:auto;height:400px;margin-top:70px;border:1px solid #dfdfdf;background:#fff;padding:30px;border-radius:10px;box-shadow:0 2px 0 rgba(0,0,0,.03)}
