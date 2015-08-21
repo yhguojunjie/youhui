@@ -93,8 +93,8 @@
 .main-title .tab li.tab-item{float: left;height: 34px;position: relative;z-index: 2;}
 .main-title .tab li.tab-item a {float: left;height: 34px;padding: 0 16px;text-decoration: none;line-height: 34px;overflow: hidden;background: #fff;border-left: solid 1px #fff;border-right: solid 1px #fff;white-space: nowrap;}
 .show-list{width:100%;float: left;height: 40px;margin-top: 10px;}
-.show-list ul li {margin-right: 16px;font-size: 12px;height: 30px;line-height: 30px;}
-.show-list ul li.current a {display: block;font-weight: bold;color: #FFF;background: #c40000;border-radius: 2px;padding: 0 9px;}
+.show-list ul li {margin-right: 16px;font-size: 12px;height: 30px;line-height: 30px;cursor: pointer;}
+.show-list ul li.current {font-weight: bold;color: #FFF;background: #c40000;border-radius: 2px;padding: 0 9px;}
 .product-box{position:relative;float:left;width:461px;height:auto;border:2px solid #eee;box-shadow:rgba(0,0,0,.17) 1px 1px 2px;margin-bottom:30px;margin-right:30px}
 .product-box:hover{border-color:#c40000;box-shadow:none}
 .product-box:nth-child(2n+1){margin-right:0}

@@ -107,10 +107,8 @@
 		<div class="nav">
 			<ul>
 				<li class="cur"><a href="#">首页</a></li>
-				<li><a href="#">我的优惠</a></li>
-				<li><a href="#">今日特惠</a></li>
-				<li><a href="#">品牌专场</a></li>
-				<li><a href="#">金牌秒杀</a></li>
+				<li><a href="#">今日品牌</a></li>
+				<li><a href="#">每日限量</a></li>
 			</ul>
 		</div>
 	</div>
@@ -350,7 +348,7 @@
 		</div>
 		<div class="main-left">
         <div class="main-title font">
-            <h1>超高优惠</h1>
+            <h1>每日限量</h1>
 <!--             <div class="tab"><ul><li class="tab-item"><a href="#">单品推荐</a></li><li class="tab-item"><a href="#">品牌专场</a></li></ul></div>    
  -->        </div>
                <div class="show-list">
