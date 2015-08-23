@@ -189,7 +189,8 @@
     <div class="right-con">
         <div class="nav font">
          <a class="spe" href="${basePath}pc/superhuiGoods/list">超高优惠</a>
-            <a class="spe" href="#">限量特价抢购</a>
+            <a class="spe" href="#">今日限量特价</a>
+            <!-- <a class="spe" href="#">今日限量特价抢购</a> -->
             <!-- 待定<a class="spe" href="#">限时抢购</a> -->
             <!-- 待定<a class="spe" href="#">多买多送</a> -->
             <a class="spe" href="#">今日推荐商品</a>          
@@ -205,6 +206,7 @@
         <!--<a href="#">50元封顶</a>  --> 
              <a href="#">优惠券</a>
             <a href="#">本地优惠(O2O)</a>
+         <!--    <a  href="#">节日专场</a> -->
             <a href="#">手机版</a>
            <!--  第二版<a href="#">商家活动专场</a>   -->  
         </div>
