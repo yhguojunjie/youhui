@@ -190,22 +190,23 @@
         <div class="nav font">
          <a class="spe" href="${basePath}pc/superhuiGoods/list">超高优惠</a>
             <a class="spe" href="#">限量特价抢购</a>
-            <!-- <a class="spe" href="#">限时抢购</a> -->
-            <!-- <a class="spe" href="#">多买多送</a> -->
-            <a class="spe" href="#">推荐商品</a>          
+            <!-- 待定<a class="spe" href="#">限时抢购</a> -->
+            <!-- 待定<a class="spe" href="#">多买多送</a> -->
+            <a class="spe" href="#">今日推荐商品</a>          
             <span class="line-a">|</span>
             <a  href="#">淘宝优惠</a>
             <a  href="#">商城优惠</a>
             
            
-           <!--  <a  href="#">宝贝优惠</a> -->
-            <!-- <a href="#">特卖场</a> -->
+           <!--  待定<a  href="#">宝贝优惠</a> -->
+            <!-- 待定<a href="#">特卖场</a> -->
             <a href="#">9.9包邮</a>
-            <a href="#">19.9包邮</a>
+          <!--   <a href="#">19.9包邮</a> -->
         <!--<a href="#">50元封顶</a>  --> 
              <a href="#">优惠券</a>
             <a href="#">本地优惠(O2O)</a>
-            <a href="#">商家活动专场</a>    
+            <a href="#">手机版</a>
+           <!--  第二版<a href="#">商家活动专场</a>   -->  
         </div>
         <div class="content">
             <div class="con" id="webShop">
