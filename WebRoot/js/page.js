@@ -1,5 +1,4 @@
 $(function(){
-
 	$('#owl-top').owlCarousel({
 		navigation: true,
 		navigationText: ["<",">"],
@@ -14,4 +13,9 @@ $(function(){
 	// 	items:9,
 	// 	pagination:false
 	// });
+	//今日品牌
+	$('.nav-list li').click(function() {
+		console.log('22222222');
+		$(this).addClass('current').siblings().removeClass('current');
+	});
 });

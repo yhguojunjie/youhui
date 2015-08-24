@@ -97,7 +97,7 @@
 })(jQuery);
 
 //注册
-$(document).ready(function() {
+/*$(document).ready(function() {
     // 中文字两个字节 
     jQuery.validator.addMethod("byteRangeLength",
     function(value, element, param) {
@@ -153,4 +153,4 @@ $(document).ready(function() {
 
 
    
- 
+ */
