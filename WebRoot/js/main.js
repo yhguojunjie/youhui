@@ -151,20 +151,18 @@ $(document).ready(function() {
     });
     
   
-    $('#form_reg .form-item').find("input[type='checkbox']").click(function(){
+   /* $('#form_reg .form-item').find("input[type='checkbox']").click(function(){
     	$(this).toggleClass('checked');
     	if($(this).hasClass('checked')){
-    		console.log('111');
-    		$(this).parent('label').next('.tiptext-error').css({
+    		$(this).parent('label').next('.err').css({
     			'display': 'none'
     		});
         }else{
-        	console.log('222');
-        	$(this).parent('label').next('.tiptext-error').css({
+        	$(this).parent('label').next('.err').css({
     			'display': 'block'
     		});
         }
-    });
+    });*/
 });
 
 

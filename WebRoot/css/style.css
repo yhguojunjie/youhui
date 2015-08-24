@@ -241,7 +241,8 @@ body.reg{background:#f2f2f2}
 .box-reg .con-1 .txt{padding:7px 8px;height:18px;vertical-align:middle;width:222px;}
 .box-reg .con-1 .txt-1{width:82px}
 .box-reg .con-1 .form-item .tip{ margin-top: 8px; height: 18px; line-height: 18px; } 
-.box-reg .con-1 .form-item .tip i { display: inline-block; overflow: hidden; margin: -2px 5px 0 -18px; width: 15px; height: 16px; background: url(../img/logo/ico_reg.png) no-repeat; vertical-align: middle; } 
+.box-reg .con-1 .form-item .tip i,.box-reg .con-1 .form-item .err i { display: inline-block; overflow: hidden; margin: -2px 5px 0 -18px; width: 15px; height: 16px; background: url(../img/logo/ico_reg.png) no-repeat; vertical-align: middle; } 
+
 .box-reg .con-1 .form-item .warn{color: #b5b4b4;} 
 .warn i{background-position:0 0;} 
 .box-reg .con-1 .form-item .err{ color: red; background-position:-32px 0; } 
@@ -252,6 +253,7 @@ body.reg{background:#f2f2f2}
 .box-reg .con-1 .form-item label.tip_message{display:none;}
 .box-reg .con-1 .form-item .label .require{color:red;margin-right:5px;font-weight:400;font-size: 18px;}
 .box-reg .con-1 .form-item .text-term{margin-top:8px;color:#666}
+.box-reg .con-1 .form-item .text-term .err{display:none;}
 .box-reg .con-1 .form-item .text-term input{margin:-2px 5px 0 0;vertical-align:middle}
 .box-reg .con-1 .form-item .text-term a{display:inline-block;color:#005AA0;text-decoration:none}
 .box-reg .con-1 .form-item .text-term a:link{color:#005AA0;text-decoration:none}
