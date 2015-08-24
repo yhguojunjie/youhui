@@ -45,6 +45,12 @@
     <div id="backToTop-up" class="up-back"><i class="fa fa-angle-up"></i></div>
     <div id="backToTop-down" class="down-back"><i class="fa fa-angle-down"></i></div>
 </div>
+<script type="text/javascript" src="${path}/js/jquery.js" ></script>
+<script type="text/javascript" src="${path}/js/img-show.js"></script>
+<script type="text/javascript" src="${path}/js/validate/automail.js" ></script>
+<script type="text/javascript" src="${path}/js/owlCarousel/owl.carousel.js"></script>
+<script type="text/javascript" src="${path}/js/main.js"></script>
+<script type="text/javascript" src="${path}/js/page.js"></script>
 	<!-- 底部 结束 -->
 	<!-- 浮动菜单 开始 -->
 <%-- 	<div class="float_menu" style="display:none;">
