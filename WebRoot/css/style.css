@@ -236,17 +236,19 @@
 /*зЂВс*/
 body.reg{background:#f2f2f2}
 .reg-content{padding-bottom:60px;min-width:960px}
-.reg-content .box-reg{margin:70px auto 0;overflow:hidden;padding:30px 0 35px 48px;width:910px;border:1px solid #dfdfdf;border-radius:10px;background:#fff;box-shadow:0 2px 0 rgba(0,0,0,.03)}
+.reg-content .box-reg{margin:70px auto 0;overflow:hidden;padding:30px;width:910px;border:1px solid #dfdfdf;border-radius:10px;background:#fff;box-shadow:0 2px 0 rgba(0,0,0,.03)}
 .box-reg .con-1{float:left;width:612px;border-right:1px solid #e5e5e5;}
 .box-reg .con-1 .txt{padding:7px 8px;height:18px;vertical-align:middle;width:222px;}
 .box-reg .con-1 .txt-1{width:82px}
 .box-reg .con-1 .form-item .tip{ margin-top: 8px; height: 18px; line-height: 18px; } 
-.box-reg .con-1 .form-item .tip i { display: inline-block; overflow: hidden; margin: -2px 5px 0 8px; width: 15px; height: 16px; background: url(../img/logo/ico_reg.png) no-repeat; vertical-align: middle; } 
+.box-reg .con-1 .form-item .tip i { display: inline-block; overflow: hidden; margin: -2px 5px 0 -18px; width: 15px; height: 16px; background: url(../img/logo/ico_reg.png) no-repeat; vertical-align: middle; } 
 .box-reg .con-1 .form-item .warn{color: #b5b4b4;} .warn i{background-position:0 0;} 
 .box-reg .con-1 .form-item .err{ color: red; background-position:-32px 0; } 
 .box-reg .con-1 .form-item .err i { background-position:-32px 0; }
 .box-reg .con-1 .form-item{position:relative;margin-bottom:20px;padding-left:70px}
 .box-reg .con-1 .form-item .label{float:left;color:#999;overflow:hidden;margin-left:-70px;margin-right:10px;width:72px;text-align:right;white-space:nowrap;font-size:14px;line-height:34px}
+.box-reg .con-1 .form-item label.error,.box-reg .con-1 .form-item label.tip_message{float: right;color: #999;width: 250px;}
+.box-reg .con-1 .form-item label.tip_message{display:none;}
 .box-reg .con-1 .form-item .label .require{color:red;margin-right:5px;font-weight:400;font-size: 18px;}
 .box-reg .con-1 .form-item .text-term{margin-top:8px;color:#666}
 .box-reg .con-1 .form-item .text-term input{margin:-2px 5px 0 0;vertical-align:middle}
@@ -254,12 +256,13 @@ body.reg{background:#f2f2f2}
 .box-reg .con-1 .form-item .text-term a:link{color:#005AA0;text-decoration:none}
 .box-reg .con-1 .form-item .btn-regist{display:inline-block;border:0 none;font-weight:700;text-align:center;color:#fff;width:270px;height:36px;font-size:16px;text-indent:-9999px;overflow:hidden;background:url(../img/regist-btn.jpg) no-repeat;margin-top:30px}
 .box-reg .con-1 .form-item .tiptext{color:#b5b4b4;margin-top:8px;height:18px;line-height:18px}
+.box-reg .con-1 .form-item .tiptext.tiptext-error{display:none;}
 .box-reg .con-1 .form-item .tiptext i{display:inline-block;overflow:hidden;margin:-2px 5px 0 8px;width:15px;height:16px;background:url(http://i.fanhuan.com/images/reg/new_20131231/ico_reg.png) 0 0 no-repeat;vertical-align:middle}
 .box-reg .con-1 .form-item .tiptext .tiptext-error{color:red;display:none; margin-left:45px;}
 .box-reg .con-1 .form-item .tiptext .tiptext-error i{background-position:-32px 0}
 .box-reg .con-1 .form-item #reg_checkcode{margin-left:8px;width:80px;height:30px;vertical-align:middle;cursor:pointer}
 .box-reg .con-1 .form-item .check-code-change{color:#005AA0}
-.box-reg .con-1 .form-item .check-code-change:hover{color:#008be4;text-decoration:none}
+.box-reg .con-1 .form-item .check-code-change:hover{color:#008be4;text-decoration:none;cursor: pointer;}
 .box-reg .con-2{margin:55px 70px 0 653px}
 .box-reg .con-2 h3{color:#333;margin-bottom:10px;font-size:14px}
 .box-reg .con-2 .btn-outer{margin-bottom:25px}

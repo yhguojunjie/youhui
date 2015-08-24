@@ -8,7 +8,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>帮you惠，优惠网！我喜欢</title>
+    <title>今日品牌</title>
     <link rel="stylesheet" href="${path}/css/common.css"/>
     <link rel="stylesheet" href="${path}/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="${path}/css/owlCarousel/owl.carousel.css" >
@@ -111,25 +111,6 @@
 				<li><a href="#">每日限量</a></li>
 			</ul>
 		</div>
-		<div class="nav-list">
-                    <ul>
-                        <li class="current">全部(100)</li>
-                        <li>服装内衣(12)</li>
-                        <li>鞋包配饰(12)</li>
-                        <li>运动户外(12)</li>
-                        <li>珠宝手表(12)</li>
-                        <li>手机数码(12)</li>
-                        <li>家电办公(12)</li>
-                        <li>护肤彩妆(12)</li>
-                        <li>母婴用品(12)</li>
-                        <li>家纺居家(12)</li>
-                        <li>家具建材(12)</li>
-                        <!-- <li><a href="#">美食特产</a></li>
-                        <li><a href="#">日用百货</a></li>
-                        <li><a href="#">汽车摩托</a></li>
-                        <li><a href="#">文化娱乐</a></li> -->
-                    </ul>
-            </div>
 	</div>
 	<div class="main_page">
 		<div class="brand-top">

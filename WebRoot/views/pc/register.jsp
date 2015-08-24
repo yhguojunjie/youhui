@@ -115,16 +115,18 @@
                         <b class="require">*</b>常用邮箱：
                     </label>
                     <input verify="true" type="text" name="email" id="email" class="txt auto_input" value=""/>
+                    <label class="tip_message"><span class="tip warn"><i></i>请填写您常用的邮箱作为登录账号</span></label>
                 </div>
                 <div class="form-item">
                     <label for="reg_password" class="label">
                         <b class="require">*</b>设置密码：
                     </label>
                     <input verify="true" type="password" name="password" id="password" class="txt"/>
+                    <label class="tip_message"><span class="tip warn"><i></i>6-20位字符，建议由字母，数字和符号两种以上组合</span></label>
                 </div>
                 <div class="form-item">
                     <label for="reg_password_again" class="label"><b class="require">*</b>确认密码：</label>
-                    <input verify="true" type="password" name="repass" id="repass" class="txt" disabled="disabled" tabindex="3" />
+                    <input verify="true" type="password" name="repass" id="repass" class="txt" tabindex="3" />
                 </div>
                 <div class="form-item">
                     <label for="reg_check_code" class="label">

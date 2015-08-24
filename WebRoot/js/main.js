@@ -97,9 +97,9 @@
 })(jQuery);
 
 //注册
-/*$(document).ready(function() {
+$(document).ready(function() {
     // 中文字两个字节 
-    jQuery.validator.addMethod("byteRangeLength",
+    /*jQuery.validator.addMethod("byteRangeLength",
     function(value, element, param) {
         var length = value.length;
         for (var i = 0; i < value.length; i++) {
@@ -109,20 +109,20 @@
         }
         return this.optional(element) || (length >= param[0] && length <= param[1]);
     },
-    "请确保输入的值在3-15个字节之间(一个中文字算2个字节)");
+    "请确保输入的值在3-15个字节之间(一个中文字算2个字节)");*/
 
     //字符串验证
-    jQuery.validator.addMethod("stringCheck",
+  /*  jQuery.validator.addMethod("stringCheck",
     function(value, element) {
         return this.optional(element) || /^[\u0391-\uFFE5\w]+$/.test(value);
     },
-    "只能包括中文字、英文字母、数字和下划线");
+    "只能包括中文字、英文字母、数字和下划线");*/
 
     validator = $('#form_reg').validate({
         rules: {
             "password": {
                 required: true,
-                rangelength: [4, 20]
+                rangelength: [6, 20]
             },
             "repass": {
                 required: true,
@@ -135,11 +135,11 @@
         },
         messages: {
             "password": {
-                required: "<span class='tip warn'><i></i>密码由数字、字母组成，字母区分大小写</span>",
-                rangelength: "<span class='tip err'><i></i>请输入4-20位正确的密码</span>"
+                required: "<span class='tip warn'><i></i>6-20位字符，建议由字母，数字和符号两种以上组合</span>",
+                rangelength: "<span class='tip err'><i></i>请输入6-20位正确的密码</span>"
             },
             "repass": {
-                required: "",
+                required: "<span class='tip warn'><i></i>请再次输入密码</span>",
                 equalTo: "<span class='tip err'><i></i>请输入相同的密码</span>"
             },
             "email": {
@@ -149,8 +149,9 @@
 
         }
     });
+    
+    $('#form_reg')
 });
 
 
    
- */
