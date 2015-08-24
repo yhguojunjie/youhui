@@ -165,12 +165,7 @@
 </div>
 <!-- 底部 开始 -->
 		<%@ include file="footer.jsp" %>
-	<!-- 底部 结束 -->
-<script type="text/javascript" src="${path}/js/jquery.js" ></script>
-<script type="text/javascript" src="${path}/js/img-show.js"></script>
-<script type="text/javascript" src="${path}/js/validate/jquery.validate.min.js" ></script>
-<script type="text/javascript" src="${path}/js/validate/messages_cn.js" ></script>
-<script type="text/javascript" src="${path}/js/main.js"></script>
+<!-- 底部 结束 -->
 <script>
 //更换验证码
 	function reloadImage(){

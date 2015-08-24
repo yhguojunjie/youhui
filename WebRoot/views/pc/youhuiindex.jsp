@@ -626,12 +626,7 @@
 <!-- 底部 开始 -->
 		<%@ include file="footer.jsp" %>
 <!-- 底部 结束 -->
-<script type="text/javascript" src="${path}/js/jquery.js" ></script>
-<script type="text/javascript" src="${path}/js/img-show.js"></script>
-<script type="text/javascript" src="${path}/js/validate/automail.js" ></script>
-<script type="text/javascript" src="${path}/js/owlCarousel/owl.carousel.js"></script>
-<script type="text/javascript" src="${path}/js/main.js"></script>
-<script type="text/javascript" src="${path}/js/page.js"></script>
+
 <script >
 
    function f(oldArray){
