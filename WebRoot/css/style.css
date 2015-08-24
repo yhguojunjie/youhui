@@ -305,7 +305,7 @@ body.reg{background:#f2f2f2}
 .line .nav-list ul li {margin-right: 16px;font-size: 12px;height: 30px;line-height: 30px;cursor: pointer;border-bottom:2px solid #fff;}
 .line .nav-list ul li.current {font-weight: bold;border-bottom-color: #c40000;border-radius: 2px;padding: 0 9px;color:#c40000;}
 .main_page{width:1200px;margin:auto;margin-top:20px;min-height:100px;overflow:hidden}
-.main_page .brand-top{width:100%;float:left}
+.main_page .brand-top{width:100%;float:left;margin-top: 10px;}
 .main_page .brand-top #owl-top{width:100%;margin:auto}
 .main_page .brand-top #owl-top .item{display:block;margin:0}
 .main_page .brand-top #owl-top img{display:block;width:100%}
