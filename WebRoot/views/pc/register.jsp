@@ -141,7 +141,7 @@
                 <div class="form-item">
                     <p class="text-term">
                         <label for="CheckTerm">
-                            <input type="checkbox" checked="checked" id="CheckTerm" class="checked"/>我已阅读并同意
+                            <input type="checkbox" checked="checked" id="CheckTerm" />我已阅读并同意
                             <a href="#">《帮you惠用户注册协议》</a>
                         </label>
                         <span class="tiptext tiptext-error"><i></i>您还未同意返还网的服务条款</span>
