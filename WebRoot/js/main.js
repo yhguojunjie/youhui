@@ -150,7 +150,21 @@ $(document).ready(function() {
         }
     });
     
-    $('#form_reg')
+  
+    $('#form_reg .form-item').find("input[type='checkbox']").click(function(){
+    	$(this).toggleClass('checked');
+    	if($(this).hasClass('checked')){
+    		console.log('111');
+    		$(this).parent('label').next('.tiptext-error').css({
+    			'display': 'none'
+    		});
+        }else{
+        	console.log('222');
+        	$(this).parent('label').next('.tiptext-error').css({
+    			'display': 'block'
+    		});
+        }
+    });
 });
 
 

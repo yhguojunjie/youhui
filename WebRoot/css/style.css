@@ -64,7 +64,7 @@
 .sidebar .side-li>li{position:relative;width:100%;margin:auto;height:31px;line-height:32px;text-align:center;border-left:1px solid #b61d1d;cursor:pointer;color:#fff}
 .sidebar .side-li>li:hover{background:#fff;color:#b61d1d}
 .sidebar .side-li>li.visited{background:#fff;color:#B61D1D}
-.right-con{width:1038px;height:auto;float:left;position:relative}
+.right-con{width:1038px;height:auto;float:left;position:relative;z-index:10;}
 .right-con .nav{width:100%;height:41px;line-height:38px;font-weight:700;font-size:14px}
 .right-con .nav>a{padding:5px 5px;height:32px;margin:0 8px;color:#202020}
 .right-con .nav>a.spe{color:#c40000;font-size:16px}
@@ -242,7 +242,8 @@ body.reg{background:#f2f2f2}
 .box-reg .con-1 .txt-1{width:82px}
 .box-reg .con-1 .form-item .tip{ margin-top: 8px; height: 18px; line-height: 18px; } 
 .box-reg .con-1 .form-item .tip i { display: inline-block; overflow: hidden; margin: -2px 5px 0 -18px; width: 15px; height: 16px; background: url(../img/logo/ico_reg.png) no-repeat; vertical-align: middle; } 
-.box-reg .con-1 .form-item .warn{color: #b5b4b4;} .warn i{background-position:0 0;} 
+.box-reg .con-1 .form-item .warn{color: #b5b4b4;} 
+.warn i{background-position:0 0;} 
 .box-reg .con-1 .form-item .err{ color: red; background-position:-32px 0; } 
 .box-reg .con-1 .form-item .err i { background-position:-32px 0; }
 .box-reg .con-1 .form-item{position:relative;margin-bottom:20px;padding-left:70px}
@@ -257,7 +258,7 @@ body.reg{background:#f2f2f2}
 .box-reg .con-1 .form-item .btn-regist{display:inline-block;border:0 none;font-weight:700;text-align:center;color:#fff;width:270px;height:36px;font-size:16px;text-indent:-9999px;overflow:hidden;background:url(../img/regist-btn.jpg) no-repeat;margin-top:30px}
 .box-reg .con-1 .form-item .tiptext{color:#b5b4b4;margin-top:8px;height:18px;line-height:18px}
 .box-reg .con-1 .form-item .tiptext.tiptext-error{display:none;}
-.box-reg .con-1 .form-item .tiptext i{display:inline-block;overflow:hidden;margin:-2px 5px 0 8px;width:15px;height:16px;background:url(http://i.fanhuan.com/images/reg/new_20131231/ico_reg.png) 0 0 no-repeat;vertical-align:middle}
+.box-reg .con-1 .form-item .tiptext i{display:inline-block;overflow:hidden;margin:-2px 5px 0 8px;width:15px;height:16px;background: url(../img/logo/ico_reg.png) no-repeat;vertical-align:middle}
 .box-reg .con-1 .form-item .tiptext .tiptext-error{color:red;display:none; margin-left:45px;}
 .box-reg .con-1 .form-item .tiptext .tiptext-error i{background-position:-32px 0}
 .box-reg .con-1 .form-item #reg_checkcode{margin-left:8px;width:80px;height:30px;vertical-align:middle;cursor:pointer}
