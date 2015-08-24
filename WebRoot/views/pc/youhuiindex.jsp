@@ -189,23 +189,26 @@
     <div class="right-con">
         <div class="nav font">
          <a class="spe" href="${basePath}pc/superhuiGoods/list">超高优惠</a>
-            <a class="spe" href="#">限量特价抢购</a>
-            <!-- <a class="spe" href="#">限时抢购</a> -->
-            <!-- <a class="spe" href="#">多买多送</a> -->
-            <a class="spe" href="#">推荐商品</a>          
+            <a class="spe" href="#">今日限量特价</a>
+            <!-- <a class="spe" href="#">今日限量特价抢购</a> -->
+            <!-- 待定<a class="spe" href="#">限时抢购</a> -->
+            <!-- 待定<a class="spe" href="#">多买多送</a> -->
+            <a class="spe" href="#">今日推荐商品</a>          
             <span class="line-a">|</span>
             <a  href="#">淘宝优惠</a>
             <a  href="#">商城优惠</a>
             
            
-           <!--  <a  href="#">宝贝优惠</a> -->
-            <!-- <a href="#">特卖场</a> -->
+           <!--  待定<a  href="#">宝贝优惠</a> -->
+            <!-- 待定<a href="#">特卖场</a> -->
             <a href="#">9.9包邮</a>
-            <a href="#">19.9包邮</a>
+          <!--   <a href="#">19.9包邮</a> -->
         <!--<a href="#">50元封顶</a>  --> 
              <a href="#">优惠券</a>
             <a href="#">本地优惠(O2O)</a>
-            <a href="#">商家活动专场</a>    
+         <!--    <a  href="#">节日专场</a> -->
+            <a href="#">手机版</a>
+           <!--  第二版<a href="#">商家活动专场</a>   -->  
         </div>
         <div class="content">
             <div class="con" id="webShop">
@@ -618,6 +621,7 @@
         <a class="help-a" href="#">手机优惠</a>
         <a class="help-a" href="#">旺信</a>
     </div>
+    
 </div>
 <!-- 底部 开始 -->
 		<%@ include file="footer.jsp" %>
@@ -772,7 +776,7 @@
    
    
    function scroll(){
-	   alert("1---");
+	   //alert("1---");
 		$(window).scroll(
 				function() {
 					var wst = $(window).scrollTop();
@@ -803,7 +807,7 @@
 	var ajaxload = false; 
 	var iisstop=0;
 	winHeight = $(window).height();
-	alert("hjjhhhh"+winHeight);
+	//alert("hjjhhhh"+winHeight);
 	scroll();
 	function ff(){
 		ajaxload = true;
@@ -811,72 +815,145 @@
 	function ajaxxx(){
 		
 		var id=$(".current").attr("id");
-		alert(id);
-		$.ajax({
-			type: "GET",
-           url: "${basePath}pc/superhuiGoods/ajaxList?id="+id+"&start=" + start,
-           dataType: "json",
-			success : function(data) {
-				//console.log("data.length="+data.length);
-				console.log("data.length="+data.length);
-				if(data.length != 0){
-					//$("#superhuishops").html("");
-					var html = " ";
-					
-						 for (var i = 0; i < data.length; i++) {
-							
-							 console.log("data.i="+i);
-							 
-						 html +='<div class="product-box">';	 
-						 html +='<div class="box">';
-						 html +='<div class="logo">';
-						 html +='<span class="bg-cgf ico-tag1">今日 </span>';
-						 html +='<span class="bg-cgf ico-tag2">活动</span>';
-						 html +='<span class="bg-cgf ico-tag3">品牌</span>';
-						html +='<span class="bg-cgf ico-tag4">限量<br>100件</span>';
-						 html +='</div>';
-						 html +='<a target="_blank" href="#">';
-						 html +='<img src="'+fileAccessPath+data[i].goodsicon+'">';
-						 html +='</a>';
-						 html +='<span class="box_activity">';
-					     html +='<i class="fa fa-clock-o"></i>';
-						html +='距活动结束<span>00:04:56:15</span>';
-						html +='</span>';
-						html +='<div class="box_hover">';
-						html +='<span class="sale">已售'+data[i].buyNum+'份</span>';
-				                 
-						html +='</div>';
-						html +='</div>';
-						html +='<div class="box_list">';
-						html +='<h3><a target="_blank" href="#"><img src="${path}/img/cooperlogo/maibaobao.gif" />荣耀 6 Plus (PE-TL10) 白色 移动联通双4G手机 双卡双待双通</a></h3>';
-						html +='<div class="list_logo">';
-						html +='<span class="price-new"><em>¥</em>'+data[i].chuprice+'</span>';
-						html +='<del class="price-old"><em>¥</em>'+data[i].normalprice+'</del>';
-						html +='</div>';
-						html +='<div class="box_listl">';
-						 html +='<span>-53.3</span>';
-						html +='<div class="ico-you">购买后减67%</div>';
-						html +='</div>';
-						html +='<div class="box_listr">';
-						html +='<a href="#" class="" target="_blank">立即购买</a>';
-						html +='</div>';
-						html +='</div>';
-						html +='</div>';
-						 }
+		var name=$(".current").attr("gjj");
+		//alert(id);
+		//alert("XXXXXXXX"+name);
+		if(name=="全部"){
+			$.ajax({
+				type: "GET",
+	           url: "${basePath}pc/superhuiGoods/ajaxAllList?id="+id+"&start=" + start,
+	           dataType: "json",
+				success : function(data) {
+					//console.log("data.length="+data.length);
+					console.log("data.length="+data.length);
+					if(data.length != 0){
+						//$("#superhuishops").html("");
+						var html = " ";
+						
+							 for (var i = 0; i < data.length; i++) {
+								
+								 console.log("data.i="+i);
+								 
+							 html +='<div class="product-box">';	 
+							 html +='<div class="box">';
+							 html +='<div class="logo">';
+							 html +='<span class="bg-cgf ico-tag1">今日 </span>';
+							 html +='<span class="bg-cgf ico-tag2">活动</span>';
+							 html +='<span class="bg-cgf ico-tag3">品牌</span>';
+							html +='<span class="bg-cgf ico-tag4">限量<br>100件</span>';
+							 html +='</div>';
+							 html +='<a target="_blank" href="#">';
+							 html +='<img src="'+fileAccessPath+data[i].goodsicon+'">';
+							 html +='</a>';
+							 html +='<span class="box_activity">';
+						     html +='<i class="fa fa-clock-o"></i>';
+							html +='距活动结束<span>00:04:56:15</span>';
+							html +='</span>';
+							html +='<div class="box_hover">';
+							html +='<span class="sale">已售'+data[i].buyNum+'份</span>';
+					                 
+							html +='</div>';
+							html +='</div>';
+							html +='<div class="box_list">';
+							html +='<h3><a target="_blank" href="#"><img src="${path}/img/cooperlogo/maibaobao.gif" />荣耀 6 Plus (PE-TL10) 白色 移动联通双4G手机 双卡双待双通</a></h3>';
+							html +='<div class="list_logo">';
+							html +='<span class="price-new"><em>¥</em>'+data[i].chuprice+'</span>';
+							html +='<del class="price-old"><em>¥</em>'+data[i].normalprice+'</del>';
+							html +='</div>';
+							html +='<div class="box_listl">';
+							 html +='<span>-53.3</span>';
+							html +='<div class="ico-you">购买后减67%</div>';
+							html +='</div>';
+							html +='<div class="box_listr">';
+							html +='<a href="#" class="" target="_blank">立即购买</a>';
+							html +='</div>';
+							html +='</div>';
+							html +='</div>';
+							 }
 
-						 //alert(html);
-							$("#superhuishops").append(html);
-					
-					console.log('结果'+html);
-	
-					ajaxload = false;
-					start = start + 6;
-				}else{
-					ajaxload = true;
-					ajaxtip("已经到底了哦！");
+							 //alert(html);
+								$("#superhuishops").append(html);
+						
+						console.log('结果'+html);
+		
+						ajaxload = false;
+						start = start + 6;
+					}else{
+						ajaxload = true;
+						ajaxtip("已经到底了哦！");
+					}
 				}
-			}
-			 });
+				 });
+		}else{
+			$.ajax({
+				type: "GET",
+	           url: "${basePath}pc/superhuiGoods/ajaxList?id="+id+"&start=" + start,
+	           dataType: "json",
+				success : function(data) {
+					//console.log("data.length="+data.length);
+					console.log("data.length="+data.length);
+					if(data.length != 0){
+						//$("#superhuishops").html("");
+						var html = " ";
+						
+							 for (var i = 0; i < data.length; i++) {
+								
+								 console.log("data.i="+i);
+								 
+							 html +='<div class="product-box">';	 
+							 html +='<div class="box">';
+							 html +='<div class="logo">';
+							 html +='<span class="bg-cgf ico-tag1">今日 </span>';
+							 html +='<span class="bg-cgf ico-tag2">活动</span>';
+							 html +='<span class="bg-cgf ico-tag3">品牌</span>';
+							html +='<span class="bg-cgf ico-tag4">限量<br>100件</span>';
+							 html +='</div>';
+							 html +='<a target="_blank" href="#">';
+							 html +='<img src="'+fileAccessPath+data[i].goodsicon+'">';
+							 html +='</a>';
+							 html +='<span class="box_activity">';
+						     html +='<i class="fa fa-clock-o"></i>';
+							html +='距活动结束<span>00:04:56:15</span>';
+							html +='</span>';
+							html +='<div class="box_hover">';
+							html +='<span class="sale">已售'+data[i].buyNum+'份</span>';
+					                 
+							html +='</div>';
+							html +='</div>';
+							html +='<div class="box_list">';
+							html +='<h3><a target="_blank" href="#"><img src="${path}/img/cooperlogo/maibaobao.gif" />荣耀 6 Plus (PE-TL10) 白色 移动联通双4G手机 双卡双待双通</a></h3>';
+							html +='<div class="list_logo">';
+							html +='<span class="price-new"><em>¥</em>'+data[i].chuprice+'</span>';
+							html +='<del class="price-old"><em>¥</em>'+data[i].normalprice+'</del>';
+							html +='</div>';
+							html +='<div class="box_listl">';
+							 html +='<span>-53.3</span>';
+							html +='<div class="ico-you">购买后减67%</div>';
+							html +='</div>';
+							html +='<div class="box_listr">';
+							html +='<a href="#" class="" target="_blank">立即购买</a>';
+							html +='</div>';
+							html +='</div>';
+							html +='</div>';
+							 }
+
+							 //alert(html);
+								$("#superhuishops").append(html);
+						
+						console.log('结果'+html);
+		
+						ajaxload = false;
+						start = start + 6;
+					}else{
+						ajaxload = true;
+						ajaxtip("已经到底了哦！");
+					}
+				}
+				 });	
+			
+			
+		}
+	
 	}
 function ajaxtip(txt) {
  $(".get_more span").html(txt);
@@ -902,15 +979,18 @@ $(function() {
 		var id=$(this).attr("id");
 		
 		var name=$(this).attr("gjj");
+		
+		start = 6;
 		ajaxload = false; 
 	    iisstop=0;
 		winHeight = $(window).height();
-	alert("hjj"+winHeight);
+	//alert("hjj"+winHeight);
 	if(name=="全部"){
 		
 		allsuiper();	
 		scroll();
 	}else{
+		//alert();
 	  $.ajax({
 			type: "GET",
        url: "${basePath}pc/superhuiGoods/ajaxList?start=0&id="+id,
@@ -1035,6 +1115,7 @@ $('.sidebar-info .side-li li').click(function(event) {
      
       }else{	  
     	  ajaxa();
+    	  //alert();
       }
  });
 });
