@@ -107,10 +107,12 @@
 		<div class="nav">
 			<ul>
 				<li class="cur"><a href="${basePath}">首页</a></li>
-				<li><a href="#">我的优惠</a></li>
+				<li><a href="${basePath}pc/superhuiGoods/list">每日限量</a></li>
+				<li><a href="${basePath}pc/superhuiGoods/brandList">今日品牌</a></li>
+				<!-- <li><a href="#">我的优惠</a></li>
 				<li><a href="#">今日特惠</a></li>
 				<li><a href="#">品牌专场</a></li>
-				<li><a href="#">金牌秒杀</a></li>
+				<li><a href="#">金牌秒杀</a></li> -->
 			</ul>
 		</div>
 	</div>
