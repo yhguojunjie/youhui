@@ -156,6 +156,34 @@ public class SuperhuiGoodsController {
 	}
 
 	/**
+	 * 超级商品优惠模块(今日品牌)
+	 * 
+	 * @param typeCon
+	 *            类型排序字段
+	 * @param orderCon
+	 *            排序字段
+	 * @param currPage
+	 *            当前页
+	 * @param model
+	 * @return
+	 * @throws Exception
+	 */
+	@SuppressWarnings("unchecked")
+	@Get("/brandList")
+	public String getAllBrandLists(Invocation inv) throws Exception {
+		// 1.分类与商城展示信息处理
+		// List<Goodsclassificat> goodsclassificatList = goodsclassificatService
+		// .findGoodsclassificat();
+		// inv.getRequest().setAttribute("goodsclassificatList",
+		// goodsclassificatList);
+		// inv.getRequest()
+		// .getSession()
+		// .setAttribute(Globals.SESSION_LASTURL,
+		// inv.getRequest().getRequestURL());
+		return "todayBrand";
+	}
+
+	/**
 	 * 模板库页
 	 * 
 	 * @param typeCon

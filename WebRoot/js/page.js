@@ -6,13 +6,15 @@ $(function(){
 		pagination:false,
 		autoPlay:true
 	});
+
 	//brand-wrapper
-	// $('#owl-brand').owlCarousel({
-	// 	navigation: true,
-	// 	navigationText: ["<",">"],
-	// 	items:9,
-	// 	pagination:false
-	// });
+	$('#owl-brand').owlCarousel({
+		navigation: true,
+		navigationText: ["<",">"],
+		items:10,
+		pagination:false
+	});
+
 	//今日品牌
 	$('.nav-list li').click(function() {
 		console.log('22222222');
