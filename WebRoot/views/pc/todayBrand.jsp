@@ -200,12 +200,87 @@
 		</div>
 		<div class="main-left">
         <div class="main-title font">
-            <h1>今日品牌</h1>
+            <h1>服装内衣品牌</h1>
 <!--             <div class="tab"><ul><li class="tab-item"><a href="#">单品推荐</a></li><li class="tab-item"><a href="#">品牌专场</a></li></ul></div>    
  -->    </div>
         <div id="superhuishops">      
             	<div class="get_more"><span>努力加载中...</span></div>
          </div>
+         <div class="brandShop">
+		<div class="product-box first">
+			<img class="item-logo" src="img/cooperlogo/dangdang.jpg" alt="">
+			<p class="item-intro">时尚卤味领军品牌</p>
+			<p class="item-disc">4.4<small>折起</small></p>
+			<p class="item-interval">12~56%</p>
+			<p class="item-countdown J_item_cd" style="">
+				<i></i>
+				<span class="J_text_inner">剩余</span>：
+				<span class="J_time_inner hasCountdown">
+					<em>07</em>天<em>06</em>时<em>46</em>分<em>50</em>秒
+				</span>
+			</p>
+		</div>
+		<div class="product-box">
+			<div class="box">
+				<a target="_blank" href="#">
+					<img src="img/show1.png">
+				</a>
+			</div>
+			<div class="box_list">
+				<div class="list_logo">
+					<span class="price-new"><em>¥</em>79</span>
+					<del class="price-old"><em>¥</em>339</del>
+				</div>
+				<div class="box_listl">
+					<span>-53.3</span>
+					<div class="ico-you">购买后减67%</div>
+				</div>
+				<div class="box_listr">
+					<a href="#" class="" target="_blank">进入品牌专场</a>
+				</div>
+			</div>
+		</div>
+		<div class="product-box">
+			<div class="box">
+				<a target="_blank" href="#">
+					<img src="img/show1.png">
+				</a>
+			</div>
+			<div class="box_list">
+				<div class="list_logo">
+					<span class="price-new"><em>¥</em>79</span>
+					<del class="price-old"><em>¥</em>339</del>
+				</div>
+				<div class="box_listl">
+					<span>-53.3</span>
+					<div class="ico-you">购买后减67%</div>
+				</div>
+				<div class="box_listr">
+					<a href="#" class="" target="_blank">进入品牌专场</a>
+				</div>
+			</div>
+		</div>
+		<div class="product-box">
+			<div class="box">
+				<a target="_blank" href="#">
+					<img src="img/show1.png">
+				</a>
+			</div>
+			<div class="box_list">
+				<div class="list_logo">
+					<span class="price-new"><em>¥</em>79</span>
+					<del class="price-old"><em>¥</em>339</del>
+				</div>
+				<div class="box_listl">
+					<span>-53.3</span>
+					<div class="ico-you">购买后减67%</div>
+				</div>
+				<div class="box_listr">
+					<a href="#" class="" target="_blank">进入品牌专场</a>
+				</div>
+			</div>
+		</div>
+	</div>
     </div>
 	</div>
 	<div class="help">

@@ -336,8 +336,24 @@ body.reg{background:#f2f2f2}
 .main_page .product-box .box_list{padding:4px 20px}
 .main_page .product-box .box_list .box_listr{top:60px;right:0;width:118px}
 .main_page .product-box .box_list a{font-size:14px;margin-bottom:2px}
-.main_page .product-box .box_list .box_listr a{font-size:14px;width:80px;padding:4px 10px;font-weight:600;font-size:18px;height:30px;line-height:30px}
+.main_page .product-box .box_list .box_listr a{width:80px;padding:4px 10px;font-weight:600;font-size:18px;height:30px;line-height:30px}
 
 /*ΩÒ»’∆∑≈∆*/
-.main_page.brand .product-box{width:286px;margin-right:10px}
-/* .main_page.brand .product-box .box .box_activity {display:none;} */
+.main_page.brand .product-box{width: 275px;margin-right: 20px;border: none;margin-bottom: 0;height: 302px;box-shadow: none;/*border-right: 1px solid #EEEDED;*/} 
+.main_page.brand .product-box.first{box-shadow: 2px 0 4px rgba(0, 0, 0, 0.06);
+border-right: 1px solid #EEEDED;}
+.main_page.brand .product-box.first p{text-align: center;}
+.main_page.brand .product-box.first .item-logo{display:block;width:100px;height:46px;margin:42px auto 5px}
+.main_page.brand .product-box.first .item-intro{height:45px;line-height:20px;font-size:12px;color:#666}
+.main_page.brand .product-box.first .item-disc{height:40px;line-height:40px;font-size:24px;color:#C00}
+.main_page.brand .product-box.first .item-disc small{font-size:14px;color:#666}
+.main_page.brand .product-box.first .item-interval{height:20px;width:100px;margin:auto;margin-bottom:20px;line-height:20px;font-size:20px;font-family:Arial;color:#C00;background:url(../img/page/icon-category1.alpha.png) -130px -60px no-repeat}
+.main_page.brand .product-box.first .item-countdown{height:18px;margin-bottom:15px;line-height:18px;font-size:12px;color:#B7B7B7}
+.main_page.brand .product-box.first .item-countdown em{font-style:normal}
+.main_page.brand .product-box.first .item-countdown i{display:inline-block;width:16px;height:18px;margin-right:3px;vertical-align:middle;background:url(../img/page/icon-category1.alpha.png) -130px -30px no-repeat}
+.main_page.brand .product-box .box img { height: 230px; } 
+.main_page.brand .product-box .box .box_hover {top: 196px;} 
+.main_page.brand .product-box .box_list .box_listr { top: 17px; right: 0; width: 100px; } 
+.main_page.brand .product-box .box_list .box_listr a { font-size: 14px; width: 84px; padding: 2px 5px; font-size: 14px; font-weight: 400; } 
+.main_page.brand .brandShop{float: left;width: 99%;border:1px solid #fff;margin-bottom: 20px;transition: border-color 0.3s;-webkit-transition: border-color 0.3s;-moz-transition: border-color 0.3s;-webkit-box-shadow:0 0 10px #ddd;-moz-box-shadow:0 0 10px #ddd;box-shadow:0 0 10px #ddd;} 
+.main_page.brand .brandShop:hover{border-color: #c81623;}
